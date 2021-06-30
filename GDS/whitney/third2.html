@@ -1,0 +1,36 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-form-group">
+    <a href="01prepare.html" class="govuk-back-link">Back</a>
+    <br></br>
+
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+      Description of the agent safety concern
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+  Remember to not use any personal details
+  </div>
+  <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="10" aria-describedby="with-hint-info with-hint-hint"></textarea>
+
+
+<br></br>
+        <a href="10success_third.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+        Submit
+          </a>
+
+          <br></br>
+          <a href="https://dwpdigital.atlassian.net/wiki/spaces/~480880257/pages/132197024589/05+-+Description">
+           <img src="/public/images/confluence.png" alt="Reviewed" width="100" height="100">
+          </a>
+
+
+
+{% endblock %}

@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<a href="04who.html" class="govuk-back-link">Back to search</a>
+<br></br>
+
+<table class="govuk-table">
+  <h1 class="govuk-heading-xl">
+    Incident list
+  </h1>
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">Date</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Reporter</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Customer</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Type</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Interaction</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Witnesses</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Status</th>
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">22/04/21 - 10:00</th>
+      <td class="govuk-table__cell">Your name</td>
+      <td class="govuk-table__cell">Robert De Silva</td>
+      <td class="govuk-table__cell">Verbal abuse / threats</td>
+      <td class="govuk-table__cell">Face to face</td>
+      <td class="govuk-table__cell">You reported this incident</td>
+      <td class="govuk-table__cell"><img src="/public/images/dotRed.png" alt="Closed"> &nbsp;Outstanding</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">21/04/21 - 10:30</th>
+      <td class="govuk-table__cell">Sadiq Assam</td>
+      <td class="govuk-table__cell">Andrew Chai</td>
+      <td class="govuk-table__cell">Verbal abuse / threats</td>
+      <td class="govuk-table__cell">Face to face</td>
+      <td class="govuk-table__cell"><a href="#">Add witness report</a></td>
+      <td class="govuk-table__cell"><img src="/public/images/dotRed.png" alt="Closed"> &nbsp;Outstanding</td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}
