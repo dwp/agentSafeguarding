@@ -1,20 +1,14 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# ignore tracking usage data config - we want a different one for each user
+usage-data-config.json
+# ignore extension SCSS because it's dynamically generated
+lib/extensions/_extensions.scss
+.env
+.sass-cache
+.DS_Store
+.start.pid
+.port.tmp
+public
+node_modules/*
+.tmuxp.*
+package-lock.json
 
-# Other files and folders
-.settings/
-
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
-
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
-node_modules
-npm-debug.log
