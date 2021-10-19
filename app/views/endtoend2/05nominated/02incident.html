@@ -1,0 +1,786 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<a href="01list.html" class="govuk-back-link">Back to list</a>
+<br></br>
+  <h1 class="govuk-heading-xl">
+    Incident report
+  </h1>
+
+  <h2 class="govuk-heading-m"><img src="/public/images/dotGreen.png" alt="Ready for decision"> &nbsp;Ready for decision</h2>
+    <h2 class="govuk-heading-m">YI787895G
+      <br></br>
+
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="#incident">
+          Incident
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="#witnesses">
+        Witnesses
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#reporter">
+          Reporter
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#citizen">
+          Citizen
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#history">
+          History
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#control">
+          Control measures
+        </a>
+      </li>
+    </ul>
+    <div class="govuk-tabs__panel" id="incident">
+      <p style="font-size:150%;"><strong>Incident details</strong></p>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Verbal abuse / threats
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Interaction
+          </dt>
+          <dd class="govuk-summary-list__value">
+           Telephone
+        </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              11/04/21 - 11:30
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Location
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong>Bromley Jobcentre</strong><br>
+              72 Guild Street<br>London<br>SE23 6FH
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Citizen involved
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a href="#citizen">
+                Andrew Whittard
+              </a>
+            </dd>
+          </div>
+        </dl>
+        <p style="font-size:150%;"><strong>Witness reports</strong></p>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Witness
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <a href="#witnesses">Sartaq Matcha</a>
+              </dd>
+            </div>
+          </dl>
+         <p style="font-size:150%;"><strong>Incident Breakdown</strong></p>
+            <p style="font-size:100%;">Written by: <a href="#reporter">Whitney Earl</a></p>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What started the situation?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Customer query around delayed payment. He wasn't happy about having no money and he became angry and abusive.
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    What happened during the interaction?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+  He uses an extremely rude language. he is very upset because of the delay and he does vent his frustration over and over again. Calling me Barbaric clerk and stupid" when asked to stop he shouted "This is Bullshit. You are useless."
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    How did you handle the interaction?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                I repeatedly asked him to refrain from using bad language but this did not help and he ended the call.
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    How did the interaction end?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                He ended the call.
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    How did you feel about the interaction?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                  I was on my guard because I was aware of the history of the customer. I couldn't help him solving his problem. I feel I'm ok now.
+                  </dd>
+                </div>
+              </dl>
+              <p style="font-size:150%;"><strong>Line manager recommendations</strong></p>
+              <p style="font-size:100%;">Written by: <a href="#reporter">Sadiq Assam</a></p>
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Suggested measures:
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      <ul>
+                    <li>Must be dealt with only in writing</li>
+                      </ul>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Suggestions and recommendations
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      The customer from previous history has proven to have verbally abused
+SC staff which indicates that this behaviours will continue every time
+he is told something he doesn't like or agree with so the appropriate step
+for the wellbeing of our staff will now be continue communication in writing
+                  </div>
+
+                </dl>
+
+    </div>
+    <div class="govuk-tabs__panel" id="witnesses">
+      <p style="font-size:150%;"><strong>Witnesses</strong></p>
+
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Sartaq Matcha
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Job Role
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  Work Coach
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Main work location
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <strong>Bromley Jobcentre</strong><br>
+                  72 Guild Street<br>London<br>SE23 6FH
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Incidents reported
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  2
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Email
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <a href="#">sartaq.matcha@dwp.gov.uk</a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                Telephone
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <a href="#">01632 960089</a>
+                </dd>
+
+              </div>
+            </dl>
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  What were the main issues? Describe the customer behaviour and the interaction using facts only.
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                I was asked by a colleague Sadiq to listen into a call he had. As I started to listen to the call the Customer was using rude language. he was upset because of a delay in receiving his UC payment. He was venting at Sadiq and repeatedly calling calling him "barbaric, stupid clerk" Sadiq asked him to stop shouting and then Andrew said "this is BS. You are useless" the call then ended
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                What brought the interaction to an end? What was the final outcome?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                The customer hung up the phone
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                  What were your feelings during the interaction? How do you feel now?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+              The customer was frustrated and seemed to be taking it out on Sadiq. i felt the customers language was inappropriate and was concerned about my colleague who this was being directed at
+                </div>
+                </dl>
+
+</div>
+
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="reporter">
+      <p style="font-size:150%;"><strong>Reporter details</strong></p>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Sadiq Assam
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Job Role
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Service Manager
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Main work location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <strong>Bromley Jobcentre</strong><br>
+            72 Guild Street<br>London<br>SE23 6FH
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Incidents reported
+          </dt>
+          <dd class="govuk-summary-list__value">
+          23
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Email
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <a href="#">sartaq.matcha@dwp.gov.uk</a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Telephone
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <a href="#">01632 960079</a>
+          </dd>
+
+        </div>
+      </dl>
+      <p style="font-size:150%;"><strong>Line manager details</strong></p>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Mark Green
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Job Role
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Work Coach Manager
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Main work location
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <strong>Bromley Jobcentre</strong><br>
+            72 Guild Street<br>London<br>SE23 6FH
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Email
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <a href="#">mark.green@dwp.gov.uk</a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Telephone
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <a href="#">01632 960016</a>
+          </dd>
+        </div>
+</dl>
+    </div>
+
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="citizen">
+      <p style="font-size:150%;"><strong>Citizen</strong></p>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+           Andrew Whittard
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            24/11/90 (Age 30)
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          National Insurance Number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            CT 00 03 41 B
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <strong>Last known address</strong><br>
+            72 Guild Street<br>London<br>SE23 6FH
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Telephone
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <a href="#">01632 960016</a>
+          </dd>
+        </div>
+</dl>
+<p style="font-size:150%;"><strong>Benefits</strong></p>
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+    Universal Credit
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Last payment received 07/03/2021
+    </dd>
+  </div>
+  </dl>
+  <p style="font-size:150%;"><strong>Relationships</strong></p>
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      None
+      </dt>
+      <dd class="govuk-summary-list__value">
+
+      </dd>
+    </div>
+
+</dl>
+</div>
+
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="history">
+   <p style="font-size:150%;"><strong>History</strong></p>
+
+
+     <img src="/public/images/card_incidentTWO.png" alt="Reviewed"> &nbsp;<img src="/public/images/card_controlZERO.png" alt="Reviewed"> &nbsp;  <img src="/public/images/card_actionONE.png" alt="Reviewed"> &nbsp;
+
+   <div class="govuk-grid-row">
+     <div class="govuk-grid-column-two-thirds">
+
+       <div id="step-by-step-navigation" class="app-step-nav app-step-nav--large app-step-nav--active" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all" data-hide-all-text="Hide all"><div class="app-step-nav__controls"><button aria-expanded="false" class="app-step-nav__button app-step-nav__button--controls js-step-controls-button" aria-controls="step-panel-check-youre-allowed-to-drive-1">Show all</button></div>
+         <ol class="app-step-nav__steps">
+
+
+
+
+
+           <li class="app-step-nav__step js-step" id="book-and-manage-your-theory-test">
+             <div class="app-step-nav__header js-toggle-panel" data-position="5">
+               <h2 class="app-step-nav__title">
+                 <span class="app-step-nav__circle app-step-nav__circle--number">
+                   <span class="app-step-nav__circle-inner">
+                     <span class="app-step-nav__circle-background">
+                       <span class="govuk-visually-hidden">22 April 2021</span> 3
+                     </span>
+                   </span>
+                 </span>
+
+                 <span class="js-step-title"><button class="app-step-nav__button app-step-nav__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-book-and-manage-your-theory-test-5"><span class="js-step-title-text">
+                     <img src="/public/images/icon_incident.png" alt="Reviewed"> &nbsp;<a href="#">22 April 2021 - 10:30</a>
+                 </span><span class="app-step-nav__toggle-link js-toggle-link" aria-hidden="true" hidden=""><a href="#">Verbal abuse</a></span></button></span>
+               </h2>
+               <a href="#">>></a>
+             </div>
+
+             <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-book-and-manage-your-theory-test-5">
+               <p class="app-step-nav__paragraph">You need a provisional driving licence to book your theory test.</p>
+
+               <ol class="app-step-nav__list " data-length="5">
+                 <li class="app-step-nav__list-item js-list-item ">
+                   <a data-position="5.1" class="app-step-nav__link js-link" href="https://govuk-prototype-kit.herokuapp.com/docs/templates/step-by-step-navigation#">Book your theory test <span class="app-step-nav__context">£23</span></a>
+                 </li>
+                 <li class="app-step-nav__list-item js-list-item ">
+                   <a data-position="5.2" class="app-step-nav__link js-link" href="https://govuk-prototype-kit.herokuapp.com/docs/templates/step-by-step-navigation#">What to take to your test </a>
+                 </li>
+                 <li class="app-step-nav__list-item js-list-item ">
+                   <a data-position="5.3" class="app-step-nav__link js-link" href="https://govuk-prototype-kit.herokuapp.com/docs/templates/step-by-step-navigation#">Change your theory test appointment </a>
+                 </li>
+                 <li class="app-step-nav__list-item js-list-item ">
+                   <a data-position="5.4" class="app-step-nav__link js-link" href="https://govuk-prototype-kit.herokuapp.com/docs/templates/step-by-step-navigation#">Check your theory test appointment details </a>
+                 </li>
+                 <li class="app-step-nav__list-item js-list-item ">
+                   <a data-position="5.5" class="app-step-nav__link js-link" href="https://govuk-prototype-kit.herokuapp.com/docs/templates/step-by-step-navigation#">Cancel your theory test </a>
+                 </li>
+               </ol>
+             </div>
+
+           </li>
+
+           <li class="app-step-nav__step js-step" id="book-and-manage-your-driving-test">
+             <div class="app-step-nav__header js-toggle-panel" data-position="6">
+               <h2 class="app-step-nav__title">
+                 <span class="app-step-nav__circle app-step-nav__circle--number">
+                   <span class="app-step-nav__circle-inner">
+                     <span class="app-step-nav__circle-background">
+                       <span class="govuk-visually-hidden">Step</span> 2
+                     </span>
+                   </span>
+                 </span>
+
+                 <span class="js-step-title"><button class="app-step-nav__button app-step-nav__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-book-and-manage-your-driving-test-6"><span class="js-step-title-text">
+                    <img src="/public/images/icon_response.png" alt="Reviewed"> &nbsp;<a href="01letter.html">22 February 2021</a>
+                 </span><span class="app-step-nav__toggle-link js-toggle-link" aria-hidden="true" hidden=""><a href="01letter.html">Warning letter (First)</a></span></button></span>
+               </h2>
+               <a href="01letter.html">>></a>
+             </div>
+
+             <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-book-and-manage-your-driving-test-6">
+               <p class="app-step-nav__paragraph">You must pass your theory test before you can book your driving test.</p>
+
+               <ol class="app-step-nav__list " data-length="5">
+                 <li class="app-step-nav__list-item js-list-item ">
+                   <a data-position="6.1" class="app-step-nav__link js-link" href="https://govuk-prototype-kit.herokuapp.com/docs/templates/step-by-step-navigation#">Book your driving test <span class="app-step-nav__context">£62 to £75</span></a>
+
+                 </li>
+                 <li class="app-step-nav__list-item js-list-item ">
+                   <a data-position="6.2" class="app-step-nav__link js-link" href="https://govuk-prototype-kit.herokuapp.com/docs/templates/step-by-step-navigation#">What to take to your test </a>
+                 </li>
+                 <li class="app-step-nav__list-item js-list-item ">
+                   <a data-position="6.3" class="app-step-nav__link js-link" href="https://govuk-prototype-kit.herokuapp.com/docs/templates/step-by-step-navigation#">Change your driving test appointment </a>
+                 </li>
+                 <li class="app-step-nav__list-item js-list-item ">
+                   <a data-position="6.4" class="app-step-nav__link js-link" href="https://govuk-prototype-kit.herokuapp.com/docs/templates/step-by-step-navigation#">Check your driving test appointment details </a>
+                 </li>
+                 <li class="app-step-nav__list-item js-list-item ">
+                   <a data-position="6.5" class="app-step-nav__link js-link" href="https://govuk-prototype-kit.herokuapp.com/docs/templates/step-by-step-navigation#">Cancel your driving test </a>
+                 </li>
+               </ol>
+             </div>
+
+           </li>
+
+           <li class="app-step-nav__step js-step" id="when-you-pass">
+             <div class="app-step-nav__header js-toggle-panel" data-position="7">
+               <h2 class="app-step-nav__title">
+                 <span class="app-step-nav__circle app-step-nav__circle--number">
+                   <span class="app-step-nav__circle-inner">
+                     <span class="app-step-nav__circle-background">
+                       <span class="govuk-visually-hidden">Step</span> 1
+                     </span>
+                   </span>
+                 </span>
+
+                 <span class="js-step-title"><button class="app-step-nav__button app-step-nav__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-when-you-pass-7"><span class="js-step-title-text">
+                  <img src="/public/images/icon_incident.png" alt="Reviewed"> &nbsp;<a href="04incident.html">22 February 2021</a>
+                 </span><span class="app-step-nav__toggle-link js-toggle-link" aria-hidden="true" hidden=""><a href="02incident.html">Verbal abuse</a></span></button></span>
+               </h2>
+               <a href="04incident.html">>></a>
+             </div>
+
+
+           </li>
+         </ol>
+       </div>
+
+     </div>
+   </div>
+
+
+
+  </div>
+
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="control">
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                No actions / no control measure
+              </dt>
+
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="01action.html">
+                  Apply<span class="govuk-visually-hidden"> View request</span>
+                </a>
+              </dd>
+            </div>
+          <p>Select this option if you don’t want to take any actions or apply any control measures at this stage.
+You will be asked to motivate this decision.</p>
+
+  </dl>
+  <hr>
+  <p><strong>Select all actions and control measures you will like to apply at this stage from the list, then press the APPLY button at the bottom of the page</strong></p>
+
+                <p style="font-size:150%;"><strong>Actions</strong></p>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                          <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="mines">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                                  Warning letter
+                                </label>
+                              </div>
+                            </dt>
+                            <dd class="govuk-summary-list__actions">
+                              <a class="govuk-link" href="01action.html">
+                              </a>
+                            </dd>
+                          </div>
+                        <p>Warning letter should be sent to a citizen to notify him about his behaviour and the next steps that are going to be taken if the behaviour doesn’t change. The template can be personalised on a case by case fashion.</p>
+
+                </dl>
+                <p style="font-size:150%;"><strong>Control measures</strong></p>
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-0" name="waste" type="checkbox" value="mines">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-0">
+                          Monitor behaviour
+                        </label>
+                      </div>
+                    </dt>
+
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="01apply.html">
+                      </a>
+                    </dd>
+                  </div>
+                <p>  Agents will be asked to review every interaction with this customer until the next review</p>
+
+                          <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                  Not permitted to use DWP computers
+                                </label>
+                              </div>
+                            </dt>
+
+                            <dd class="govuk-summary-list__actions">
+                              <a class="govuk-link" href="01apply.html">
+                              </a>
+                            </dd>
+                          </div>
+                        <p>The citizen will be forbidden from using DWP computers in the offices. The citizen must be notify after entering an office and accompanied only in rooms where he can be monitored.</p>
+
+                        <div class="govuk-summary-list__row">
+                          <dt class="govuk-summary-list__key">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="mines">
+                              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                Accompanied interviews
+                              </label>
+                            </div>
+                          </dt>
+                          <dd class="govuk-summary-list__actions">
+                            <a class="govuk-link" href="01apply.html">
+                                                        </a>
+                          </dd>
+                        </div>
+                      <p>The citizen will be allow to face to face interactions only if supervised by a security staff member.</p>
+
+                      <div class="govuk-summary-list__row">
+                        <dt class="govuk-summary-list__key">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="mines">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-4">
+                              To be dealt with by named officer
+                            </label>
+                          </div>
+                        </dt>
+                        <dd class="govuk-summary-list__actions">
+                          <a class="govuk-link" href="01apply.html">
+                          </a>
+                        </dd>
+                      </div>
+                    <p>Only a named officer can have interaction with this citizen. The named officer details are going to be displayed below.</p>
+
+                    <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="mines">
+                          <label class="govuk-label govuk-checkboxes__label" for="waste-5">
+                            Must be dealt with in a screened environment
+                          </label>
+                        </div>
+                      </dt>
+                      <dd class="govuk-summary-list__actions">
+                        <a class="govuk-link" href="01apply.html">
+
+                        </a>
+                      </dd>
+                    </div>
+                  <p>The citizen can be seen only in screened environment. If there is not a screened environment in his closest jobcentre you may ask the citizen to travel to a different one. In some case this will not be possible so it is suggested to add / change the control measure in monitored visits.</p>
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-6" name="waste" type="checkbox" value="mines">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-6">
+                          No home visits
+                        </label>
+                      </div>
+                    </dt>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="01apply.html">
+                      </a>
+                    </dd>
+                  </div>
+                <p>DWP staff members shouldn’t go to the home of the citizen under any circumstances. </p>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-7" name="waste" type="checkbox" value="mines">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-7">
+                        Banned from office
+                      </label>
+                    </div>
+                  </dt>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="01apply.html">
+                    </a>
+                  </dd>
+                </div>
+              <p>The citizen will not be allow to book face to face appointments in jobcentres. The details of this citizen will be notified to the security staff team.  </p>
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-8" name="waste" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-8">
+                      Banned from from using UCFS journal
+                    </label>
+                  </div>
+                </dt>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="01apply.html">
+                  </a>
+                </dd>
+              </div>
+            <p>(Legacy) This control measure cannot be taken any longer but some of the citizen may still be affected.</p>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="waste-9" name="waste" type="checkbox" value="mines">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste-9">
+                  Request injuction (England and Wales)
+                  </label>
+                </div>
+              </dt>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="01apply.html">
+                </a>
+              </dd>
+            </div>
+          <p>A judicial order restraining a person from beginning or continuing an action threatening or invading the legal right of another, or compelling a person to carry out a certain act, e.g. to make restitution to an injured party.</p>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste-10" name="waste" type="checkbox" value="mines">
+                <label class="govuk-label govuk-checkboxes__label" for="waste-10">
+                Request interdiction (Scotland)
+                </label>
+              </div>
+            </dt>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="01apply.html">
+
+              </a>
+            </dd>
+          </div>
+        <p>An interdict is a civil court order that tells a person not to do something or to stay away from you, your children or a specific place, such as your house. In Scotland if a person doesn't stick to an interdict, the police might be able to arrest them if the interdict gives them the power to do so.</p>
+
+
+
+    </dl>
+      <a href="01apply.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+        Apply
+        </a>
+
+  </div>
+
+
+
+
+
+
+{% endblock %}

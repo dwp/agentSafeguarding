@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<table class="govuk-table">
+  <h1 class="govuk-heading-xl">
+    Outstanding Incidents list
+  </h1>
+  <h2 class="govuk-heading-m">All incidents</h2>
+
+  <a href="#"><img src="/public/images/card_totalTWO.png" alt="Reviewed" ></a> &nbsp; <a href="#"><img src="/public/images/card_outstandingONE.png" alt="Reviewed"></a> &nbsp; <a href="#"><img src="/public/images/card_readyONE.png" alt="Reviewed"></a> &nbsp;
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">Date of incident</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Reporter</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Type</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Interaction</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Assign to</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="01incident">08/04/21 - 09:30</a></th>
+      <td class="govuk-table__cell">Whitney Earl</td>
+      <td class="govuk-table__cell">Physical violence</td>
+      <td class="govuk-table__cell">Face to face</td>
+      <td class="govuk-table__cell">Your name</td>
+      <td class="govuk-table__cell"><img src="/public/images/dotGreen.png" alt="Closed"> &nbsp;Ready</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="02incident">08/04/21 - 09:50</a></th>
+      <td class="govuk-table__cell">Sartaq Matcha</td>
+      <td class="govuk-table__cell">Verbal abuse</td>
+      <td class="govuk-table__cell">Telephone</td>
+      <td class="govuk-table__cell"><a href="#">Assign to me</a></td>
+      <td class="govuk-table__cell"><img src="/public/images/dotRed.png" alt="Outstanding"> &nbsp;Outstanding</td>
+    </tr>
+
+
+
+
+  </tbody>
+</table>
+
+{% endblock %}

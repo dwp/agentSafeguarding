@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<a href="04who.html" class="govuk-back-link">Back</a>
+<h1 class="govuk-heading-l">Search result</h1>
+
+<div class="govuk-form-group">
+  <div id="roll-number-hint" class="govuk-hint">
+    1 result found
+  </div>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds-from-desktop">
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Robert De Silva
+      </dt>
+      <dd class="govuk-summary-list__value">
+        12/04/93
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+              Select
+            </label>
+          </div>
+      </dd>
+    </div>
+      </div>
+        </div>
+
+    <br></br>
+    <a class="govuk-link" href="04who.html">
+      Search again
+    </a>
+<br></br>
+
+<a href="01prepare.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+  Continue
+  </a>
+
+
+
+{% endblock %}

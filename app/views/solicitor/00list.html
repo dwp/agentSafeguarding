@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<table class="govuk-table">
+  <h1 class="govuk-heading-xl">
+    Outstanding Requests
+  </h1>
+  <h2 class="govuk-heading-m">All requests</h2>
+
+
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">Date of request</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Requester</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Type</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Incident</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="01incident.html">21/04/21 - 10:30</a></th>
+      <td class="govuk-table__cell">Sadiq Assam</td>
+      <td class="govuk-table__cell">Banning letter</td>
+      <td class="govuk-table__cell">Physical Violence</td>
+      <td class="govuk-table__cell"><img src="/public/images/dotRed.png" alt="Closed"> &nbsp;Outstanding</td>
+    </tr>
+
+
+
+  </tbody>
+</table>
+
+{% endblock %}

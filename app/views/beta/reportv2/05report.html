@@ -1,0 +1,56 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<a href="../../index.html"> <img src="/public/images/header.png" width="100%" height="100%" alt="Header" ></a>
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<a href="04report.html" class="govuk-back-link">Back to customer profile</a>
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Report submitted
+          </h1>
+      </div>
+
+        <p class="govuk-body">We have received your incident report. <br>
+
+          We have notified your manager and they will review the report within <strong>48 hours.</strong><br>
+
+          You can check the status of the incident in the incident report list at this <a href="#">link</a>.<br>
+
+          <strong>We will tell you when a decision has been made about what to do next.</strong><br></br>
+
+          What did you think of this service? <a href="#">Link to survey</a> (takes 30 seconds)</p>
+
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+{% endblock %}
