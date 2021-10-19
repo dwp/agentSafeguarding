@@ -1,0 +1,47 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<a href="00safeguarding.html" class="govuk-back-link">Back</a>
+<br></br>
+
+<table class="govuk-table">
+  <h1 class="govuk-heading-xl">
+    Incident list
+  </h1>
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">Date</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Reporter</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Type</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Witnesses</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">06/02/21 - 10:30</th>
+      <td class="govuk-table__cell">Whitney Earl</td>
+      <td class="govuk-table__cell">Abuse, Threat</td>
+      <td class="govuk-table__cell"><a href="05breakdown1">Add witness report</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">15/02/21 - 13:45</th>
+      <td class="govuk-table__cell">Sadiq Assam</td>
+      <td class="govuk-table__cell">Damage to property</td>
+      <td class="govuk-table__cell"><a href="05breakdown1">Add witness report</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">22/02/21 - 16:00</th>
+      <td class="govuk-table__cell">Whitney Earl</td>
+      <td class="govuk-table__cell">Harassment</td>
+      <td class="govuk-table__cell"><a href="05breakdown1">Add witness report</a></td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

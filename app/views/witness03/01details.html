@@ -1,0 +1,80 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-form-group">
+  <a href="00list" class="govuk-back-link">Back</a>
+  <br></br>
+  <p style="font-size:150%;"><strong>Incident details</strong></p>
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      Type
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Abuse, Threats
+      </dd>
+    </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          30/03/21 - 10:30
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Location
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong>Bromley Jobcentre</strong><br>
+          72 Guild Street<br>London<br>SE23 6FH
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Area
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Adviser interview area
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Citizen involved
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a href="#citizen">
+            Robert De Silva
+          </a>
+        </dd>
+
+      </div>
+
+<div class="govuk-form-group">
+  <br></br>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          I confirm this is the incident I witnessed
+        </label>
+      </div>
+</div>
+
+
+
+  <br></br>
+    <a href="02statement.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+      Continue
+      </a>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,131 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<a href="../../index.html"> <img src="/public/images/header.png" width="100%" height="100%" alt="Header"> </a>
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="00reportError">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <style>
+    .nav {
+        background-color: #1E6FB8;
+        height: 48px;
+        padding-top: 24px;
+        padding-right: 8px;
+        padding-bottom: 8px;
+        padding-left: 16px;
+    }
+    .menu {
+        background-color: #F8F8F8;
+        height: 36px;
+        padding-top: 24px;
+        padding-right: 8px;
+        padding-bottom: 8px;
+        padding-left: 16px;
+    }
+    .report {
+      color:white;
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .menu_font {
+      color:#1E6FB8;
+      font-size: 26px;
+      font-weight: bold;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #F8F8F8;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: #1E6FB8;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        padding: 0px 16px;
+        text-decoration: none;
+      }
+      .active {
+  text-decoration: underline solid;
+  text-decoration-thickness: 20%;
+  font-weight: bold;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  text-decoration: underline solid;
+  text-decoration-thickness: 20%;
+}
+
+</style>
+
+<main class="govuk-main-wrapper">
+
+<div class="nav">
+      <p class="report">INCIDENT REPORT - FG56789K</p>
+</div>
+<div class="menu">
+  <ul>
+    <li><a class="active" href="#home">Incident</a></li>
+    <li><a href="#news">Witness report</a></li>
+    <li><a href="#contact">History</a></li>
+    <li><a href="#contact">Manager recommendations</a></li>
+  </ul>
+</div>
+  </main>
+
+<main class="govuk-main-wrapper--auto-spacing">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Two-thirds column</h2>
+        <p class="govuk-body-l">This is a lead paragraph inside a two-thirds wide column</p>
+        <p class="govuk-body">This is a paragraph inside a two-thirds wide column</p>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">One-third column</h3>
+        <p class="govuk-body">This is a paragraph inside a one-third wide column</p>
+      </div>
+    </div>
+    <a href="01report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+      Continue
+      </a>
+
+
+
+
+
+
+  <br></br>
+
+
+
+
+{% endblock %}

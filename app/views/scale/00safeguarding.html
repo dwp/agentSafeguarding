@@ -1,0 +1,63 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-breadcrumbs ">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">DWP Safeguarding</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item" aria-current="page">Report an incident</li>
+    </ol>
+  </div>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Report an incident</h1>
+
+        <a href="facetoface/01when.html"><img src="/public/images/scale1.png" alt="Facetoface" ></a> <a href="online/01when.html"><img src="/public/images/scale2.png" alt="Telephone"></a>  <a href="online/01when.html"><img src="/public/images/scale3.png" alt="Written"></a> <a href="online/01when.html"><img src="/public/images/scale4.png" alt="Video Call"></a>  <a href="online/01when.html"><img src="/public/images/scale5.png" alt="Video Call"></a> 
+
+
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+
+        <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+        <aside class="app-related-items" role="complementary">
+          <h2 class="govuk-heading-m" id="subsection-title">
+           Related topics
+          </h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="govuk-list govuk-!-font-size-16">
+              <li>
+                <a class="govuk-link" href="00list.html">
+                  Incident reports list
+                </a>
+              </li>
+              <li>
+                <a class="govuk-link" href="https://intranet.dwp.gov.uk/section/working-dwp/human-resources/work/health/employee-assistance-programme">
+                  Help Employee Assistance
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

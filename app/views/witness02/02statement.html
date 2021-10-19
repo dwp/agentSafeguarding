@@ -1,0 +1,37 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-form-group">
+    <a href="01witness.html" class="govuk-back-link">Back</a>
+    <br></br>
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+      Please provide a brief statement
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+    Please report the exact words/language used by citizen. That would be extremely useful for us.
+  </div>
+
+  <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="10" aria-describedby="with-hint-info with-hint-hint"></textarea>
+   </div>
+
+   <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+     You can enter up to 2000 characters
+   </div>
+<br></br>
+
+        <a href="03success.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+          Save & submit
+          </a>
+
+
+
+
+
+{% endblock %}
