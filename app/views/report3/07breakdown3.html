@@ -1,0 +1,33 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-form-group">
+    <a href="06breakdown2.html" class="govuk-back-link">Back</a>
+    <br></br>
+    <p>Incident breakdown <strong>3 of 5</strong> </p>
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+      How did you handle the interaction?
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+  How did you try to resolve the situation? What worked and what did not worked and why?
+  </div>
+  <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="10" aria-describedby="with-hint-info with-hint-hint"></textarea>
+   </div>
+
+<br></br>
+        <a href="08breakdown4.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+        Continue
+          </a>
+
+
+
+
+
+{% endblock %}

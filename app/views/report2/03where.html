@@ -1,0 +1,232 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="02when.html" class="govuk-back-link">Back</a>
+
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Where did the interaction happen?
+      </h1>
+    </legend>
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Job centre
+        </span>
+      </h2>
+    </div>
+
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="roll-number" style="strong">
+          <strong>Search by postcode</strong>
+        </label>
+        <div id="roll-number-hint" class="govuk-hint">
+          eg LS1 1AG. Ensure there is a space between the two parts of the postcode.
+        </div>
+          <input class="govuk-input govuk-input--width-10" id="roll-number" name="roll-number" type="text" spellcheck="false" aria-describedby="roll-number-hint">
+        </div>
+
+        <a href="03whereSearch.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+          Search
+          </a>
+
+        <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <label class="govuk-label" for="roll-number" style="strong">
+                    <strong>And also please specify the location of the interaction</strong>
+                  </label>
+
+                  <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                        Adviser interview area
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                        Customer Assisted Service phones in Job Centre
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                        Customer computer area in Job Centre
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                        Directly outside the building
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                        Group session room
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                        Interview room
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                        Outreach premises
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                      Public entrance / welcome area
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                        Screened area
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                        Staff car park
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                        Waiting area
+                      </label>
+                    </div>
+                  </div>
+
+                </fieldset>
+              </div>
+
+    </div>
+    </div>
+
+
+
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+        Off-site
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      Customer home (during visit)
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      Outside work / outside working hours
+                    </label>
+                  </div>
+
+    </div>
+  </div>
+    </div>
+    </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          Online
+        </span>
+      </h2>
+    </div>
+
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+      <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      Email / Social media / Text
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      Universal Credit Journal entry (In office)
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                      Universal Credit Journal entry (Working from home)
+                    </label>
+                  </div>
+                </div>
+
+              </fieldset>
+            </div>
+    </div>
+
+
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+        Telephone
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+      <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      Telephone Call (In office)
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      Telephone Call (Working from home)
+                    </label>
+                  </div>
+
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+<br></br>
+  <a href="04who.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+    Continue
+    </a>
+
+
+
+
+{% endblock %}

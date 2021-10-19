@@ -1,0 +1,99 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<a href="../../index.html"> <img src="/public/images/header.png" width="100%" height="100%" alt="Header"> </a>
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="03reportError">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+{% block content %}
+
+
+
+
+<div class="govuk-form-group">
+    <a href="02report" class="govuk-back-link">Back</a>
+    <br></br>
+
+    <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+        Describe the incident</h1>
+
+  <img src="/public/images/notification3.png" width="100%" height="100%" alt="Keep to the facts and be as specific as possible. Do not include the names of any DWP staff in your answers.">
+  <br></br>
+
+  <p>
+    <strong>1. Why was the customer in contact with us?</strong> <br><span style="color: #505a5f">For example: I called John for a routine welfare check.</span>
+
+  </p>
+  <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="4" aria-describedby="with-hint-info with-hint-hint"></textarea>
+
+    <p>
+      <strong>2. How did the incident start? Was there a specific trigger?</strong> <br>Please report the exact words that everyone used. <br><span style="color: #505a5f">For example: I asked John to come into the office next week, and he raised his voice and shouted “I’m not coming to the bloody job centre.”</span>
+    </p>
+    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="4" aria-describedby="with-hint-info with-hint-hint"></textarea>
+
+    <p>
+      <strong>3. What were the issues with the customer’s behaviour? </strong> <br>Tell us what they said and did, and report the exact words that everyone used.<br><span style="color: #505a5f">For example: John refused to answer my questions and said “you’re a stupid cow.”</span>
+    </p>
+    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="4" aria-describedby="with-hint-info with-hint-hint"></textarea>
+
+    <p>
+      <strong>4. Tell us what happened next. How did you try to resolve the situation, and how did the customer react? </strong> <br>Please report the exact words that everyone used. <br><span style="color: #505a5f">For example: I said, “Stop swearing at me. I am trying to help you.” But the customer continued to shout and said, "You're not bloody helping me."</span>
+    </p>
+    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="4" aria-describedby="with-hint-info with-hint-hint"></textarea>
+    <p>
+      <strong>5. Were there any witnesses to this incident?</strong>
+    </p>
+    <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      No
+                    </label>
+                    <br></br>
+                  </div>
+   </div>
+
+   <p>
+     <strong>6.	How did your interaction with the customer end?</strong> <br><span style="color: #505a5f">For example: I terminated the call.</span>
+   </p>
+   <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="4" aria-describedby="with-hint-info with-hint-hint"></textarea>
+
+   <p>
+     <strong>7. How did you feel during the incident?</strong> <br> Include emotional, mental and physical effects.
+   </p>
+   <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="4" aria-describedby="with-hint-info with-hint-hint"></textarea>
+
+    </div>
+
+
+        <a href="04report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+        Submit report
+          </a>
+
+          <br></br>
+
+
+
+
+
+{% endblock %}

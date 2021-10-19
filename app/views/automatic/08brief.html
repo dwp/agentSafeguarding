@@ -1,0 +1,86 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-form-group">
+    <a href="07behaviour.html" class="govuk-back-link">Back</a>
+    <br></br>
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+      Incident trigger
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+    What is the event or situation that started the incident?
+  </div>
+  <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="6" aria-describedby="with-hint-info with-hint-hint"></textarea>
+   </div>
+<hr>
+<br></br>
+
+<div class="govuk-form-group">
+<h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+    Description of the interaction
+  </label>
+</h1>
+<div id="more-detail-hint" class="govuk-hint">
+  Please describe what happened during the incident. Quote the exact words if relevant.
+</div>
+<textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="6" aria-describedby="with-hint-info with-hint-hint"></textarea>
+ </div>
+<hr>
+<br></br>
+
+<div class="govuk-form-group">
+<h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+    Handling the interaction
+  </label>
+</h1>
+<div id="more-detail-hint" class="govuk-hint">
+  How did you handle the interaction?
+</div>
+<textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="6" aria-describedby="with-hint-info with-hint-hint"></textarea>
+ </div>
+<hr>
+<br></br>
+
+<div class="govuk-form-group">
+<h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+    End of the incident
+  </label>
+</h1>
+<div id="more-detail-hint" class="govuk-hint">
+  Please describe how the incident ended and if anything relevant happened next
+</div>
+<textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="6" aria-describedby="with-hint-info with-hint-hint"></textarea>
+ </div>
+<hr>
+<br></br>
+
+<div class="govuk-form-group">
+<h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+  How did you feel during the interaction?
+  </label>
+</h1>
+<div id="more-detail-hint" class="govuk-hint">
+  Please describe your emotional state during the interaction
+</div>
+<textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="6" aria-describedby="with-hint-info with-hint-hint"></textarea>
+ </div>
+<hr>
+<br></br>
+
+
+        <a href="08witness.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+          Continue
+          </a>
+
+
+
+
+
+{% endblock %}

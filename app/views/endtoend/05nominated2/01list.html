@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<table class="govuk-table">
+  <h1 class="govuk-heading-xl">
+    Outstanding Incidents list
+  </h1>
+  <h2 class="govuk-heading-m">All incidents</h2>
+
+  <a href="00list.html"><img src="/public/images/card_totalTWO.png" alt="Reviewed" ></a> &nbsp; <a href="00listRed.html"><img src="/public/images/card_outstandingONEoff.png" alt="Reviewed"></a> &nbsp; <a href="00listGreen.html"><img src="/public/images/card_readyONE.png" alt="Reviewed"></a> &nbsp;
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">Date of incident</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Reporter</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Type</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Interaction</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Assigned to</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">22/04/21 - 10:00</a></th>
+      <td class="govuk-table__cell">Mark Green</td>
+      <td class="govuk-table__cell">Verbal Abuse / Threats</td>
+      <td class="govuk-table__cell">Telephone</td>
+        <td class="govuk-table__cell">Sadiq Matcha</td>
+      <td class="govuk-table__cell"><img src="/public/images/dotRed.png" alt="Closed"> &nbsp;Outstanding</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="02incident.html">21/04/21 - 11:30</a></th>
+      <td class="govuk-table__cell">Sadiq Assam</td>
+      <td class="govuk-table__cell">Verbal Abuse / Threats</td>
+        <td class="govuk-table__cell">Telephone</td>
+      <td class="govuk-table__cell"><a href="#">Assign to me</a></td>
+
+      <td class="govuk-table__cell"><img src="/public/images/dotGreen.png" alt="Reviewed"> &nbsp;Ready for decision</td>
+    </tr>
+
+  </tbody>
+</table>
+
+{% endblock %}

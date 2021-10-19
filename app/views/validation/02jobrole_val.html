@@ -1,0 +1,107 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#passport-issued-error"> Please choose an option</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="govuk-width-container">
+  <a href="01yourmanager_val" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/form-handler" method="post" novalidate>
+
+          <div class="govuk-form-group govuk-form-group--error">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Your business area
+                </h1>
+              </legend>
+              <span id="passport-issued-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Please choose an option
+              </span>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                    AC - Assessment Centre
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                    CMS - Child Maintenance Service
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                    Corporate
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                    Debt
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                    Fraud
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                    JS / SC
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                    Pensions
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                   PIP - Personal Independence Payment
+                  </label>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+        </div>
+  </div>
+
+    <br></br>
+      <a href="02jobrole2_val.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+        Continue
+        </a>
+
+
+
+
+
+
+{% endblock %}

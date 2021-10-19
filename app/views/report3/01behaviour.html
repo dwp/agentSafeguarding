@@ -1,0 +1,101 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<a href="00safeguarding.html" class="govuk-back-link">Back</a>
+<br></br>
+<fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      What would you like to report?
+    </h1>
+  </legend>
+  <div id="waste-hint" class="govuk-hint">
+ Select all that apply.
+</div>
+<div class="govuk-checkboxes">
+ <div class="govuk-checkboxes__item">
+   <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+   <label class="govuk-label govuk-checkboxes__label" for="waste">
+     Immediate risk for life or harm for you or others
+   </label>
+ </div>
+ <div class="govuk-checkboxes__item">
+   <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+   <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+     Severe disruption of normal work
+   </label>
+ </div>
+ <div class="govuk-checkboxes__item">
+   <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+   <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+     Terrorist threat
+   </label>
+ </div>
+ <div class="govuk-checkboxes">
+   <div class="govuk-checkboxes__item">
+     <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+     <label class="govuk-label govuk-checkboxes__label" for="waste">
+       Abuse
+     </label>
+   </div>
+   <div class="govuk-checkboxes__item">
+     <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+     <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+       Threats
+     </label>
+   </div>
+   <div class="govuk-checkboxes__item">
+     <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+     <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+       Intimidation
+     </label>
+   </div>
+   <div class="govuk-checkboxes__item">
+     <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+     <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+       Harassment
+     </label>
+   </div>
+   <div class="govuk-checkboxes__item">
+     <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+     <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+       Damage to property
+     </label>
+   </div>
+   <div class="govuk-checkboxes__item">
+     <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+     <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+       Attempted assaults
+     </label>
+   </div>
+   <div class="govuk-checkboxes__item">
+     <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+     <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+       Actual assualt / physical violence
+     </label>
+   </div>
+   <div class="govuk-checkboxes__item">
+     <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+     <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+       Other
+     </label>
+   </div>
+ </div>
+</div>
+
+
+
+  <br></br>
+    <a href="02when.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+      Continue
+      </a>
+
+
+
+
+{% endblock %}

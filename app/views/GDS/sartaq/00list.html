@@ -1,0 +1,62 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<a href="00safeguarding.html" class="govuk-back-link">Back</a>
+<br></br>
+
+<table class="govuk-table">
+  <h1 class="govuk-heading-xl">
+    Incident list
+    <p><strong>Bromley Job Centre</strong></p>
+  </h1>
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header app-custom-class">Date</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Reporter</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Incident type</th>
+        <th scope="col" class="govuk-table__header app-custom-class">Interaction type</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Customer</th>
+      <th scope="col" class="govuk-table__header app-custom-class">Witnesses</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">22/04/21 - 10:30</th>
+      <td class="govuk-table__cell">Whitney Earl</td>
+      <td class="govuk-table__cell">Physical violence</td>
+      <td class="govuk-table__cell">Face to face</td>
+      <td class="govuk-table__cell">Robert De Silva</td>
+      <td class="govuk-table__cell"><a href="01details">Add witness report</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">21/04/21 - 13:45</th>
+      <td class="govuk-table__cell">Sadiq Assam</td>
+      <td class="govuk-table__cell">Verbal Abuse / Threats</td>
+      <td class="govuk-table__cell">Telephone</td>
+        <td class="govuk-table__cell">Andrew Whittard</td>
+      <td class="govuk-table__cell"><a href="02details">Add witness report</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">21/04/21 - 16:00</th>
+      <td class="govuk-table__cell">Whitney Earl</td>
+      <td class="govuk-table__cell">Harassment</td>
+      <td class="govuk-table__cell">Telephone</td>
+        <td class="govuk-table__cell">Willy Wonka</td>
+      <td class="govuk-table__cell"><a href="#">Add witness report</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<br></br>
+<a href="https://dwpdigital.atlassian.net/wiki/spaces/~480880257/pages/132201939278/01e+-+Incident+List">
+ <img src="/public/images/confluence.png" alt="Reviewed" width="100" height="100">
+</a>
+
+
+{% endblock %}

@@ -1,0 +1,87 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-form-group">
+  <a href="00list" class="govuk-back-link">Back</a>
+  <br></br>
+  <p style="font-size:150%;"><strong>Incident details</strong></p>
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+      Type
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Verbal abuse / threats
+      </dd>
+    </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          22/04/21 - 10:30
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Location
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong>Bromley Jobcentre</strong><br>
+          72 Guild Street<br>London<br>SE23 6FH
+        </dd>
+      </div>
+          <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Citizen involved
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a href="#citizen">
+            Robert De Silva
+          </a>
+        </dd>
+
+      </div>
+</div>
+<div class="govuk-form-group">
+  <br></br>
+  <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          I witnessed this incident
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          I am reporting on behalf of somebody else
+        </label>
+      </div>
+    </div>
+
+
+
+
+
+  <br></br>
+    <a href="05breakdown1.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+      Continue
+      </a>
+
+</div>
+
+<br></br>
+<a href="https://dwpdigital.atlassian.net/wiki/spaces/~480880257/pages/132202365239/02+-+Incident+Details">
+ <img src="/public/images/confluence.png" alt="Reviewed" width="100" height="100">
+</a>
+
+
+
+{% endblock %}

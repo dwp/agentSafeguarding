@@ -1,0 +1,49 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-form-group">
+    <a href="07behaviour.html" class="govuk-back-link">Back</a>
+    <br></br>
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+      Can you provide more detail?
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+    Following the structure used so far please give more details of the incident creating a brief narrative of the event.
+    <br></br>
+    Please report the exact words/language used by citizen. That would be extremely useful for us.
+  </div>
+  <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Read an example of a report
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</details>
+
+  <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="10" aria-describedby="with-hint-info with-hint-hint"></textarea>
+   </div>
+
+   <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+     You can enter up to 2000 characters
+   </div>
+<br></br>
+
+        <a href="11success.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+          Save & Submit
+          </a>
+
+
+
+
+
+{% endblock %}

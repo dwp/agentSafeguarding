@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-form-group">
+    <a href="01prepare.html" class="govuk-back-link">Back</a>
+    <br></br>
+
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+      Source of the concern
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+    What was the original document of the concern?
+  </div>
+  <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="1" aria-describedby="with-hint-info with-hint-hint"></textarea>
+
+
+   <div id="more-detail-hint" class="govuk-hint">
+    Specific reference in the original document (i.e. page number)
+   </div>
+   <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="1" aria-describedby="with-hint-info with-hint-hint"></textarea>
+    </div>
+
+
+
+<br></br>
+        <a href="third2.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+        Continue
+          </a>
+
+
+
+
+
+{% endblock %}
