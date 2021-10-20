@@ -13,6 +13,10 @@ router.use((req, res, next) => {
 
 // ROUTES FOR THE LETTER GENERATOR
 
+router.post('/beta/lettergenerator/start', (req, res) => {
+  res.redirect('/beta/lettergenerator/first-or-second')
+})
+;
 
 router.post('/beta/lettergenerator/first-or-second', (req, res) => {
   res.redirect('/beta/lettergenerator/where-did-the-incident-take-place')
