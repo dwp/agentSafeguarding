@@ -60,6 +60,10 @@
               {% include './includes/f4-second-warning.html' %}
             {% endif %}
 
+            {% if data['first-or-second'] === 'third' %}
+              {% include './includes/f4-multiple-warnings.html' %}
+            {% endif %}
+
             <!-- FIFTH FRAGMENT - RECORD KEPT -->
             {% include './includes/f5-update-records.html' %}
 
