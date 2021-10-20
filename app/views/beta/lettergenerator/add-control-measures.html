@@ -1,0 +1,102 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of checkbox-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  What control measures are you adding?
+                </h1>
+              </legend>
+
+              <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="guard" name="add-control-measure-1" type="checkbox" value="guard">
+                  <label class="govuk-label govuk-checkboxes__label" for="guard">
+                    you must be accompanied by a security guard to all future appointments
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="named-staff-only" name="add-control-measure-2" type="checkbox" value="named-staff-only" data-aria-controls="named-staff-member">
+                  <label class="govuk-label govuk-checkboxes__label" for="named-staff-only">
+                    you must only deal with [NAMED STAFF MEMBER]
+                  </label>
+                </div>
+
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="named-staff-member">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="named-staff">
+                        Named staff member
+                      </label>
+                      <input class="govuk-input govuk-!-width-two-thirds" id="named-staff" name="named-staff" type="text" spellcheck="false">
+                    </div>
+                  </div>
+
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="screen-environment" name="add-control-measure-3" type="checkbox" value="screen-environment">
+                  <label class="govuk-label govuk-checkboxes__label" for="screen-environment">
+                    you can only attend appointments by video call
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="no-home-visits" name="add-control-measure-4" type="checkbox" value="no-home-visits">
+                  <label class="govuk-label govuk-checkboxes__label" for="no-home-visits">
+                    DWP staff will not visit you in your home
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="banned" name="add-control-measure-5" type="checkbox" value="banned">
+                  <label class="govuk-label govuk-checkboxes__label" for="banned">
+                    you are banned from entering Jobcentres or any other DWP offices
+                  </label> </div>
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="other" name="add-control-measure-6" type="checkbox" value="other" data-aria-controls="other-control-measures">
+                    <label class="govuk-label govuk-checkboxes__label" for="other">
+                      other (manual text input)
+                    </label>
+                  </div>
+
+
+                    <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="other-control-measures">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="other-measures">
+                          Enter the control measure exactly how it will appear on the letter
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="other-measures" name="other-measures" type="text" spellcheck="false">
+                      </div>
+                    </div>
+
+
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+    </main>
+  </div>
+  {% endblock %}
