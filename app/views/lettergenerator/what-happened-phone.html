@@ -1,0 +1,84 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  What did the citizen do?
+                </h1>
+              </legend>
+
+              <div class="govuk-checkboxes govuk-checkboxes--conditional" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="abusive" name="what-happened-1" type="checkbox" value="abusive">
+                  <label class="govuk-label govuk-checkboxes__label" for="abusive">
+                    used abusive language
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="threatening" name="what-happened-2" type="checkbox" value="threatening">
+                  <label class="govuk-label govuk-checkboxes__label" for="threatening">
+                    used threatening behaviour
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="recording" name="what-happened-4" type="checkbox" value="recording">
+                  <label class="govuk-label govuk-checkboxes__label" for="recording">
+                    recorded or filmed without permission
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="password" name="what-happened-6" type="checkbox" value="password">
+                  <label class="govuk-label govuk-checkboxes__label" for="password">
+                    used an offensive password pr security question
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="other" name="what-happened-5" type="checkbox" value="other" data-aria-controls="other-incident-type">
+                  <label class="govuk-label govuk-checkboxes__label" for="other">
+                    other
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="other-incident-type">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="named-staff">
+                      Enter what did the citizen did exactly how it will appear on the letter
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="other-incident" name="other-incident" type="text" spellcheck="false">
+                  </div>
+                </div>
+
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+    </main>
+  </div>
+  {% endblock %}
