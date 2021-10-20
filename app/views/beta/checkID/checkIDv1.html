@@ -1,0 +1,51 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<a href="../../index.html"> <img src="/public/images/header.png" width="100%" height="100%" alt="Header"> </a>
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="00reportError">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<a href="../../index.html" class="govuk-back-link">Back</a>
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="national-insurance-number">
+    National Insurance number
+  </label>
+  <div id="national-insurance-number-hint" class="govuk-hint">
+    For example, ‘QQ 12 34 56 C’.
+  </div>
+  <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+</div>
+
+
+  <br></br>
+
+
+
+
+<a href="01report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+  Continue
+  </a>
+
+  <br></br>
+
+
+
+
+{% endblock %}
