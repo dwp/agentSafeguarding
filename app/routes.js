@@ -5,11 +5,11 @@ const router = express.Router()
 
 // copy the const name and the file path to new version
 
-const lettergenerator = require('./routes/lettergenerator');;
+const lettergeneratorV1 = require('./routes/lettergeneratorV1');;
 
 
 //copy the router use and update the sprint version
 
-router.use(lettergenerator);
+router.use(lettergeneratorV1);
 
 module.exports = router
