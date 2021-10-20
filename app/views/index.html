@@ -10,54 +10,121 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
+        Agent Safeguarding Beta
         <span class="govuk-caption-xl">{{releaseVersion}}</span>
       </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+      <h2 class="govuk-heading-m">Versions</h2>
 
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
-
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Describe the incident: page
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
       <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/beta/breakdown/breakdown.html">Breakdown v.1-A - Blue version</a>
+          <p class='govuk-body'>9 Questions. This is the version after Alpha. <br> Average time to complete: 12 minutes</p>
+        </li>
 
-            <li>
-              <a href="/GDS/index.html">GDS Assessment</a>
-            </li>
-            <li>
-              <a href="/beta/breakdown.html">Breakdown</a>
-            </li>
-            <li>
-              <a href="/beta/breakdownv2.html">Breakdown v.2</a>
-            </li>
-            <li>
-              <a href="/beta/breakdownv3.html">Breakdown v.3</a>
-            </li>
-            <li>
-              <a href="/beta/report/00report.html">Report incident</a>
-            </li>
-            <li>
-              <a href="/beta/reportv2/00report.html">Report incident v.2</a>
-            </li>
-            <li>
-              <a href="/beta/reportv3/00report.html">Report incident v.3</a>
-            </li>
-            <li>
-              <a href="/beta/linemanager/00report.html">Line manager: incident report</a>
-            </li>
+        <li>
+          <a href="/beta/breakdown/breakdownv2.html">Breakdown v.1-B - Red version</a>
+          <p class='govuk-body'>1 textarea and a checklist. <br> Average time to complete: 8 minutes</p>
+        </li>
+        <li>
+          <a href="/beta/breakdown/breakdownv3.html">Breakdown v.2-A - Blue version</a>
+          <p class='govuk-body'>UX draft. Can we reduce the number of questions? Eliminate questions that where causing duplications. Down to 5 questions.</p>
+        </li>
+        <li>
+          <a href="/beta/breakdown/breakdownv4.html">Breakdown v.3-A - Blue version</a>
+          <p class='govuk-body'>New contents from Emma. 7 Questions. Includes validations (Click Feedback survey)</p>
+        </li>
+        <li>
+          <a href="/beta/breakdown/breakdownv5.html">Breakdown v.2-B - Red version</a>
+          <p class='govuk-body'>New contents from Emma.</p>
+        </li>
+        </ul>
+    </div>
+  </div>
 
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Date and time: page
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/beta/datetime/datetimev1.html">Date and time v.1-A - Simple</a>
+          <p class='govuk-body'>This is the simple version with no guidance. Assumption: Agent are going to intuitively try to guess the best time for the report.</p>
+        </li>
+
+        <li>
+          <a href="/beta/datetime/datetimev2.html">Date and time v.1-B - Contents</a>
+          <p class='govuk-body'>This is the version with guidances around estimating the time of the incident.</p>
+        </li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Incident report: journey
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="/beta/report_incident/reportv1/00report.html">Report incident v.1</a>
+            </li>
+            <li>
+              <a href="/beta/report_incident/reportv2/00report.html">Report incident v.2</a>
+            </li>
+            <li>
+              <a href="/beta/report_incident/reportv3/00report.html">Report incident v.3 (aka: Richard's version)</a>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">
+                  <strong class="govuk-tag govuk-tag--turquoise">
+                  Active
+                </strong>
+
+      </td>
+    </tr>
+            </li>
+          </ul>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+          Leave Recommendations: journey
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+      <p class='govuk-body'>This is the content for Know your audience.</p>
+      <ul class="govuk-list govuk-list--bullet">
+            <li>
+              <a href="/beta/report_incident/reportv1/00report.html">Line manager v.1</a>
+            </li>
       </ul>
+    </div>
+  </div>
+
+</div>
+
     </div>
   </div>
 
