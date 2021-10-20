@@ -1,0 +1,12 @@
+<h2 class="govuk-heading-m">Action we are taking</h2>
+
+<p class="govuk-body">To protect our staff from future incidents:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+{% if data['add-control-measure-1'] == 'guard' %}<li>you must be accompanied by a security guard to all future appointments</li>{% endif %}
+{% if data['add-control-measure-2'] == 'named-staff-only' %}<li>you must only deal with {{data['named-staff']}}</li>{% endif %}
+{% if data['add-control-measure-3'] == 'screen-environment' %}<li>you can only attend appointments by video call</li>{% endif %}
+{% if data['add-control-measure-4'] == 'no-home-visits' %}<li>DWP staff will not visit you in your home</li>{% endif %}
+{% if data['add-control-measure-5'] == 'banned' %}<li>you are banned from entering Jobcentres or any other DWP offices</li>{% endif %}
+{% if data['add-control-measure-6'] == 'other' %}<li>{{data['other-measures']}}</li>{% endif %}
+</ul>

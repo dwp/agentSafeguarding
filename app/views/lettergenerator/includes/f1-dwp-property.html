@@ -1,0 +1,13 @@
+<h1 class="govuk-heading-l">Letter of Warning</h1>
+
+<p class="govuk-body">You visited a DWP property on 16 September 2021.</p>
+
+<p class="govuk-body">During this visit you:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  {% if data['what-happened-1'] == 'abusive' %}<li>used abusive language</li>{% endif %}
+  {% if data['what-happened-2'] == 'threatening' %}<li>used threatening behaviour</li>{% endif %}
+  {% if data['what-happened-3'] == 'violent' %}<li>were physically violent</li>{% endif %}
+  {% if data['what-happened-4'] == 'recording' %}<li>recorded or filmed without permission</li>{% endif %}
+  {% if data['what-happened-5'] == 'other' %}<li>{{data['other-incident']}}</li>{% endif %}
+</ul>

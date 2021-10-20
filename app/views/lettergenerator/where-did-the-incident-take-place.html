@@ -1,0 +1,81 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Where did the incident take place?
+                </h1>
+              </legend>
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="dwp-property" name="where-did-the-incident-take-place" type="radio" value="dwp-property">
+                  <label class="govuk-label govuk-radios__label" for="dwp-property">
+                    Face-to-face at a DWP property
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="outside-dwp-property" name="where-did-the-incident-take-place" type="radio" value="outside-dwp-property">
+                  <label class="govuk-label govuk-radios__label" for="outside-dwp-property">
+                    Face-to-face outside of DWP property
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="phone" name="where-did-the-incident-take-place" type="radio" value="phone">
+                  <label class="govuk-label govuk-radios__label" for="phone">
+                    Over the phone
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="video" name="where-did-the-incident-take-place" type="radio" value="video">
+                  <label class="govuk-label govuk-radios__label" for="video">
+                    In a video call
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="written" name="where-did-the-incident-take-place" type="radio" value="written">
+                  <label class="govuk-label govuk-radios__label" for="written">
+                    In a written submission, like a letter or form
+                  </label> </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="uc-diary" name="where-did-the-incident-take-place" type="radio" value="uc-diary">
+                    <label class="govuk-label govuk-radios__label" for="uc-diary">
+                      In the citizen's Universal Credit diary
+                    </label>
+                  </div>
+
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+    </main>
+  </div>
+  {% endblock %}

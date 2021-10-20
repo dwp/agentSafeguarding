@@ -1,0 +1,81 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+
+            <!-- FIRST FRAGMENT - LOCATION -->
+
+            {% if data['where-did-the-incident-take-place'] === 'dwp-property' %}
+              {% include './includes/f1-dwp-property.html' %}
+            {% endif %}
+
+            {% if data['where-did-the-incident-take-place'] === 'outside-dwp-property' %}
+              {% include './includes/f1-outside-dwp-property.html' %}
+            {% endif %}
+
+            {% if data['where-did-the-incident-take-place'] === 'phone' %}
+              {% include './includes/f1-telephone.html' %}
+            {% endif %}
+
+            {% if data['where-did-the-incident-take-place'] === 'video' %}
+              {% include './includes/f1-video.html' %}
+            {% endif %}
+
+            {% if data['where-did-the-incident-take-place'] === 'written' %}
+              {% include './includes/f1-written.html' %}
+            {% endif %}
+
+            {% if data['where-did-the-incident-take-place'] === 'uc-diary' %}
+              {% include './includes/f1-journal.html' %}
+            {% endif %}
+
+            <!-- SECOND FRAGMENT - CONTROL MEASURES -->
+
+            {% if data['decide-control-measures'] === 'yes' %}
+              {% include './includes/f2-controls.html' %}
+            {% endif %}
+
+            {% if data['decide-control-measures'] === 'no' %}
+              {% include './includes/f2-no-controls.html' %}
+            {% endif %}
+
+            <!-- THIRD FRAGMENT - INAPPROPRIATE PASSWORD -->
+            {% if data['what-happened-6'] == 'password' %}
+              {% include './includes/f3-password.html' %}
+            {% endif %}
+
+            <!-- FOURTH FRAGMENT - WARNING -->
+
+            {% if data['first-or-second'] === 'first' %}
+              {% include './includes/f4-first-warning.html' %}
+            {% endif %}
+
+            {% if data['first-or-second'] === 'second' %}
+              {% include './includes/f4-second-warning.html' %}
+            {% endif %}
+
+            <!-- FIFTH FRAGMENT - RECORD KEPT -->
+            {% include './includes/f5-update-records.html' %}
+
+            <!-- SIXTH FRAGMENT - CLOSING PARAGRAPH -->
+            {% include './includes/f6-closing.html' %}
+
+          </div>
+
+          <button type="submit" class="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+
+
+    </div>
+  </main>
+</div>
+{% endblock %}

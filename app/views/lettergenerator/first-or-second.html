@@ -1,0 +1,54 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Is this the first or second warning letter?
+                </h1>
+              </legend>
+
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="first" name="first-or-second" type="radio" value="first">
+                  <label class="govuk-label govuk-radios__label" for="first">
+                    First
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="second" name="first-or-second" type="radio" value="second">
+                  <label class="govuk-label govuk-radios__label" for="second">
+                    Second
+                  </label>
+                </div>
+
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="govuk-button">
+              Continue
+            </button>
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+    </main>
+  </div>
+  {% endblock %}
