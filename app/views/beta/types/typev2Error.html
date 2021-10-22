@@ -22,12 +22,29 @@
 {% block content %}
 <a href="../../index.html" class="govuk-back-link">Back</a>
 <br></br>
-<fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#passport-issued-day">Please choose all the relevant options</a>
+      </li>
+
+    </ul>
+  </div>
+
+</div>
+  <div class="govuk-form-group govuk-form-group--error">
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
     <h1 class="govuk-fieldset__heading">
       What would you like to report?
     </h1>
   </legend>
+  <span id="passport-issued-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> What better describe the incident?
+              </span>
   <div id="waste-hint" class="govuk-hint">
  Select all that apply.
 </div>
@@ -78,6 +95,8 @@
    </div>
 
 
+</div>
+</div>
 </div>
 
 
