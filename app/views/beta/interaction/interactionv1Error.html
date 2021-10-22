@@ -14,7 +14,7 @@
       beta
     </strong>
     <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="interactionv1Error">feedback</a> will help us to improve it.
+      This is a new service – your <a class="govuk-link" href="interactionv1">feedback</a> will help us to improve it.
     </span>
   </p>
 </div>
@@ -24,19 +24,28 @@
 <div class="govuk-width-container">
 
     <a href="02report.html" class="govuk-back-link">Back</a>
-
-    <main class="govuk-main-wrapper " id="main-content" role="main">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <form action="/form-handler" method="post" novalidate>
-
-            <div class="govuk-form-group">
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#passport-issued-day">Please choose one option</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+            <div class="govuk-form-group govuk-form-group--error">
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
                     How did the interaction take place?
                   </h1>
                 </legend>
+                <span id="passport-issued-error" class="govuk-error-message">
+                              <span class="govuk-visually-hidden">Error:</span> What better describe the incident?
+                            </span>
                 <div id="waste-hint" class="govuk-hint">
                Choose one
               </div>
@@ -90,11 +99,8 @@
             <a href="04report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
               Continue
               </a>
-          </form>
+
         </div>
-      </div>
-    </main>
-  </div>
 
 
 
