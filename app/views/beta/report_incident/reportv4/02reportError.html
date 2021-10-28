@@ -16,7 +16,7 @@
       </a>
     </div>
     <div class="govuk-header__content">
-      <a href="../../../index.html" class="govuk-header__link govuk-header__link--service-name">
+      <a href="../../index.html" class="govuk-header__link govuk-header__link--service-name">
         Agent Safeguarding
       </a>
     </div>
@@ -35,101 +35,91 @@
   </p>
 </div>
 {% endblock %}
+
 {% block content %}
-<a href="01report" class="govuk-back-link">Back</a>
-<br></br>
-<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
-  <h2 class="govuk-error-summary__title" id="error-summary-title">
-    There is a problem
-  </h2>
-  <div class="govuk-error-summary__body">
-    <ul class="govuk-list govuk-error-summary__list">
-      <li>
-        <a href="#passport-issued-day">Select the type of incident</a>
-      </li>
+<div class="govuk-width-container">
 
-    </ul>
-  </div>
-  </div>
-<div class="govuk-form-group govuk-form-group--error">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-    <h1 class="govuk-fieldset__heading">
-      What would you like to report?
-    </h1>
-  </legend>
-  <span id="passport-issued-error" class="govuk-error-message">
-                <span class="govuk-visually-hidden">Error:</span> Select the type of incident
-              </span>
-  <div id="waste-hint" class="govuk-hint">
- Select all that apply.
-</div>
-<div class="govuk-checkboxes">
- <div class="govuk-checkboxes__item">
-   <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-   <label class="govuk-label govuk-checkboxes__label" for="waste">
-     Threat
-   </label>
- </div>
- <div class="govuk-checkboxes__item">
-   <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-   <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-     Verbal abuse
-   </label>
- </div>
- <div class="govuk-checkboxes__item">
-   <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-   <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-     Offensive behaviour
-   </label>
- </div>
- <div class="govuk-checkboxes">
-   <div class="govuk-checkboxes__item">
-     <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-     <label class="govuk-label govuk-checkboxes__label" for="waste">
-      Discrimination
-     </label>
-   </div>
-   <div class="govuk-checkboxes__item">
-     <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-     <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-      Physical assault
-     </label>
-   </div>
-   <div class="govuk-checkboxes__item">
-     <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-     <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-      Attempted physical assault
-     </label>
-   </div>
-   <div class="govuk-checkboxes__item">
-     <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-     <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-      Recorded or filmed without permission
-     </label>
-   </div>
-   <div class="govuk-checkboxes__item">
-     <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-     <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-      Offensive password or security question
-     </label>
-   </div>
-   <div class="govuk-checkboxes__item">
-     <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-     <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-      Other
-     </label>
-   </div>
+    <a href="02report.html" class="govuk-back-link">Back</a>
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#passport-issued-day">Select the type of interaction</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+            <div class="govuk-form-group govuk-form-group--error">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    What type of interaction was it?
+                  </h1>
+                </legend>
+                <span id="passport-issued-error" class="govuk-error-message">
+                              <span class="govuk-visually-hidden">Error:</span> Select the type of interaction
+                            </span>
+                <div id="waste-hint" class="govuk-hint">
+               Select one option.
+              </div>
 
-</div>
-</div>
-</div>
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      In person
+                      <div id="nationality-hint" class="govuk-hint">
+                        For example, at a job centre or a customer's house
+                      </div>
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      Video call
+                      <div id="nationality-hint" class="govuk-hint">
+                        For example, an appointment over MS Teams
+                      </div>
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                      Telephone
+                      <div id="nationality-hint" class="govuk-hint">
+                        Including voice mails and text messages
+                      </div>
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                      Written
+                      <div id="nationality-hint" class="govuk-hint">
+                        For example: letters, emails, web chat, comments in journal
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+
+              </fieldset>
+
+            </div>
 
 
 
-  <br></br>
-    <a href="03report" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-      Continue
-      </a>
+            <a href="04report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+              Continue
+              </a>
+
+        </div>
+
+
+
 
 
 
