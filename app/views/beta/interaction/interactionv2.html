@@ -30,7 +30,7 @@
       beta
     </strong>
     <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="interactionv2Error">feedback</a> will help us to improve it.
+      This is a new service – your <a class="govuk-link" href="interactionv1Error">feedback</a> will help us to improve it.
     </span>
   </p>
 </div>
@@ -46,78 +46,89 @@
         <div class="govuk-grid-column-two-thirds">
           <form action="/form-handler" method="post" novalidate>
 
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    What type of interaction was it?
-                  </h1>
-                </legend>
-                <div id="waste-hint" class="govuk-hint">
-               Select one option.
-              </div>
 
-                <div class="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="interaction1" name="where-do-you-live" type="radio" value="In person">
-                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-                      In person
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="interaction2" name="where-do-you-live" type="radio" value="scotland">
-                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                      Video call
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-                      Telephone
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-                      Written
-                    </label>
-                  </div>
-                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+              <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            What type of interaction was it?
+          </h1>
+        </legend>
+        <div id="waste-hint" class="govuk-hint">
+       Select one option.
+      </div>
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-radios__label" for="contact">
-          Other
+          In person
+          <div id="nationality-hint" class="govuk-hint">
+            For example, at a job centre or a customer's house
+          </div>
         </label>
       </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="contact-by-email">
-            Type of interaction
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email"></div>
-
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Video call
+          <div id="nationality-hint" class="govuk-hint">
+            For example, an appointment over MS Teams
+          </div>
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Telephone
+          <div id="nationality-hint" class="govuk-hint">
+            Including voice mails and text messages
+          </div>
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Written
+          <div id="nationality-hint" class="govuk-hint">
+            For example: letters, emails, web chat, comments in journal
+          </div>
+        </label>
       </div>
 
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+        Other
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-3">
+          Interaction type
+        </label>
+        <br>
+        <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel"></div>
 
-                </div>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+      </div>
+    </div>
 
 
 
-              </fieldset>
-
-            </div>
-
-
+</div>
+<br></br>
 
             <a href="04report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
               Continue
               </a>
-          </form>
-        </div>
-      </div>
-    </main>
-  </div>
-
+  
 
 
 
