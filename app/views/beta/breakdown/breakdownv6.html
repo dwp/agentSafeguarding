@@ -38,8 +38,6 @@
 {% block content %}
 
 
-
-
 <div class="govuk-form-group">
     <a href="../../index.html" class="govuk-back-link">Back</a>
     <br></br>
@@ -47,9 +45,14 @@
     <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
         Describe the incident</h1>
 
-  <img src="/public/images/notification3.png" width="100%" height="100%" alt="Keep to the facts and be as specific as possible. Do not include the names of any DWP staff in your answers.">
-  <br></br>
-
+        <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Keep to the facts and be as specific as possible. <br>
+          Do not include the names of any DWP staff in your answers.
+        </strong>
+      </div>
   <p>
     <strong>1. Why was the customer in contact with us?</strong> <br><span style="color: #505a5f">For example: I called John for a routine welfare check.</span>
 
