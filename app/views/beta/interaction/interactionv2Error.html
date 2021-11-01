@@ -69,26 +69,44 @@
               <div class="govuk-radios">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="interaction1" name="where-do-you-live" type="radio" value="In person">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-                    In person
-                  </label>
+                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                  In person
+                  <div id="nationality-hint" class="govuk-hint">
+                    For example, at a job centre or a customer's house
+                  </div>
+                </label>
                 </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="interaction2" name="where-do-you-live" type="radio" value="scotland">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                    Video call
-                  </label>
-                </div>
+
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
                   <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
                     Telephone
+                    <div id="nationality-hint" class="govuk-hint">
+                      Including voice mails and text messages
+                    </div>
                   </label>
                 </div>
+
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
                     Written
+                    <div id="nationality-hint" class="govuk-hint">
+                      For example: letters, emails, web chat, comments in journal
+                    </div>
+                  </label>
+                </div>
+
+
+
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="interaction2" name="where-do-you-live" type="radio" value="scotland">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                    Video call
+                    <div id="nationality-hint" class="govuk-hint">
+                      For example, an appointment over Microsoft Teams
+                    </div>
                   </label>
                 </div>
                 <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
@@ -101,7 +119,7 @@
     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
       <div class="govuk-form-group">
         <label class="govuk-label" for="contact-by-email">
-          Please describe interaction type
+          Interaction type
         </label>
         <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email"></div>
 
