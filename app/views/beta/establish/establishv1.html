@@ -31,7 +31,7 @@
       beta
     </strong>
     <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="behalfv2Error">feedback</a> will help us to improve it.
+      This is a new service – your <a class="govuk-link" href="behalfv1Error">feedback</a> will help us to improve it.
     </span>
   </p>
 </div>
@@ -43,7 +43,7 @@
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Were you involved in this incident?
+        What would you like to report?
       </h1>
     </legend>
 
@@ -54,30 +54,17 @@
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-radios__label" for="contact">
-        No
+        Something that happened during an interaction with a customer.
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+        Something that I've learned from a reputable source that could help colleagues have safe interactions in future.
         </label>
       </div>
 
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-        <label class="govuk-label govuk-radios__label" for="contact-2">
-        Yes, I'm reporting this on behalf of someone else
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="contact-by-phone">
-            Their full name
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
-        </div>
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="contact-by-phone">
-            Their email address
-          </label>
-          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
-        </div>
-    </div>
+
     </div>
 
   </fieldset>
