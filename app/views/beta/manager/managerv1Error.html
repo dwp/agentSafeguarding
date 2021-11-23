@@ -1,0 +1,99 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="../../../index.html" class="govuk-header__link govuk-header__link--service-name">
+        Agent Safeguarding
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="managerv1">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<a href="../../index.html" class="govuk-back-link">Back</a>
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#fullname">Please provide your manager's full name</a>
+      </li>
+      <li>
+        <a href="#email">Please provide your manager's email address</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Who is your line manager?
+      </h1>
+    </legend>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="full-name">
+        Your manager's full name
+      </label>
+      <span id="passport-issued-error" class="govuk-error-message">
+     <span class="govuk-visually-hidden">Error:</span> Please provide your manager's full name
+   </span>
+      <input class="govuk-input govuk-!-width-one-third" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+    <div class="govuk-form-group">
+  <label class="govuk-label" for="email">
+    Your manager's email address
+  </label>
+  <div id="email-hint" class="govuk-hint">
+    Please make sure it is the correct address
+  </div>
+  <span id="passport-issued-error" class="govuk-error-message">
+     <span class="govuk-visually-hidden">Error:</span> Please provide your manager's email address
+   </span>
+  <input class="govuk-input govuk-!-width-one-third" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+  </div>
+  </fieldset>
+</div>
+
+
+<a href="01report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+  Continue
+  </a>
+
+
+  <br></br>
+
+
+
+
+{% endblock %}
