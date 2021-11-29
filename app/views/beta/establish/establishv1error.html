@@ -46,7 +46,7 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#passport-issued-day">Please select one option</a>
+        <a href="#passport-issued-day">Select the report type</a>
       </li>
     </ul>
   </div>
@@ -55,7 +55,7 @@
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        What would you like to report?
+        What do you want to report?
       </h1>
     </legend>
 
@@ -63,19 +63,25 @@
       Select one option.
     </div>
     <span id="passport-issued-error" class="govuk-error-message">
-     <span class="govuk-visually-hidden">Error:</span> Please select one option
+     <span class="govuk-visually-hidden">Error:</span> Select the report type
    </span>
     <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-radios__label" for="contact">
-        Something that happened during an interaction with a customer.
+          An incident that has already happened
+          <div id="nationality-hint" class="govuk-hint">
+            For example, a customer's unacceptable behaviour
+          </div>
         </label>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-radios__label" for="contact">
-        Something that I've learned from a reputable source that could help colleagues have safe interactions in future.
+          A concern that something might happen in future
+          <div id="nationality-hint" class="govuk-hint">
+            For example, information on a Capability for Work form indicates a risk to DWP staff
+          </div>
         </label>
       </div>
 

@@ -31,7 +31,7 @@
       beta
     </strong>
     <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="establishv1Error">feedback</a> will help us to improve it.
+      This is a new service – your <a class="govuk-link" href="establishv1b">feedback</a> will help us to improve it.
     </span>
   </p>
 </div>
@@ -39,41 +39,70 @@
 
 {% block content %}
 <a href="../../index.html" class="govuk-back-link">Back</a>
-<div class="govuk-form-group">
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#passport-issued-day">Select the report type</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="govuk-form-group govuk-form-group--error">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        What do you want to report?
+        What would you like to report?
       </h1>
     </legend>
 
     <div id="contact-hint" class="govuk-hint">
       Select one option.
     </div>
+    <span id="passport-issued-error" class="govuk-error-message">
+     <span class="govuk-visually-hidden">Error:</span> Select the report type
+   </span>
     <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-radios__label" for="contact">
-        An incident that has already happened
-        <div id="nationality-hint" class="govuk-hint">
-          For example, a customer's unacceptable behaviour
-        </div>
+          An incident that has already happened
+          <div id="nationality-hint" class="govuk-hint">
+            For example, a customer's unacceptable behaviour
+          </div>
         </label>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-radios__label" for="contact">
-        A concern that something might happen in future
-        <div id="nationality-hint" class="govuk-hint">
-          For example, information on a Capability for Work form indicates a risk to DWP staff
-        </div>
+          A concern that something might happen in future
+          <div id="nationality-hint" class="govuk-hint">
+            For example, information on a Capability for Work form indicates a risk to DWP staff
+          </div>
         </label>
       </div>
+
 
     </div>
 
   </fieldset>
 </div>
+
+<details class="govuk-details" data-module="govuk-details">
+<br></br>
+<summary class="govuk-details__summary">
+<span class="govuk-details__summary-text">
+Help with reporting
+</span>
+</summary>
+<div class="govuk-details__text">
+If you are looking for the third-party referral form, click the second option to report a concern.
+
+</div>
+</details>
 
 <a href="01report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
   Continue
