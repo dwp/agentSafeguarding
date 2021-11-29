@@ -43,7 +43,7 @@
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        What would you like to report?
+        What do you want to report?
       </h1>
     </legend>
 
@@ -54,21 +54,39 @@
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-radios__label" for="contact">
-        Something that happened during an interaction with a customer.
+        An incident that has already happened
+        <div id="nationality-hint" class="govuk-hint">
+          For example, a customer's unacceptable behaviour
+        </div>
         </label>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
         <label class="govuk-label govuk-radios__label" for="contact">
-        Something that I've learned from a reputable source that could help colleagues have safe interactions in future.
+        A concern that something might happen in future
+        <div id="nationality-hint" class="govuk-hint">
+          For example, information on a Capability for Work form indicates a risk to DWP staff
+        </div>
         </label>
       </div>
-
 
     </div>
 
   </fieldset>
 </div>
+
+<details class="govuk-details" data-module="govuk-details">
+<br></br>
+<summary class="govuk-details__summary">
+<span class="govuk-details__summary-text">
+Help with reporting
+</span>
+</summary>
+<div class="govuk-details__text">
+If you are looking for the third-party referral form, click the second option to report a concern.
+
+</div>
+</details>
 
 
 <a href="01report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
