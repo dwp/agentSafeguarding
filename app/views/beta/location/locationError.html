@@ -50,7 +50,7 @@
             <a href="#passport-issued-day">Select the location of the incident</a>
           </li>
           <li>
-            <a href="#passport-issued-day">Tell us where the incident happened</a>
+            <a href="#location">Tell us where the incident happened</a>
           </li>
         </ul>
       </div>
@@ -72,67 +72,64 @@
                 <span id="passport-issued-error" class="govuk-error-message">
                  <span class="govuk-visually-hidden">Error:</span> Select the location of the incident
                </span>
+               <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-1">
+                               <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                                 The office you're based at
+                               </label>
+                             </div>
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                               <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                                 A different office
+                               </label>
+                             </div>
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-3">
+                               <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                                 An outreach location
+                               </label>
+                             </div>
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-4">
+                               <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                                 Your home
+                               </label>
+                             </div>
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-5">
+                               <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                                 The customer's home
+                               </label>
+                             </div>
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-6">
+                               <label class="govuk-label govuk-radios__label" for="contact-6">
+                                 Somewhere else
+                               </label>
+                             </div>
+                             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-6">
+                               <div class="govuk-form-group">
+                                 <label class="govuk-label" for="contact-by-text">
+                                   Incident location
+                                 </label>
+                                 <span id="location" class="govuk-error-message">
+                                    <span class="govuk-visually-hidden">Error:</span> Tell us where the incident happened
+                                  </span>
+                                 <input class="govuk-input govuk-!-width-one-third govuk-input--error" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel"></div>
 
-              <div class="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="interaction1" name="where-do-you-live" type="radio" value="In person">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-                  The office you're based at
-                </label>
-                </div>
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-                    A different office
-                  </label>
-                </div>
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-                  <label class="govuk-label govuk-radios__label" for="contact">
-                    An outreach location
-                  </label>
-                </div>
+                               </div>
+                           </div>
 
 
 
 
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="interaction2" name="where-do-you-live" type="radio" value="scotland">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                    Your home
-                  </label>
-                </div>
-
-                  <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="interaction2" name="where-do-you-live" type="radio" value="scotland">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                    The customer's home
-                  </label>
-                </div>
-
-                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-    <div class="govuk-radios__item">
-      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-      <label class="govuk-label govuk-radios__label" for="contact">
-        Somewhere else
-      </label>
-    </div>
-    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="contact-by-email">
-          Incident location
-        </label>
-        <span id="passport-issued-error" class="govuk-error-message">
-           <span class="govuk-visually-hidden">Error:</span> Tell us where the incident happened
-         </span>
-        <input class="govuk-input govuk-!-width-one-third govuk-input--error" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email"></div>
 
     </div>
 
 
-              </fieldset>
+
 
             </div>
 
