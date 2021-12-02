@@ -1,0 +1,81 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="../../../index.html" class="govuk-header__link govuk-header__link--service-name">
+        Agent Safeguarding
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="behalfv1Error">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<a href="attachv1" class="govuk-back-link">Back</a>
+<div class="moj-banner moj-banner--success">
+
+  <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+    <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" />
+  </svg>
+
+  <div class="moj-banner__message">
+    <span class="moj-banner__assistive">Success</span>File named abc.jpg has been deleted
+  </div>
+
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--xl" for="file-upload-1">
+    Upload receipts
+  </label>
+
+  <div id="file-upload-1-hint" class="govuk-hint">
+    You can upload your receipt as a scanned copy or photo of the original
+  </div>
+
+  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
+</div>
+
+
+
+<a href="01report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+  Continue
+  </a>
+
+
+  <br></br>
+
+
+
+
+{% endblock %}

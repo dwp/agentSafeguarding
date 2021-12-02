@@ -1,0 +1,81 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="../../../index.html" class="govuk-header__link govuk-header__link--service-name">
+        Agent Safeguarding
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="behalfv1Error">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<a href="../../index.html" class="govuk-back-link">Back</a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Upload evidence</h1>
+    <div class="govuk-form-group">
+      <p>Upload images that can be used as evidence of the incident</p>
+      <p class="govuk-body">You can upload</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>JPG</li>
+        <li>PNG</li>
+        <li>RAW</li>
+      </ul>
+      <p>Image size shouldn't be greater than 20MB</p>
+    <hr></hr>
+
+      <label class="govuk-label" for="file-upload-1">
+        Upload a file
+      </label>
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+    </div>
+
+  </div>
+</div>
+
+
+
+<a href="attachv2.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+  Continue
+  </a>
+
+
+  <br></br>
+
+
+
+
+{% endblock %}
