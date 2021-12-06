@@ -33,15 +33,28 @@
       beta
     </strong>
     <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="attachv1error">feedback</a> will help us to improve it.
+      This is a new service – your <a class="govuk-link" href="attachv1">feedback</a> will help us to improve it.
     </span>
   </p>
 </div>
 {% endblock %}
 
 {% block content %}
-
 <a href="../../index.html" class="govuk-back-link">Back</a>
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#passport-issued-day">The selected file must be a JPG, PNG or RAW</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
@@ -57,13 +70,18 @@
       <p>Image size shouldn't be greater than 20MB</p>
     <hr></hr>
 
+
+    <div class="govuk-form-group govuk-form-group--error">
       <label class="govuk-label" for="file-upload-1">
         Upload a file
       </label>
-      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      <span id="file-upload-1-error" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span> The selected file must be a JPG, PNG or RAW
+      </span>
+      <input class="govuk-file-upload govuk-file-upload--error" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-error">
     </div>
-
   </div>
+</div>
 </div>
 
 
