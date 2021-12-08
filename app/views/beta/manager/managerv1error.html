@@ -47,13 +47,13 @@
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#error1">Error1</a>
+        <a href="#error1">Enter their first name</a>
       </li>
       <li>
-        <a href="#error2">Error2</a>
+        <a href="#error2">Enter their last name</a>
       </li>
       <li>
-        <a href="#error3">Error3</a>
+        <a href="#error3">Enter their email address in the format name@example.com</a>
       </li>
     </ul>
   </div>
@@ -66,13 +66,12 @@
         Who is your line manager?
       </h1>
     </legend>
-
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-phone">
             Their first name
           </label>
           <span id="error1" class="govuk-error-message">
-    <span class="govuk-visually-hidden">Error:</span> Error1
+    <span class="govuk-visually-hidden">Error:</span> Enter their first name
   </span>
           <input class="govuk-input govuk-!-width-one-third govuk-input--error" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
         </div>
@@ -81,7 +80,7 @@
             Their last name
           </label>
           <span id="error2" class="govuk-error-message">
-    <span class="govuk-visually-hidden">Error:</span> Error2
+    <span class="govuk-visually-hidden">Error:</span> Enter their last name
   </span>
           <input class="govuk-input govuk-!-width-one-third govuk-input--error" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
         </div>
@@ -89,12 +88,13 @@
           <label class="govuk-label" for="contact-by-phone">
             Their email address
           </label>
-          <span id="error3" class="govuk-error-message">
-    <span class="govuk-visually-hidden">Error:</span> Error3
-  </span>
           <div id="email-hint" class="govuk-hint">
-            As they appear on the Global Address List
+              Enter their email address as it appears on the Global Address List
           </div>
+          <span id="error3" class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter their email address in the format name@example.com
+  </span>
+
           <input class="govuk-input govuk-!-width-one-third govuk-input--error" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
         </div>
     </div>
