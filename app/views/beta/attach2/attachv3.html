@@ -1,0 +1,96 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="../../../index.html" class="govuk-header__link govuk-header__link--service-name">
+        Agent Safeguarding
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="behalfv1Error">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<a href="attachv1" class="govuk-back-link">Back</a>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Upload evidence</h1>
+    <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">File added</h2>
+
+    <dl class="govuk-summary-list">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          File 1
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a download href="/" class="govuk-link">image.jpg</a>, 2MB
+        </dd>
+
+        <dd class="govuk-summary-list__actions">
+
+          <a class="govuk-link" href="attachv3">
+            Delete<span class="govuk-visually-hidden"> file 1</span>
+          </a>
+
+        </dd>
+
+      </div>
+
+
+    </dl>
+
+  </div>
+</div>
+<label class="govuk-label" for="file-upload-1">
+  Upload an evidence
+</label>
+<input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+
+
+  <br></br>
+
+<a href="attachv4.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+  Continue
+  </a>
+
+
+
+
+
+
+
+{% endblock %}
