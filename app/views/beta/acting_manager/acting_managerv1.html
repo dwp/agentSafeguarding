@@ -43,9 +43,12 @@
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Did a manager, different from your usual line manager, support you at the time of the incident?
+        Did someone who is not your line manager stand in for your manager at the time of the incident?
       </h1>
     </legend>
+  <div id="waste-hint" class="govuk-hint">
+ Select one option.
+</div>
     <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
@@ -57,7 +60,7 @@
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
         <label class="govuk-label govuk-radios__label" for="contact-2">
-        Yes, another manager supported me at the day of the incident
+        Yes, someone else acted as my manager at the time of the incident
         </label>
       </div>
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
@@ -78,7 +81,7 @@
             Their email address
           </label>
           <div id="email-hint" class="govuk-hint">
-            As they appear on the Global Address List
+            Enter their email address as it appears on the Global Address List
           </div>
           <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
         </div>
