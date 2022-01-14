@@ -1,0 +1,82 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="../../../index.html" class="govuk-header__link govuk-header__link--service-name">
+        Agent Safeguarding
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                  Concern submitted
+                </h1>
+                <div class="govuk-panel__body">
+                  Your reference number<br><strong>123-456-789</strong>
+                </div>
+              </div>
+
+      <p class="govuk-body">We've received your concern report, and we’ve notified your manager about it.</p>
+
+        <h2 class="govuk-heading-m">What happens next</h2>
+
+        <p class="govuk-body">
+          We aim to email you within 48 hours with a response.
+        </p>
+        <p class="govuk-body">
+          DWP staff can access free counselling and support through <a class="govuk-link" href="https://intranet.dwp.gov.uk/section/working-dwp/human-resources/wellbeing/employee-assistance-programme">PAM Assist</a> .
+        </p>
+        <p class="govuk-body">
+          You can <a href="#" class="govuk-link">email us</a> about your concern report. You must give us the reference number at the top of the page.
+        </p>
+        <p class="govuk-body">
+          Make a note of your reference number before you close this tab, or print or save this page.
+        </p>
+        <br>
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">What did you think of this service?</a> (takes two minutes)
+        </p>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}
