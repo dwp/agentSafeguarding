@@ -1,0 +1,660 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="../../../index.html" class="govuk-header__link govuk-header__link--service-name">
+        Agent Safeguarding
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="03concernerror">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<style media="screen">
+  dl, dt, dd {
+  border: none;
+  margin: 0;
+  padding: 0;
+  }
+
+  .dwp-key-details-bar {
+  background-color: #1d70b8;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 20px 30px;
+  position: relative;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__top-block::after,
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block::after {
+  clear: both;
+  content: ' ';
+  display: block;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block {
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  content: ' ';
+  padding-top: 10px;
+  margin-top: 6px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd,
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dt {
+  float: left;
+  font-size: 19px;
+  margin-right: 5px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd {
+  margin-right: 20px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__name {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11111;
+  margin-right: 10px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__nino {
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 12px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__status {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 5px 8px 0;
+  color: #005ea5;
+  background-color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  float: right;
+  margin: 5px 0 0;
+  }
+
+  @media (max-width: 40.0525em) {
+  .dwp-key-details-bar .dwp-key-details-bar__key-details {
+  padding: 20px 15px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block {
+  border: 0;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd,
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dt {
+  float: none;
+  font-size: 16px;
+  margin: 0;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd {
+  margin-bottom: 20px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd:last-of-type {
+  margin-bottom: 20px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__name {
+  font-size: 24px;
+  line-height: 1.04167;
+  float: left;
+  margin: 0 5px 0 0;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__nino {
+  font-size: 18px;
+  float: left;
+  margin: 5px 0 0 0;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__status {
+  font-size: 14px;
+  float: left;
+  clear: both;
+  margin-top: 5px;
+  }
+  }
+</style>
+<div class="govuk-width-container">
+<section class="dwp-key-details-bar" aria-label="Key details">
+<dl class="dwp-key-details-bar__key-details">
+  <div class="dwp-key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-key-details-bar__name"> Robert De Silva</dd>
+
+      <dt class="govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
+
+      <dt class="govuk-visually-hidden">Claim status:</dt>
+
+  </div>
+
+  <div class="dwp-key-details-bar__bottom-block">
+      <dt>Date of birth:</dt>
+      <dd>4 June 1972</dd>
+
+      <dt>Postcode:</dt>
+      <dd>E1 7KJ</dd>
+
+
+  </div>
+</dl>
+</section>
+</div>
+
+{% endblock %}
+
+
+
+{% block content %}
+<a href="06report" class="govuk-back-link">Back</a>
+<br></br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        What documents are supporting the concerns?
+      </h1>
+    </legend>
+    <br>
+    <div id="waste-hint" class="govuk-hint">
+   Select all that apply.
+    </div>
+
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-checkboxes__label" for="contact">
+          UC50
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+          <div id="passport-issued-hint" class="govuk-hint">
+            Date the form was submitted to CHDA.<br>For example, 30 11 2021<br>
+          </div>
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+            </div>
+            <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+
+              <div class="govuk-form-group">
+                <br></br>
+                <div id="passport-issued-hint" class="govuk-hint">
+                    <br></br>
+                  Quote from the document
+                </div>
+                <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="8" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                 You can enter up to 1000 characters
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="check2">
+            <label class="govuk-label govuk-checkboxes__label" for="contact">
+              ESA50
+            </label>
+          </div>
+          <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="check2">
+              <div id="passport-issued-hint" class="govuk-hint">
+                Date the form was submitted to CHDA.<br>For example, 30 11 2021<br>
+              </div>
+              <div class="govuk-date-input" id="passport-issued">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+
+                  <div class="govuk-form-group">
+                    <br></br>
+                    <div id="passport-issued-hint" class="govuk-hint">
+                        <br></br>
+                      Quote from the document
+                    </div>
+                    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="8" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                    <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                     You can enter up to 1000 characters
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="check3">
+                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                  MAPPAJ
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="check3">
+                  <div id="passport-issued-hint" class="govuk-hint">
+                    Date the form was submitted to CHDA.<br>For example, 30 11 2021<br>
+                  </div>
+                  <div class="govuk-date-input" id="passport-issued">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+
+                      <div class="govuk-form-group">
+                        <br></br>
+                        <div id="passport-issued-hint" class="govuk-hint">
+                            <br></br>
+                          Quote from the document
+                        </div>
+                        <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="8" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                        <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                         You can enter up to 1000 characters
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="check4">
+                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                      DS1500
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="check4">
+                      <div id="passport-issued-hint" class="govuk-hint">
+                        Date the form was submitted to CHDA.<br>For example, 30 11 2021<br>
+                      </div>
+                      <div class="govuk-date-input" id="passport-issued">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                              Day
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                              Month
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                              Year
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                        </div>
+                        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+
+                          <div class="govuk-form-group">
+                            <br></br>
+                            <div id="passport-issued-hint" class="govuk-hint">
+                                <br></br>
+                              Quote from the document
+                            </div>
+                            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="8" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                            <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                             You can enter up to 1000 characters
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="check5">
+                        <label class="govuk-label govuk-checkboxes__label" for="contact">
+                          WCA55
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="check5">
+                          <div id="passport-issued-hint" class="govuk-hint">
+                            Date the form was submitted to CHDA.<br>For example, 30 11 2021<br>
+                          </div>
+                          <div class="govuk-date-input" id="passport-issued">
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                  Day
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                  Month
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                  Year
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                            </div>
+                            <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+
+                              <div class="govuk-form-group">
+                                <br></br>
+                                <div id="passport-issued-hint" class="govuk-hint">
+                                    <br></br>
+                                  Quote from the document
+                                </div>
+                                <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="8" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                                <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                                 You can enter up to 1000 characters
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="check6">
+                            <label class="govuk-label govuk-checkboxes__label" for="contact">
+                              UC113
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="check6">
+                              <div id="passport-issued-hint" class="govuk-hint">
+                                Date the form was submitted to CHDA.<br>For example, 30 11 2021<br>
+                              </div>
+                              <div class="govuk-date-input" id="passport-issued">
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                      Day
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                      Month
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                  <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                      Year
+                                    </label>
+                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                                </div>
+                                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+
+                                  <div class="govuk-form-group">
+                                    <br></br>
+                                    <div id="passport-issued-hint" class="govuk-hint">
+                                        <br></br>
+                                      Quote from the document
+                                    </div>
+                                    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="8" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                                    <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                                     You can enter up to 1000 characters
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                              <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="check7">
+                                <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                  ESA113
+                                </label>
+                              </div>
+                              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="check7">
+                                  <div id="passport-issued-hint" class="govuk-hint">
+                                    Date the form was submitted to CHDA.<br>For example, 30 11 2021<br>
+                                  </div>
+                                  <div class="govuk-date-input" id="passport-issued">
+                                    <div class="govuk-date-input__item">
+                                      <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                          Day
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                      <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                          Month
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                      <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                          Year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                                    </div>
+                                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+
+                                      <div class="govuk-form-group">
+                                        <br></br>
+                                        <div id="passport-issued-hint" class="govuk-hint">
+                                            <br></br>
+                                          Quote from the document
+                                        </div>
+                                        <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="8" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                                        <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                                         You can enter up to 1000 characters
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                  <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="check8">
+                                    <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                      3rd party referral form
+                                    </label>
+                                  </div>
+                                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="check8">
+                                      <div id="passport-issued-hint" class="govuk-hint">
+                                        Date the form was submitted to CHDA.<br>For example, 30 11 2021<br>
+                                      </div>
+                                      <div class="govuk-date-input" id="passport-issued">
+                                        <div class="govuk-date-input__item">
+                                          <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                              Day
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                                        </div>
+                                        <div class="govuk-date-input__item">
+                                          <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                              Month
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                                        </div>
+                                        <div class="govuk-date-input__item">
+                                          <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                              Year
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                                        </div>
+                                        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+
+                                          <div class="govuk-form-group">
+                                            <br></br>
+                                            <div id="passport-issued-hint" class="govuk-hint">
+                                                <br></br>
+                                              Quote from the document
+                                            </div>
+                                            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="8" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                                            <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                                             You can enter up to 1000 characters
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                      <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="check9">
+                                        <label class="govuk-label govuk-checkboxes__label" for="contact">
+                                          Emails
+                                        </label>
+                                      </div>
+                                      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="check9">
+                                          <div id="passport-issued-hint" class="govuk-hint">
+                                            Date the first email of the thread was submitted to CHDA.<br>For example, 30 11 2021<br>
+                                          </div>
+                                          <div class="govuk-date-input" id="passport-issued">
+                                            <div class="govuk-date-input__item">
+                                              <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                                  Day
+                                                </label>
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                                            </div>
+                                            <div class="govuk-date-input__item">
+                                              <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                                  Month
+                                                </label>
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                                            </div>
+                                            <div class="govuk-date-input__item">
+                                              <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                                  Year
+                                                </label>
+                                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                                            </div>
+                                            <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="1000">
+
+                                              <div class="govuk-form-group">
+                                                <br></br>
+                                                <div id="passport-issued-hint" class="govuk-hint">
+                                                    <br></br>
+                                                  Quote from the emails thread
+                                                </div>
+                                                <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="8" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                                                <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                                                 You can enter up to 1000 characters
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+
+  </fieldset>
+</div>
+
+
+
+  <br></br>
+    <a href="04concern" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+      Continue
+      </a>
+
+
+
+
+{% endblock %}
