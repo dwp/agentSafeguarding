@@ -32,7 +32,7 @@
       beta
     </strong>
     <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="02concernerror">feedback</a> will help us to improve it.
+      This is a new service – your <a class="govuk-link" href="02concern">feedback</a> will help us to improve it.
     </span>
   </p>
 </div>
@@ -189,16 +189,38 @@
 
 <div class="govuk-form-group">
     <a href="01concern" class="govuk-back-link">Back</a>
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#textarea">Enter a description of the safety concern</a>
+          </li>
+          <li>
+            <a href="#checklist">Confirm you have reviewed all the required information</a>
+          </li>
+
+        </ul>
+      </div>
+      </div>
 
     <br></br>
+
+
+
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-      Tell us about the safety concern you want to report
+  Tell us about the safety concern you want to report
       </h1>
     </legend>
     <img src="/public/images/notification3.png" width="100%" height="100%" alt="Important: Do not include any personal information about DWP staff or customers in your responses. For example, do not use full names or National Insurance numbers. Keep to the facts and be as specific as possible.">
 <br></br>
-
+    <p id="error1" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter a description of the safety concern
+    </p>
     <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="2000">
 
       <div class="govuk-form-group">
@@ -208,60 +230,63 @@
          You can enter up to 2000 characters
         </div>
       </div>
-      <br></br>
+    </div>
+    <div class="govuk-form-group govuk-form-group--error">
       <p>
         <strong>Please confirm you have considered and included where relevant:</strong> <br>
       </p>
 
-      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-              <label class="govuk-label govuk-checkboxes__label" for="waste">
-            The names of all forms and documents that identify this safety concern – for example, an ESA50 form  and a DS15000 form
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                Page numbers on all documents and forms
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                The date the safety concern was identified (this is likely to be the date on the forms)
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-  Where the original documents or forms are stored, if you have this information
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-              Definitions of any acronyms that someone reading this form might not understand
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-              The exact words used on the forms or documents that point to a safety risk. Please only include information that is relevant to this concern
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                Why this information means there is a safety risk to staff
-              </label>
-            </div>
 
-    </div>
+      <span id="passport-issued-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span>Confirm you have reviewed all the required information
+                  </span>
 
 
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+          The names of all forms and documents that identify this safety concern – for example, an ESA50 form  and a DS15000 form
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+              Page numbers from all documents and forms
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              The date the safety concern was identified (this is likely to be the date on the forms)
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+Where the original documents or forms are stored, if you have this information
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Definitions of any acronyms that someone reading this form might not understand
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            The exact words used on the forms or documents that point to a safety risk. Please only include information that is relevant to this concern.
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              Why this information means there is a safety risk to staff
+            </label>
+          </div>
 
-
+</div>
 <br></br>
         <a href="05concern.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
         Submit report
