@@ -1,0 +1,59 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="../../../index.html" class="govuk-header__link govuk-header__link--service-name">
+        Agent Safeguarding
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="00reportError">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Agent Safeguarding: ACTION REQUIRED [OFFICIAL-SENSITIVE]</h1>
+  <p class="govuk-body">Hi Sartaq,</p><br>
+  <p class="govuk-body">We believe you recently saw or heard an incident between one of your colleagues and a customer.</p><br>
+  <p class="govuk-body">Please log into <a class="govuk-link" href="link">Agent Safeguarding</a> as soon as possible to tell us what happened.</p><br>
+  <p class="govuk-body">If you didn’t witness this incident, you must still log in to let us know.</p><br>
+  <p class="govuk-body">Thank you,</p>
+    <p class="govuk-body">Agent Safeguarding.</p><br>
+
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}
