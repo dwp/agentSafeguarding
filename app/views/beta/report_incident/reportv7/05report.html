@@ -16,15 +16,13 @@
       </a>
     </div>
     <div class="govuk-header__content">
-      <a href="../../../index.html" class="govuk-header__link govuk-header__link--service-name">
+      <a href="../../index.html" class="govuk-header__link govuk-header__link--service-name">
         Agent Safeguarding
       </a>
     </div>
   </div>
 </header>
 {% endblock %}
-
-
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -42,6 +40,7 @@
   margin: 0;
   padding: 0;
   }
+
   .dwp-key-details-bar {
   background-color: #1d70b8;
   color: #fff;
@@ -182,49 +181,83 @@
 {% endblock %}
 
 {% block content %}
-<a href="00report" class="govuk-back-link">Back</a>
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-      <h1 class="govuk-fieldset__heading">
-        What do you want to report?
-      </h1>
-    </legend>
+<div class="govuk-width-container">
 
-    <div id="contact-hint" class="govuk-hint">
-      Select one option.
-    </div>
-    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-        <label class="govuk-label govuk-radios__label" for="contact">
-        An incident that has already happened
-        <div id="nationality-hint" class="govuk-hint">
-          For example, a customer's unacceptable behaviour
+    <a href="04report.html" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="/form-handler" method="post" novalidate>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    What type of interaction was it?
+                  </h1>
+                </legend>
+                <div id="waste-hint" class="govuk-hint">
+               Select one option.
+              </div>
+
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                      In person
+                      <div id="nationality-hint" class="govuk-hint">
+                        For example, at a job centre or a customer's house
+                      </div>
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                      Video call
+                      <div id="nationality-hint" class="govuk-hint">
+                        For example, an appointment over MS Teams
+                      </div>
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                      Telephone
+                      <div id="nationality-hint" class="govuk-hint">
+                        Including voice mails and text messages
+                      </div>
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                      Written
+                      <div id="nationality-hint" class="govuk-hint">
+                        For example: letters, emails, web chat, comments in journal
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+
+              </fieldset>
+
+            </div>
+
+
+
+            <a href="06report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+              Continue
+              </a>
+          </form>
         </div>
-        </label>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-        <label class="govuk-label govuk-radios__label" for="contact">
-        A concern that something might happen in future
-        <div id="nationality-hint" class="govuk-hint">
-          For example, information on a Capability for Work questionnaire indicates a risk to DWP staff
-        </div>
-        </label>
-      </div>
-
-    </div>
-
-  </fieldset>
-</div>
-
-<a href="02report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-  Continue
-  </a>
+    </main>
+  </div>
 
 
-  <br></br>
+
 
 
 

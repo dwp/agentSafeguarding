@@ -23,8 +23,6 @@
   </div>
 </header>
 {% endblock %}
-
-
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -42,6 +40,7 @@
   margin: 0;
   padding: 0;
   }
+
   .dwp-key-details-bar {
   background-color: #1d70b8;
   color: #fff;
@@ -180,51 +179,93 @@
 </div>
 
 {% endblock %}
-
 {% block content %}
-<a href="00report" class="govuk-back-link">Back</a>
+<a href="06report" class="govuk-back-link">Back</a>
+<br></br>
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+  <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        What do you want to report?
+        Do you feel the incident was motivated by any of the following types of discrimination?
       </h1>
     </legend>
-
-    <div id="contact-hint" class="govuk-hint">
-      Select one option.
+    <br>
+    <div id="waste-hint" class="govuk-hint">
+   Select all that apply.
     </div>
-    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-        <label class="govuk-label govuk-radios__label" for="contact">
-        An incident that has already happened
-        <div id="nationality-hint" class="govuk-hint">
-          For example, a customer's unacceptable behaviour
-        </div>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries" name="countries" type="checkbox" value="france">
+        <label class="govuk-label govuk-checkboxes__label" for="countries">
+          Age
         </label>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-        <label class="govuk-label govuk-radios__label" for="contact">
-        A concern that something might happen in future
-        <div id="nationality-hint" class="govuk-hint">
-          For example, information on a Capability for Work questionnaire indicates a risk to DWP staff
-        </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+        Being married or in a civil partnership
         </label>
       </div>
-
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+        Pregnancy or maternity
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+          Disability
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+        Gender reassignment
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+        Race including colour, nationality, ethnic or national origin
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+        Religion or belief
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+        Sex
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+        Sexual orientation
+        </label>
+      </div>
+      <div class="govuk-checkboxes__divider">or</div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" data-behaviour="exclusive">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+          None of the above
+        </label>
+      </div>
     </div>
 
   </fieldset>
 </div>
 
-<a href="02report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-  Continue
-  </a>
 
 
   <br></br>
+    <a href="08report" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+      Continue
+      </a>
 
 
 
