@@ -195,7 +195,16 @@
 <br></br>
 
 
-  <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="12" aria-describedby="with-hint-info with-hint-hint"></textarea>
+<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="3000">
+  <div class="govuk-form-group">
+    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="12" aria-describedby="with-hint-info with-hint-hint"></textarea>
+  </div>
+
+  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+    You can enter up to 3000 characters
+  </div>
+
+</div>
   <p>
     <strong>Confirm you have included (if possible):</strong> <br>
   </p>
