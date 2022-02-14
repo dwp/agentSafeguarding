@@ -1,0 +1,358 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="../../../index.html" class="govuk-header__link govuk-header__link--service-name">
+        Agent Safeguarding
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="01concernerror">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<style>
+  .nav {
+      background-color: #1E6FB8;
+      height: 48px;
+      padding-top: 24px;
+      padding-right: 8px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+  }
+  .menu {
+      background-color: #F8F8F8;
+      height: 36px;
+      padding-top: 24px;
+      padding-right: 8px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+  }
+  .report {
+    color:white;
+    font-size: 26px;
+    font-weight: bold;
+  }
+  .menu_font {
+    color:#1E6FB8;
+    font-size: 26px;
+    font-weight: bold;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F8F8F8;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: #1E6FB8;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      padding: 0px 16px;
+      text-decoration: none;
+    }
+    .active {
+text-decoration: underline solid;
+text-decoration-thickness: 20%;
+font-weight: bold;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+text-decoration: underline solid;
+text-decoration-thickness: 20%;
+}
+
+</style>
+
+
+<style media="screen">
+  dl, dt, dd {
+  border: none;
+  margin: 0;
+  padding: 0;
+  }
+
+  .dwp-key-details-bar {
+  background-color: #1d70b8;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 20px 30px;
+  position: relative;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__top-block::after,
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block::after {
+  clear: both;
+  content: ' ';
+  display: block;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block {
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  content: ' ';
+  padding-top: 10px;
+  margin-top: 6px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd,
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dt {
+  float: left;
+  font-size: 19px;
+  margin-right: 5px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd {
+  margin-right: 20px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__name {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11111;
+  margin-right: 10px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__nino {
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 12px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__status {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 5px 8px 0;
+  color: #005ea5;
+  background-color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  float: right;
+  margin: 5px 0 0;
+  }
+
+  @media (max-width: 40.0525em) {
+  .dwp-key-details-bar .dwp-key-details-bar__key-details {
+  padding: 20px 15px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block {
+  border: 0;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd,
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dt {
+  float: none;
+  font-size: 16px;
+  margin: 0;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd {
+  margin-bottom: 20px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd:last-of-type {
+  margin-bottom: 20px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__name {
+  font-size: 24px;
+  line-height: 1.04167;
+  float: left;
+  margin: 0 5px 0 0;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__nino {
+  font-size: 18px;
+  float: left;
+  margin: 5px 0 0 0;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__status {
+  font-size: 14px;
+  float: left;
+  clear: both;
+  margin-top: 5px;
+  }
+  <hr style="width:100%", size="3", color=white>
+  }
+</style>
+<main class="govuk-main-wrapper">
+<div class="govuk-width-container">
+<section class="dwp-key-details-bar" aria-label="Key details">
+<dl class="dwp-key-details-bar__key-details">
+  <div class="dwp-key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-key-details-bar__name"> Robert De Silva</dd>
+
+      <dt class="govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
+
+      <dt class="govuk-visually-hidden">Claim status:</dt>
+
+  </div>
+
+  <div class="dwp-key-details-bar__bottom-block">
+      <dt>Date of birth:</dt>
+      <dd>4 June 1972</dd>
+      <dt>Postcode:</dt>
+      <dd>E1 7KJ</dd>
+  </div>
+</dl>
+</section>
+</div>
+<hr>
+<div class="nav">
+    <div class="govuk-grid-column-two-thirds">
+    <p class="report">INCIDENT REPORT - INC 123-456-789</p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <strong class="govuk-tag govuk-tag--blue">
+    In progress
+  </strong>
+    </div>
+</div>
+
+<div class="menu">
+<ul>
+  <li><a class="active" href="00overview">Overview</a></li>
+    <li><a href="01reporters">Reporter</a></li>
+  <li><a href="02linked">Linked reports</a></li>
+  <li><a href="03recommendations">Manager recommendations</a></li>
+</ul>
+</div>
+</main>
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Overview</h2>
+        <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">incident information</caption>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Interaction type</th>
+                <td class="govuk-table__cell">Face to face</td>
+              </tr>
+            </tbody>
+          </table>
+        <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Date and time</caption>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Date and approximate time</th>
+                <td class="govuk-table__cell">08 Feb 2022 - 10:30</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Report submitted</th>
+                <td class="govuk-table__cell">08 Feb 2022 - 17:30</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">SLA</th>
+                <td class="govuk-table__cell">11 Feb 2022 - 17:30</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="govuk-table">
+              <caption class="govuk-table__caption govuk-table__caption--m">Description</caption>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Described by</th>
+                  <td class="govuk-table__cell">Whitney Earl - Victim</td>
+                </tr>
+
+              </tbody>
+
+            </table>
+            <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                Incident motivated by discrimination: race and sex.
+              </strong>
+            </div>
+
+            <h3 class="govuk-heading-s">1. Why was the customer in contact with us?</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget tristique justo. In et vulputate nisi. Integer commodo ante tellus, sed iaculis dolor consequat accumsan. Donec sodales, orci eget facilisis fringilla, risus augue fermentum enim, vitae pulvinar odio dolor id felis. Donec luctus sit amet lectus nec vestibulum.
+            </p>
+            <hr>
+            <h3 class="govuk-heading-s">2. How did the incident start? Was there a specific trigger?</h3>
+            <p>Mauris lobortis sodales nisi. Etiam mollis pharetra diam, vel pretium libero finibus ac. Cras quis mi urna. Nam lobortis finibus nibh nec elementum. Integer sed urna sem. Donec luctus sit amet lectus nec vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            </p>
+            <hr>
+            <h3 class="govuk-heading-s">3. What were the issues with the customer's behaviour?</h3>
+            <p>Mauris fermentum consectetur orci aliquet pretium. Nunc porttitor consectetur ultrices. Mauris nec maximus mauris. Suspendisse posuere vel nibh non tincidunt. Cras suscipit ante ut lectus consequat, quis vestibulum lectus efficitur. Integer et risus enim. Fusce lacinia purus nec euismod convallis. Fusce volutpat nulla non libero bibendum, sit amet commodo est imperdiet.
+            </p>
+            <hr>
+            <h3 class="govuk-heading-s">4. Tell us what happened next. How did you try to resolve the situation, and how did the customer react?</h3>
+            <p>Maecenas sit amet mauris vulputate, sollicitudin nisi eget, dignissim tellus. Sed at tempus odio, ut egestas sapien. Nunc quam dolor, elementum quis fringilla ac, tincidunt id augue. Phasellus quis venenatis nisl.</p>
+            <hr>
+            <h3 class="govuk-heading-s">5. Were there any witnesses to this incident?</h3>
+            <p>Yes</p>
+            <hr>
+            <h3 class="govuk-heading-s">6. How did your interaction with the customer end?</h3>
+            <p> Nullam vitae nulla vel purus tincidunt gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam ut cursus magna. In in sagittis libero
+            </p>
+            <hr>
+            <h3 class="govuk-heading-s">7. How did your feel during the incident?</h3>
+            <p>Morbi congue lectus odio, vitae imperdiet tortor convallis sed. Fusce cursus, lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.Morbi congue lectus odio, vitae imperdiet tortor convallis sed. Fusce cursus, lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.</p>
+            <hr>
+
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Sub categories</h3>
+        <a href="#">Incident information</a>
+      <a href="#">Date and time</a>
+      <a href="#">Description</a>
+      </div>
+
+
+  <br></br>
+
+
+
+
+{% endblock %}

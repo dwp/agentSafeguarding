@@ -1,0 +1,319 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="../../../index.html" class="govuk-header__link govuk-header__link--service-name">
+        Agent Safeguarding
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="01concernerror">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<style>
+  .nav {
+      background-color: #1E6FB8;
+      height: 48px;
+      padding-top: 24px;
+      padding-right: 8px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+  }
+  .menu {
+      background-color: #F8F8F8;
+      height: 36px;
+      padding-top: 24px;
+      padding-right: 8px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+  }
+  .report {
+    color:white;
+    font-size: 26px;
+    font-weight: bold;
+  }
+  .menu_font {
+    color:#1E6FB8;
+    font-size: 26px;
+    font-weight: bold;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F8F8F8;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: #1E6FB8;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      padding: 0px 16px;
+      text-decoration: none;
+    }
+    .active {
+text-decoration: underline solid;
+text-decoration-thickness: 20%;
+font-weight: bold;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+text-decoration: underline solid;
+text-decoration-thickness: 20%;
+}
+
+</style>
+
+
+<style media="screen">
+  dl, dt, dd {
+  border: none;
+  margin: 0;
+  padding: 0;
+  }
+
+  .dwp-key-details-bar {
+  background-color: #1d70b8;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 20px 30px;
+  position: relative;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__top-block::after,
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block::after {
+  clear: both;
+  content: ' ';
+  display: block;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block {
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  content: ' ';
+  padding-top: 10px;
+  margin-top: 6px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd,
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dt {
+  float: left;
+  font-size: 19px;
+  margin-right: 5px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd {
+  margin-right: 20px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__name {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11111;
+  margin-right: 10px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__nino {
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 12px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__status {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 5px 8px 0;
+  color: #005ea5;
+  background-color: #fff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  float: right;
+  margin: 5px 0 0;
+  }
+
+  @media (max-width: 40.0525em) {
+  .dwp-key-details-bar .dwp-key-details-bar__key-details {
+  padding: 20px 15px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block {
+  border: 0;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd,
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dt {
+  float: none;
+  font-size: 16px;
+  margin: 0;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd {
+  margin-bottom: 20px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details dd:last-of-type {
+  margin-bottom: 20px;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__name {
+  font-size: 24px;
+  line-height: 1.04167;
+  float: left;
+  margin: 0 5px 0 0;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__nino {
+  font-size: 18px;
+  float: left;
+  margin: 5px 0 0 0;
+  }
+
+  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__status {
+  font-size: 14px;
+  float: left;
+  clear: both;
+  margin-top: 5px;
+  }
+  <hr style="width:100%", size="3", color=white>
+  }
+</style>
+<main class="govuk-main-wrapper">
+<div class="govuk-width-container">
+<section class="dwp-key-details-bar" aria-label="Key details">
+<dl class="dwp-key-details-bar__key-details">
+  <div class="dwp-key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="dwp-key-details-bar__name"> Robert De Silva</dd>
+
+      <dt class="govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
+
+      <dt class="govuk-visually-hidden">Claim status:</dt>
+
+  </div>
+
+  <div class="dwp-key-details-bar__bottom-block">
+      <dt>Date of birth:</dt>
+      <dd>4 June 1972</dd>
+      <dt>Postcode:</dt>
+      <dd>E1 7KJ</dd>
+  </div>
+</dl>
+</section>
+</div>
+<hr>
+<div class="nav">
+    <div class="govuk-grid-column-two-thirds">
+    <p class="report">INCIDENT REPORT - INC 123-456-789</p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <strong class="govuk-tag govuk-tag--blue">
+    In progress
+  </strong>
+    </div>
+</div>
+
+<div class="menu">
+<ul>
+  <li><a  href="00overview">Overview</a></li>
+    <li><a href="01reporters">Reporter</a></li>
+  <li><a href="02linked">Linked reports</a></li>
+  <li><a class="active" href="03recommendations">Manager recommendations</a></li>
+</ul>
+</div>
+</main>
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Manager recommendations</h2>
+        <table class="govuk-table">
+
+          <table class="govuk-table">
+              <caption class="govuk-table__caption govuk-table__caption--m">Incident manager</caption>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Full name</th>
+                  <td class="govuk-table__cell">Sarah Darjeeling</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Incident manager contact</th>
+                  <td class="govuk-table__cell">sarah.darjeeling@dwp.gov.uk</td>
+                </tr>
+              </tbody>
+          </table>
+
+          <table class="govuk-table">
+              <caption class="govuk-table__caption govuk-table__caption--m">Suggestions</caption>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Letter</th>
+                  <td class="govuk-table__cell">Warning letter</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Solicitor action</th>
+                  <td class="govuk-table__cell">Ban from office</td>
+                </tr>
+              </tbody>
+          </table>
+
+          <h3 class="govuk-heading-s">Recommendations</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget tristique justo. In et vulputate nisi. Integer commodo ante tellus, sed iaculis dolor consequat accumsan. Donec sodales, orci eget facilisis fringilla, risus augue fermentum enim, vitae pulvinar odio dolor id felis. Donec luctus sit amet lectus nec vestibulum.
+          </p>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-m">Sub categories</h3>
+      <a href="#">Incident manager details</a>
+      <a href="#">Recommendations</a>
+      </div>
+
+
+  <br></br>
+
+
+
+
+{% endblock %}
