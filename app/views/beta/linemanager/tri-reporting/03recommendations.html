@@ -255,52 +255,16 @@ text-decoration-thickness: 20%;
 <div class="menu">
 <ul>
   <li><a  href="00overview">Overview</a></li>
-    <li><a href="01reporters">Reporter</a></li>
-  <li><a href="02linked">Linked reports</a></li>
-  <li><a class="active" href="03recommendations">Manager recommendations</a></li>
+    <li><a href="01reporters">Victims</a></li>
+  <li><a href="02witnesses">Witnesses</a></li>
+  <li><a class="active" href="03recommendations">Manager area</a></li>
 </ul>
 </div>
 </main>
 {% endblock %}
 
 {% block content %}
-<style>
-.message {
-  border: 5px outset green;
-  background-color: white;
-  text-align: left;
-  border-style: solid;
-  padding-top: 20px;
- padding-right: 5px;
- padding-bottom: 0px;
- padding-left: 20px;
-  width: 63%;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  }
 
-  li {
-    float: left;
-    padding: 0px 0px 0px 10px;
-  }
-</style>
-<div class="message">
-  <ul>
-
-    <li>  <img src="/public/images/check_icon.svg" width="25" height="25" alt="green_check"></li>
-
-    <li>   <p>   You are now the incident manager for this incident</p></li>
-
-  </ul>
-
-
-</div>
-
-<br></br>
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -325,32 +289,25 @@ ul {
               <caption class="govuk-table__caption govuk-table__caption--m">Suggestions</caption>
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">No suggestions for this incident yet</th>
-                  <td class="govuk-table__cell"></td>
+                  <th scope="row" class="govuk-table__header">Letters</th>
+                  <td class="govuk-table__cell">Warning letter</td>
                 </tr>
-
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Solicitor action</th>
+                  <td class="govuk-table__cell">Ban from office</td>
+                </tr>
               </tbody>
-
           </table>
-            <table class="govuk-table">
-                <caption class="govuk-table__caption govuk-table__caption--m">Recommendations</caption>
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">No recommendations for this incident yet</th>
-                    <td class="govuk-table__cell"></td>
-                  </tr>
 
-                </tbody>
+          <h3 class="govuk-heading-m">Recommendations</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget tristique justo. In et vulputate nisi. Integer commodo ante tellus, sed iaculis dolor consequat accumsan. Donec sodales, orci eget facilisis fringilla, risus augue fermentum enim, vitae pulvinar odio dolor id felis. Donec luctus sit amet lectus nec vestibulum.
+          </p>
 
-            </table>
-          <a href="05recommendations.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-           Add suggestions and recommendations
+          <h3 class="govuk-heading-m">Invite collaborators</h3>
+          <a href="04recommendations.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+            Send request to report
             </a>
-            <hr>
-            <h3 class="govuk-heading-m">Invite collaborators</h3>
-            <a href="09recommendations.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-              Send request to report
-              </a>
+
       </div>
 
 
@@ -359,6 +316,7 @@ ul {
       <a href="#">Incident manager<br></a>
       <a href="#">Suggestions<br></a>
       <a href="#">Recommendations</a>
+
       </div>
 
 

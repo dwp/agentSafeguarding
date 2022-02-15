@@ -254,111 +254,67 @@ text-decoration-thickness: 20%;
 
 <div class="menu">
 <ul>
-  <li><a  href="00overview">Overview</a></li>
-    <li><a href="01reporters">Reporter</a></li>
-  <li><a href="02linked">Linked reports</a></li>
-  <li><a class="active" href="03recommendations">Manager recommendations</a></li>
+  <li><a  href="00overview">incident details</a></li>
+    <li><a href="01reporters">Victims</a></li>
+  <li><a class="active" href="02witnesses">Witnesses</a></li>
+  <li><a href="03recommendations">Manager area</a></li>
 </ul>
 </div>
 </main>
 {% endblock %}
 
 {% block content %}
-<style>
-.message {
-  border: 5px outset green;
-  background-color: white;
-  text-align: left;
-  border-style: solid;
-  padding-top: 20px;
- padding-right: 5px;
- padding-bottom: 0px;
- padding-left: 20px;
-  width: 63%;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  }
 
-  li {
-    float: left;
-    padding: 0px 0px 0px 10px;
-  }
-</style>
-<div class="message">
-  <ul>
-
-    <li>  <img src="/public/images/check_icon.svg" width="25" height="25" alt="green_check"></li>
-
-    <li>   <p>   You are now the incident manager for this incident</p></li>
-
-  </ul>
-
-
-</div>
-
-<br></br>
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">Manager recommendations</h2>
+        <h2 class="govuk-heading-l">Report WIT-001</h2>
         <table class="govuk-table">
-
-          <table class="govuk-table">
-              <caption class="govuk-table__caption govuk-table__caption--m">Incident manager</caption>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Full name</th>
-                  <td class="govuk-table__cell">Sarah Darjeeling</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Incident manager contact</th>
-                  <td class="govuk-table__cell">sarah.darjeeling@dwp.gov.uk</td>
-                </tr>
-              </tbody>
+        <h2 class="govuk-heading-m">WIT-001 - Witness details</h2>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Full name</th>
+                <td class="govuk-table__cell">Sartaq Matcha</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Role in the incident</th>
+                <td class="govuk-table__cell">Witness</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Contact</th>
+                <td class="govuk-table__cell">sartaq.matcha@dwp.gov.uk</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Reporter's line manager</th>
+                <td class="govuk-table__cell">Sartaq Matcha</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Line manager contact</th>
+                <td class="govuk-table__cell">sartaq.matcha@dwp.gov.uk</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Location at time of the incident</th>
+                <td class="govuk-table__cell">The office their based at</td>
+              </tr>
+            </tbody>
           </table>
+          <h2 class="govuk-heading-m">WIT-001 - Incident details</h2>
 
-          <table class="govuk-table">
-              <caption class="govuk-table__caption govuk-table__caption--m">Suggestions</caption>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">No suggestions for this incident yet</th>
-                  <td class="govuk-table__cell"></td>
-                </tr>
 
-              </tbody>
+            <h3 class="govuk-heading-s">Description</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget tristique justo. In et vulputate nisi. Integer commodo ante tellus, sed iaculis dolor consequat accumsan. Donec sodales, orci eget facilisis fringilla, risus augue fermentum enim, vitae pulvinar odio dolor id felis. Donec luctus sit amet lectus nec vestibulum.<br>
+              Mauris lobortis sodales nisi. Etiam mollis pharetra diam, vel pretium libero finibus ac. Cras quis mi urna. Nam lobortis finibus nibh nec elementum. Integer sed urna sem. Donec luctus sit amet lectus nec vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. <br>
+              Mauris fermentum consectetur orci aliquet pretium. Nunc porttitor consectetur ultrices. Mauris nec maximus mauris. Suspendisse posuere vel nibh non tincidunt. Cras suscipit ante ut lectus consequat, quis vestibulum lectus efficitur. Integer et risus enim. Fusce lacinia purus nec euismod convallis. Fusce volutpat nulla non libero bibendum, sit amet commodo est imperdiet.
+            </p>
 
-          </table>
-            <table class="govuk-table">
-                <caption class="govuk-table__caption govuk-table__caption--m">Recommendations</caption>
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">No recommendations for this incident yet</th>
-                    <td class="govuk-table__cell"></td>
-                  </tr>
-
-                </tbody>
-
-            </table>
-          <a href="05recommendations.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-           Add suggestions and recommendations
-            </a>
-            <hr>
-            <h3 class="govuk-heading-m">Invite collaborators</h3>
-            <a href="09recommendations.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-              Send request to report
-              </a>
-      </div>
+            </div>
 
 
       <div class="govuk-grid-column-one-third">
-        <h3 class="govuk-heading-m">Sub categories</h3>
-      <a href="#">Incident manager<br></a>
-      <a href="#">Suggestions<br></a>
-      <a href="#">Recommendations</a>
+        <h3 class="govuk-heading-m">Total witnesses: 1</h3>
+        <p><strong>WIT-001</strong></p>
+        <a href="#">1. Witness details<br></a>
+        <a href="#">1. Incident description</a>
       </div>
 
 

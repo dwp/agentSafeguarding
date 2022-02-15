@@ -264,105 +264,46 @@ text-decoration-thickness: 20%;
 {% endblock %}
 
 {% block content %}
-<style>
-.message {
-  border: 5px outset green;
-  background-color: white;
-  text-align: left;
-  border-style: solid;
-  padding-top: 20px;
- padding-right: 5px;
- padding-bottom: 0px;
- padding-left: 20px;
-  width: 63%;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  }
 
-  li {
-    float: left;
-    padding: 0px 0px 0px 10px;
-  }
-</style>
-<div class="message">
-  <ul>
-
-    <li>  <img src="/public/images/check_icon.svg" width="25" height="25" alt="green_check"></li>
-
-    <li>   <p>   You are now the incident manager for this incident</p></li>
-
-  </ul>
-
-
-</div>
-
-<br></br>
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">Manager recommendations</h2>
-        <table class="govuk-table">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Who would you invite to report?
+              </h1>
+            </legend>
 
-          <table class="govuk-table">
-              <caption class="govuk-table__caption govuk-table__caption--m">Incident manager</caption>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Full name</th>
-                  <td class="govuk-table__cell">Sarah Darjeeling</td>
-                </tr>
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Incident manager contact</th>
-                  <td class="govuk-table__cell">sarah.darjeeling@dwp.gov.uk</td>
-                </tr>
-              </tbody>
-          </table>
-
-          <table class="govuk-table">
-              <caption class="govuk-table__caption govuk-table__caption--m">Suggestions</caption>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">No suggestions for this incident yet</th>
-                  <td class="govuk-table__cell"></td>
-                </tr>
-
-              </tbody>
-
-          </table>
-            <table class="govuk-table">
-                <caption class="govuk-table__caption govuk-table__caption--m">Recommendations</caption>
-                <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">No recommendations for this incident yet</th>
-                    <td class="govuk-table__cell"></td>
-                  </tr>
-
-                </tbody>
-
-            </table>
-          <a href="05recommendations.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-           Add suggestions and recommendations
-            </a>
-            <hr>
-            <h3 class="govuk-heading-m">Invite collaborators</h3>
-            <a href="09recommendations.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-              Send request to report
-              </a>
-      </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">
+                    Their first name
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">
+                    Their last name
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
+                </div>
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">
+                    Their email address
+                  </label>
+                  <div id="email-hint" class="govuk-hint">
+                    Enter their email address as it appears on the Global Address List
+                  </div>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
+                </div>
+            </div>
 
 
-      <div class="govuk-grid-column-one-third">
-        <h3 class="govuk-heading-m">Sub categories</h3>
-      <a href="#">Incident manager<br></a>
-      <a href="#">Suggestions<br></a>
-      <a href="#">Recommendations</a>
-      </div>
+        <a href="10recommendations.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+          Continue
+          </a>
 
-
-  <br></br>
 
 
 
