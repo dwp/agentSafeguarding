@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-form-group">
+  <a href="01concern" class="govuk-back-link">Back</a>
+  <br></br>
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Please confirm that you have:
+      </h1>
+    </legend>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Successfully complete the third party referral form followin the instructions
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Sent the form via email to the nominated manager
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Downloaded and sent the evidence that were provided to the nominated manager (if any)
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+  <br></br>
+    <a href="02success.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+      Confirm and submit
+      </a>
+</div>
+
+
+
+{% endblock %}
