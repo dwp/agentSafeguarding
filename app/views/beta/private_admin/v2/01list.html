@@ -1,0 +1,54 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-form-group">
+  <a href="00list" class="govuk-back-link">Back</a>
+  <br></br>
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Incidents and concerns reported through agent safeguarding service
+    </h1>
+  </legend>
+<hr>
+
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Reference</th>
+      <th scope="col" class="govuk-table__header">Date submitted</th>
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="01details">INC 000-000-001</a></th>
+      <td class="govuk-table__cell">16/03/22 <br> 14:30</td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="02concern">CON 000-000-002</a></th>
+      <td class="govuk-table__cell">16/03/22 <br> 11:30</td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="01concern">CON 000-000-001</a></th>
+      <td class="govuk-table__cell"><b>18/03/22 <br> 10:30</b></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+
+
+{% endblock %}
