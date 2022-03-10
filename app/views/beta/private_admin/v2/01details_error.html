@@ -11,6 +11,20 @@
 
 <div class="govuk-form-group">
   <a href="01list" class="govuk-back-link">Back</a>
+
+  <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#error1">Missing UCB reference number</a>
+      </li>
+
+    </ul>
+  </div>
+</div>
   <br></br>
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
     <h1 class="govuk-fieldset__heading">
@@ -485,17 +499,22 @@ sadiq.assam@dwp.gov.uk
 </dd>
 </div>
 </dl>
+
+<div class="govuk-form-group govuk-form-group--error">
 <div class="govuk-date-input__item">
         <div class="govuk-form-group">
           <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
             Plese insert the UCB reference number for this incident
           </label>
+          <p id="error1" class="govuk-error-message">
+     <span class="govuk-visually-hidden">Error:</span> Please insert the UCB reference number
+   </p>
           <input class="govuk-input govuk-date-input__input govuk-input--width-7" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
         </div>
       </div>
-
+</div>
   <br></br>
-    <a href="01details_error.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+    <a href="01list.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
       Close
       </a>
 
