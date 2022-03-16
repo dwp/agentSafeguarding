@@ -4,7 +4,29 @@
 {% block pageTitle %}
   GOV.UK Prototype Kit
 {% endblock %}
+{% block beforeContent %}
+<br>
+<h2 class="govuk-heading-m">User Reaserch and Presentations</h2>
+<a href="index2.html">Presentation 02 Feb</a>
+<br></br>
+<a href="index3.html">UR Tue 15 Feb / Wed 16 Feb</a>
+<br></br>
+<hr>
+<h2 class="govuk-heading-m">Confluence references</h2>
+<ul>
+<li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132447764502">All Agent Safeguarding User Needs</a></li>
+<li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132524310540">Report an incident journey</a></li>
+<li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132630545028">Report an Agent Safety Concern journey</a></li>
+<li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132662624314">Submit a witness report journey</a></li>
+<li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132539547936">Decision maker journey</a></li>
+<li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132482172143/Research+Analysis+Private+Beta">Common Reporting</a></li>
+<li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132482172143/Research+Analysis+Private+Beta">Look Ahead Business Analysis Plan</a></li>
+<li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132537614421">Pathfinder work with Searchlight (user permissions)</a></li>
+<li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132485579026">Private Beta Green Zone milestones</a></li>
+<li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132550656014">Agent Safeguarding and DWP Notifications integration</a></li>
+</ul>
 
+{% endblock %}
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -14,10 +36,7 @@
         <span class="govuk-caption-xl">{{releaseVersion}}</span>
       </h1>{{releaseVersion | log }}
 
-      <h2 class="govuk-heading-m">Versions</h2>
-<a href="index2.html">Presentation 02 Feb</a>
-<br></br>
-<a href="index3.html">UR Tue 15 Feb / Wed 16 Feb</a>
+
 
 
   <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
