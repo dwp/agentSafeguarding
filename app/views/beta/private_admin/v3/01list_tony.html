@@ -1,0 +1,49 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-form-group">
+  <a href="00list" class="govuk-back-link">Back</a>
+  <br></br>
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Incidents and concerns reported in Agent Safeguarding
+    </h1>
+  </legend>
+<hr>
+
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Reference</th>
+        <th scope="col" class="govuk-table__header">Type</th>
+      <th scope="col" class="govuk-table__header">Date reported</th>
+      <th scope="col" class="govuk-table__header">Action</th>
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">000-000-001</th>
+      <td class="govuk-table__cell">Incident</td>
+      <td class="govuk-table__cell">16/03/22 <br> 14:30</td>
+      <td class="govuk-table__cell"><a href="01details">Accept <br><br> Reject</a></td>
+
+    </tr>
+
+
+
+  </tbody>
+</table>
+
+
+
+{% endblock %}

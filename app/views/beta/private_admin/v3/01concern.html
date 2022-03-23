@@ -1,0 +1,783 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-form-group">
+  <a href="01list" class="govuk-back-link">Back</a>
+  <br></br>
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Agent Safeguarding to UCDB </h1>
+    <!-- <h1 class="govuk-fieldset__heading">
+    Instructions
+    </h1> -->
+
+  </legend>
+
+  <h2 class="govuk-heading-m">
+    Instructions
+  </h2>
+
+  <p>Using information from the table below you must complete a new third-party report in UCDB.
+  </p>
+  <p>Each row corresponds to field in the UCDB report that needs completing. This page displays either the information required and a button to copy it, the option that you must pick from a list, instruction to leave the field blank, or you must
+    interpret the data.</p>
+  <!-- <p>Follow the instructions below to report this incident in the Unacceptable Customer Database (UCDB).</p> -->
+
+  <br>
+  <h3 class="govuk-heading-m">Examples</h3>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Field (example)
+      </dt>
+      <dt class="govuk-summary-list__key">
+        Data (example)
+      </dt>
+      <dt class="govuk-summary-list__key">
+        Action
+      </dt>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Customer name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Joe Bloggs
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button><br>
+        If you see a 'Copy' button, click on it to copy the text to your clipboard. Then go to this field in UCDB and press Ctrl + V to paste the text in.
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Customer title
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--grey">Prefer not to say </strong>
+      </dd>
+      <dd class="govuk-summary-list__value">
+        If you see an instruction that looks like this, select the option shown. In this example, you would select 'Prefer not to say'.
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Title
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i>Leave this blank</i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+        If you see this instruction, leave this field blank in UCDB.
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Date referral made
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i>Agent Safeguarding - Concern description</i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+        You must read the concern description to find the information required.
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Job role
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i>Alternate DWP system</i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+        You must use either the most appropriate DWP system to find the information required.
+      </dd>
+    </div>
+  </dl>
+
+
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Concern: CON-000-000-001
+    </h1>
+  </legend>
+
+
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-warning-text__assistive">Warning</span>
+      Please refresh the page before start reporting this on UCDB.
+    </strong>
+  </div>
+
+  <h2 class="govuk-heading-m">
+    Referrer Details
+  </h2>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Field
+      </dt>
+      <dt class="govuk-summary-list__key">
+        Data/instruction
+      </dt>
+      <dt class="govuk-summary-list__key">
+        Action
+      </dt>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Referrer
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Ted Ladygrey (?)
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Business
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i>Alternate DWP system</i> (?)
+      </dd>
+      <dd class="govuk-summary-list__value">
+        (?)
+      </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Business area
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i>Alternate DWP system</i> (?)
+      </dd>
+      <dd class="govuk-summary-list__value">
+        (?)
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Home Office/Usual place of work
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i>Alternate DWP system</i> (?)
+      </dd>
+      <dd class="govuk-summary-list__value">
+        (?)
+      </dd>
+    </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">
+    Details of Customer/Claimant
+    </h2>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Field
+    </dt>
+    <dt class="govuk-summary-list__key">
+      Data/Instructions
+    </dt>
+    <dt class="govuk-summary-list__key">
+      Action
+    </dt>
+  </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Customer/ Claimant Title
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--grey">I don't know </strong>
+      </dd>
+      <dd class="govuk-summary-list__value">
+
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        First name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Robert
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Other names
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i>Leave it blank</i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Last name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Da Silva
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        NINO
+      </dt>
+      <dd class="govuk-summary-list__value">
+        QQ 12 34 56 X
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Date referral made
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i>Agent Safeguarding - Concern description</i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+
+        You must read the information below in this page. Use the following link to navigate to it. <a href="#notes">Click here to go to 'Notes'</a>.
+
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Are you reporting the customer?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--grey">Yes </strong>
+      </dd>
+      <dd class="govuk-summary-list__value">
+
+      </dd>
+    </div>
+  </dl>
+  <h3 class="govuk-heading-m">
+    Customer/Claimant address
+  </h3>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Field
+      </dt>
+      <dt class="govuk-summary-list__key">
+        Data/Instructions
+      </dt>
+      <dt class="govuk-summary-list__key">
+        Action
+      </dt>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        House number or name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        1
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Street
+      </dt>
+      <dd class="govuk-summary-list__value">
+        The Street
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Town
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Anywhere
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        County
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Hereshire
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Postcode
+      </dt>
+      <dd class="govuk-summary-list__value">
+        QQ9 9QQ
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Incident category
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--grey">Other</strong>
+      </dd>
+      <dd class="govuk-summary-list__value">
+        Select this option
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+
+        Do you intend to implement control measures for the customer?
+
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--grey">No</strong>
+      </dd>
+      <dd class="govuk-summary-list__value">
+        Select this option
+      </dd>
+    </div>
+
+CHECK WITH BA THE NO OPTIONS ON UCDB
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        What contol measures have you applied? Select all that apply? (Published to Staff Protection List)
+      </dt>
+      <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--grey">???</strong>
+      </dd>
+      <dd class="govuk-summary-list__value">
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Have you set markers on IT system?
+      <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--grey">???</strong>
+      </dd>
+      <dd class="govuk-summary-list__value">
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        IT systems marked
+      <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--grey">???</strong>
+      </dd>
+      <dd class="govuk-summary-list__value">
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Notes
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nulla vel eros malesuada sodales. Fusce at luctus tortor. In feugiat, risus sit amet venenatis feugiat, neque metus gravida nulla, ac eleifend ante turpis a turpis. Vestibulum
+        nec massa at dolor aliquet malesuada. Vestibulum at posuere ante, nec euismod eros.
+      </dd>
+      <dd class="govuk-summary-list__value">
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Attach referral evidence
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i>Leave it blank</i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+</dl>
+
+<h2 class="govuk-heading-m">
+Review Action
+</h2>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Field
+      </dt>
+      <dt class="govuk-summary-list__key">
+        Data/Instructions
+      </dt>
+      <dt class="govuk-summary-list__key">
+        Action
+      </dt>
+    </div>
+      <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Nominated manager responsible for review
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i>Leave it blank</i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Date of next review
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i>Leave it blank</i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+
+        Notes
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i>Leave it blank</i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+
+
+        Attach  evidence
+
+
+
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i>Leave it blank</i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+      </dd>
+    </div>
+  </dl>
+
+    <h2 class="govuk-heading-m">
+      Linked incidents
+    </h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Field
+          </dt>
+          <dt class="govuk-summary-list__key">
+            Data/Instructions
+          </dt>
+          <dt class="govuk-summary-list__key">
+            Action
+          </dt>
+        </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+
+        Link incident by a customer
+
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i>Leave it blank</i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+      </dd>
+    </div>
+
+  </dl>
+  <h2 class="govuk-heading-m">
+    Incident history
+  </h2>
+<hr>
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-warning-text__assistive">Warning</span>
+      Please SAVE AND CLOSE. Please DO NO PUBLISH.
+    </strong>
+  </div>
+  <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <h3 class="govuk-heading-m">Enter the Referral ID number for this report</h3>
+            <div id="more-detail-hint" class="govuk-hint">
+              You can find this at the top of the referral.
+            </div>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-5" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
+          </div>
+        </div>
+
+    <br></br>
+      <a href="01details_error.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+        Close
+        </a>
+
+</div>
+
+  <!--old code
+
+  <h3 class="govuk-heading-m">If not customer provide the following details</h3>
+
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Title
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i> Leave this blank </i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        First name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i> Leave this blank </i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Other names
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i> Leave this blank </i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Surname
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i> Leave this blank </i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Relationship to customer e.g. Partner, Carer
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <i> Leave this blank </i>
+      </dd>
+      <dd class="govuk-summary-list__value">
+
+      </dd>
+    </div>
+</div>
+
+
+
+
+
+
+<h3 class="govuk-heading-m">Customer / claimant address</h3>
+
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      House number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <i> Leave this blank </i>
+    </dd>
+    <dd class="govuk-summary-list__value">
+
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Street
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <i> Leave this blank </i>
+    </dd>
+    <dd class="govuk-summary-list__value">
+
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Town
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <i> Leave this blank </i>
+    </dd>
+    <dd class="govuk-summary-list__value">
+
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      County
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <i> Leave this blank </i>
+    </dd>
+    <dd class="govuk-summary-list__value">
+
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Postcode
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <i> Leave this blank </i>
+    </dd>
+    <dd class="govuk-summary-list__value">
+
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Incident category
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--grey">Third party referral</strong>
+    </dd>
+    <dd class="govuk-summary-list__value">
+      Select this option in UCDB
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Notes (please provide a brief narrative to advise the reason for referral)
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+      pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
+      tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+      nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit
+      amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros
+      faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
+    </dd>
+    <dd class="govuk-summary-list__value">
+      <a href="#">Copy</a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Any supporting paperwork? Mark as appropriate X
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--grey">Yes</strong>
+    </dd>
+    <dd class="govuk-summary-list__value">
+      Select this option in UCDB
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      If yes provide details of what is to be forwarded with the form and anything else to follow
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <a href="#">Evidence.doc</a>
+    </dd>
+    <dd class="govuk-summary-list__value">
+
+    </dd>
+  </div>
+</dl>
+
+<h3 class="govuk-heading-m">Please e-mail this form to your nominated manager immediately and forward on any supporting/associated documents thereafter</h3>
+<dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Line Manager
+    </dt>
+    <dd class="govuk-summary-list__value">
+      centralised.team@dwp.gov.uk
+    </dd>
+    <dd class="govuk-summary-list__value">
+      <a href="#">Copy</a>
+    </dd>
+  </div>
+</dl>
+<br></br>
+<a href="01list.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+  Close task
+</a>
+-->
+
+
+{% endblock %}
