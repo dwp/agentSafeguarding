@@ -1,8 +1,7 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 {% block header %}
 <header class="govuk-header " role="banner" data-module="govuk-header">
@@ -35,147 +34,149 @@
   </p>
 </div>
 <style media="screen">
-  dl, dt, dd {
-  border: none;
-  margin: 0;
-  padding: 0;
+  dl,
+  dt,
+  dd {
+    border: none;
+    margin: 0;
+    padding: 0;
   }
 
   .dwp-key-details-bar {
-  background-color: #1d70b8;
-  color: #fff;
-  font-family: Arial, sans-serif;
+    background-color: #1d70b8;
+    color: #fff;
+    font-family: Arial, sans-serif;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details {
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 20px 30px;
-  position: relative;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 20px 30px;
+    position: relative;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__top-block::after,
   .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block::after {
-  clear: both;
-  content: ' ';
-  display: block;
+    clear: both;
+    content: ' ';
+    display: block;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block {
-  border-top: 1px solid rgba(255, 255, 255, .3);
-  content: ' ';
-  padding-top: 10px;
-  margin-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    content: ' ';
+    padding-top: 10px;
+    margin-top: 6px;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details dd,
   .dwp-key-details-bar .dwp-key-details-bar__key-details dt {
-  float: left;
-  font-size: 19px;
-  margin-right: 5px;
+    float: left;
+    font-size: 19px;
+    margin-right: 5px;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details dd {
-  margin-right: 20px;
+    margin-right: 20px;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__name {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.11111;
-  margin-right: 10px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11111;
+    margin-right: 10px;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__nino {
-  font-size: 24px;
-  line-height: 1;
-  margin-top: 12px;
+    font-size: 24px;
+    line-height: 1;
+    margin-top: 12px;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__status {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.25;
-  padding: 5px 8px 0;
-  color: #005ea5;
-  background-color: #fff;
-  letter-spacing: 1px;
-  text-decoration: none;
-  text-transform: uppercase;
-  float: right;
-  margin: 5px 0 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+    padding: 5px 8px 0;
+    color: #005ea5;
+    background-color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: right;
+    margin: 5px 0 0;
   }
 
   @media (max-width: 40.0525em) {
-  .dwp-key-details-bar .dwp-key-details-bar__key-details {
-  padding: 20px 15px;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details {
+      padding: 20px 15px;
+    }
 
-  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block {
-  border: 0;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block {
+      border: 0;
+    }
 
-  .dwp-key-details-bar .dwp-key-details-bar__key-details dd,
-  .dwp-key-details-bar .dwp-key-details-bar__key-details dt {
-  float: none;
-  font-size: 16px;
-  margin: 0;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details dd,
+    .dwp-key-details-bar .dwp-key-details-bar__key-details dt {
+      float: none;
+      font-size: 16px;
+      margin: 0;
+    }
 
-  .dwp-key-details-bar .dwp-key-details-bar__key-details dd {
-  margin-bottom: 20px;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details dd {
+      margin-bottom: 20px;
+    }
 
-  .dwp-key-details-bar .dwp-key-details-bar__key-details dd:last-of-type {
-  margin-bottom: 20px;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details dd:last-of-type {
+      margin-bottom: 20px;
+    }
 
-  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__name {
-  font-size: 24px;
-  line-height: 1.04167;
-  float: left;
-  margin: 0 5px 0 0;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__name {
+      font-size: 24px;
+      line-height: 1.04167;
+      float: left;
+      margin: 0 5px 0 0;
+    }
 
-  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__nino {
-  font-size: 18px;
-  float: left;
-  margin: 5px 0 0 0;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__nino {
+      font-size: 18px;
+      float: left;
+      margin: 5px 0 0 0;
+    }
 
-  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__status {
-  font-size: 14px;
-  float: left;
-  clear: both;
-  margin-top: 5px;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__status {
+      font-size: 14px;
+      float: left;
+      clear: both;
+      margin-top: 5px;
+    }
   }
 </style>
 <div class="govuk-width-container">
-<section class="dwp-key-details-bar" aria-label="Key details">
-<dl class="dwp-key-details-bar__key-details">
-  <div class="dwp-key-details-bar__top-block">
-      <dt class="govuk-visually-hidden">Name:</dt>
-      <dd class="dwp-key-details-bar__name"> Robert De Silva</dd>
+  <section class="dwp-key-details-bar" aria-label="Key details">
+    <dl class="dwp-key-details-bar__key-details">
+      <div class="dwp-key-details-bar__top-block">
+        <dt class="govuk-visually-hidden">Name:</dt>
+        <dd class="dwp-key-details-bar__name"> Robert De Silva</dd>
 
-      <dt class="govuk-visually-hidden">National Insurance number:</dt>
-      <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
+        <dt class="govuk-visually-hidden">National Insurance number:</dt>
+        <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
 
-      <dt class="govuk-visually-hidden">Claim status:</dt>
+        <dt class="govuk-visually-hidden">Claim status:</dt>
 
-  </div>
+      </div>
 
-  <div class="dwp-key-details-bar__bottom-block">
-      <dt>Date of birth:</dt>
-      <dd>4 June 1972</dd>
+      <div class="dwp-key-details-bar__bottom-block">
+        <dt>Date of birth:</dt>
+        <dd>4 June 1972</dd>
 
-      <dt>Postcode:</dt>
-      <dd>E1 7KJ</dd>
+        <dt>Postcode:</dt>
+        <dd>E1 7KJ</dd>
 
 
-  </div>
-</dl>
-</section>
+      </div>
+    </dl>
+  </section>
 </div>
 
 {% endblock %}
@@ -183,78 +184,107 @@
 {% block content %}
 <div class="govuk-width-container">
 
-    <a href="04report.html" class="govuk-back-link">Back</a>
+  <a href="04report.html" class="govuk-back-link">Back</a>
 
-    <main class="govuk-main-wrapper " id="main-content" role="main">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <form action="/form-handler" method="post" novalidate>
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="/form-handler" method="post" novalidate>
 
+          <div class="govuk-form-group">
             <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
+              <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
                     What type of interaction was it?
                   </h1>
                 </legend>
-                <div id="waste-hint" class="govuk-hint">
-               Select one option.
-              </div>
-
-                <div class="govuk-radios">
+                <div id="contact-hint" class="govuk-hint">
+                  Select one option.
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-                    <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                    <input class="govuk-radios__input" id="contacta" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                    <label class="govuk-label govuk-radios__label" for="contacta">
                       In person
                       <div id="nationality-hint" class="govuk-hint">
                         For example, at a job centre or a customer's house
                       </div>
                     </label>
                   </div>
+
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                    <input class="govuk-radios__input" id="contactb" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                    <label class="govuk-label govuk-radios__label" for="contactb">
+                      Social media
+                      <div id="nationality-hint" class="govuk-hint">
+                        For example, FaceBook, Twitter, Instagram, TikTok
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contactc" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                    <label class="govuk-label govuk-radios__label" for="contactc">
                       Video call
                       <div id="nationality-hint" class="govuk-hint">
                         For example, an appointment over MS Teams
                       </div>
                     </label>
                   </div>
+
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                    <input class="govuk-radios__input" id="contactd" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                    <label class="govuk-label govuk-radios__label" for="contactd">
                       Telephone
                       <div id="nationality-hint" class="govuk-hint">
                         Including voice mails and text messages
                       </div>
                     </label>
                   </div>
+
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                    <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                    <input class="govuk-radios__input" id="contacte" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                    <label class="govuk-label govuk-radios__label" for="contacte">
                       Written
                       <div id="nationality-hint" class="govuk-hint">
                         For example: letters, emails, web chat, comments in journal
                       </div>
                     </label>
                   </div>
+
+                  <div class="govuk-radios__divider">or</div><br>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
+                    <label class="govuk-label govuk-radios__label" for="contact-3">
+                      Other
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="contact-by-text">
+                        Interaction type
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel">
+                    </div>
+
+                  </div>
                 </div>
 
-
               </fieldset>
-
             </div>
+          </div>
 
 
-
-            <a href="06report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-              Continue
-              </a>
-          </form>
-        </div>
+          <a href="06report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+            Continue
+          </a>
+        </form>
       </div>
-    </main>
-  </div>
+    </div>
+  </main>
+</div>
 
 
 
