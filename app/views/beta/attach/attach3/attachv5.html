@@ -1,8 +1,7 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 {% block header %}
 <header class="govuk-header " role="banner" data-module="govuk-header">
@@ -38,298 +37,322 @@
   </p>
 </div>
 <style media="screen">
-  dl, dt, dd {
-  border: none;
-  margin: 0;
-  padding: 0;
+  dl,
+  dt,
+  dd {
+    border: none;
+    margin: 0;
+    padding: 0;
   }
 
   .dwp-key-details-bar {
-  background-color: #1d70b8;
-  color: #fff;
-  font-family: Arial, sans-serif;
+    background-color: #1d70b8;
+    color: #fff;
+    font-family: Arial, sans-serif;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details {
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 20px 30px;
-  position: relative;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 20px 30px;
+    position: relative;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__top-block::after,
   .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block::after {
-  clear: both;
-  content: ' ';
-  display: block;
+    clear: both;
+    content: ' ';
+    display: block;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block {
-  border-top: 1px solid rgba(255, 255, 255, .3);
-  content: ' ';
-  padding-top: 10px;
-  margin-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    content: ' ';
+    padding-top: 10px;
+    margin-top: 6px;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details dd,
   .dwp-key-details-bar .dwp-key-details-bar__key-details dt {
-  float: left;
-  font-size: 19px;
-  margin-right: 5px;
+    float: left;
+    font-size: 19px;
+    margin-right: 5px;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details dd {
-  margin-right: 20px;
+    margin-right: 20px;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__name {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.11111;
-  margin-right: 10px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11111;
+    margin-right: 10px;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__nino {
-  font-size: 24px;
-  line-height: 1;
-  margin-top: 12px;
+    font-size: 24px;
+    line-height: 1;
+    margin-top: 12px;
   }
 
   .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__status {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.25;
-  padding: 5px 8px 0;
-  color: #005ea5;
-  background-color: #fff;
-  letter-spacing: 1px;
-  text-decoration: none;
-  text-transform: uppercase;
-  float: right;
-  margin: 5px 0 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+    padding: 5px 8px 0;
+    color: #005ea5;
+    background-color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: right;
+    margin: 5px 0 0;
   }
 
   @media (max-width: 40.0525em) {
-  .dwp-key-details-bar .dwp-key-details-bar__key-details {
-  padding: 20px 15px;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details {
+      padding: 20px 15px;
+    }
 
-  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block {
-  border: 0;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block {
+      border: 0;
+    }
 
-  .dwp-key-details-bar .dwp-key-details-bar__key-details dd,
-  .dwp-key-details-bar .dwp-key-details-bar__key-details dt {
-  float: none;
-  font-size: 16px;
-  margin: 0;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details dd,
+    .dwp-key-details-bar .dwp-key-details-bar__key-details dt {
+      float: none;
+      font-size: 16px;
+      margin: 0;
+    }
 
-  .dwp-key-details-bar .dwp-key-details-bar__key-details dd {
-  margin-bottom: 20px;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details dd {
+      margin-bottom: 20px;
+    }
 
-  .dwp-key-details-bar .dwp-key-details-bar__key-details dd:last-of-type {
-  margin-bottom: 20px;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details dd:last-of-type {
+      margin-bottom: 20px;
+    }
 
-  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__name {
-  font-size: 24px;
-  line-height: 1.04167;
-  float: left;
-  margin: 0 5px 0 0;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__name {
+      font-size: 24px;
+      line-height: 1.04167;
+      float: left;
+      margin: 0 5px 0 0;
+    }
 
-  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__nino {
-  font-size: 18px;
-  float: left;
-  margin: 5px 0 0 0;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__nino {
+      font-size: 18px;
+      float: left;
+      margin: 5px 0 0 0;
+    }
 
-  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__status {
-  font-size: 14px;
-  float: left;
-  clear: both;
-  margin-top: 5px;
-  }
+    .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__status {
+      font-size: 14px;
+      float: left;
+      clear: both;
+      margin-top: 5px;
+    }
   }
 </style>
 
 <style>
-.myDiv {
-  border: 3px outset black;
-  background-color: white;
-  text-align: left;
-  border-style: dashed;
-  padding-top: 30px;
- padding-right: 30px;
- padding-bottom: 15px;
- padding-left: 30px;
-}
+  .myDiv {
+    border: 3px outset black;
+    background-color: white;
+    text-align: left;
+    border-style: dashed;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    width: fit-content;
+  }
 </style>
 
 <style>
-.message {
-  border: 5px outset red;
-  background-color: white;
-  text-align: left;
-  border-style: solid;
-  padding-top: 20px;
- padding-right: 5px;
- padding-bottom: 0px;
- padding-left: 20px;
-  width: 63%;
-}
-.filter-red{
-       filter: invert(12%) sepia(76%) saturate(6397%) hue-rotate(356deg) brightness(112%) contrast(87%);
-   }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  .message {
+    border: 5px outset red;
+    background-color: white;
+    text-align: left;
+    border-style: solid;
+    padding-top: 20px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    width: 63%;
   }
 
-  li {
-    float: left;
-    padding: 0px 0px 0px 10px;
+  .filter-red {
+    filter: invert(12%) sepia(76%) saturate(6397%) hue-rotate(356deg) brightness(112%) contrast(87%);
   }
+  .margintop0 {margin-top:0}
 </style>
+<div class="govuk-width-container ">
+  <section class="dwp-key-details-bar" aria-label="Key details">
+    <dl class="dwp-key-details-bar__key-details">
+      <div class="dwp-key-details-bar__top-block">
+        <dt class="govuk-visually-hidden">Name:</dt>
+        <dd class="dwp-key-details-bar__name"> Robert De Silva</dd>
+
+        <dt class="govuk-visually-hidden">National Insurance number:</dt>
+        <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
+
+        <dt class="govuk-visually-hidden">Claim status:</dt>
+
+      </div>
+
+      <div class="dwp-key-details-bar__bottom-block">
+        <dt>Date of birth:</dt>
+        <dd>4 June 1972</dd>
+
+        <dt>Postcode:</dt>
+        <dd>E1 7KJ</dd>
 
 
-<div class="govuk-width-container">
-<section class="dwp-key-details-bar" aria-label="Key details">
-<dl class="dwp-key-details-bar__key-details">
-  <div class="dwp-key-details-bar__top-block">
-      <dt class="govuk-visually-hidden">Name:</dt>
-      <dd class="dwp-key-details-bar__name"> Robert De Silva</dd>
-
-      <dt class="govuk-visually-hidden">National Insurance number:</dt>
-      <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
-
-      <dt class="govuk-visually-hidden">Claim status:</dt>
-
-  </div>
-
-  <div class="dwp-key-details-bar__bottom-block">
-      <dt>Date of birth:</dt>
-      <dd>4 June 1972</dd>
-
-      <dt>Postcode:</dt>
-      <dd>E1 7KJ</dd>
-
-
-  </div>
-</dl>
-</section>
+      </div>
+    </dl>
+  </section>
 </div>
 {% endblock %}
-
 {% block content %}
-
 <a href="attachv4" class="govuk-back-link">Back</a>
 
-
-  <div class="message">
-    <ul>
-
-      <li>  <img src="/public/images/check_icon_black.svg" width="25" height="25" alt="green_check" class="filter-red"></li>
-
-      <li>   <p>   Error: File cannot be uploaded</p></li>
-
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#upload">"definite_evidence.exe" must be an acceptable file type </a>
+      </li>
+      <li>
+        <a href="#upload">"definite_evidence.zip" must be an acceptable file type </a>
+      </li>
     </ul>
-
-
   </div>
-
-<br></br>
-
+  <!-- We have only identified one class of error so although GDS asks for a line by line explanation, this reduces repetition and complexity -->
+  <details class="govuk-details nobottommnargin topmargin30" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Help with file types
+      </span>
+    </summary>
+    <div class="govuk-details__text" id="filetypes">
+      <!-- Make consistent with attach0 -->
+      <p class="govuk-body">You can upload</p>
+      <ul class="govuk-list govuk-list--bullet">
+       <!-- switch order to present most common files first -->
+        <li>Documents (DOC, DOCX, PDF, XLS, PPT, ...)</li>
+        <li>Images (JPG, PNG, RAW, ...)</li>
+      </ul>
+      <p>Image size shouldn't be greater than 20MB</p>
+    </div>
+  </details>
+</div>
 <h1 class="govuk-heading-xl">Upload evidence</h1>
 
+<style>
+  .filter-green {
+    filter: invert(28%) sepia(56%) saturate(1218%) hue-rotate(115deg) brightness(98%) contrast(103%);
+    position: relative;
+    top: 5px;
+  }
+
+  .nobottommnargin {
+    margin-bottom: 0px
+  }
+  .topmargin30 {
+    margin-top: 30px
+  }
+</style>
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h2 class="govuk-heading-m">Files added</h2>
+
+  <style>
+    .fullwidth {
+      padding: 0 15px !important
+    }
+  </style>
+
+  <div class="fullwidth">
+    <h2 class="govuk-heading-m ">Files added</h2>
 
     <dl class="govuk-summary-list">
-
       <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          File 1
-        </dt>
         <dd class="govuk-summary-list__value">
-          <a download href="/">evidence.jpg</a>, 2MB
+          <svg class="moj-banner__icon filter-green" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+            <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z"></path>
+          </svg> <span class="govuk-success-colour">evidence.jpg</span>
         </dd>
-
         <dd class="govuk-summary-list__actions">
-
           <a class="govuk-link" href="#">
             Delete<span class="govuk-visually-hidden"> file 1</span>
           </a>
-
         </dd>
-
       </div>
-
-
-    </dl>
-    <dl class="govuk-summary-list">
-
-    </dl>
-    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+        <dd class="govuk-summary-list__value ">
+          <span id="documents-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> "definite_evidence.exe" must be an acceptable file type
+          </span>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+        <dd class="govuk-summary-list__value ">
+          <span id="documents-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> "definite_evidence.zip" must be an acceptable file type
+          </span>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+        </dd>
+      </div>
 
       <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          File 3
-        </dt>
         <dd class="govuk-summary-list__value">
-          <a download href="/">definite_evidence.jpg</a>, 3.5MB
+          <svg class="moj-banner__icon filter-green" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+            <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z"></path>
+          </svg> <span class="govuk-success-colour">more_evidence.jpg</span>
         </dd>
-
         <dd class="govuk-summary-list__actions">
-
           <a class="govuk-link" href="#">
-            Delete<span class="govuk-visually-hidden"> file 3</span>
+            Delete<span class="govuk-visually-hidden"> file 1</span>
           </a>
-
         </dd>
-
       </div>
-
-
     </dl>
     <label class="govuk-label govuk-label--m" for="documents">
       Files upload
     </label>
     <div class="myDiv">
+      <style>
+        input[type='file'] {
+          display: none;
+        }
 
-      <div class="govuk-form-group">
+        .mylabel {
+          background-color: white;
+          box-shadow: none;
+          border-left: 0px
+        }
+      </style>
+      <div class="govuk-form-group" id="upload">
         <label class="govuk-label" for="file-upload-1">
-          Drag and drop files here or
+          <br><br><span class="govuk-button govuk-button--secondary mylabel">Drag and drop files here or </span><span class="govuk-button govuk-button--secondary myfileupload">
+            Choose files
+          </span>
         </label>
-        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+        <input class="govuk-file-upload hidevalue" id="file-upload-1" name="file-upload-1" type="file" title=" asd">
+        <br>
       </div>
-      </div>
-
-
+    </div>
   </div>
 </div>
-
-
-
-  <br></br>
-<a href="attachv4.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+<br></br>
+<a href="#" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
   Continue
-  </a>
-
-
-  <br></br>
-
-
-
-
-
-
-
-
-
+</a>
+<br></br>
 {% endblock %}

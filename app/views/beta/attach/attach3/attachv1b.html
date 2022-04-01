@@ -199,34 +199,39 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-<a href="attachv0" class="govuk-back-link">Back</a>
+<a href="attachv1a" class="govuk-back-link">Back</a>
+<div class="govuk-notification-banner" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Working
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      1 file uploading
+    </h3>
+  </div>
+</div>
 <div class="govuk-grid-row">
-
-  <style>.fullwidth{padding:0 15px !important}</style>
+  <style>
+    .fullwidth {
+      padding: 0 15px !important
+    }
+  </style>
   <div class="fullwidth">
-
     <h1 class="govuk-heading-xl">Upload evidence</h1>
-
     <div class="moj-multi-file-upload">
       <div class="moj-multi-file__uploaded-files ">
-        <!-- <h2 class="govuk-heading-m">Files added</h2> -->
-        <!-- <dl class="govuk-summary-list">
+        <h2 class="govuk-heading-m">Files added</h2>
+        <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dd class="govuk-summary-list__value">
-              <style>
-                .filter-green {
-                  filter: invert(28%) sepia(56%) saturate(1218%) hue-rotate(115deg) brightness(98%) contrast(103%);
-                  position: relative;
-                  top: 5px;
-                }
-              </style>
-              <span class="govuk-success-colour">No files have been uploaded yet</span>
+              "evidence.jpg" processing. Please wait
             </dd>
             <dd class="govuk-summary-list__actions">
-
             </dd>
           </div>
-        </dl> -->
+        </dl>
         <!-- <table class="govuk-table">
           <caption class="govuk-table__caption govuk-table__caption--m">Files added</caption>
 
@@ -236,7 +241,7 @@ GOV.UK Prototype Kit
 filter: invert(28%) sepia(56%) saturate(1218%) hue-rotate(115deg) brightness(98%) contrast(103%);
     }</style>
               <svg class="moj-banner__icon filter-green" fill="" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25"><path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z"></path></svg>
-              <th scope="row" class="govuk-table__header">No files have been uploaded yet</th>
+              <th scope="row" class="">evidence.jpg 35% uploaded</th>
               <td class="govuk-table__cell"></td>
             </tr>
 
@@ -248,13 +253,13 @@ filter: invert(28%) sepia(56%) saturate(1218%) hue-rotate(115deg) brightness(98%
     <label class="govuk-label govuk-label--m" for="documents">
       Upload files
     </label>
-
     <div class="myDiv">
       <style>
         input[type='file'] {
           display: none;
         }
-
+      </style>
+      <style>
         .mylabel {
           background-color: white;
           box-shadow: none;
@@ -269,30 +274,13 @@ filter: invert(28%) sepia(56%) saturate(1218%) hue-rotate(115deg) brightness(98%
         </label>
         <input class="govuk-file-upload hidevalue" id="file-upload-1" name="file-upload-1" type="file" title=" asd">
         <br>
-
       </div>
     </div>
-
-
     <br></br>
-
-    <a href="attachv1a.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+    <a href="attachv2.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
       Continue
     </a>
-
   </div>
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
 
 {% endblock %}
