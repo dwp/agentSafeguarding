@@ -182,64 +182,30 @@
 {% endblock %}
 
 {% block content %}
-<a href="../../index.html" class="govuk-back-link">Back</a>
-<h1 class="govuk-heading-l">Is this your line manager?</h1>
+<a href="02report" class="govuk-back-link">Back</a>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Who is your line manager?
+      </h1>
+    </legend>
 
-<div id="contact-hint" class="govuk-hint">
-  We will send a copy of this report to your line manager.
-</div>
-<br>
-
-<dl class="govuk-summary-list nobottommargin">
-
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Name
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Sarah Darjeeling
-    </dd>
-
-  </div>
-
+      <br>
+        <div class="govuk-form-group">
+        
+          <div id="email-hint" class="govuk-hint">
+            Enter their email address as it appears on the Global Address List
+          </div>
+          <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
+        </div>
+    </div>
 
 
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Email address
-    </dt>
-    <dd class="govuk-summary-list__value">
-      sarah.darjeeling@dwp.gov.uk
-    </dd>
-
-  </div>
-
-
-
-
-</dl>
-<br>
-<div class="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-          No, this is not my line manager or their details are wrong
-        </label>
-      </div>
-
-    <br></br>
-
-<br></br>
-
-<a href="03reportb.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+<a href="acting_managerv1.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
   Continue
   </a>
+
 
   <br></br>
 
