@@ -1,0 +1,150 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="../../index.html" class="govuk-header__link govuk-header__link--service-name">
+        Agent Safeguarding
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="06report">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#passport-issued-day">Select the location of the incident</a>
+          </li>
+          <li>
+            <a href="#location">Tell us where the incident happened</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+            <div class="govuk-form-group govuk-form-group--error">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                    Where were you during the incident?
+                  </h1>
+                </legend>
+
+
+                <div id="contact-hint" class="govuk-hint">
+                  Select one option.
+                </div>
+                <span id="passport-issued-error" class="govuk-error-message">
+                 <span class="govuk-visually-hidden">Error:</span> Select the location of the incident
+               </span>
+               <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-1">
+                               <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                                 The office you're based at
+                               </label>
+                             </div>
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                               <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                                 A different office
+                               </label>
+                             </div>
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-3">
+                               <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                                 An outreach location
+                               </label>
+                             </div>
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-4">
+                               <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                                 Your home
+                               </label>
+                             </div>
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-5">
+                               <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                                 The customer's home
+                               </label>
+                             </div>
+                             <div class="govuk-radios__item">
+                               <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-6">
+                               <label class="govuk-label govuk-radios__label" for="contact-6">
+                                 Somewhere else
+                               </label>
+                             </div>
+                             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-6">
+                               <div class="govuk-form-group">
+                                 <label class="govuk-label" for="contact-by-text">
+                                   Incident location
+                                 </label>
+                                 <span id="location" class="govuk-error-message">
+                                    <span class="govuk-visually-hidden">Error:</span> Tell us where the incident happened
+                                  </span>
+                                 <input class="govuk-input govuk-!-width-one-third govuk-input--error" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel"></div>
+
+                               </div>
+                           </div>
+
+
+
+
+
+    </div>
+
+
+
+
+            </div>
+
+
+
+            <a href="07report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+              Continue
+              </a>
+
+        </div>
+
+
+
+
+
+
+
+{% endblock %}

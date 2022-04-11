@@ -1,0 +1,143 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="../../../index.html" class="govuk-header__link govuk-header__link--service-name">
+        Agent Safeguarding
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="07report">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+{% block content %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<br></br>
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#passport-issued-day">Tell us if the incident was motivated by discrimination</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+Do you feel the incident was motivated by any of the following types of discrimination?
+      </h1>
+    </legend>
+    <div id="waste-hint" class="govuk-hint">
+   Select all that apply.
+    </div>
+    <span id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Tell us if the incident was motivated by discrimination
+    </span>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries" name="countries" type="checkbox" value="france">
+        <label class="govuk-label govuk-checkboxes__label" for="countries">
+          Age
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+        Being married or in a civil partnership
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+        Pregnancy or maternity
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-2" name="countries" type="checkbox" value="portugal">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+          Disability
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+        Gender reassignment
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+        Race including colour, nationality, ethnic or national origin
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+        Religion or belief
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+        Sex
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+        Sexual orientation
+        </label>
+      </div>
+      <div class="govuk-checkboxes__divider">or</div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="countries-5" name="countries" type="checkbox" value="none" data-behaviour="exclusive">
+        <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+          None of the above
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+
+
+  <br></br>
+    <a href="08report" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+      Continue
+      </a>
+
+
+
+
+{% endblock %}
