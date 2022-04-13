@@ -188,12 +188,12 @@ GOV.UK Prototype Kit
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Which manager can supply details and recommendations regarding the incident?
+        Who is the most appropriate person to add comments or recommendations about the incident?
       </h1>
     </legend>
-    <div id="waste-hint" class="govuk-hint">
-      For example, a job centre manager, or someone standing in for your line manager.<br><br>
-      <p>Select one option.</p>
+    <div id="nationality-hint" class="govuk-hint">
+      Select one option.
+      <br><br>
     </div>
     <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
       <div class="govuk-radios__item">
@@ -209,7 +209,11 @@ GOV.UK Prototype Kit
           data-aria-controls="conditional-contact-2">
         <label class="govuk-label govuk-radios__label" for="contact-2">
           Another manager
+          <div id="nationality-hint" class="govuk-hint">
+            For example, a job centre manager or someone standing in for your line manager
+          </div>
         </label>
+
       </div>
     </div>
   </fieldset>
