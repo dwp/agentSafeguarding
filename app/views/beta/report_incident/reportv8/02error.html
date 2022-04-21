@@ -45,9 +45,17 @@ GOV.UK Prototype Kit
   </h2>
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
+
       <li>
-        <a href="#passport-issued-day">Enter their email address in the format name@example.com</a>
+        <a href="#passport-issued-day">Select yes if you are reporting an incident you were involved in</a>
       </li>
+      <li>
+        <a href="#passport-issued-day">Enter their email address</a>
+      </li>
+      <li>
+        <a href="#passport-issued-day">Enter their email address, in the format name@example.com</a>
+      </li>
+
 
     </ul>
   </div>
@@ -63,9 +71,7 @@ GOV.UK Prototype Kit
     <div id="contact-hint" class="govuk-hint">
       Select one option.
     </div>
-    <!-- <span id="passport-issued-error" class="govuk-error-message">
-      <span class="govuk-visually-hidden">Error:</span> Enter their email address in the format name@example.com
-    </span> -->
+
     <div class="govuk-radios govuk-radios--conditional " data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input govuk-input--error" id="contact-2" name="contact" type="radio" value="phone"
@@ -89,7 +95,7 @@ GOV.UK Prototype Kit
             Their email address
           </label>
           <span id="passport-issued-error" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span> Enter their email address, in the format name@example.com
+            <span class="govuk-visually-hidden">Error:</span> Enter their email address
           </span>
           <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel"
             autocomplete="tel">
