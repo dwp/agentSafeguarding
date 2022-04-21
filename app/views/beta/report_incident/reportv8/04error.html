@@ -49,11 +49,22 @@
 <div class="govuk-error-summary__body">
   <ul class="govuk-list govuk-error-summary__list">
     <li>
-      <a href="#error1">Please enter a valid date</a>
+      <a href="#error1">Enter a valid date</a>
     </li>
     <li>
-      <a href="#error2">Please enter a valid time</a>
+      <a href="#error2">Enter a valid time</a>
     </li>
+    <li>
+      <a href="#error1">Date of incident must be today or in the past</a>
+    </li>  <li>
+        <a href="#error1">Time of incident must be in the past</a>
+      </li>
+      <li>
+          <a href="#error1">Date of incident must be one year ago or less</a>
+        </li>
+        <li>
+          <a href="#error1">Date and time of incident must be one year ago or less</a>
+        </li>
   </div>
 </div>
   <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
@@ -69,7 +80,7 @@
 
     <div class="govuk-form-group govuk-form-group--error">
       <span id="error1" class="govuk-error-message">
-        <span class="govuk-visually-hidden">Error:</span> Please enter a valid date.
+        <span class="govuk-visually-hidden">Error:</span> Enter a valid date
       </span>
     <div id="passport-issued-hint" class="govuk-hint">
       For example, 30 11 2021
@@ -104,7 +115,7 @@
       Use the 24-hour clock.  For example, 15:30
     </div>
     <span id="error2" class="govuk-error-message">
-      <span class="govuk-visually-hidden">Error:</span> Please enter a valid time.
+      <span class="govuk-visually-hidden">Error:</span> Enter a valid time
     </span>
     <div class="govuk-date-input" id="passport-issued">
       <div class="govuk-date-input__item">
