@@ -197,73 +197,131 @@ Incidents and concerns
       Incidents and concerns reported in Agent Safeguarding
     </h1>
   </legend>
+  <p>All incidents and concerns for the last 10 years are shown below. </p>
   <br>
 
- <style>
-   .nobreak {
+  <style>
+    .nobreak {
       white-space: nowrap;
     }
- </style>
+  </style>
   <br>
   <table class="govuk-table">
+    <style>
+      [aria-sort] button,
+      [aria-sort] button:hover {
+        background-color: transparent;
+        border-width: 0;
+        -webkit-box-shadow: 0 0 0 0;
+        -moz-box-shadow: 0 0 0 0;
+        box-shadow: 0 0 0 0;
+        color: #005ea5;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        padding: 0 10px 0 0;
+        position: relative;
+        text-align: inherit;
+        font-size: 1em;
+        margin: 0;
+      }
 
-    <thead class="govuk-table__head">
+      [aria-sort] button:after {
+        content: " ▲";
+        position: absolute;
+        right: -1px;
+        top: 1px;
+        font-size: .5em;
+      }
+
+      [aria-sort] button:before {
+        content: " ▼";
+        position: absolute;
+        right: -1px;
+        top: 9px;
+        font-size: .5em;
+      }
+
+      [aria-sort=ascending] button:before {
+        content: "  ";
+        position: absolute;
+        right: -1px;
+        top: 9px;
+        font-size: .5em;
+      }
+
+      [aria-sort=ascending] button:after {
+        content: " ▲";
+        font-size: .8em;
+        position: absolute;
+        right: -5px;
+        top: 2px;
+      }
+      [aria-sort=descending] button:before {
+        content: "  ";
+        position: absolute;
+        right: -1px;
+        top: 9px;
+        font-size: .5em;
+      }
+
+      [aria-sort=descending] button:after {
+        content: " ▼";
+        font-size: .8em;
+        position: absolute;
+        right: -5px;
+        top: 2px;
+      }
+    </style>
+    <thead class="govuk-table__head" data-module="moj-sortable-table">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Reference</th>
-        <th scope="col" class="govuk-table__header">Type of report</th>
-        <th scope="col" class="govuk-table__header">Date reported</th>
-        <th scope="col" class="govuk-table__header">Status</th>
-         <th scope="col" class="govuk-table__header">Action</th>
+        <th scope="col" class="govuk-table__header" aria-sort="descending"><button>Incident date</button></th>
+        <th scope="col" class="govuk-table__header" aria-sort="none"><button>Status</button></th>
+        <th scope="col" class="govuk-table__header">Safeguarding measures</th>
 
       </tr>
     </thead>
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><span class="nobreak">INC-000-999-002</span></th>
-        <td class="govuk-table__cell">
-
-              Incident
-
-        </td>
+        <th scope="row" class="govuk-table__header"><span class="nobreak"><a href="">INC-000-999-004</a></span></th>
         <td class="govuk-table__cell">16/03/22 <br>16:30</td>
-        <td class="govuk-table__cell"><span class="nobreak">In progress</span></td>
-        <td class="govuk-table__cell"><a href="">View incident</a><br><a href=""><details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              More details
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+        <td class="govuk-table__cell"><span class="nobreak">In progress</span>
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              <span class="nobreak">Fast-track</span>
+            </strong>
           </div>
-        </details></a></td>
-
+        </td>
+        <td class="govuk-table__cell">None</td>
       </tr>
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">CON-000-999-009</th>
-        <td class="govuk-table__cell">Safety concern</td>
+        <th scope="row" class="govuk-table__header"><a href="">CON-000-999-009</a> </th>
         <td class="govuk-table__cell">10/03/22 <br>14:30</td>
         <td class="govuk-table__cell">Active</td>
-         <td class="govuk-table__cell"><a href="">View </a></td>
-
+        <td class="govuk-table__cell">None</td>
       </tr>
-
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">INC-000-999-001</th>
-        <td class="govuk-table__cell">Incident</td>
+        <th scope="row" class="govuk-table__header"><a href="">INC-000-999-002</a> <span class="govuk-body-s"><br>INC-000-999-013 <br>WIT-000-999-018</span></th>
+        <td class="govuk-table__cell">09/03/22 <br>10:30</td>
+        <td class="govuk-table__cell">Active</td>
+        <td class="govuk-table__cell">Second letter</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="">INC-000-999-001</a> <span class="govuk-body-s"><br>WIT-000-999-005 <br>WIT-000-999-002</span></th>
         <td class="govuk-table__cell">01/03/22 <br>10:30</td>
         <td class="govuk-table__cell">Active</td>
-        <td class="govuk-table__cell"><a href="">View </a></td>
-
+        <td class="govuk-table__cell">First letter</td>
       </tr>
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">INC-000-888-003</th>
-        <td class="govuk-table__cell">Incident</td>
+        <th scope="row" class="govuk-table__header"><a href="">INC-000-888-003</a> <span class="govuk-body-s"><br>WIT-000-888-012<br>WIT-000-888-013<br>WIT-000-888-014</span></th>
         <td class="govuk-table__cell">18/03/02 <br>10:30</td>
         <td class="govuk-table__cell">Expired</td>
-        <td class="govuk-table__cell"><a href="">View</a></td>
+        <td class="govuk-table__cell">First letter<br>Second letter<br>Ban</td>
       </tr>
-
     </tbody>
   </table>
 

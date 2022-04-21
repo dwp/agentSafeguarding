@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Incidents and concerns
 {% endblock %}
 {% block header %}
 <header class="govuk-header " role="banner" data-module="govuk-header">
@@ -22,6 +22,8 @@ GOV.UK Prototype Kit
   </div>
 </header>
 {% endblock %}
+
+
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -29,7 +31,7 @@ GOV.UK Prototype Kit
       beta
     </strong>
     <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      This is a new service – your <a class="govuk-link" href="01concernerror">feedback</a> will help us to improve it.
     </span>
   </p>
 </div>
@@ -165,29 +167,106 @@ GOV.UK Prototype Kit
       <div class="dwp-key-details-bar__bottom-block">
         <dt>Date of birth:</dt>
         <dd>4 June 1972</dd>
-        <dt>Postcode:</dt>
-        <dd>E1 7KJ</dd>
+        <!-- Remove postcode - not needed/difficult to get -->
+        <!-- <dt>Postcode:</dt>
+        <dd>E1 7KJ</dd> -->
       </div>
     </dl>
   </section>
 </div>
+<style>
+  /* Make back link appear just under banner */
+  #main-content {
+    padding-top: 0px !important
+  }
+
+  .addbottom {
+    margin-bottom: 55px !important
+  }
+</style>
+
 {% endblock %}
+
 {% block content %}
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
-<h1 class="govuk-heading-xl">What is their email address?</h1>
-<fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-  <div class="govuk-form-group">
-    <div id="email-hint" class="govuk-hint">
-      Enter their email address as it appears on the Global Address List
-    </div>
-    <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone">
-  </div>
-</fieldset>
-<div class="govuk-button-group">
-  <a href="witness3" role="button" draggable="false" class="govuk-button govuk-button--start"
-    data-module="govuk-button">
-    Continue
-  </a>
-</div>
-<br></br>
-{% endblock %}
+
+<div class="govuk-form-group">
+  <a href="00list" class="govuk-back-link">Back</a>
+  <br></br>
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Incidents and concerns reported in Agent Safeguarding
+    </h1>
+  </legend>
+  <br>
+
+ <style>
+   .nobreak {
+      white-space: nowrap;
+    }
+ </style>
+  <br>
+  <table class="govuk-table">
+
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Reference</th>
+        <th scope="col" class="govuk-table__header">Type of report</th>
+        <th scope="col" class="govuk-table__header">Date reported</th>
+        <th scope="col" class="govuk-table__header">Status</th>
+         <th scope="col" class="govuk-table__header">Action</th>
+
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><span class="nobreak">INC-000-999-002</span></th>
+        <td class="govuk-table__cell">
+
+              Incident
+
+        </td>
+        <td class="govuk-table__cell">16/03/22 <br>16:30</td>
+        <td class="govuk-table__cell"><span class="nobreak">In progress</span></td>
+        <td class="govuk-table__cell"><a href="">View incident</a><br><a href=""><details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              More details
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post.
+          </div>
+        </details></a></td>
+
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">CON-000-999-009</th>
+        <td class="govuk-table__cell">Safety concern</td>
+        <td class="govuk-table__cell">10/03/22 <br>14:30</td>
+        <td class="govuk-table__cell">Active</td>
+         <td class="govuk-table__cell"><a href="">View </a></td>
+
+      </tr>
+
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">INC-000-999-001</th>
+        <td class="govuk-table__cell">Incident</td>
+        <td class="govuk-table__cell">01/03/22 <br>10:30</td>
+        <td class="govuk-table__cell">Active</td>
+        <td class="govuk-table__cell"><a href="">View </a></td>
+
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">INC-000-888-003</th>
+        <td class="govuk-table__cell">Incident</td>
+        <td class="govuk-table__cell">18/03/02 <br>10:30</td>
+        <td class="govuk-table__cell">Expired</td>
+        <td class="govuk-table__cell"><a href="">View</a></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+  {% endblock %}

@@ -1,8 +1,7 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 {% block header %}
 <header class="govuk-header " role="banner" data-module="govuk-header">
@@ -54,11 +53,11 @@
   <fieldset class="govuk-fieldset" aria-describedby="countries-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-Do you feel the incident was motivated by any of the following types of discrimination?
+        Do you feel the incident was motivated by any of the following types of discrimination?
       </h1>
     </legend>
     <div id="waste-hint" class="govuk-hint">
-   Select all that apply.
+      Select all that apply.
     </div>
     <span id="passport-issued-error" class="govuk-error-message">
       <span class="govuk-visually-hidden">Error:</span> Tell us if the incident was motivated by discrimination
@@ -73,13 +72,13 @@ Do you feel the incident was motivated by any of the following types of discrimi
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
         <label class="govuk-label govuk-checkboxes__label" for="countries-3">
-        Being married or in a civil partnership
+          Being married or in a civil partnership
         </label>
       </div>
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
         <label class="govuk-label govuk-checkboxes__label" for="countries-3">
-        Pregnancy or maternity
+          Pregnancy or maternity
         </label>
       </div>
       <div class="govuk-checkboxes__item">
@@ -91,31 +90,31 @@ Do you feel the incident was motivated by any of the following types of discrimi
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
         <label class="govuk-label govuk-checkboxes__label" for="countries-3">
-        Gender reassignment
+          Gender reassignment
         </label>
       </div>
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
         <label class="govuk-label govuk-checkboxes__label" for="countries-3">
-        Race including colour, nationality, ethnic or national origin
+          Race including colour, nationality, ethnic or national origin
         </label>
       </div>
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
         <label class="govuk-label govuk-checkboxes__label" for="countries-3">
-        Religion or belief
+          Religion or belief
         </label>
       </div>
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
         <label class="govuk-label govuk-checkboxes__label" for="countries-3">
-        Sex
+          Sex
         </label>
       </div>
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="countries-3" name="countries" type="checkbox" value="spain">
         <label class="govuk-label govuk-checkboxes__label" for="countries-3">
-        Sexual orientation
+          Sexual orientation
         </label>
       </div>
       <div class="govuk-checkboxes__divider">or</div>
@@ -129,13 +128,21 @@ Do you feel the incident was motivated by any of the following types of discrimi
 
   </fieldset>
 </div>
+<br></br>
+     <h2 class="govuk-heading-m">Now submit your report</h2>
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+  Once you click Submit, you will not be able to change your report online. 
+  </strong>
+</div>
 
 
-
-  <br></br>
-    <a href="08report" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-      Continue
-      </a>
+<br></br>
+<a href="09report" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+  Submit report
+</a>
 
 
 
