@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Incidents and concerns
+Case history
 {% endblock %}
 {% block header %}
 <header class="govuk-header " role="banner" data-module="govuk-header">
@@ -31,7 +31,7 @@ Incidents and concerns
       beta
     </strong>
     <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="01concernerror">feedback</a> will help us to improve it.
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
     </span>
   </p>
 </div>
@@ -184,80 +184,337 @@ Incidents and concerns
     margin-bottom: 55px !important
   }
 </style>
+<style>
+  .nobreak {
+    white-space: nowrap;
+  }
+
+  [aria-sort] button,
+  [aria-sort] button:hover {
+    background-color: transparent;
+    border-width: 0;
+    -webkit-box-shadow: 0 0 0 0;
+    -moz-box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0;
+    color: #005ea5;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    padding: 0 10px 0 0;
+    position: relative;
+    text-align: inherit;
+    font-size: 1em;
+    margin: 0;
+  }
+
+  [aria-sort] button:after {
+    content: " ▲";
+    position: absolute;
+    right: -1px;
+    top: 1px;
+    font-size: .5em;
+  }
+
+  [aria-sort] button:before {
+    content: " ▼";
+    position: absolute;
+    right: -1px;
+    top: 9px;
+    font-size: .5em;
+  }
+
+  [aria-sort=ascending] button:before {
+    content: "  ";
+    position: absolute;
+    right: -1px;
+    top: 9px;
+    font-size: .5em;
+  }
+
+  [aria-sort=ascending] button:after {
+    content: " ▲";
+    font-size: .8em;
+    position: absolute;
+    right: -5px;
+    top: 2px;
+  }
+
+  [aria-sort=descending] button:before {
+    content: "  ";
+    position: absolute;
+    right: -1px;
+    top: 9px;
+    font-size: .5em;
+  }
+
+  [aria-sort=descending] button:after {
+    content: " ▼";
+    font-size: .8em;
+    position: absolute;
+    right: -5px;
+    top: 2px;
+  }
+
+  .dwp-timeline {
+    border-left: 3px solid #005ea5;
+  }
+
+  .dwp-timeline__entry {
+    margin: 2em 0;
+    padding-left: 1em;
+    position: relative;
+  }
+
+  .dwp-timeline__entry::before {
+    background-color: #005ea5;
+    content: ' ';
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: .5em;
+    width: 10px;
+  }
+
+  .dwp-timeline__entry .dwp-timeline__title {
+    display: block;
+    font-weight: 700;
+  }
+
+  .dwp-timeline__entry .dwp-timeline__author,
+  .dwp-timeline__entry .dwp-timeline__date {
+    color: #6f777b;
+    display: block;
+  }
+
+  .dwp-timeline__entry .dwp-timeline__info {
+    margin-top: 0;
+  }
+
+  .dwp-timeline__entry .dwp-timeline__body {
+    display: block;
+  }
+
+  ul,
+  ol {
+    list-style-type: none;
+  }
+
+  div,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .heading-medium {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 700;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-top: 1.25em;
+    margin-bottom: 0.5em;
+  }
+
+  .dwp-timeline__entry .dwp-timeline__title {
+    display: block;
+    font-weight: 700;
+    font-family: "nta", Arial, sans-serif;
+  }
+
+  @media (min-width: 641px) {}
+
+  p,
+  .body-text {
+    margin-top: 1;
+    margin-bottom: 1;
+  }
+</style>
 
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-form-group">
-  <a href="00list" class="govuk-back-link">Back</a>
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
   <br></br>
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
     <h1 class="govuk-fieldset__heading">
-      Incidents and concerns reported in Agent Safeguarding
+      Case history
     </h1>
   </legend>
-  <br>
-
- <style>
-   .nobreak {
-      white-space: nowrap;
-    }
- </style>
-  <br>
+  <p>This page shows all incidents and concerns reported about this customer's behaviour, plus all safeguarding measures. </p>
   <table class="govuk-table">
-
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Reference</th>
-        <th scope="col" class="govuk-table__header">Type of report</th>
-        <th scope="col" class="govuk-table__header">Date reported</th>
-        <th scope="col" class="govuk-table__header">Status</th>
-         <th scope="col" class="govuk-table__header">Action</th>
-
-      </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><span class="nobreak">INC-000-999-002</span></th>
-        <td class="govuk-table__cell">
-
-              Incident
-
-        </td>
-        <td class="govuk-table__cell">16/03/22 <br>16:30</td>
-        <td class="govuk-table__cell"><span class="nobreak">In progress</span></td>
-        <td class="govuk-table__cell"><a href="">View</a></td>
-
-      </tr>
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">CON-000-999-009</th>
-        <td class="govuk-table__cell">Safety concern</td>
-        <td class="govuk-table__cell">10/03/22 <br>14:30</td>
-        <td class="govuk-table__cell">Active</td>
-         <td class="govuk-table__cell"><a href="">View </a></td>
-
-      </tr>
-
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">INC-000-999-001</th>
-        <td class="govuk-table__cell">Incident</td>
-        <td class="govuk-table__cell">01/03/22 <br>10:30</td>
-        <td class="govuk-table__cell">Active</td>
-        <td class="govuk-table__cell"><a href="">View </a></td>
-
-      </tr>
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">INC-000-888-003</th>
-        <td class="govuk-table__cell">Incident</td>
-        <td class="govuk-table__cell">18/03/02 <br>10:30</td>
-        <td class="govuk-table__cell">Expired</td>
-        <td class="govuk-table__cell"><a href="">View</a></td>
-      </tr>
-
-    </tbody>
+    <main id="content" role="main">
+      <div class="grid-row">
+        <div class="column-one-third">
+          <ol class="dwp-timeline">
+            <li class="dwp-timeline__entry">
+              <h3 class="dwp-timeline__title">Banned from all DWP locations</h3>
+              <p class="dwp-timeline__info">
+                <span class="govuk-visually-hidden visually-hidden">Banned from all job centres</span>
+                <span class="dwp-timeline__date">20 March 2022</span>
+              </p>
+              <p class="dwp-timeline__body">
+                <span class="govuk-body-s"><a href="">View letter</a></span>
+              </p>
+            </li>
+            <li class="dwp-timeline__entry">
+              <h3 class="dwp-timeline__title">Incident: In-person</h3>
+              <p class="dwp-timeline__info">
+                <span class="govuk-visually-hidden visually-hidden">Incident: In-person</span>
+                <span class="dwp-timeline__date">19 March 2022</span>
+              </p>
+              <p class="dwp-timeline__body">
+                <span class="govuk-body-s"><a href="">INC-000-000-001</a></span>,
+                <span class="govuk-body-s">WIT-000-000-009</span>,
+                <span class="govuk-body-s">WIT-000-000-010</span>,
+                <span class="govuk-body-s">WIT-000-000-012</span>,
+                <span class="govuk-body-s">WIT-000-000-013</span>,
+                <span class="govuk-body-s">WIT-000-000-015</span>
+              </p>
+            </li>
+            <li class="dwp-timeline__entry">
+              <h3 class="dwp-timeline__title">Ongoing (good) behaviour: In-person</h3>
+              <p class="dwp-timeline__info">
+                <span class="govuk-visually-hidden visually-hidden">Ongoing (good) behaviour: In-person</span>
+                <span class="dwp-timeline__date">17 March 2022</span>
+              </p>
+              <p class="dwp-timeline__body">
+                <span class="govuk-body-s"><a href="">OGB-000-000-111</a></span>
+              </p>
+            </li>
+            <li class="dwp-timeline__entry">
+              <h3 class="dwp-timeline__title">Second letter sent</h3>
+              <p class="dwp-timeline__info">
+                <span class="govuk-visually-hidden visually-hidden">Second letter sent</span>
+                <span class="dwp-timeline__date">12 March 2022</span>
+              </p>
+              <p class="dwp-timeline__body">
+                <span class="govuk-body-s"><a href="">View letter</a></span>
+              </p>
+            </li>
+            <li class="dwp-timeline__entry">
+              <h3 class="dwp-timeline__title">Incident: In-person</h3>
+              <p class="dwp-timeline__info">
+                <span class="govuk-visually-hidden visually-hidden">Incident: In-person</span>
+                <span class="dwp-timeline__date">10 March 2022</span>
+              </p>
+              <p class="dwp-timeline__body">
+                <span class="govuk-body-s"><a href="">INC-000-000-001</a></span>,
+                <span class="govuk-body-s">WIT-000-888-222</span>,
+                <span class="govuk-body-s">WIT-000-888-221</span>
+              </p>
+            </li>
+            <li class="dwp-timeline__entry">
+              <h3 class="dwp-timeline__title">First letter sent</h3>
+              <p class="dwp-timeline__info">
+                <span class="govuk-visually-hidden visually-hidden">First letter sent</span>
+                <span class="dwp-timeline__date">4 February 2022</span>
+              </p>
+              <p class="dwp-timeline__body">
+                <span class="govuk-body-s"><a href="">View letter</a></span>
+              </p>
+            </li>
+            <li class="dwp-timeline__entry">
+              <h3 class="dwp-timeline__title">Incident: In-person </h3>
+              <p class="dwp-timeline__info">
+                <span class="govuk-visually-hidden visually-hidden">Incident: In-person</span>
+                <span class="dwp-timeline__date">2 February 2022</span>
+              </p>
+              <p class="dwp-timeline__body">
+                <span class="govuk-body-s"><a href="">INC-000-000-001</a></span>,
+                <span class="govuk-body-s">WIT-000-999-101</span>,
+                <span class="govuk-body-s">WIT-000-999-102</span>
+              </p>
+            </li>
+            <li class="dwp-timeline__entry">
+              <h3 class="dwp-timeline__title">Concern: CHDA </h3>
+              <p class="dwp-timeline__info">
+                <span class="govuk-visually-hidden visually-hidden">Concern: CHDA </span>
+                <span class="dwp-timeline__date">22 January 2022</span>
+              </p>
+              <p class="dwp-timeline__body">
+                <span class="govuk-body-s"><a href="">CON-000-888-333</a></span>
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
   </table>
+</div>
 
-
-
-  {% endblock %}
+{% endblock %}
