@@ -1,0 +1,209 @@
+<style>
+    .moj-side-navigation {
+        font-family: "GDS Transport", arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+        font-size: 14px;
+        font-size: .875rem;
+        line-height: 1.1428571429
+    }
+
+    @media print {
+        .moj-side-navigation {
+            font-family: sans-serif
+        }
+    }
+
+    @media(min-width: 40.0625em) {
+        .moj-side-navigation {
+            font-size: 16px;
+            font-size: 1rem;
+            line-height: 1.25
+        }
+    }
+
+    @media print {
+        .moj-side-navigation {
+            font-size: 14pt;
+            line-height: 1.2
+        }
+    }
+
+    @media(max-width: 40.0525em) {
+        .moj-side-navigation {
+            display: flex;
+            overflow-x: scroll
+        }
+    }
+/* Note: overridden MOJ top spacing TC 28/4/22 */
+    @media(min-width: 40.0625em) {
+        .moj-side-navigation {
+            display: block;
+            padding: 0px 0 0
+        }
+    }
+
+    .moj-side-navigation__title {
+        font-family: "GDS Transport", arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+        color: #505a5f;
+        font-weight: normal;
+        margin: 0;
+        padding: 10px;
+        padding-left: 14px
+    }
+
+    @media print {
+        .moj-side-navigation__title {
+            font-family: sans-serif
+        }
+    }
+
+    @media(min-width: 40.0625em) {
+        .moj-side-navigation__title {
+            font-size: 19px;
+            font-size: 1.1875rem;
+            line-height: 1.3157894737
+        }
+    }
+
+    @media print {
+        .moj-side-navigation__title {
+            font-size: 14pt;
+            line-height: 1.15
+        }
+    }
+
+    @media(max-width: 40.0525em) {
+        .moj-side-navigation__title {
+            display: none
+        }
+    }
+
+    .moj-side-navigation__list {
+        list-style: none;
+        margin: 0;
+        padding: 0
+    }
+
+    @media(max-width: 40.0525em) {
+        .moj-side-navigation__list {
+            display: flex;
+            margin: 0;
+            white-space: nowrap
+        }
+    }
+
+    @media(min-width: 40.0625em) {
+        .moj-side-navigation__list {
+            margin-bottom: 20px
+        }
+    }
+
+    @media(max-width: 40.0525em) {
+        .moj-side-navigation__item {
+            display: flex
+        }
+    }
+
+    .moj-side-navigation__item a,
+    .moj-side-navigation__item a:link,
+    .moj-side-navigation__item a:visited {
+        background-color: inherit;
+        color: #1d70b8;
+        display: block;
+        text-decoration: none
+    }
+
+    @media(max-width: 40.0525em) {
+
+        .moj-side-navigation__item a,
+        .moj-side-navigation__item a:link,
+        .moj-side-navigation__item a:visited {
+            border-bottom: 4px solid transparent;
+            padding: 15px;
+            padding-bottom: 11px
+        }
+    }
+
+    @media(min-width: 40.0625em) {
+
+        .moj-side-navigation__item a,
+        .moj-side-navigation__item a:link,
+        .moj-side-navigation__item a:visited {
+            background-color: inherit;
+            border-left: 4px solid transparent;
+            padding: 10px
+        }
+    }
+
+    .moj-side-navigation__item a:hover {
+        border-color: #5694ca
+    }
+
+    .moj-side-navigation__item a:focus {
+        color: #0b0c0c;
+        background-color: #fd0;
+        box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+        border-color: #0b0c0c;
+        border-left-color: transparent;
+        position: relative
+    }
+
+    .moj-side-navigation__item--active a:link,
+    .moj-side-navigation__item--active a:visited {
+        border-color: #1d70b8;
+        color: #1d70b8;
+        font-weight: bold
+    }
+
+    .moj-side-navigation__item--active a:focus {
+        color: #0b0c0c;
+        background-color: #fd0;
+        box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+        border-color: #0b0c0c;
+        border-left-color: transparent
+    }
+
+    @media(min-width: 40.0625em) {
+
+        .moj-side-navigation__item--active a:link,
+        .moj-side-navigation__item--active a:visited {
+            background-color: #f3f2f1
+        }
+
+        .moj-side-navigation__item--active a:focus {
+            color: #0b0c0c;
+            background-color: #fd0;
+            border-color: transparent
+        }
+    }
+</style>
+<nav class="moj-side-navigation" aria-label="Side navigation">
+    <h4 class="moj-side-navigation__title">Witnesses</h4>
+    <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+            <a href="#1" aria-current="location">WIT-999-000-001</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+            <a href="#2">WIT-999-000-002</a>
+        </li>
+
+        <li class="moj-side-navigation__item">
+            <a href="#3">WIT-999-000-003</a>
+        </li>
+    </ul>
+    <h4 class="moj-side-navigation__title">Linked Incidents</h4>
+    <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item">
+            <a href="#1">INC-999-555-001</a>
+        </li>
+    </ul>
+</nav>

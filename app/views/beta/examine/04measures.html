@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Linked reports
+{% endblock %}
+
+{% block beforeContent %}
+{% include "templates/header_newservice.html" %}
+{% include "templates/header_searchlight.html" %}
+{% include "templates/header_incident.html" %}
+{% include "templates/header_examine_menu.html" %}
+{% include "templates/header_back.html" %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l">Apply measures</h2>
+      <a href="05measures.html" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Send warning letter
+      </a>
+<br>
+      <a href="05measures.html" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Apply safeguarding measures
+      </a>
+      <br>
+      <a href="05report.html" role="button" draggable="false" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Request solicitor
+      </a>
+
+
+  </div>
+
+
+
+</div>
+{% endblock %}
