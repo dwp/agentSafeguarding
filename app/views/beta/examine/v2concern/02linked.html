@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemTwo = " aria-current=page" %}
+
+{% block pageTitle %}
+Linked reports
+{% endblock %}
+
+{% block beforeContent %}
+{% include "templates/v2concern/header_newservice.html" %}
+{% include "templates/v2concern/header_searchlight.njk" %}
+{% include "templates/v2concern/header_incident.html" %}
+{% include "templates/v2concern/header_examine_menu.njk" %}
+{% include "templates/v2concern/header_back.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+{% include "templates/v2concern/linked_side_nav.html" %}
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">Linked reports</span>
+    <h1 class="govuk-heading-l">WIT-999-000-001</h1>
+    <h3 class="govuk-heading-s">Description</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget tristique justo. In et vulputate nisi. Integer commodo ante tellus, sed iaculis dolor consequat accumsan. Donec sodales, orci eget facilisis fringilla, risus augue fermentum enim, vitae pulvinar odio dolor id felis. Donec luctus sit amet lectus nec vestibulum.<br>
+      Mauris lobortis sodales nisi. Etiam mollis pharetra diam, vel pretium libero finibus ac. Cras quis mi urna. Nam lobortis finibus nibh nec elementum. Integer sed urna sem. Donec luctus sit amet lectus nec vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. <br>
+      Mauris fermentum consectetur orci aliquet pretium. Nunc porttitor consectetur ultrices. Mauris nec maximus mauris. Suspendisse posuere vel nibh non tincidunt. Cras suscipit ante ut lectus consequat, quis vestibulum lectus efficitur. Integer et risus enim. Fusce lacinia purus nec euismod convallis. Fusce volutpat nulla non libero bibendum, sit amet commodo est imperdiet.
+    </p>
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Full name</th>
+          <td class="govuk-table__cell">Sartaq Matcha</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Email address</th>
+          <td class="govuk-table__cell">sartaq.matcha@dwp.gov.uk</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Location at time of the incident</th>
+          <td class="govuk-table__cell">The office they're based at</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Reporter's line manager</th>
+          <td class="govuk-table__cell">Manager Oolong</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Manager's email</th>
+          <td class="govuk-table__cell">manager.oolong@dwp.gov.uk</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

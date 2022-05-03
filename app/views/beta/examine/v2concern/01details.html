@@ -1,0 +1,178 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemTwo = " app-subnav__section-item--current" %}
+
+
+
+{% block pageTitle %}
+Incident overview
+{% endblock %}
+
+{% block beforeContent %}
+{% include "templates/v2concern/header_newservice.html" %}
+{% include "templates/v2concern/header_searchlight.njk" %}
+{% include "templates/v2concern/header_incident.html" %}
+{% include "templates/v2concern/header_examine_menu.njk" %}
+{% include "templates/v2concern/header_back.html" %}
+{% endblock %}
+
+{% block content %}
+<style>
+  h1 {
+    margin-bottom: 20px !important;
+  }
+</style>
+<style>
+  /* for subnav */
+  .app-subnav {
+    margin-bottom: 100px;
+    padding: 30px 15px 0 0;
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1.1428571429
+  }
+
+  @media print {
+    .app-subnav {
+      font-family: sans-serif
+    }
+  }
+
+  @media(min-width: 40.0625em) {
+    .app-subnav {
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.25
+    }
+  }
+
+  @media print {
+    .app-subnav {
+      font-size: 14pt;
+      line-height: 1.2
+    }
+  }
+
+  .app-subnav__section {
+    margin: 0 0 20px;
+    padding: 0;
+    list-style-type: none
+  }
+
+  .app-subnav__link {
+    padding: 2px 0
+  }
+
+  .app-subnav__section-item {
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px
+  }
+
+  .app-subnav__section-item--current {
+    margin-left: -14px;
+    padding-left: 10px;
+    border-left: 4px solid #1d70b8;
+    background-color: #fff
+  }
+
+  .app-subnav__section-item--current .app-subnav__link {
+    font-weight: bold
+  }
+
+  .app-subnav__section--nested {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 20px
+  }
+
+  .app-subnav__section--nested .app-subnav__section-item::before {
+    content: "—";
+    margin-left: -20px;
+    color: #505a5f
+  }
+
+  .app-subnav__section--nested .app-subnav__link {
+    padding-left: 0;
+    font-weight: normal
+  }
+
+  .app-subnav__theme {
+    margin: 0;
+    padding: 10px 15px 10px 0;
+    color: #505a5f;
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25
+  }
+
+  @media print {
+    .app-subnav__theme {
+      font-family: sans-serif
+    }
+  }
+
+  @media(min-width: 40.0625em) {
+    .app-subnav__theme {
+      font-size: 19px;
+      font-size: 1.1875rem;
+      line-height: 1.3157894737
+    }
+  }
+
+  @media print {
+    .app-subnav__theme {
+      font-size: 14pt;
+      line-height: 1.15
+    }
+  }
+</Style>
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">Overview</span>
+    <h1 class="govuk-heading-xl">Report Details</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget tristique justo. In et vulputate nisi. Integer commodo ante tellus, sed iaculis dolor consequat accumsan. Donec sodales, orci eget facilisis fringilla, risus augue fermentum enim, vitae pulvinar odio dolor id felis. Donec luctus sit amet lectus nec vestibulum.
+    </p>
+    
+
+    <br>
+    <br>
+    <h2 class="govuk-heading-l">Reporter</h2>
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Full name</th>
+          <td class="govuk-table__cell">Whitney Earl</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Email address</th>
+          <td class="govuk-table__cell">whitney.earl@dwp.gov.uk</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Location at time of the incident</th>
+          <td class="govuk-table__cell">The office they are based at </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Reporter's line manager</th>
+          <td class="govuk-table__cell">Sarah Darjeeling</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Manager's email</th>
+          <td class="govuk-table__cell">sarah.darjeeling@dwp.gov.uk</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}

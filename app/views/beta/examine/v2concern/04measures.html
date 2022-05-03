@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemFour = " aria-current=page" %}
+
+{% block pageTitle %}
+Linked reports
+{% endblock %}
+
+{% block beforeContent %}
+{% include "templates/v2concern/header_newservice.html" %}
+{% include "templates/v2concern/header_searchlight.njk" %}
+{% include "templates/v2concern/header_incident.html" %}
+{% include "templates/v2concern/header_examine_menu.njk" %}
+{% include "templates/v2concern/header_back.html" %}
+{% endblock %}
+
+{% block content %}
+
+<style>
+  /* I shouldnt have to do this fix - need to look at layout */
+  .govuk-grid-row {
+    margin:0px;
+  }
+</style>
+<div class="govuk-grid-row">    <h2 class="govuk-heading-l">Measures</h2>
+    <h2 class="govuk-heading-m">Current measures</h2>
+    <p class="govuk-body">The following measures are active.</p>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date measure applied
+        </dt>
+        <dt class="govuk-summary-list__key">
+          Measure
+        </dt>
+        <dt class="govuk-summary-list__key">
+          Expiry date
+        </dt>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__value">
+          10 January 2022
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Meet in screened area
+        </dd>
+        <dd class="govuk-summary-list__value">
+          9 January 2023
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__value">
+          10 January 2022
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Not to be seen alone
+        </dd>
+        <dd class="govuk-summary-list__value">
+          10 January 2023
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__value">
+          10 January 2023
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Accompanied by security
+        </dd>
+        <dd class="govuk-summary-list__value">
+          10 January 2023
+        </dd>
+      </div>
+
+    </dl>
+    <h2 class="govuk-heading-m">Apply measures</h2>
+    <div class="govuk-button-group">
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Send letter
+      </button>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Apply safeguarding measures
+      </button>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Request solicitor
+      </button>
+    </div>
+
+
+
+
+
+
+
+
+</div>
+{% endblock %}
