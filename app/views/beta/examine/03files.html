@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemThree = " aria-current=page" %}
+
+{% block pageTitle %}
+Linked reports
+{% endblock %}
+
+{% block beforeContent %}
+{% include "templates/header_newservice.html" %}
+{% include "templates/header_searchlight.njk" %}
+{% include "templates/header_incident.html" %}
+{% include "templates/header_examine_menu.njk" %}
+{% include "templates/header_back.html" %}
+{% endblock %}
+
+{% block content %}
+<style>
+  .marginbottomzero {
+    margin-bottom: 0px;
+  }
+  /* I shouldnt have to do this fix - need to look at layout */
+  .govuk-grid-row {
+    margin:0px;
+  }
+</style>
+
+<div class="govuk-grid-row">
+  <h2 class="govuk-heading-l">Files</h2>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        emailtome.msg
+      </dt>
+      <dd class="govuk-summary-list__value">
+        10 January 2022
+      </dd>
+      <dd class="govuk-summary-list__value">
+        Email from CHDA
+      </dd>
+
+      <dd class="govuk-summary-list__actions">
+        <button class="govuk-button govuk-button--secondary marginbottomzero" data-module="govuk-button">
+          View file
+        </button>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        screen_shot.png
+      </dt>
+      <dd class="govuk-summary-list__value">
+        9 January 2022
+      </dd>
+      <dd class="govuk-summary-list__value">
+        Screenshot showing abuse in journal
+      </dd>
+
+      <dd class="govuk-summary-list__actions">
+        <button class="govuk-button govuk-button--secondary marginbottomzero" data-module="govuk-button">
+          View file
+        </button>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        letter_l.pdf
+      </dt>
+      <dd class="govuk-summary-list__value">
+        8 January 2022
+      </dd>
+      <dd class="govuk-summary-list__value">
+        Letter sent to request customer to desist threatening behaviour
+      </dd>
+
+      <dd class="govuk-summary-list__actions">
+        <button class="govuk-button govuk-button--secondary marginbottomzero" data-module="govuk-button">
+          View file
+        </button>
+      </dd>
+    </div>
+  </dl>
+</div>
+{% endblock %}

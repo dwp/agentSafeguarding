@@ -1,4 +1,6 @@
 {% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemTwo = " aria-current=page" %}
 
 {% block pageTitle %}
 Linked reports
@@ -6,9 +8,9 @@ Linked reports
 
 {% block beforeContent %}
 {% include "templates/header_newservice.html" %}
-{% include "templates/header_searchlight.html" %}
+{% include "templates/header_searchlight.njk" %}
 {% include "templates/header_incident.html" %}
-{% include "templates/header_examine_menu.html" %}
+{% include "templates/header_examine_menu.njk" %}
 {% include "templates/header_back.html" %}
 {% endblock %}
 
@@ -19,8 +21,8 @@ Linked reports
 {% include "templates/linked_side_nav.html" %}
   </div>
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Linked reports</h1>
-    <h2 class="govuk-heading-m">WIT-999-000-001</h2>
+    <span class="govuk-caption-xl">Linked reports</span>
+    <h1 class="govuk-heading-l">WIT-999-000-001</h1>
     <h3 class="govuk-heading-s">Description</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget tristique justo. In et vulputate nisi. Integer commodo ante tellus, sed iaculis dolor consequat accumsan. Donec sodales, orci eget facilisis fringilla, risus augue fermentum enim, vitae pulvinar odio dolor id felis. Donec luctus sit amet lectus nec vestibulum.<br>
       Mauris lobortis sodales nisi. Etiam mollis pharetra diam, vel pretium libero finibus ac. Cras quis mi urna. Nam lobortis finibus nibh nec elementum. Integer sed urna sem. Donec luctus sit amet lectus nec vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. <br>
