@@ -1,0 +1,163 @@
+<style>
+  @media(min-width: 40.0625em) {
+    .moj-sub-navigation__list {
+      box-shadow: inset 0 -1px 0 #b1b4b6;
+       
+      /* align width and indent with searchlight banner  */
+      /* width: 100%     */
+      padding-inline-start: 30px;
+      /*  overrride to match to GDS pages */
+      margin-top: 4px;
+      background-color: #f8f8f8;
+    }
+  }
+  .moj-sub-navigation__item {
+    /*change font family */
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    box-shadow: inset 0 -1px 0 #b1b4b6;
+    display: block;
+    margin-top: -1px
+  }
+  @media print {
+    .moj-sub-navigation__item {
+      font-family: sans-serif
+    }
+  }
+  @media(min-width: 40.0625em) {
+    .moj-sub-navigation__item {
+      font-size: 19px;
+      font-size: 1.1875rem;
+      line-height: 1.3157894737
+    }
+  }
+  @media print {
+    .moj-sub-navigation__item {
+      font-size: 14pt;
+      line-height: 1.15
+    }
+  }
+  .moj-sub-navigation__item:last-child {
+    box-shadow: none
+  }
+  @media(min-width: 40.0625em) {
+    .moj-sub-navigation__item {
+      box-shadow: none;
+      display: inline-block;
+      margin-right: 20px;
+      margin-top: 0
+    }
+  }
+  .moj-sub-navigation__link {
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: underline;
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 15px;
+    text-decoration: none;
+    position: relative
+  }
+  @media print {
+    .moj-sub-navigation__link {
+      font-family: sans-serif
+    }
+  }
+  .moj-sub-navigation__link:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+    text-decoration: none
+  }
+  .moj-sub-navigation__link:link {
+    color: #1d70b8
+  }
+  .moj-sub-navigation__link:visited {
+    color: #4c2c92
+  }
+  .moj-sub-navigation__link:hover {
+    color: #003078
+  }
+  .moj-sub-navigation__link:active {
+    color: #0b0c0c
+  }
+  .moj-sub-navigation__link:focus {
+    color: #0b0c0c
+  }
+  @media(min-width: 40.0625em) {
+    .moj-sub-navigation__link {
+      padding-left: 0
+    }
+  }
+  .moj-sub-navigation__link:link,
+  .moj-sub-navigation__link:visited {
+    color: #1d70b8
+  }
+  .moj-sub-navigation__link:hover {
+    color: #5694ca
+  }
+  .moj-sub-navigation__link:focus {
+    color: #0b0c0c;
+    position: relative;
+    box-shadow: none
+  }
+  .moj-sub-navigation__link:focus:before {
+    background-color: #0b0c0c;
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px
+  }
+  .moj-sub-navigation__link[aria-current=page] {
+    color: #0b0c0c;
+    position: relative;
+    text-decoration: none
+  }
+  .moj-sub-navigation__link[aria-current=page]:before {
+    background-color: #1d70b8;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5px
+  }
+  @media(min-width: 40.0625em) {
+    .moj-sub-navigation__link[aria-current=page]:before {
+      height: 5px;
+      width: 100%
+    }
+  }
+  .moj-sub-navigation__link[aria-current=page]:focus:before {
+    background-color: #0b0c0c
+  }
+</style>
+<nav class="moj-sub-navigation" aria-label="Sub navigation">
+  <ul class="moj-sub-navigation__list">
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link" {{ menuItemOne }} href="00overview">Overview</a>
+    </li>
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link" {{ menuItemTwo }} href="02linked">Linked reports</a>
+    </li>
+    <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link" {{ menuItemThree }} href="03files">Files</a>
+    </li>
+    {# <li class="moj-sub-navigation__item">
+      <a class="moj-sub-navigation__link" {{ menuItemFour }} href="04measures">Measures</a>
+    </li> #}
+  </ul>
+</nav>

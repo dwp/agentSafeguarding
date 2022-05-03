@@ -1,0 +1,121 @@
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+<style>
+    /* for subnav */
+    .app-subnav {
+      margin-bottom: 100px;
+      margin-left: 15px;
+      /* padding: was 30px 15px 0 0; - changed to match searchlight banner */
+      padding: 0 15px 100px 0;
+      /* font-family: "GDS Transport", arial, sans-serif;*/
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-weight: 400;
+      font-size: 14px;
+      font-size: 0.875rem;
+      line-height: 1.1428571429
+    }
+    @media print {
+      .app-subnav {
+        font-family: sans-serif
+      }
+    }
+    @media(min-width: 40.0625em) {
+      .app-subnav {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25
+      }
+    }
+    @media print {
+      .app-subnav {
+        font-size: 14pt;
+        line-height: 1.2
+      }
+    }
+    .app-subnav__section {
+      margin: 0 0 5px;
+      padding: 0;
+      list-style-type: none
+    }
+    .app-subnav__link {
+      padding: 2px 0
+    }
+    .app-subnav__section-item {
+      margin-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px
+    }
+    .app-subnav__section-item--current {
+      margin-left: -14px;
+      padding-left: 10px;
+      border-left: 4px solid #1d70b8;
+      background-color: #fff
+    }
+    .app-subnav__section-item--current .app-subnav__link {
+      font-weight: bold
+    }
+    .app-subnav__section--nested {
+      margin-top: 10px;
+      margin-bottom: 0;
+      padding-left: 20px
+    }
+    .app-subnav__section--nested .app-subnav__section-item::before {
+      content: "—";
+      margin-left: -20px;
+      color: #505a5f
+    }
+    .app-subnav__section--nested .app-subnav__link {
+      padding-left: 0;
+      font-weight: normal
+    }
+    .app-subnav__theme {
+      margin: 0;
+      padding: 10px 15px 10px 0;
+      color: #505a5f;
+      font-family: "GDS Transport", arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-weight: 400;
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 1.25
+    }
+    @media print {
+      .app-subnav__theme {
+        font-family: sans-serif
+      }
+    }
+    @media(min-width: 40.0625em) {
+      .app-subnav__theme {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.3157894737
+      }
+    }
+    @media print {
+      .app-subnav__theme {
+        font-size: 14pt;
+        line-height: 1.15
+      }
+    }
+
+}
+  </style>
+  <nav class="app-subnav" aria-labelledby="app-subnav-heading">
+    <ul class="app-subnav__section">
+        <li class="app-subnav__section-item {{ subMenuItemOne }}">
+          <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">WIT-999-000-001</a>
+        </li>
+      </ul>
+      <ul class="app-subnav__section">
+        <li class="app-subnav__section-item {{ subMenuItemTwo }}">
+          <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">WIT-999-000-002</a>
+        </li>
+      </ul>
+      <ul class="app-subnav__section">
+        <li class="app-subnav__section-item {{ subMenuItemThree }}">
+          <a class="app-subnav__link govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="#">WIT-999-000-003</a>
+        </li>
+      </ul>
+        </nav>
