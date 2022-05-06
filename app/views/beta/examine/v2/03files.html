@@ -25,54 +25,48 @@ Linked reports
   }
 </style>
 
-<div class="govuk-grid-row">
   <h2 class="govuk-heading-l">Files attached to incident report</h2>
-  <dl class="govuk-summary-list">
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        emailtome.msg
-      </dt>
-      <dd class="govuk-summary-list__value govuk-!-text-align-centre">
-        10 January 2022
-      </dd>
+  <br>
+<table class="govuk-table">
 
-
-      <dd class="govuk-summary-list__actions">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">File name</th>
+      <th scope="col" class="govuk-table__header">Date file was attached to report</th><br>
+        <th scope="col" class="govuk-table__header">Action</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">emailtome.msg</th>
+      <td class="govuk-table__cell">10 January 2022</td>
+      <td class="govuk-table__cell">
         <button class="govuk-button govuk-button--secondary marginbottomzero" data-module="govuk-button">
           View file
         </button>
-      </dd>
-    </div>
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        screen_shot.png
-      </dt>
-      <dd class="govuk-summary-list__value govuk-!-text-align-centre">
-        9 January 2022
-      </dd>
-
-
-      <dd class="govuk-summary-list__actions">
+      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">screen_shot.png</th>
+      <td class="govuk-table__cell">9 January 2022</td>
+      <td class="govuk-table__cell">
         <button class="govuk-button govuk-button--secondary marginbottomzero" data-module="govuk-button">
           View file
         </button>
-      </dd>
-    </div>
-    <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
-        letter_l.pdf
-      </dt>
-      <dd class="govuk-summary-list__value govuk-!-text-align-centre">
-        8 January 2022
-      </dd>
+      </td>
+    </tr>  <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">letter_l.pdf</th>
+        <td class="govuk-table__cell">8 January 2022</td>
+        <td class="govuk-table__cell">
+          <button class="govuk-button govuk-button--secondary marginbottomzero" data-module="govuk-button">
+            View file
+          </button>
+        </td>
+      </tr>
+  </tbody>
+</table>
 
 
-      <dd class="govuk-summary-list__actions">
-        <button class="govuk-button govuk-button--secondary marginbottomzero" data-module="govuk-button">
-          View file
-        </button>
-      </dd>
-    </div>
-  </dl>
+
 </div>
 {% endblock %}
