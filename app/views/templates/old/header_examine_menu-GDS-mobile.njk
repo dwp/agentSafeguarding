@@ -1,0 +1,162 @@
+<style>
+  @media(min-width: 40.0625em) {
+    .app-navigation {
+      display: block;
+    }
+    .app-navigation {
+      border-bottom: 1px solid #b1b4b6;
+      background-color: #f8f8f8;
+    }
+    nav {
+      display: block;
+    }
+  }
+  .govuk-visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    border: 0 !important;
+    white-space: nowrap !important;
+  }
+  h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+  }
+  @media(min-width: 40.0625em) {
+    @supports(margin: max(calc(0px))) {
+      .app-width-container {
+        margin-right: max(30px, calc(15px + env(safe-area-inset-right)));
+        margin-left: max(30px, calc(15px + env(safe-area-inset-left)));
+      }
+    }
+  }
+  @media(min-width: 40.0625em) {
+    .app-width-container {
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+  }
+  @supports(margin: max(calc(0px))) {
+    .app-width-container {
+      margin-right: max(15px, calc(15px + env(safe-area-inset-right)));
+      margin-left: max(15px, calc(15px + env(safe-area-inset-left)));
+    }
+  }
+  .app-width-container {
+    max-width: 1100px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  @media(min-width: 40.0625em) {
+    .app-navigation__list {
+      position: relative;
+      left: -15px;
+    }
+  }
+  .app-navigation__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 40px;
+  }
+  @media(min-width: 40.0625em) and(min-width: 40.0625em) {
+    .app-navigation__list-item {
+      font-size: 19px;
+      font-size: 1.1875rem;
+      line-height: 2.6315789474;
+    }
+  }
+  @media(min-width: 40.0625em) {
+    .app-navigation__list-item {
+      font-family: "GDS Transport", arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-weight: 700;
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 3.125;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      height: 50px;
+      height: 3.125rem;
+      padding: 0 15px;
+      float: left;
+    }
+  }
+  .app-navigation__list-item {
+    position: relative;
+  }
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+</style>
+<nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
+  <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
+  <ul class="app-navigation__list app-width-container">
+    <li class="app-navigation__list-item ">
+      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/get-started/">
+        Incident report
+      </a>
+      <button hidden="" class="app-navigation__button js-app-navigation__button" id="js-mobile-nav-subnav-toggler-0" aria-expanded="false" aria-controls="js-mobile-nav__subnav-0">
+        Incident report
+      </button>
+      <ul class="app-navigation__subnav js-app-navigation__subnav " aria-label="Get started" hidden="" id="js-mobile-nav__subnav-0">
+        <li class="app-navigation__subnav-item">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/get-started/">
+            Incident report overview
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="app-navigation__list-item ">
+      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/styles/">
+        Linked reports
+      </a>
+      <button hidden="" class="app-navigation__button js-app-navigation__button" id="js-mobile-nav-subnav-toggler-1" aria-expanded="false" aria-controls="js-mobile-nav__subnav-1">
+        Linked reports
+      </button>
+      <ul class="app-navigation__subnav js-app-navigation__subnav " aria-label="Styles" hidden="" id="js-mobile-nav__subnav-1">
+        <li class="app-navigation__subnav-item">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/styles/">
+            Linked reports overview
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="app-navigation__list-item  app-navigation__list-item--current">
+      <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link js-app-navigation__link" href="/components/">
+        Attached files
+      </a>
+      <button hidden="" class="app-navigation__button js-app-navigation__button" id="js-mobile-nav-subnav-toggler-2" aria-expanded="false" aria-controls="js-mobile-nav__subnav-2">
+        Attached files
+      </button>
+      <ul class="app-navigation__subnav js-app-navigation__subnav app-navigation__subnav--active" aria-label="Components" hidden="" id="js-mobile-nav__subnav-2">
+        <li class="app-navigation__subnav-item">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" href="/components/">
+            Attached files overview
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
