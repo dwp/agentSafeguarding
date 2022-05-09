@@ -109,6 +109,37 @@
     display: list-item;
     text-align: -webkit-match-parent;
   }
+  .govuk-link--no-underline:not(:hover):not(:active) {
+    text-decoration: none;
+}
+@media (min-width: 40.0625em){
+.app-navigation__link:not([hidden]) {
+    display: inline;
+}}
+.app-navigation__link:not([hidden]) {
+    display: inline-block;
+}
+.govuk-link--no-visited-state:link {
+    color: #1d70b8;
+}
+.app-prose-scope a:link, .govuk-link:link {
+    color: #1d70b8;
+}
+.app-navigation__link, .app-navigation__button {
+    margin: 15px 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: 19px;
+    font-size: 1.1875rem;
+}
+.app-prose-scope a, .govuk-link {
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: underline;
+    text-decoration-thickness: max(1px, 0.0625rem);
+    text-underline-offset: 0.1em;
+}
 </style>
 <nav id="app-navigation" class="app-navigation js-app-navigation govuk-clearfix" role="navigation" aria-labelledby="app-navigation-heading">
   <h2 class="govuk-visually-hidden" id="app-navigation-heading">Menu</h2>
