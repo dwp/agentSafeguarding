@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Incident report overview - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+{% include "templates/v2/header_newservice.html" %}
+{% include "templates/v2/header_searchlight.njk" %}
+{% include "templates/v2/header_incident.html" %}
+{% include "templates/v2/header_back.html" %}
+{% include "templates/v2/header_examine_menu.njk" %}
+{% endblock %}
+
+{% block content %}
+<style>
+  h1 {
+    margin-bottom: 20px !important;
+  }
+</style>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    {% include "templates/v2/overview_side_nav.njk" %}
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">Incident report</span>
+    <br> <br>
+    <h1 class="govuk-heading-xl">Overview</h1>
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--s"><span class="govuk-warning-text__assistive">Overview</span></caption>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Incident occured:</th>
+          <td class="govuk-table__cell">8 February 2022 - 10:30</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-warning-text__assistive">Incident</span> Reported:</th>
+          <td class="govuk-table__cell">8 February 2022 - 11:31</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Measures in place when incident occurred:</th>
+          <td class="govuk-table__cell">Must be seen in screened area, accompanied by security</td>
+        </tr>
+    </table>
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        Indication that incident was motivated by discrimination: race and sex.
+      </strong>
+    </div>
+    <h2 class="govuk-heading-l">Comments</h2>
+    <p>[1/1/2022 TC] Morbi congue lectus odio, vitae imperdiet tortor convallis sed. Fusce cursus, lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. <br>
+      <br>[1/1/2022 TC] Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.Morbi congue lectus odio, vitae imperdiet tortor convallis sed. Fusce cursus, lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.</p>
+    <!-- <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--s"><span class="govuk-warning-text__assistive">Comment details</span></caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><span class="govuk-warning-text__assistive">Added by</span></th>
+              <td class="govuk-table__cell"><a href="mailto:nom.manager@dwp.gov.uk">Nom Manager</a> - 9 February 2022 - 13:22</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div> -->
+    <!-- <p>Lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.Morbi congue lectus odio, vitae imperdiet tortor convallis sed.</p>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--s"><span class="govuk-warning-text__assistive">Comment details</span></caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><span class="govuk-warning-text__assistive">Added by</span></th>
+              <td class="govuk-table__cell"><a href="mailto:sarah.darjeeling@dwp.gov.uk">Sarah Darjeeling</a> - 8 February 2022 - 18:41</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div> -->
+    <br><br>
+
+  </div>
+</div>
+
+{% endblock %}

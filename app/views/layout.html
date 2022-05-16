@@ -38,14 +38,13 @@
 {% endblock %}
 
 {% block header %}
-  {% include "includes/cookie-banner.html" %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: serviceName,
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
+{% from "internal-services-header/macro.njk" import dwpHeader %}
+
+{{ dwpHeader({
+name: "Agent Safeguarding",
+serviceHref: '/',
+container:true
+}) }} 
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
