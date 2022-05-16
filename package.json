@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@dwp/dwp-frontend": "^2.0.10",
+    "@ministryofjustice/frontend": "^1.4.1",
     "acorn": "^7.1.1",
     "ansi-colors": "^4.1.1",
     "basic-auth": "^2.0.0",
@@ -40,7 +41,7 @@
     "keypather": "^3.0.0",
     "marked": "^0.8.2",
     "notifications-node-client": "^4.7.2",
-    "nunjucks": "^3.2.1",
+    "nunjucks": "^3.2.3",
     "portscanner": "^2.1.1",
     "require-dir": "^1.0.0",
     "sync-request": "^6.0.0",

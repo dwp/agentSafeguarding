@@ -1,0 +1,15 @@
+{%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+{{ mojSideNavigation({
+      label: 'Side navigation',
+      items: [{
+        text: 'WIT-999-000-001',
+        href: '#1',
+        active: true
+      }, {
+        text: 'WIT-999-000-002',
+        href: '#2'
+      }, {
+        text: 'WIT-999-000-003',
+        href: '#3'
+      }]
+    }) }}
