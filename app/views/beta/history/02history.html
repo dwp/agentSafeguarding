@@ -7,155 +7,13 @@ Customer history - Agent Safeguarding
 
 
 {% block beforeContent %}
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      beta
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-    </span>
-  </p>
-</div>
-<style media="screen">
-  dl,
-  dt,
-  dd {
-    border: none;
-    margin: 0;
-    padding: 0;
-  }
+{% include "templates/v2/header_newservice.html" %}
+{% include "templates/v2/header_searchlight.njk" %}
+{% include "templates/v2/header_incident.html" %}
+{% include "templates/v2/header_back.html" %}
+{% endblock %}
 
-  .dwp-key-details-bar {
-    background-color: #1d70b8;
-    color: #fff;
-    font-family: Arial, sans-serif;
-  }
-
-  .dwp-key-details-bar .dwp-key-details-bar__key-details {
-    margin: 0 auto;
-    max-width: 960px;
-    padding: 20px 30px;
-    position: relative;
-  }
-
-  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__top-block::after,
-  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block::after {
-    clear: both;
-    content: ' ';
-    display: block;
-  }
-
-  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block {
-    border-top: 1px solid rgba(255, 255, 255, .3);
-    content: ' ';
-    padding-top: 10px;
-    margin-top: 6px;
-  }
-
-  .dwp-key-details-bar .dwp-key-details-bar__key-details dd,
-  .dwp-key-details-bar .dwp-key-details-bar__key-details dt {
-    float: left;
-    font-size: 19px;
-    margin-right: 5px;
-  }
-
-  .dwp-key-details-bar .dwp-key-details-bar__key-details dd {
-    margin-right: 20px;
-  }
-
-  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__name {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.11111;
-    margin-right: 10px;
-  }
-
-  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__nino {
-    font-size: 24px;
-    line-height: 1;
-    margin-top: 12px;
-  }
-
-  .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__status {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.25;
-    padding: 5px 8px 0;
-    color: #005ea5;
-    background-color: #fff;
-    letter-spacing: 1px;
-    text-decoration: none;
-    text-transform: uppercase;
-    float: right;
-    margin: 5px 0 0;
-  }
-
-  @media (max-width: 40.0525em) {
-    .dwp-key-details-bar .dwp-key-details-bar__key-details {
-      padding: 20px 15px;
-    }
-
-    .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__bottom-block {
-      border: 0;
-    }
-
-    .dwp-key-details-bar .dwp-key-details-bar__key-details dd,
-    .dwp-key-details-bar .dwp-key-details-bar__key-details dt {
-      float: none;
-      font-size: 16px;
-      margin: 0;
-    }
-
-    .dwp-key-details-bar .dwp-key-details-bar__key-details dd {
-      margin-bottom: 20px;
-    }
-
-    .dwp-key-details-bar .dwp-key-details-bar__key-details dd:last-of-type {
-      margin-bottom: 20px;
-    }
-
-    .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__name {
-      font-size: 24px;
-      line-height: 1.04167;
-      float: left;
-      margin: 0 5px 0 0;
-    }
-
-    .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__nino {
-      font-size: 18px;
-      float: left;
-      margin: 5px 0 0 0;
-    }
-
-    .dwp-key-details-bar .dwp-key-details-bar__key-details .dwp-key-details-bar__status {
-      font-size: 14px;
-      float: left;
-      clear: both;
-      margin-top: 5px;
-    }
-  }
-</style>
-<div class="govuk-width-container">
-  <section class="dwp-key-details-bar" aria-label="Key details">
-    <dl class="dwp-key-details-bar__key-details">
-      <div class="dwp-key-details-bar__top-block">
-        <dt class="govuk-visually-hidden">Name:</dt>
-        <dd class="dwp-key-details-bar__name"> Robert De Silva</dd>
-        <dt class="govuk-visually-hidden">National Insurance number:</dt>
-        <dd class="dwp-key-details-bar__nino">QQ 12 34 56 X</dd>
-        <dt class="govuk-visually-hidden">Claim status:</dt>
-      </div>
-      <div class="dwp-key-details-bar__bottom-block">
-        <dt>Date of birth:</dt>
-        <dd>4 June 1972</dd>
-        <!-- Remove postcode - not needed/difficult to get -->
-        <!-- <dt>Postcode:</dt>
-        <dd>E1 7KJ</dd> -->
-      </div>
-    </dl>
-  </section>
-</div>
+{% block content %}
 <style>
   /* Make back link appear just under banner */
   #main-content {
@@ -169,73 +27,6 @@ Customer history - Agent Safeguarding
 <style>
   .nobreak {
     white-space: nowrap;
-  }
-
-  [aria-sort] button,
-  [aria-sort] button:hover {
-    background-color: transparent;
-    border-width: 0;
-    -webkit-box-shadow: 0 0 0 0;
-    -moz-box-shadow: 0 0 0 0;
-    box-shadow: 0 0 0 0;
-    color: #005ea5;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    padding: 0 10px 0 0;
-    position: relative;
-    text-align: inherit;
-    font-size: 1em;
-    margin: 0;
-  }
-
-  [aria-sort] button:after {
-    content: " ▲";
-    position: absolute;
-    right: -1px;
-    top: 1px;
-    font-size: .5em;
-  }
-
-  [aria-sort] button:before {
-    content: " ▼";
-    position: absolute;
-    right: -1px;
-    top: 9px;
-    font-size: .5em;
-  }
-
-  [aria-sort=ascending] button:before {
-    content: "  ";
-    position: absolute;
-    right: -1px;
-    top: 9px;
-    font-size: .5em;
-  }
-
-  [aria-sort=ascending] button:after {
-    content: " ▲";
-    font-size: .8em;
-    position: absolute;
-    right: -5px;
-    top: 2px;
-  }
-
-  [aria-sort=descending] button:before {
-    content: "  ";
-    position: absolute;
-    right: -1px;
-    top: 9px;
-    font-size: .5em;
-  }
-
-  [aria-sort=descending] button:after {
-    content: " ▼";
-    font-size: .8em;
-    position: absolute;
-    right: -5px;
-    top: 2px;
   }
 
   .dwp-timeline {
@@ -385,85 +176,78 @@ Customer history - Agent Safeguarding
     margin-bottom: 1;
   }
 </style>
+<section aria-label="Customer history" role="region">
+  <h1 class="govuk-heading-l">Customer history</h1>
+  <p>This page shows all incidents and safety concerns reported about this customer's behaviour. They are in chronological order, with the most recent at the top of the page. </p>
+  <!-- <p>Active measures: <strong class="govuk-tag govuk-tag--red">Banned from all DWP locations</strong></p> -->
 
-{% endblock %}
-
-{% block content %}
-
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
-<br></br>
-<h1 class="govuk-heading-l">Customer history</h1>
-<p>This page shows all incidents and safety concerns reported about this customer's behaviour. They are in chronological order, with the most recent at the top of the page. </p>
-<!-- <p>Active measures: <strong class="govuk-tag govuk-tag--red">Banned from all DWP locations</strong></p> -->
-
-<ol class="dwp-timeline">
-  <li class="dwp-timeline__entry">
-    <h3 class="dwp-timeline__title">Incident: <span class="govuk-!-font-weight-regular">Written</span></h3>
-    <p class="dwp-timeline__info">
-      <span class="govuk-visually-hidden visually-hidden">Incident: In-person</span>
-      <span class="dwp-timeline__date">21 March 2022</span>
-    </p>
-    <p class="dwp-timeline__body">
-      <span class="govuk-body-s"><a href="/beta/examine/v3/00incident">INC-999-000-999</a></span>
-    </p>
-  </li>
+  <ol class="dwp-timeline">
+    <li class="dwp-timeline__entry">
+      <h3 class="dwp-timeline__title">Incident: <span class="govuk-!-font-weight-regular">Written</span></h3>
+      <p class="dwp-timeline__info">
+        <span class="govuk-visually-hidden visually-hidden">Incident: In-person</span>
+        <span class="dwp-timeline__date">21 March 2022</span>
+      </p>
+      <p class="dwp-timeline__body">
+        <span class="govuk-body-s"><a href="/beta/examine/v3/00incident">INC-999-000-999</a></span>
+      </p>
+    </li>
 
 
-  <li class="dwp-timeline__entry">
-    <h3 class="dwp-timeline__title">Incident: <span class="govuk-!-font-weight-regular">In-person</span></h3>
-    <p class="dwp-timeline__info">
-      <span class="govuk-visually-hidden visually-hidden">Incident: <span class="govuk-!-font-weight-regular">In-person</span></span>
-      <span class="dwp-timeline__date">19 March 2022</span>
-    </p>
-    <p class="dwp-timeline__body">
-      <span class="govuk-body-s"><a href="/beta/examine/v3/00incident">INC-000-000-003</a></span>
-    </p>
-  </li>
+    <li class="dwp-timeline__entry">
+      <h3 class="dwp-timeline__title">Incident: <span class="govuk-!-font-weight-regular">In-person</span></h3>
+      <p class="dwp-timeline__info">
+        <span class="govuk-visually-hidden visually-hidden">Incident: <span class="govuk-!-font-weight-regular">In-person</span></span>
+        <span class="dwp-timeline__date">19 March 2022</span>
+      </p>
+      <p class="dwp-timeline__body">
+        <span class="govuk-body-s"><a href="/beta/examine/v3/00incident">INC-000-000-003</a></span>
+      </p>
+    </li>
 
 
-  <li class="dwp-timeline__entry">
-    <h3 class="dwp-timeline__title">Incident: <span class="govuk-!-font-weight-regular">In-person</span></h3>
-    <p class="dwp-timeline__info">
-      <span class="govuk-visually-hidden visually-hidden">Incident: In-person</span>
-      <span class="dwp-timeline__date">10 March 2022</span>
-    </p>
-    <p class="dwp-timeline__body">
-      <span class="govuk-body-s"><a href="/beta/examine/v3/00incident">INC-000-000-002</a></span>
-    </p>
-  </li>
+    <li class="dwp-timeline__entry">
+      <h3 class="dwp-timeline__title">Incident: <span class="govuk-!-font-weight-regular">In-person</span></h3>
+      <p class="dwp-timeline__info">
+        <span class="govuk-visually-hidden visually-hidden">Incident: In-person</span>
+        <span class="dwp-timeline__date">10 March 2022</span>
+      </p>
+      <p class="dwp-timeline__body">
+        <span class="govuk-body-s"><a href="/beta/examine/v3/00incident">INC-000-000-002</a></span>
+      </p>
+    </li>
 
 
-  <li class="dwp-timeline__entry">
-    <h3 class="dwp-timeline__title">Incident: <span class="govuk-!-font-weight-regular">In-person</span></h3>
-    <p class="dwp-timeline__info">
-      <span class="govuk-visually-hidden visually-hidden">Incident: In-person</span>
-      <span class="dwp-timeline__date">2 February 2022</span>
-    </p>
-    <p class="dwp-timeline__body">
-      <span class="govuk-body-s"><a href="/beta/examine/v3/00incident">INC-000-000-001</a></span>
-    </p>
-  </li>
-  <li class="dwp-timeline__entry">
-    <h3 class="dwp-timeline__title">Incident: <span class="govuk-!-font-weight-regular">Written</span></h3>
-    <p class="dwp-timeline__info">
-      <span class="govuk-visually-hidden visually-hidden">Incident: Written</span>
-      <span class="dwp-timeline__date">22 January 2022</span>
-    </p>
-    <p class="dwp-timeline__body">
-      <span class="govuk-body-s"><a href="/beta/examine/v3/00incident">INC-000-888-334</a></span>
-    </p>
-  </li>
-  <li class="dwp-timeline__entry">
-    <h3 class="dwp-timeline__title">Safety concern: <span class="govuk-!-font-weight-regular">CHDA</span> </h3>
-    <p class="dwp-timeline__info">
-      <span class="govuk-visually-hidden visually-hidden">Concern: CHDA </span>
-      <span class="dwp-timeline__date">22 January 2022</span>
-    </p>
-    <p class="dwp-timeline__body">
-      <span class="govuk-body-s"><a href="/beta/examine/v3/00concern">CON-000-888-333</a></span>
-    </p>
-  </li>
-</ol>
-
-
+    <li class="dwp-timeline__entry">
+      <h3 class="dwp-timeline__title">Incident: <span class="govuk-!-font-weight-regular">In-person</span></h3>
+      <p class="dwp-timeline__info">
+        <span class="govuk-visually-hidden visually-hidden">Incident: In-person</span>
+        <span class="dwp-timeline__date">2 February 2022</span>
+      </p>
+      <p class="dwp-timeline__body">
+        <span class="govuk-body-s"><a href="/beta/examine/v3/00incident">INC-000-000-001</a></span>
+      </p>
+    </li>
+    <li class="dwp-timeline__entry">
+      <h3 class="dwp-timeline__title">Incident: <span class="govuk-!-font-weight-regular">Written</span></h3>
+      <p class="dwp-timeline__info">
+        <span class="govuk-visually-hidden visually-hidden">Incident: Written</span>
+        <span class="dwp-timeline__date">22 January 2022</span>
+      </p>
+      <p class="dwp-timeline__body">
+        <span class="govuk-body-s"><a href="/beta/examine/v3/00incident">INC-000-888-334</a></span>
+      </p>
+    </li>
+    <li class="dwp-timeline__entry">
+      <h3 class="dwp-timeline__title">Safety concern: <span class="govuk-!-font-weight-regular">CHDA</span> </h3>
+      <p class="dwp-timeline__info">
+        <span class="govuk-visually-hidden visually-hidden">Concern: CHDA </span>
+        <span class="dwp-timeline__date">22 January 2022</span>
+      </p>
+      <p class="dwp-timeline__body">
+        <span class="govuk-body-s"><a href="/beta/examine/v3/00concern">CON-000-888-333</a></span>
+      </p>
+    </li>
+  </ol>
+</section>
 {% endblock %}

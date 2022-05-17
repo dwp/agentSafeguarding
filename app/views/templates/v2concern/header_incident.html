@@ -4,15 +4,28 @@
     border-top: 1px solid #1d70b8b9;
     border-bottom: 0px;
   }
+
   p.report {
-margin-bottom: 0px;
+    margin-bottom: 0px;
   }
 
+  @media (max-width: 40.0525em) {
+    p.report {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 40.0525em) {
+    #incident_number {
+      padding-left: 0;
+    }
+  }
 </style>
-<hr class="rule_white">
+<hr class="rule_white" aria-hidden="true">
 <div class="nav">
-  <div class="govuk-grid-column-two-thirds">
-    <p class="report">CON-000-888-333: CHDA</p>
+  <section aria-label="Safety concern number" role="region" >
+  <div class="govuk-grid-column-two-thirds" id="incident_number">
+    <p class="report"><span class="govuk-visually-hidden">Safety concern number: </span>CON-000-888-333: <span class="govuk-visually-hidden">Safety concern type: </span>CHDA</p>
   </div>
   <!-- Strictly speaking shouldnt be "govuk-table__header--numeric" -->
   <div class="govuk-grid-column-one-third govuk-table__header--numeric">
@@ -20,4 +33,5 @@ margin-bottom: 0px;
       In progress
     </strong> -->
   </div>
+  </section>
 </div>

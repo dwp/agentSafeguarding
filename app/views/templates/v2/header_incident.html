@@ -4,29 +4,34 @@
     border-top: 1px solid #1d70b8b9;
     border-bottom: 0px;
   }
+
   p.report {
-margin-bottom: 0px;
+    margin-bottom: 0px;
   }
+
   @media (max-width: 40.0525em) {
     p.report {
       font-size: 18px;
     }
   }
+
   @media (max-width: 40.0525em) {
     #incident_number {
-     padding-left: 0;
+      padding-left: 0;
     }
   }
 </style>
-<hr class="rule_white">
+<hr class="rule_white" aria-hidden="true">
 <div class="nav">
-  <div class="govuk-grid-column-two-thirds" id="incident_number">
-    <p class="report">INC-123-456-789: In-person</p>
-  </div>
-  <!-- Strictly speaking shouldnt be "govuk-table__header--numeric" -->
-  <div class="govuk-grid-column-one-third govuk-table__header--numeric">
-    <!-- <strong class="govuk-tag govuk-tag--blue">
-      In progress
-    </strong> -->
-  </div>
+  <section aria-label="Incident number" role="region" >
+    <div class="govuk-grid-column-two-thirds" id="incident_number">
+      <p class="report"><span class="govuk-visually-hidden">Incident number: </span>INC-123-456-789: <span class="govuk-visually-hidden">Incident type: </span>In-person</p>
+    </div>
+    <!-- Strictly speaking shouldnt be "govuk-table__header--numeric" -->
+    <div class="govuk-grid-column-one-third govuk-table__header--numeric">
+      <!-- <strong class="govuk-tag govuk-tag--blue">
+        In progress
+      </strong> -->
+    </div>
+  </section>
 </div>

@@ -15,53 +15,58 @@ Incident report - Agent Safeguarding
 {% endblock %}
 
 {% block content %}
+
 <style>
   h1 {
     margin-bottom: 20px !important;
   }
 </style>
-<h1 class="govuk-heading-l">Incident report</h1>
+<h1 class="govuk-heading-l">Incident reportx</h1>
 
 {% from "govuk/components/tabs/macro.njk" import govukTabs %}
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
 {% set incidentOverview %}
-<h2 class="govuk-heading-m">Overview</h2>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--s"><span class="govuk-warning-text__assistive">Overview</span></caption>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Incident occured:</th>
-          <td class="govuk-table__cell">8 February 2022 - 10:30</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><span class="govuk-warning-text__assistive">Incident</span> Reported:</th>
-          <td class="govuk-table__cell">8 February 2022 - 11:31</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Measures in place when incident occurred:</th>
-          <td class="govuk-table__cell">Must be seen in screened area, accompanied by security</td>
-        </tr>
-    </table>
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-warning-text__assistive">Warning</span>
-        Indication that incident was motivated by discrimination: race and sex.
-      </strong>
+<section aria-label="Incident overview" role="region" >
+  <h2 class="govuk-heading-m">Overview</h2>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--s"><span class="govuk-warning-text__assistive">Overview</span></caption>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Incident occured:</th>
+            <td class="govuk-table__cell">8 February 2022 - 10:30</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><span class="govuk-warning-text__assistive">Incident</span> Reported:</th>
+            <td class="govuk-table__cell">8 February 2022 - 11:31</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Measures in place when incident occurred:</th>
+            <td class="govuk-table__cell">Must be seen in screened area, accompanied by security</td>
+          </tr>
+      </table>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Indication that incident was motivated by discrimination: race and sex.
+        </strong>
+      </div>
+      <h2 class="govuk-heading-m">Comments</h2>
+      <p>[1/1/2022 TC] Morbi congue lectus odio, vitae imperdiet tortor convallis sed. Fusce cursus, lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. <br>
+        <br>[1/1/2022 TC] Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.Morbi congue lectus odio, vitae imperdiet tortor convallis sed. Fusce cursus, lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.
+      </p>
     </div>
-    <h2 class="govuk-heading-m">Comments</h2>
-    <p>[1/1/2022 TC] Morbi congue lectus odio, vitae imperdiet tortor convallis sed. Fusce cursus, lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. <br>
-      <br>[1/1/2022 TC] Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.Morbi congue lectus odio, vitae imperdiet tortor convallis sed. Fusce cursus, lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.
-    </p>
   </div>
-</div>
+</section>
 
 {% endset -%}
 
 {% set incidentDetails %}
+<section aria-label="Incident details" role="region" >
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h2 class="govuk-heading-m">Details</h2>
@@ -120,9 +125,12 @@ Incident report - Agent Safeguarding
   <div class="govuk-grid-column-two-thirds">
   </div>
 </div>
+</section>
 {% endset -%}
 
 {% set witnesses %}
+<section aria-label="Witnesses" role="region" >
+
 <h2 class="govuk-heading-m">Witnesses</h2>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
@@ -151,9 +159,12 @@ Incident report - Agent Safeguarding
     </table>
   </div>
 </div>
+</section>
 {% endset -%}
 
 {% set attachedFiles %}
+<section aria-label="Attached files" role="region" >
+
 <h2 class="govuk-heading-m">Files attached to incident report</h2>
 
 <table class="govuk-table">
@@ -196,6 +207,7 @@ Incident report - Agent Safeguarding
     </tr>
   </tbody>
 </table>
+</section>
 {% endset -%}
 
 
@@ -231,6 +243,5 @@ html: attachedFiles
 }
 ]
 }) }}
-
 
 {% endblock %}

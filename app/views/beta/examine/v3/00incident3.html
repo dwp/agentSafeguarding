@@ -20,6 +20,10 @@ Incident report - Agent Safeguarding
     margin-bottom: 20px !important;
   }
 
+  #main-content {
+    padding-top: 0 !important;
+  }
+
   @media (max-width: 40.0525em) {
     #wit {
       margin-top: 20px;
@@ -32,6 +36,7 @@ Incident report - Agent Safeguarding
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
 {% set incidentOverview %}
+<section aria-label="Incident overview" role="region">
 <h2 class="govuk-heading-m">Overview</h2>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -64,10 +69,11 @@ Incident report - Agent Safeguarding
     </p>
   </div>
 </div>
-
+</section>
 {% endset -%}
 
 {% set incidentDetails %}
+<section aria-label="Incident details" role="region">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h2 class="govuk-heading-m">Details</h2>
@@ -126,9 +132,11 @@ Incident report - Agent Safeguarding
   <div class="govuk-grid-column-two-thirds">
   </div>
 </div>
+</section>
 {% endset -%}
 
 {% set witnesses %}
+<section aria-label="Incident witnesses" role="region">
 <h2 class="govuk-heading-m">Witnesses</h2>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
@@ -142,7 +150,7 @@ Incident report - Agent Safeguarding
     </style>
     {%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
     {{ mojSideNavigation({
-          label: 'Side navigation',
+          label: 'Side ',
           items: [{
             text: 'WIT-999-000-001',
             href: '/beta/examine/v3/00incident#witnesses'
@@ -177,9 +185,11 @@ Incident report - Agent Safeguarding
     </table>
   </div>
 </div>
+</section>
 {% endset -%}
 
 {% set attachedFiles %}
+<section aria-labelledby="attached" role="region">
 <h2 class="govuk-heading-m">Files attached to incident report</h2>
 
 <table class="govuk-table">
