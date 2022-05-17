@@ -189,50 +189,50 @@ Incident report - Agent Safeguarding
 {% endset -%}
 
 {% set attachedFiles %}
-<section aria-labelledby="attached" role="region">
-<h2 class="govuk-heading-m">Files attached to incident report</h2>
+<section aria-label="Files attached to incident report" role="region">
+  <h2 class="govuk-heading-m" id="attached">Files attached to incident report</h2>
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">File name</th>
+        <th scope="col" class="govuk-table__header">Date attached to report</th><br>
+        <th scope="col" class="govuk-table__header">Action</th>
+      </tr>
+    </thead>
 
-<table class="govuk-table">
-
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">File name</th>
-      <th scope="col" class="govuk-table__header">Date attached to report</th><br>
-      <th scope="col" class="govuk-table__header">Action</th>
-    </tr>
-  </thead>
-
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">emailtome.msg</th>
-      <td class="govuk-table__cell">10 January 2022</td>
-      <td class="govuk-table__cell">
-        <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
-          Download file
-        </a>
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">screen_shot.png</th>
-      <td class="govuk-table__cell">9 January 2022</td>
-      <td class="govuk-table__cell">
-        <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
-          Download file
-        </a>
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">letter_l.pdf</th>
-      <td class="govuk-table__cell">8 January 2022</td>
-      <td class="govuk-table__cell">
-        <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
-          Download file
-        </a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">emailtome.msg</th>
+        <td class="govuk-table__cell">10 January 2022</td>
+        <td class="govuk-table__cell">
+          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
+            Download file<span class="govuk-visually-hidden">emailtome.msg</span>
+          </a>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">screen_shot.png</th>
+        <td class="govuk-table__cell">9 January 2022</td>
+        <td class="govuk-table__cell">
+          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
+            Download file<span class="govuk-visually-hidden">screen_shot.png</span>
+          </a>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">letter_l.pdf</th>
+        <td class="govuk-table__cell">8 January 2022</td>
+        <td class="govuk-table__cell">
+          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
+            Download file<span class="govuk-visually-hidden">letter_l.pdfg</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 {% endset -%}
+
 
 
 {{ govukTabs({

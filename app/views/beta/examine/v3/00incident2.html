@@ -191,11 +191,9 @@ Incident report - Agent Safeguarding
 {% endset -%}
 
 {% set attachedFiles %}
-<section aria-labelledby="attached" role="region">
-  <h2 class="govuk-heading-m">Files attached to incident report</h2>
-
+<section aria-label="Files attached to incident report" role="region">
+  <h2 class="govuk-heading-m" id="attached">Files attached to incident report</h2>
   <table class="govuk-table">
-
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">File name</th>
@@ -210,7 +208,7 @@ Incident report - Agent Safeguarding
         <td class="govuk-table__cell">10 January 2022</td>
         <td class="govuk-table__cell">
           <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
-            Download file
+            Download file<span class="govuk-visually-hidden">emailtome.msg</span>
           </a>
         </td>
       </tr>
@@ -219,7 +217,7 @@ Incident report - Agent Safeguarding
         <td class="govuk-table__cell">9 January 2022</td>
         <td class="govuk-table__cell">
           <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
-            Download file
+            Download file<span class="govuk-visually-hidden">screen_shot.png</span>
           </a>
         </td>
       </tr>
@@ -228,7 +226,7 @@ Incident report - Agent Safeguarding
         <td class="govuk-table__cell">8 January 2022</td>
         <td class="govuk-table__cell">
           <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
-            Download file
+            Download file<span class="govuk-visually-hidden">letter_l.pdfg</span>
           </a>
         </td>
       </tr>
@@ -236,6 +234,7 @@ Incident report - Agent Safeguarding
   </table>
 </section>
 {% endset -%}
+
 
 
 {{ govukTabs({
