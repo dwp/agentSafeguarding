@@ -7,11 +7,20 @@
   p.report {
 margin-bottom: 0px;
   }
-
+  @media (max-width: 40.0525em) {
+    p.report {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 40.0525em) {
+    #incident_number {
+     padding-left: 0;
+    }
+  }
 </style>
 <hr class="rule_white">
 <div class="nav">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-two-thirds" id="incident_number">
     <p class="report">INC-123-456-789: In-person</p>
   </div>
   <!-- Strictly speaking shouldnt be "govuk-table__header--numeric" -->
