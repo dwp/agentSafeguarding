@@ -1,0 +1,274 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Incident report - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+{% include "templates/v2/header_newservice.html" %}
+{% include "templates/v2/header_searchlight.njk" %}
+{% include "templates/v2/header_incident.html" %}
+{% include "templates/v2/header_back.html" %}
+{% endblock %}
+
+{% block content %}
+<style>
+  h1 {
+    margin-bottom: 20px !important;
+  }
+
+  #main-content {
+    padding-top: 0 !important;
+  }
+
+  @media (max-width: 40.0525em) {
+    #wit {
+      margin-top: 20px;
+    }
+  }
+</style>
+<h1 class="govuk-heading-l">Incident report</h1>
+
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{% set incidentOverview %}
+<section aria-label="Incident overview" role="region">
+  <h2 class="govuk-heading-m">Overview</h2>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--s"><span class="govuk-warning-text__assistive">Overview</span></caption>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Incident occured:</th>
+            <td class="govuk-table__cell">8 February 2022 - 10:30</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><span class="govuk-warning-text__assistive">Incident</span> Reported:</th>
+            <td class="govuk-table__cell">8 February 2022 - 11:31</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Measures in place when incident occurred:</th>
+            <td class="govuk-table__cell">Must be seen in screened area, accompanied by security</td>
+          </tr>
+      </table>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Indication that incident was motivated by discrimination: race and sex.
+        </strong>
+      </div>
+      <h2 class="govuk-heading-m">Comments</h2>
+      <p>[1/1/2022 TC] Morbi congue lectus odio, vitae imperdiet tortor convallis sed. Fusce cursus, lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. <br>
+        <br>[1/1/2022 TC] Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.Morbi congue lectus odio, vitae imperdiet tortor convallis sed. Fusce cursus, lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.
+      </p>
+    </div>
+  </div>
+</section>
+{% endset -%}
+
+{% set incidentDetails %}
+<section aria-label="Incident details" role="region">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Details</h2>
+      <h3 class="govuk-heading-s">1. Why was the customer in contact with us?</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget tristique justo. In et vulputate nisi. Integer commodo ante tellus, sed iaculis dolor consequat accumsan. Donec sodales, orci eget facilisis fringilla, risus augue fermentum enim, vitae pulvinar odio dolor id felis. Donec luctus sit amet lectus nec vestibulum.
+      </p>
+      <hr>
+      <h23 class="govuk-heading-s">2. How did the incident start? Was there a specific trigger?</h3>
+        <p>Mauris lobortis sodales nisi. Etiam mollis pharetra diam, vel pretium libero finibus ac. Cras quis mi urna. Nam lobortis finibus nibh nec elementum. Integer sed urna sem. Donec luctus sit amet lectus nec vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+        <hr>
+        <h3 class="govuk-heading-s">3. What were the issues with the customer's behaviour?</h3>
+        <p>Mauris fermentum consectetur orci aliquet pretium. Nunc porttitor consectetur ultrices. Mauris nec maximus mauris. Suspendisse posuere vel nibh non tincidunt. Cras suscipit ante ut lectus consequat, quis vestibulum lectus efficitur. Integer et risus enim. Fusce lacinia purus nec euismod convallis. Fusce volutpat nulla non libero bibendum, sit amet commodo est imperdiet.
+        </p>
+        <hr>
+        <h3 class="govuk-heading-s">4. Tell us what happened next. How did you try to resolve the situation, and how did the customer react?</h3>
+        <p>Maecenas sit amet mauris vulputate, sollicitudin nisi eget, dignissim tellus. Sed at tempus odio, ut egestas sapien. Nunc quam dolor, elementum quis fringilla ac, tincidunt id augue. Phasellus quis venenatis nisl.</p>
+        <hr>
+        <h2 class="govuk-heading-s">5. Were there any witnesses to this incident?</h3>
+          <!-- <p><a href="02linked">WIT-999-000-001</a>, <a href="mailto:sartaq.matcha@dwp.gov.uk">sartaq.matcha@dwp.gov.uk</a></p> -->
+          <p>Yes</p>
+          <hr>
+          <h3 class="govuk-heading-s">6. How did your interaction with the customer end?</h3>
+          <p> Nullam vitae nulla vel purus tincidunt gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nullam ut cursus magna. In in sagittis libero
+          </p>
+          <hr>
+          <h3 class="govuk-heading-s">7. How did your feel during the incident?</h3>
+          <p>Morbi congue lectus odio, vitae imperdiet tortor convallis sed. Fusce cursus, lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.Morbi congue lectus odio, vitae imperdiet tortor convallis sed. Fusce cursus, lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.</p>
+
+          <h3 class="govuk-heading-m">Reporter</h3>
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Full name</th>
+                <td class="govuk-table__cell">Whitney Earl</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Email address</th>
+                <td class="govuk-table__cell">whitney.earl@dwp.gov.uk</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Location at time of the incident</th>
+                <td class="govuk-table__cell">The office they are based at </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Reporter's line manager</th>
+                <td class="govuk-table__cell">Sarah Darjeeling</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Manager's email</th>
+                <td class="govuk-table__cell">sarah.darjeeling@dwp.gov.uk</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+    </div>
+  </div>
+</section>
+{% endset -%}
+
+{% set witnesses %}
+<section aria-label="Incident witnesses" role="region">
+  <h2 class="govuk-heading-m">Witnesses</h2>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <style>
+        .moj-side-navigation__item--active a:link,
+        .moj-side-navigation__item--active a:visited {
+          background-color: transparent !important;
+        }
+
+        nav.moj-side-navigation {
+          padding-top: 0;
+        }
+      </style>
+      {%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
+      {{ mojSideNavigation({
+      label: 'Side',
+      items: [{
+      text: 'WIT-999-000-001',
+      href: '/beta/examine/v3/00incident#witnesses'
+      }, {
+      text: 'WIT-999-000-002',
+      href: '/beta/examine/v3/00incident2#witnesses',
+      active: true
+      }, {
+      text: 'WIT-999-000-003',
+      href: '/beta/examine/v3/00incident3#witnesses'
+      }]
+      }) }}
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h3 class="govuk-heading-l" id="wit">WIT-999-000-002</h3>
+      <h4 class="govuk-heading-m">Description</h4>
+      <p>Mauris fermentum consectetur orci aliquet pretium. Nunc porttitor consectetur ultrices. Mauris nec maximus mauris. Suspendisse posuere vel nibh non tincidunt. Cras suscipit ante ut lectus consequat, quis vestibulum lectus efficitur. Integer et risus enim. Fusce lacinia purus nec euismod convallis. Fusce volutpat nulla non libero bibendum, sit amet commodo est imperdiet.
+      </p>
+
+      <h4 class="govuk-heading-m">Witness</h4>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Full name</th>
+            <td class="govuk-table__cell">Amira Darjeeling</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Email address</th>
+            <td class="govuk-table__cell">amira.darjeeling@dwp.gov.uk</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endset -%}
+
+{% set attachedFiles %}
+<section aria-label="Files attached to incident report" role="region">
+  <h2 class="govuk-heading-m" id="attached">Files attached to incident report</h2>
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">File name</th>
+        <th scope="col" class="govuk-table__header">Date attached to report</th><br>
+        <th scope="col" class="govuk-table__header">Action</th>
+      </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">emailtome.msg</th>
+        <td class="govuk-table__cell">10 January 2022</td>
+        <td class="govuk-table__cell">
+          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
+            Download file<span class="govuk-visually-hidden">emailtome.msg</span>
+          </a>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">screen_shot.png</th>
+        <td class="govuk-table__cell">9 January 2022</td>
+        <td class="govuk-table__cell">
+          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
+            Download file<span class="govuk-visually-hidden">screen_shot.png</span>
+          </a>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">letter_l.pdf</th>
+        <td class="govuk-table__cell">8 January 2022</td>
+        <td class="govuk-table__cell">
+          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
+            Download file<span class="govuk-visually-hidden">letter_l.pdfg</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+{% endset -%}
+
+
+
+{{ govukTabs({
+items: [
+{
+label: "Overview",
+id: "incident-overview",
+panel: {
+html: incidentOverview
+}
+},
+{
+label: "Details",
+id: "incident-details",
+panel: {
+html: incidentDetails
+}
+},
+{
+label: "Witnesses",
+id: "witnesses",
+panel: {
+html: witnesses
+}
+},
+{
+label: "Attached files",
+id: "attached-files",
+panel: {
+html: attachedFiles
+}
+}
+]
+}) }}
+
+
+{% endblock %}

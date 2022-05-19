@@ -1,0 +1,141 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Safety concern - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+{% include "templates/v2concern/header_newservice.html" %}
+{% include "templates/v2concern/header_searchlight.njk" %}
+{% include "templates/v2concern/header_incident.html" %}
+{% include "templates/v2concern/header_back.html" %}
+{% endblock %}
+
+{% block content %}
+<style>
+  h1 {
+    margin-bottom: 20px !important;
+  }
+
+  #main-content {
+    padding-top: 0 !important;
+  }
+</style>
+<h1 class="govuk-heading-l">Safety concern</h1>
+
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{% set incidentOverview %}
+<section aria-label="Incident overview" role="region">
+  <h2 class="govuk-heading-m">Overview</h2>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--s"><span class="govuk-warning-text__assistive">Overview</span></caption>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><span class="govuk-warning-text__assistive">Concern</span> Reported:</th>
+            <td class="govuk-table__cell">8 February 2022 - 11:31</td>
+          </tr>
+      </table>
+      <h3 class="govuk-heading-s">Comments</h3>
+      <p>[1/1/2022 TC] Morbi congue lectus odio, vitae imperdiet tortor convallis sed. Fusce cursus, lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. <br>
+        <br>[1/1/2022 TC] Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.Morbi congue lectus odio, vitae imperdiet tortor convallis sed. Fusce cursus, lorem pulvinar volutpat lacinia, metus turpis consequat ipsum, sit amet finibus nisi metus ac nisl. Maecenas vehicula, mauris eu rhoncus rhoncus, elit purus tincidunt elit, eget volutpat libero leo vitae sem.
+      </p>
+      <h3 class="govuk-heading-s">Details</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget tristique justo. In et vulputate nisi. Integer commodo ante tellus, sed iaculis dolor consequat accumsan. Donec sodales, orci eget facilisis fringilla, risus augue fermentum enim, vitae pulvinar odio dolor id felis. Donec luctus sit amet lectus nec vestibulum.
+      </p>
+      <br>
+      <br>
+      <h3 class="govuk-heading-s">Reporter</h3>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Full name</th>
+            <td class="govuk-table__cell">Whitney Earl</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Email address</th>
+            <td class="govuk-table__cell">whitney.earl@dwp.gov.uk</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{% endset -%}
+
+{% set attachedFiles %}
+<section aria-label="Files attached to incident report" role="region">
+  <h2 class="govuk-heading-m">Files attached to incident report</h2>
+
+  <table class="govuk-table">
+
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">File name</th>
+        <th scope="col" class="govuk-table__header">Date attached to report</th><br>
+        <th scope="col" class="govuk-table__header">Action</th>
+      </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">emailtome.msg</th>
+        <td class="govuk-table__cell">10 January 2022</td>
+        <td class="govuk-table__cell">
+          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
+            Download file<span class="govuk-visually-hidden">emailtome.msg</span>
+          </a>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">screen_shot.png</th>
+        <td class="govuk-table__cell">9 January 2022</td>
+        <td class="govuk-table__cell">
+          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
+            Download file<span class="govuk-visually-hidden">screen_shot.png</span>
+          </a>
+        </td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">letter_l.pdf</th>
+        <td class="govuk-table__cell">8 January 2022</td>
+        <td class="govuk-table__cell">
+          <a href="#" role="button" draggable="false" class="govuk-button govuk-button--secondary " data-module="govuk-button">
+            Download file<span class="govuk-visually-hidden">letter_l.pdfg</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </table>
+</section>
+{% endset -%}
+
+
+{{ govukTabs({
+items: [
+{
+label: "Overview",
+id: "incident-overview",
+panel: {
+html: incidentOverview
+}
+},
+{
+label: "Attached files",
+id: "attached-files",
+panel: {
+html: attachedFiles
+}
+}
+]
+}) }}
+
+
+{% endblock %}
