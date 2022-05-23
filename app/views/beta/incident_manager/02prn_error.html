@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Do you know the Police Reference Number? - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+
+
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+    {% from "govuk/components/input/macro.njk" import govukInput %}
+
+
+
+    {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+    {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Supply the Police Reference Number",
+        href: "#"
+      }
+    ]
+  }) }}
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% set prnHtml %}
+{{ govukInput({
+  id: "prn",
+  name: "prn",
+  spellcheck: false,
+  classes: "govuk-!-width-one-half",
+  label: {
+    text: "Police Reference Number"
+  },
+  errorMessage: {
+    text: "Police Reference Number cannot be blank"
+  }
+}) }}
+{% endset -%}
+
+
+{{ govukRadios({
+  idPrefix: "prnQuestion",
+  name: "prnQuestion",
+  fieldset: {
+    legend: {
+      text: "Do you know the Police Reference Number?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Hint text."
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes",
+      checked: true,
+      conditional: {
+        html: prnHtml
+      }
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ]
+}) }}
+    <br><br>
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Continue",
+      href: "03fast"
+    }) }}
+    
+    
+    {% endblock %}
+  </fieldset>
+
+</div>
+

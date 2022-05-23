@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Do you know the Police Reference Number? - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="00police_error.njk">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+
+
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+    
+    {% set textPRN %}
+    {{ govukInput({
+      id: "prn",
+      name: "prn",
+      classes: "govuk-!-width-one-third",
+      label: {
+        text: "Police Reference Number"
+      }
+    }) }}
+    {% endset -%}
+
+    {{ govukRadios({
+      idPrefix: "prnQuestion",
+      name: "prnQuestion",
+      fieldset: {
+        legend: {
+          text: "Should this incident be Fast Track?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "Hint text."
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ]
+    }) }}
+    <br><br>
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Continue",
+      href: "#"
+    }) }}
+    
+    
+    {% endblock %}
+  </fieldset>
+
+</div>
+

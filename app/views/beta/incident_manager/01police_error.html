@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+{% block pageTitle %}
+Have you reported to the police? - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+  {{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+{% block content %}
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+      {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+      {{ govukErrorSummary({
+      titleText: "There is a problem",
+      errorList: [
+        {
+          text: "Select yes if...",
+          href: "#"
+        }
+      ]
+    }) }}
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {{ govukRadios({
+  idPrefix: "reported-to-police",
+  name: "reported-to-police",
+  fieldset: {
+    legend: {
+      text: "Have you reported to the police?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Hint text."
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+    }
+  ],
+  errorMessage: {
+    text: "Select yes if..."
+  }
+}) }}
+      <br>
+        <br>
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+          {{ govukButton({
+    text: "Continue",
+    href: "02prn"
+    }) }}
+        {% endblock %}
+      </fieldset>
+    </div>
