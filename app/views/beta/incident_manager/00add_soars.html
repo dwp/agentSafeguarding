@@ -13,7 +13,7 @@ Have you reported this incident on SO-ARS? - Agent Safeguarding
   tag: {
     text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="00add_soars_error">feedback</a> will help us to improve it.'
 }) }}
 {% endblock %}
 
@@ -23,8 +23,34 @@ Have you reported this incident on SO-ARS? - Agent Safeguarding
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 
-    <h1 class="govuk-heading-l">Have you reported this incident on SO-ARS?</h1>
-    <p class="govuk-body">Some words around what SO-ARS is and why you should report.</p>
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+    {{ govukRadios({
+      idPrefix: "soarsQuestion",
+      name: "soarsQuestion",
+      fieldset: {
+        legend: {
+          text: "Have you reported this incident on SO-ARS?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "Some words around what SO-ARS is and which incidents need to be logged."
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ]
+    }) }}
+    <br><br>
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
