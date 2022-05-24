@@ -13,14 +13,14 @@ Do you know the Police Reference Number? - Agent Safeguarding
   tag: {
     text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="00add_witness_error">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 {% include "templates/v2/header_searchlight.njk" %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
 {{ govukBackLink({
   text: "Back",
-  href: "#"
+  href: "javascript:history.back()"
 }) }}
 
 {% endblock %}
@@ -43,7 +43,7 @@ Do you know the Police Reference Number? - Agent Safeguarding
             text: "Witness"
           },
           value: {
-            text: "Sarah Philips (sarah.philips@dwp.gov.uk)"
+            text: "Sartaq Matcha (sartaq.matcha@dwp.gov.uk)"
           },
           actions: {
             items: [
@@ -62,14 +62,13 @@ Do you know the Police Reference Number? - Agent Safeguarding
         }
       ]
     }) }}
-    <br><br>
     {% from "govuk/components/button/macro.njk" import govukButton %}
     <div class="govuk-button-group">
 
     {{ govukButton({
       text: "Add another",
       classes: "govuk-button--secondary",
-      href: "00add_witness"
+      href: "00add_witness_another"
     }) }}
     {{ govukButton({
       text: "Submit",

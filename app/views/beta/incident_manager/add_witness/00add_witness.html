@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Add contact details for a witness - Agent Safeguarding
+Request a witness report - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -20,7 +20,7 @@ Add contact details for a witness - Agent Safeguarding
 
 {{ govukBackLink({
   text: "Back",
-  href: "#"
+  href: "javascript:history.back()"
 }) }}
 
 {% endblock %}
@@ -29,7 +29,7 @@ Add contact details for a witness - Agent Safeguarding
 <span class="govuk-caption-xl">Incident: INC-123-456-789</span>
 
 <h1 class="govuk-heading-l">Request a witness report</h1>
-<p class="govuk-body">Provide a witness's contact details below. We will contact them via email to request they provide a report. </p>
+<p class="govuk-body">Provide a witness's contact details below. Using the email address, we will ask them to make a witness request. </p>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 
@@ -37,7 +37,7 @@ Add contact details for a witness - Agent Safeguarding
 
     {{ govukInput({
       label: {
-        text: "Witnesses full name"
+        text: "Witness's full name"
       },
       id: "full-name",
       classes: "govuk-!-width-one-third",
@@ -60,7 +60,8 @@ Add contact details for a witness - Agent Safeguarding
   autocomplete: "email",
   spellcheck: false
 }) }}
-    <br><br>
+<div class="govuk-button-group">
+
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
@@ -70,6 +71,7 @@ Add contact details for a witness - Agent Safeguarding
     
     
     {% endblock %}
+    </div>
   </fieldset>
 
 </div>

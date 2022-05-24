@@ -20,7 +20,7 @@ Add contact details for a witness - Agent Safeguarding
 
 {{ govukBackLink({
   text: "Back",
-  href: "#"
+  href: "javascript:history.back()"
 }) }}
 
 {% endblock %}
@@ -37,7 +37,7 @@ Add contact details for a witness - Agent Safeguarding
 
     {{ govukInput({
       label: { text: "Witnesses full name"},
-      value: "Sarah Philips"  ,
+      value: "Sartaq Matcha"  ,
 
       id: "full-name",
       classes: "govuk-!-width-one-third",
@@ -53,14 +53,15 @@ Add contact details for a witness - Agent Safeguarding
     text: "Email address"
   },
   classes: "govuk-!-width-one-third",
-  value: "sarah.philips@dwp.gov.uk",
+  value: "sartaq.matcha@dwp.gov.uk",
   id: "email",
   name: "email",
   type: "email",
   autocomplete: "email",
   spellcheck: false
 }) }}
-    <br><br>
+<div class="govuk-button-group">
+
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
@@ -70,6 +71,7 @@ Add contact details for a witness - Agent Safeguarding
     
     
     {% endblock %}
+    </div>
   </fieldset>
 
 </div>

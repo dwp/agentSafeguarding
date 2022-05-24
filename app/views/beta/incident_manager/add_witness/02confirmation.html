@@ -20,7 +20,7 @@ Do you know the Police Reference Number? - Agent Safeguarding
 
 {{ govukBackLink({
   text: "Back",
-  href: "#"
+  href: "javascript:history.back()"
 }) }}
 
 {% endblock %}
@@ -38,7 +38,7 @@ Do you know the Police Reference Number? - Agent Safeguarding
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
-      text: "Return to incident",
+      text: "Return to My Safeguarding",
       href: "00add_witness"
     }) }}
     

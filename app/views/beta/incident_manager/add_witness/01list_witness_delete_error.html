@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Do you know the Police Reference Number? - Agent Safeguarding
+Are you sure you want to remove Sartaq Matcha from the witness report request list? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,7 +13,7 @@ Do you know the Police Reference Number? - Agent Safeguarding
   tag: {
     text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="01list_witness_delete_error">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 {% include "templates/v2/header_searchlight.njk" %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -26,16 +26,26 @@ Do you know the Police Reference Number? - Agent Safeguarding
 {% endblock %}
 
 {% block content %}
-<span class="govuk-caption-xl">Incident: INC-123-456-789</span>
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+    {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Select yes if you would like to remove Sartaq Matcha from the witness report request list",
+        href: "#removeWitness"
+      }
+    ]
+  }) }}
+  <span class="govuk-caption-xl">Incident: INC-123-456-789</span>
 
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
     {{ govukRadios({
-      idPrefix: "policeQuestion",
-      name: "policeQuestion",
+      idPrefix: "removeWitness",
+      name: "removeWitness",
       fieldset: {
         legend: {
           text: "Are you sure you want to remove Sartaq Matcha from the witness report request list?",
@@ -56,12 +66,14 @@ Do you know the Police Reference Number? - Agent Safeguarding
           value: "no",
           text: "No"
         }
-      ]
+      ],
+      errorMessage: {
+        text: "Select yes if you would like to remove Sartaq Matcha from the witness report request list"
+      }
     }) }}
     <div class="govuk-button-group">
 
     {% from "govuk/components/button/macro.njk" import govukButton %}
-
 
     {{ govukButton({
       text: "Continue",

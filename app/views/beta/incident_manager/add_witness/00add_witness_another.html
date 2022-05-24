@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Add contact details for a witness - Agent Safeguarding
+Request a witness report - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,7 +13,7 @@ Add contact details for a witness - Agent Safeguarding
   tag: {
     text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="00add_witness_error">feedback</a> will help us to improve it.'
 }) }}
 {% include "templates/v2/header_searchlight.njk" %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -26,52 +26,12 @@ Add contact details for a witness - Agent Safeguarding
 {% endblock %}
 
 {% block content %}
-{% set errorHTML %}
-
-    <ul class="govuk-list govuk-error-summary__list">
-      <li>
-        <a href="#full-name">Witness name cannot be blank</a>
-      </li>
-      <li>
-        <a href="#email">Email address cannot be blank</a>
-      </li>
-    </ul>
-
-{% endset %}
-{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
-{{ govukErrorSummary({
-titleText: "There is a problem",
-errorList: [
-  {
-    html: errorHTML
-  }
-]
-}) }}
 <span class="govuk-caption-xl">Incident: INC-123-456-789</span>
 
 <h1 class="govuk-heading-l">Request a witness report</h1>
 <p class="govuk-body">Provide a witness's contact details below. Using the email address, we will ask them to make a witness request. </p>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    {% set errorHTML %}
-    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
-      <h2 class="govuk-error-summary__title" id="error-summary-title">
-        There is a problem
-      </h2>
-      <div class="govuk-error-summary__body">
-        
-        <ul class="govuk-list govuk-error-summary__list">
-        
-          <li>
-          
-            <a href="#policeQuestion">Select yes if anyone called the police</a>
-          
-          </li>
-        
-        </ul>
-      </div>
-    </div>
-    {% endset %}
 
     {% from "govuk/components/input/macro.njk" import govukInput %}
 
@@ -84,10 +44,7 @@ errorList: [
 
       name: "full-name",
       autocomplete: "name",
-      spellcheck: false,
-      errorMessage: {
-        text: "Witness name cannot be blank"
-      }
+      spellcheck: false
     }) }}
     {% from "govuk/components/input/macro.njk" import govukInput %}
 
@@ -101,10 +58,7 @@ errorList: [
   name: "email",
   type: "email",
   autocomplete: "email",
-  spellcheck: false,
-  errorMessage: {
-    text: "Email address cannot be blank"
-  }
+  spellcheck: false
 }) }}
 <div class="govuk-button-group">
 
@@ -112,7 +66,7 @@ errorList: [
 
     {{ govukButton({
       text: "Continue",
-      href: "01list_witness"
+      href: "01list_witness2"
     }) }}
     
     
