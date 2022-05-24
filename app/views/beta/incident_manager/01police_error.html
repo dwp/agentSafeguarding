@@ -2,66 +2,87 @@
 <!-- Set active submenu item -->
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
+
 {% block pageTitle %}
-Have you reported to the police? - Agent Safeguarding
+Have you reported this incident to the police? - Agent Safeguarding
 {% endblock %}
+
 {% block beforeContent %}
-  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-  {{ govukPhaseBanner({
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
   tag: {
     text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="01police_error">feedback</a> will help us to improve it.'
+}) }}
+{% include "templates/v2/header_searchlight.njk" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
 }) }}
 {% endblock %}
+
 {% block content %}
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-      {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
-      {{ govukErrorSummary({
-      titleText: "There is a problem",
-      errorList: [
-        {
-          text: "Select yes if...",
-          href: "#"
+
+
+<div class="govuk-form-group">
+  <form class="form" action="test" method="post">
+
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+    {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Select yes if anyone called the police",
+        href: "#policeQuestion"
+      }
+    ]
+  }) }}
+  <span class="govuk-caption-xl">Incident: INC-123-456-789</span>
+
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+    {{ govukRadios({
+      idPrefix: "policeQuestion",
+      name: "policeQuestion",
+      fieldset: {
+        legend: {
+          text: "Have you reported this incident to the police?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
         }
-      ]
+      },
+      hint: {
+        text: ""
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ],
+      errorMessage: {
+        text: "Select yes if anyone called the police"
+      }
     }) }}
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
-      {{ govukRadios({
-  idPrefix: "reported-to-police",
-  name: "reported-to-police",
-  fieldset: {
-    legend: {
-      text: "Have you reported to the police?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  hint: {
-    text: "Hint text."
-  },
-  items: [
-    {
-      value: "yes",
-      text: "Yes"
-    },
-    {
-      value: "no",
-      text: "No"
-    }
-  ],
-  errorMessage: {
-    text: "Select yes if..."
-  }
-}) }}
-      <br>
-        <br>
-          {% from "govuk/components/button/macro.njk" import govukButton %}
-          {{ govukButton({
-    text: "Continue",
-    href: "02prn"
+    <div class="govuk-button-group">
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Continue"
     }) }}
-        {% endblock %}
-      </fieldset>
+    
+    {% endblock %}
     </div>
+  </fieldset>
+</form>
+</div>
+

@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Do you know the Police Reference Number? - Agent Safeguarding
+Were you issued a crime reference number by the police? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,7 +13,14 @@ Do you know the Police Reference Number? - Agent Safeguarding
   tag: {
     text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="02prn_error">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="03prn_error">feedback</a> will help us to improve it.'
+}) }}
+{% include "templates/v2/header_searchlight.njk" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
 }) }}
 {% endblock %}
 
@@ -22,7 +29,7 @@ Do you know the Police Reference Number? - Agent Safeguarding
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-
+    <span class="govuk-caption-xl">Incident: INC-123-456-789</span>
 
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
     
@@ -32,7 +39,7 @@ Do you know the Police Reference Number? - Agent Safeguarding
       name: "prn",
       classes: "govuk-!-width-one-third",
       label: {
-        text: "Police Reference Number"
+        text: "Crime reference number"
       }
     }) }}
     {% endset -%}
@@ -42,13 +49,13 @@ Do you know the Police Reference Number? - Agent Safeguarding
       name: "prnQuestion",
       fieldset: {
         legend: {
-          text: "Do you know the Police Reference Number?",
+          text: "Were you issued a crime reference number by the police?",
           isPageHeading: true,
           classes: "govuk-fieldset__legend--l"
         }
       },
       hint: {
-        text: "Hint text."
+        text: ""
       },
       items: [
         {
@@ -64,16 +71,18 @@ Do you know the Police Reference Number? - Agent Safeguarding
         }
       ]
     }) }}
-    <br><br>
+    <div class="govuk-button-group">
+
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
       text: "Continue",
-      href: "03fast"
+      href: "04add_soars"
     }) }}
     
     
     {% endblock %}
+    </div>
   </fieldset>
 
 </div>

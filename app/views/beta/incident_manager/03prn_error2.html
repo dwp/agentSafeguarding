@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Have you reported this incident to the police? - Agent Safeguarding
+Were you issued a crime reference number by the police? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,7 +13,7 @@ Have you reported this incident to the police? - Agent Safeguarding
   tag: {
     text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="01police_error">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 {% include "templates/v2/header_searchlight.njk" %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -28,20 +28,41 @@ Have you reported this incident to the police? - Agent Safeguarding
 
 
 <div class="govuk-form-group">
-  <form class="form" action="test" method="post">
-
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    <span class="govuk-caption-xl">Incident: INC-123-456-789</span>
-
-
-    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+    {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+    {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Crime reference number cannot be blank",
+        href: "#prn"
+      }
+    ]
+  }) }}
+  <span class="govuk-caption-xl">Incident: INC-123-456-789</span>
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+    
+    {% set textPRN %}
+    {{ govukInput({
+      id: "prn",
+      name: "prn",
+      classes: "govuk-!-width-one-third",
+      spellcheck: false,
+      label: {
+        text: "Crime reference number"
+      },
+      errorMessage: {
+        text: "Crime reference number cannot be blank"
+      }
+    }) }}
+    {% endset -%}
 
     {{ govukRadios({
-      idPrefix: "policeQuestion",
-      name: "policeQuestion",
+      idPrefix: "prnQuestion",
+      name: "prnQuestion",
       fieldset: {
         legend: {
-          text: "Have you reported this incident to the police?",
+          text: "Were you issued a crime reference number by the police?",
           isPageHeading: true,
           classes: "govuk-fieldset__legend--l"
         }
@@ -52,7 +73,11 @@ Have you reported this incident to the police? - Agent Safeguarding
       items: [
         {
           value: "yes",
-          text: "Yes"
+          text: "Yes",
+          checked: true,
+          conditional: {
+            html: textPRN
+          }
         },
         {
           value: "no",
@@ -65,12 +90,14 @@ Have you reported this incident to the police? - Agent Safeguarding
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
-      text: "Continue"
+      text: "Continue",
+      href: "04add_soars"
     }) }}
+    
     
     {% endblock %}
     </div>
   </fieldset>
-</form>
+
 </div>
 

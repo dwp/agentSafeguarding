@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Have you reported this as a Fast Track Incident using the SOARS? - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="05fast_error">feedback</a> will help us to improve it.'
+}) }}
+{% include "templates/v2/header_searchlight.njk" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-form-group">
+  <form action="">
+    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+      <span class="govuk-caption-xl">Incident: INC-123-456-789</span>
+
+      {% set incidentHTML %}
+      Immediate action will be appropriate where there has been a serious incident connected with DWP’s business. Serious incidents are known as Fast Track Incidents (FTIs).
+      Find out more <a href="https://intranet.dwp.gov.uk/page/fast-track-serious-incident-reporting">about FTIs and how to report them using SOARS</a>.
+      {% endset -%}
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+    
+      {% set textPRN %}
+      {{ govukInput({
+        id: "prn",
+        name: "prn",
+        classes: "govuk-!-width-one-third",
+        label: {
+          text: "Police Reference Number"
+        }
+      }) }}
+      {% endset -%}
+      {{ govukRadios({
+        idPrefix: "prnQuestion",
+        name: "prnQuestion",
+        fieldset: {
+          legend: {
+            text: "Have you reported this as a Fast Track Incident using the SOARS?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          html: incidentHTML
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ]
+      }) }}
+      <div class="govuk-button-group">
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+      {{ govukButton({
+        text: "Continue",
+        href: "end"
+      }) }}
+      {% endblock %}
+      </div>
+    </fieldset>
+  </form>
+
+</div>
+
