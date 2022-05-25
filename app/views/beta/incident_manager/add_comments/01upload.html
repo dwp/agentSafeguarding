@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Do you know the Police Reference Number? - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% include "templates/v2/header_searchlight.njk" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<span class="govuk-caption-xl">Incident: INC-123-456-789</span>
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "uploadFiles",
+          name: "uploadFiles",
+          fieldset: {
+            legend: {
+              text: "Do you want to add files to your report?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ],
+          hint: {
+            text: "You can add files that contain evidence about the incident."
+          }
+        }) }}
+
+
+        
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+        <div class="govuk-button-group">
+
+            {{ govukButton({
+            text: "Continue",
+            href: "02comments"
+            }) }}
+
+        </div>
+    </fieldset>
+
+</div>
+{% endblock %}

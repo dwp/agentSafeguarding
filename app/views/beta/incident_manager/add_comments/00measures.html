@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Do you know the Police Reference Number? - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% include "templates/v2/header_searchlight.njk" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+<span class="govuk-caption-xl">Incident: INC-123-456-789</span>
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% set hintText %}
+<p class="govuk-body">Describe the measures that you think would be appropriate to ensure the safety of DWP colleagues. Make sure you include a short justificaton of any measures that you list. Appropriate may include (but are not limited to): </p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Send a warning letter</li>
+  <li>Appointments to be in a screened environments</li>
+  <li>Customers should only be seen accompanied colleagues </li>
+</ul>
+<p class="govuk-body govuk-!-font-weight-bold">Recommendations will be reviewed by a decision maker before implementation</p>
+
+{% endset %}
+
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+        {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+        {{ govukCharacterCount({
+        id: "recommendations",
+        name: "recommendations",
+        maxlength: 2000,
+        rows: "10",
+        label: {
+          text: "What measures do you recommend?",
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
+        hint: {
+          html: hintText  
+        }
+        }) }}
+        <h2 class="govuk-heading-s">Please confirm you have considered the following:</h2>
+        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+        {{ govukCheckboxes({
+          idPrefix: "checklist",
+          name: "checklist",
+          items: [
+            {
+              value: "measures",
+              text: "I have made appropriate recommendations for safeguarding measures"
+            },
+            {
+                value: "justified",
+                text: "I have justified all the recommendations I have made"
+            }
+
+
+          ]
+        }) }}
+        
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+        <div class="govuk-button-group">
+
+            {{ govukButton({
+            text: "Continue",
+            href: "01upload"
+            }) }}
+
+        </div>
+    </fieldset>
+
+</div>
+{% endblock %}
