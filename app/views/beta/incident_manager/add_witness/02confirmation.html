@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Do you know the Police Reference Number? - Agent Safeguarding
+Witness report requests sent - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -29,10 +29,13 @@ Do you know the Police Reference Number? - Agent Safeguarding
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     {% from "govuk/components/panel/macro.njk" import govukPanel %}
+    {% set refHTML %}
+    <div class="govuk-panel__body">Incident number: <br><strong><span aria-hidden="true">INC-</span>123-456-789</strong></div>
 
+    {% endset %}
     {{ govukPanel({
       titleText: "Witness report requests sent",
-      html: "Incident number:<br><strong>INC-123-456-789</strong>"
+      html: refHTML
     }) }}
     <br><br>
     {% from "govuk/components/button/macro.njk" import govukButton %}

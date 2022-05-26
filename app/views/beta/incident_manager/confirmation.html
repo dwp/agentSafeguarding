@@ -29,10 +29,13 @@ Recommendations and comments submitted - Agent Safeguarding
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     {% from "govuk/components/panel/macro.njk" import govukPanel %}
+    {% set refHTML %}
+    <div class="govuk-panel__body">Incident number: <br><strong><span aria-hidden="true">INC-</span>123-456-789</strong></div>
 
+    {% endset %}
     {{ govukPanel({
       titleText: "Recommendations and comments submitted",
-      html: "Incident number:<br><strong>INC-123-456-789</strong>"
+      html: refHTML
     }) }}
 
     <p class="govuk-body">We've received your incident report, and it will now be considered by a decision maker.</p>
