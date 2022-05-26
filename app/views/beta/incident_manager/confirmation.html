@@ -30,7 +30,7 @@ Recommendations and comments submitted - Agent Safeguarding
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     {% from "govuk/components/panel/macro.njk" import govukPanel %}
     {% set refHTML %}
-    <div class="govuk-panel__body">Incident number: <br><strong><span aria-hidden="true">INC-</span>123-456-789</strong></div>
+    <div class="govuk-panel__body">Incident number: <br><span aria-hidden="true">INC-</span><span aria-hidden="false">123-456-789</span></div>
 
     {% endset %}
     {{ govukPanel({
