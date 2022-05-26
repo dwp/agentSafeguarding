@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Have you reported this incident to the police? - Agent Safeguarding
+Were the police contacted? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -31,7 +31,7 @@ Have you reported this incident to the police? - Agent Safeguarding
   <form class="form" action="test" method="post">
 
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    <span class="govuk-caption-xl">Incident: INC-123-456-789</span>
+    {% include "templates/v3/govuk-caption-l.njk" %}
 
 
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -45,9 +45,6 @@ Have you reported this incident to the police? - Agent Safeguarding
           isPageHeading: true,
           classes: "govuk-fieldset__legend--l"
         }
-      },
-      hint: {
-        text: ""
       },
       items: [
         {
