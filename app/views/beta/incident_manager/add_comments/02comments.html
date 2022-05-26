@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Do you know the Police Reference Number? - Agent Safeguarding
+Add comments that help clarify the report - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,8 +26,8 @@ href: "javascript:history.back()"
 {% endblock %}
 
 {% block content %}
-<span class="govuk-caption-xl">Incident: INC-123-456-789</span>
-<h1 class="govuk-heading-l">Add comments that clarify the report</h1>
+{% include "templates/v3/govuk-caption-l.njk" %}
+<h1 class="govuk-heading-l">Add comments that help clarify the report</h1>
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
 {% set html %}

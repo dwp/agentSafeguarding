@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Do you know the Police Reference Number? - Agent Safeguarding
+What measures do you recommend? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,14 +26,15 @@ href: "javascript:history.back()"
 {% endblock %}
 
 {% block content %}
-<span class="govuk-caption-xl">Incident: INC-123-456-789</span>
+{% include "templates/v3/govuk-caption-l.njk" %}
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 {% set hintText %}
-<p class="govuk-body">Describe the measures that you think would be appropriate to ensure the safety of DWP colleagues. Make sure you include a short justificaton of any measures that you list. Appropriate may include (but are not limited to): </p>
+<p class="govuk-body">Describe the measures that you think would be appropriate to ensure the safety of DWP colleagues. Make sure you include a short justification of any measures that you list. Appropriate measures may include (but are not limited to): </p>
 <ul class="govuk-list govuk-list--bullet">
   <li>Send a warning letter</li>
   <li>Appointments to be in a screened environments</li>
-  <li>Customers should only be seen accompanied colleagues </li>
+  <li>Customer should only be seen accompanied colleagues </li>
+  <li>Customer should be banned from a location </li>
 </ul>
 <p class="govuk-body govuk-!-font-weight-bold">Recommendations will be reviewed by a decision maker before implementation</p>
 
