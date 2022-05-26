@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Do you know the Police Reference Number? - Agent Safeguarding
+Have you supplied contact details for all witnesses? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,10 +26,10 @@ Do you know the Police Reference Number? - Agent Safeguarding
 {% endblock %}
 
 {% block content %}
-<span class="govuk-caption-xl">Incident: INC-123-456-789</span>
+{% include "templates/v3/govuk-caption-l.njk" %}
 
 <h1 class="govuk-heading-l">Have you supplied contact details for all witnesses?</h1>
-<p class="govuk-body">Make sure that you have added all the witnesses and that their details are correct.  
+<p class="govuk-body">Make sure that you have added all the witnesses and their details are correct.  
 </p>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -43,7 +43,7 @@ Do you know the Police Reference Number? - Agent Safeguarding
             text: "Witness"
           },
           value: {
-            text: "Sartaq Matcha (sarah.philips@dwp.gov.uk)"
+            text: "Sartaq Matcha (sartaq.matcha@dwp.gov.uk)"
           },
           actions: {
             items: [
