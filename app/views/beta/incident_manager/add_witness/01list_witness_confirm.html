@@ -28,8 +28,8 @@ Have you supplied contact details for all witnesses? - Agent Safeguarding
 {% block content %}
 {% include "templates/v3/govuk-caption-l.njk" %}
 
-<h1 class="govuk-heading-l">Have you supplied contact details for all witnesses?</h1>
-<p class="govuk-body">Make sure that you have added all the witnesses and their details are correct.  
+<h1 class="govuk-heading-l">Send requests to these people?</h1>
+<p class="govuk-body">Witness report requests will be sent to the following people.  
 </p>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -44,20 +44,6 @@ Have you supplied contact details for all witnesses? - Agent Safeguarding
           },
           value: {
             text: "Sartaq Matcha (sartaq.matcha@dwp.gov.uk)"
-          },
-          actions: {
-            items: [
-            {
-              href: "00add_witness_filled",
-              text: "Change",
-              visuallyHiddenText: "witness"
-            },
-            {
-              href: "01list_witness_delete",
-              text: "Delete",
-              visuallyHiddenText: "witness"
-            }
-          ]
           }
         },
         {
@@ -66,20 +52,6 @@ Have you supplied contact details for all witnesses? - Agent Safeguarding
           },
           value: {
             text: "Ted Lady (ted.lady@dwp.gov.uk)"
-          },
-          actions: {
-            items: [
-            {
-              href: "00add_witness_filled",
-              text: "Change",
-              visuallyHiddenText: "witness"
-            },
-            {
-              href: "01list_witness_delete",
-              text: "Delete",
-              visuallyHiddenText: "witness"
-            }
-          ]
           }
         }
       ]
@@ -95,8 +67,8 @@ Have you supplied contact details for all witnesses? - Agent Safeguarding
     }) }}
 
     {{ govukButton({
-      text: "Continue",
-      href: "01list_witness_confirm"
+      text: "Confirm and send",
+      href: "02confirmation"
     }) }}
     
     </div>

@@ -29,62 +29,14 @@ Have you supplied contact details for all witnesses? - Agent Safeguarding
 {% include "templates/v3/govuk-caption-l.njk" %}
 
 <h1 class="govuk-heading-l">Have you supplied contact details for all witnesses?</h1>
-<p class="govuk-body">Make sure that you have added all the witnesses and their details are correct.  
-</p>
+<p class="govuk-body">There are no witnesses. You may add another witness or continue without adding any witnesses using the button below.
+
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 
     {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
-    {{ govukSummaryList({
-      rows: [
-        {
-          key: {
-            text: "Witness"
-          },
-          value: {
-            text: "Sartaq Matcha (sartaq.matcha@dwp.gov.uk)"
-          },
-          actions: {
-            items: [
-            {
-              href: "00add_witness_filled",
-              text: "Change",
-              visuallyHiddenText: "witness"
-            },
-            {
-              href: "01list_witness_delete",
-              text: "Delete",
-              visuallyHiddenText: "witness"
-            }
-          ]
-          }
-        },
-        {
-          key: {
-            text: "Witness"
-          },
-          value: {
-            text: "Ted Lady (ted.lady@dwp.gov.uk)"
-          },
-          actions: {
-            items: [
-            {
-              href: "00add_witness_filled",
-              text: "Change",
-              visuallyHiddenText: "witness"
-            },
-            {
-              href: "01list_witness_delete",
-              text: "Delete",
-              visuallyHiddenText: "witness"
-            }
-          ]
-          }
-        }
-      ]
-    }) }}
-    <p class="govuk-body">Instruction</p>
+    
     {% from "govuk/components/button/macro.njk" import govukButton %}
     <div class="govuk-button-group">
 
@@ -96,7 +48,7 @@ Have you supplied contact details for all witnesses? - Agent Safeguarding
 
     {{ govukButton({
       text: "Continue",
-      href: "01list_witness_confirm"
+      href: "end"
     }) }}
     
     </div>
