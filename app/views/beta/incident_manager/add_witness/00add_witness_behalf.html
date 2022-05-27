@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Request a witness report - Agent Safeguarding
+Details not recognised - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,8 +28,12 @@ Request a witness report - Agent Safeguarding
 {% block content %}
 {% include "templates/v3/govuk-caption-l.njk" %}
 
-<h1 class="govuk-heading-l">Request a witness report</h1>
-<p class="govuk-body">Provide a witness's contact details below. Using the email address, we will ask them to make a witness request. </p>
+<h1 class="govuk-heading-l">Details not recognised</h1>
+<p class="govuk-body">The details you provided were not recognised as a DWP colleague with sufficient accesss to use this service.</p> <p class="govuk-body">Either: </p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>correct the email address supplied and retry, or </li>
+  <li>complete the witness report on behalf of the witness. </li>
+</ul>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 
@@ -41,7 +45,7 @@ Request a witness report - Agent Safeguarding
       },
       id: "full-name",
       classes: "govuk-!-width-one-third",
-
+      value: "Mike Black",
       name: "full-name",
       autocomplete: "name",
       spellcheck: false
@@ -53,7 +57,7 @@ Request a witness report - Agent Safeguarding
     text: "Email address"
   },
   classes: "govuk-!-width-one-third",
-
+  value: "mike.black@g4s.com",
   id: "email",
   name: "email",
   type: "email",
@@ -63,10 +67,14 @@ Request a witness report - Agent Safeguarding
 <div class="govuk-button-group">
 
     {% from "govuk/components/button/macro.njk" import govukButton %}
-
     {{ govukButton({
-      text: "Continue",
-      href: "01list_witness2_2witnesses"
+      text: "Retry",
+      classes: "govuk-button--secondary",
+      href: "00add_witness_another"
+    }) }}
+    {{ govukButton({
+      text: "Complete report on behalf of witness",
+      href: "01list_witness4_on_behalf"
     }) }}
     
     

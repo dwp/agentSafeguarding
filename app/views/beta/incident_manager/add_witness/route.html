@@ -1,0 +1,28 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+	  items: [
+	    {
+	      text: "GOV.UK Prototype Kit",
+	      href: "/docs"
+	    }
+	  ]
+	}) }}
+{% endblock %}
+
+{% block content %}
+<p>
+    this is a dummy page to route to "on behalf" page. 
+
+    Go to next page (01list_witness) unless name=Tim
+</p>
+
+{% endblock %}
+
+

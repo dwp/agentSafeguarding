@@ -31,6 +31,8 @@ Request a witness report - Agent Safeguarding
 <h1 class="govuk-heading-l">Request a witness report</h1>
 <p class="govuk-body">Provide a witness's contact details below. Using the email address, we will ask them to make a witness request. </p>
 <div class="govuk-form-group">
+  <form class="form" action="route" method="post">
+
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 
     {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -65,14 +67,13 @@ Request a witness report - Agent Safeguarding
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
-      text: "Continue",
-      href: "01list_witness"
+      text: "Continue"
     }) }}
     
     
     {% endblock %}
     </div>
   </fieldset>
-
+</form>
 </div>
 

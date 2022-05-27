@@ -36,6 +36,22 @@ router.post('/beta/incident_manager/test2', function (req, res) {
   
   })
 
+// Run this code when a form is submitted to 'route' in witnesses to simulate on behalf of journey
+router.post('/beta/incident_manager/add_witness/route', function (req, res) {
+
+  // Make a variable and give it the value from 'prnQuestion'
+  var isItTim = req.session.data['full-name'].toLowerCase()
+
+  // Check whether the variable matches a condition
+  if (isItTim == "mike" || isItTim == "mike black"){
+    // Send user to next page
+    res.redirect('00add_witness_behalf')
+  } else {
+    // Send user to ineligible page
+    res.redirect('01list_witness')
+  }
+
+})
 
 
 
