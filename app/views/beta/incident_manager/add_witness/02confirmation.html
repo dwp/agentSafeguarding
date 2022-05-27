@@ -28,16 +28,17 @@ Witness report requests sent - Agent Safeguarding
 {% block content %}
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    {% include "templates/v3/govuk-caption-l.njk" %}
     {% from "govuk/components/panel/macro.njk" import govukPanel %}
     {% set refHTML %}
-    <div class="govuk-panel__body">Incident number: <br><strong><span aria-hidden="true">INC-</span><span aria-hidden="false">123-456-789</span></strong></div>
+    
 
     {% endset %}
     {{ govukPanel({
-      titleText: "Witness report requests sent",
+      titleText: "3 witness report requests sent",
       html: refHTML
     }) }}
-    <br><br>
+    <p class="govuk-body">extra info</p>
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({

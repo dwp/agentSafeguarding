@@ -62,16 +62,21 @@ Have you reported this as a Fast Track Incident using the SOARS? - Agent Safegua
           html: incidentHTML
         },
         items: [
-          {
-            value: "yes",
-            text: "Yes"
-          },
-          {
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "maybe",
+          text: "Maybe"
+        },
+      {
             value: "no",
             text: "No"
           }
         ]
       }) }}
+      
       <div class="govuk-button-group">
       {% from "govuk/components/button/macro.njk" import govukButton %}
       {{ govukButton({
