@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Did anyone call the police? - Agent Safeguarding
+Were the police contacted? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -41,7 +41,7 @@ Did anyone call the police? - Agent Safeguarding
       name: "policeQuestion",
       fieldset: {
         legend: {
-          text: "Did anyone call the police?",
+          text: "Were the police contacted?",
           isPageHeading: true,
           classes: "govuk-fieldset__legend--l"
         }
@@ -64,9 +64,10 @@ Did anyone call the police? - Agent Safeguarding
     {{ govukButton({
       text: "Continue"
     }) }}
-
+    
     {% endblock %}
     </div>
   </fieldset>
 </form>
 </div>
+
