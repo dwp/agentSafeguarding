@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Have you reported this incident using the Safety Online - Accident Reporting System (SOARS)? - Agent Safeguarding
+Have you reported this in SOARS? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -35,7 +35,7 @@ Have you reported this incident using the Safety Online - Accident Reporting Sys
       titleText: "There is a problem",
       errorList: [
         {
-          text: "Select yes if you have reported this incident using SOARS",
+          text: "Select yes if you have reported this in SOARS",
           href: "#"
         }
       ]
@@ -43,7 +43,7 @@ Have you reported this incident using the Safety Online - Accident Reporting Sys
     {% include "templates/v3/govuk-caption-l.njk" %}
 
       {% set hintHTML %}
-      SOARS is used to report an accident or near miss. More information can be found on the <a href="https://intranet.dwp.gov.uk/section/working-dwp/human-resources/work/health-and-safety">Health and Safety home page</a>
+          Use <a href="https://intranet.dwp.gov.uk/section/working-dwp/human-resources/work/health-and-safety">SOARS</a> to report an accident or a near miss.
       {% endset %}
 
 
@@ -53,7 +53,7 @@ Have you reported this incident using the Safety Online - Accident Reporting Sys
         name: "soarsQuestion",
         fieldset: {
           legend: {
-            text: "Have you reported this incident using the Safety Online - Accident Reporting System (SOARS)?",
+            text: "Have you reported this in the Safety Online - Accident Reporting System (SOARS)?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
@@ -72,7 +72,7 @@ Have you reported this incident using the Safety Online - Accident Reporting Sys
           }
         ],
         errorMessage: {
-          text: "Select yes if you have reported this incident using SOARS"
+          text: "Select yes if you have reported this in SOARS"
         }
       }) }}
       <div class="govuk-button-group">
@@ -81,11 +81,10 @@ Have you reported this incident using the Safety Online - Accident Reporting Sys
       {{ govukButton({
         text: "Continue"
       }) }}
-    
+
       {% endblock %}
       </div>
     </fieldset>
   </form>
 
 </div>
-
