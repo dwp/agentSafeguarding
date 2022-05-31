@@ -53,10 +53,13 @@ Incident report - Agent Safeguarding
       </table>
       <div class="govuk-warning-text">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-warning-text__assistive">Warning </span>
-          The reporter stated that the incident involved discrimination.
-        </strong>
+          <span class="govuk-warning-text__assistive">Warning </span> 
+          <p class="govuk-body"><strong class="govuk-warning-text__text">Indication that incident was motivated by discrimination:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Age</li>
+            <li>Being married or in a civil partnership</li>
+          </ul>
+        </strong></p>
       </div>
       <p class="govuk-body"><a href="/beta/history/04history">View customer history</a></p>
     </div>
@@ -142,6 +145,7 @@ Incident report - Agent Safeguarding
         nav.moj-side-navigation {
           padding-top: 0;
         }
+
         .moj-side-navigation__item a:first-child {
           display: none !important;
         }
@@ -162,9 +166,9 @@ Incident report - Agent Safeguarding
       html: wit1HTML,
       active: true
       }, {
-        html: wit2HTML
+      html: wit2HTML
       }, {
-        html: wit3HTML
+      html: wit3HTML
       }]
       }) }}
     </div>
