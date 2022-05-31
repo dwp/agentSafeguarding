@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Request a witness report - Agent Safeguarding
+Enter witness details - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,8 +28,8 @@ Request a witness report - Agent Safeguarding
 {% block content %}
 {% include "templates/v3/govuk-caption-l.njk" %}
 
-<h1 class="govuk-heading-l">Request a witness report</h1>
-<p class="govuk-body">Provide a witness's contact details below. Using the email address, we will ask them to make a witness request. </p>
+<h1 class="govuk-heading-l">Enter witness details</h1>
+<p class="govuk-body">We will send them an email asking them to complete a witness report. </p>
 <div class="govuk-form-group">
   <form class="form" action="route" method="post">
 
@@ -39,7 +39,7 @@ Request a witness report - Agent Safeguarding
 
     {{ govukInput({
       label: {
-        text: "Witness's full name"
+        text: "Full name"
       },
       id: "full-name",
       classes: "govuk-!-width-one-third",
@@ -69,11 +69,10 @@ Request a witness report - Agent Safeguarding
     {{ govukButton({
       text: "Continue"
     }) }}
-    
-    
+
+
     {% endblock %}
     </div>
   </fieldset>
 </form>
 </div>
-

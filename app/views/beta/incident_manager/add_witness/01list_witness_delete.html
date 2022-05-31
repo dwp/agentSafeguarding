@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Are you sure you want to remove Sartaq Matcha from the witness report request list? - Agent Safeguarding
+Are you sure you want to remove this witness from the list? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -38,13 +38,13 @@ Are you sure you want to remove Sartaq Matcha from the witness report request li
       name: "policeQuestion",
       fieldset: {
         legend: {
-          text: "Are you sure you want to remove Sartaq Matcha from the witness report request list?",
+          text: "Are you sure you want to remove Sartaq Matcha from the witness list?",
           isPageHeading: true,
           classes: "govuk-fieldset__legend--l"
         }
       },
       hint: {
-        text: "The request email has not yet been sent"
+        text: "We have not yet sent an email asking them to complete a witness report."
       },
       items: [
         {
@@ -67,11 +67,10 @@ Are you sure you want to remove Sartaq Matcha from the witness report request li
       text: "Continue",
       href: "01list_witness3_no_witnesses"
     }) }}
-    
-    
+
+
     {% endblock %}
     </div>
   </fieldset>
 
 </div>
-

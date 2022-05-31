@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Have you supplied contact details for all witnesses? - Agent Safeguarding
+Have you added all witnesses? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,20 +28,20 @@ Have you supplied contact details for all witnesses? - Agent Safeguarding
 {% block content %}
 {% include "templates/v3/govuk-caption-l.njk" %}
 
-<h1 class="govuk-heading-l">Have you supplied contact details for all witnesses?</h1>
-<p class="govuk-body">There are no witnesses. You may add another witness or continue without adding any witnesses using the button below.
+<h1 class="govuk-heading-l">Have you added everyone who witnessed this incident?</h1>
+<p class="govuk-body">There are no witnesses to this incident. You can add a witness or select Continue to proceed without adding any witnesses.
 
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
 
     {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
-    
+
     {% from "govuk/components/button/macro.njk" import govukButton %}
     <div class="govuk-button-group">
 
     {{ govukButton({
-      text: "Add another",
+      text: "Add witness",
       classes: "govuk-button--secondary",
       href: "00add_witness"
     }) }}
@@ -50,10 +50,9 @@ Have you supplied contact details for all witnesses? - Agent Safeguarding
       text: "Continue",
       href: "end"
     }) }}
-    
+
     </div>
     {% endblock %}
   </fieldset>
 
 </div>
-

@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Details not recognised - Agent Safeguarding
+Witness details not recognised - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,20 +28,21 @@ Details not recognised - Agent Safeguarding
 {% block content %}
 {% include "templates/v3/govuk-caption-l.njk" %}
 
-<h1 class="govuk-heading-l">Details not recognised</h1>
-<p class="govuk-body">The details you provided were not recognised as a DWP colleague with sufficient accesss to use this service.</p> <p class="govuk-body">Either: </p>
+<h1 class="govuk-heading-l">Witness details not recognised</h1>
+<p class="govuk-body">The details you entered do not belong to a DWP colleague with accesss to this service.</p> <p class="govuk-body">You can: </p>
 <ul class="govuk-list govuk-list--bullet">
-  <li>correct the email address supplied and retry, or </li>
-  <li>complete the witness report on behalf of the witness. </li>
+  <li>enter a different email address and select Retry</li>
+  <li>complete a witness report on behalf of the witness </li>
 </ul>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <br>
 
     {% from "govuk/components/input/macro.njk" import govukInput %}
 
     {{ govukInput({
       label: {
-        text: "Witness's full name"
+        text: "Full name"
       },
       id: "full-name",
       classes: "govuk-!-width-one-third",
@@ -76,11 +77,10 @@ Details not recognised - Agent Safeguarding
       text: "Complete report on behalf of witness",
       href: "01list_witness4_on_behalf"
     }) }}
-    
-    
+
+
     {% endblock %}
     </div>
   </fieldset>
 
 </div>
-

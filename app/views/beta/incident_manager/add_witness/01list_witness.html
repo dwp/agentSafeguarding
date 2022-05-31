@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Have you supplied contact details for all witnesses? - Agent Safeguarding
+Have you added all witnesses? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,8 +28,8 @@ Have you supplied contact details for all witnesses? - Agent Safeguarding
 {% block content %}
 {% include "templates/v3/govuk-caption-l.njk" %}
 
-<h1 class="govuk-heading-l">Have you supplied contact details for all witnesses?</h1>
-<p class="govuk-body">Make sure that you have added all the witnesses and their details are correct.  
+<h1 class="govuk-heading-l">Have you added everyone who witnessed this incident?</h1>
+<p class="govuk-body">Check you have added all witnesses and that their details are correct.
 </p>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -62,7 +62,7 @@ Have you supplied contact details for all witnesses? - Agent Safeguarding
         }
       ]
     }) }}
-    <p class="govuk-body">Instruction</p>
+
     {% from "govuk/components/button/macro.njk" import govukButton %}
     <div class="govuk-button-group">
 
@@ -75,10 +75,9 @@ Have you supplied contact details for all witnesses? - Agent Safeguarding
       text: "Continue",
       href: "01list_witness_confirm"
     }) }}
-    
+
     </div>
     {% endblock %}
   </fieldset>
 
 </div>
-

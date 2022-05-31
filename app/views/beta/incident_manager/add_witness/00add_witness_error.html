@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Request a witness report - Agent Safeguarding
+Enter witness details - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -30,10 +30,10 @@ Request a witness report - Agent Safeguarding
 
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#full-name">Witness name cannot be blank</a>
+        <a href="#full-name">Enter the name of the witness</a>
       </li>
       <li>
-        <a href="#email">Email address cannot be blank</a>
+        <a href="#email">Enter an email address</a>
       </li>
     </ul>
 
@@ -49,8 +49,8 @@ errorList: [
 }) }}
 {% include "templates/v3/govuk-caption-l.njk" %}
 
-<h1 class="govuk-heading-l">Request a witness report</h1>
-<p class="govuk-body">Provide a witness's contact details below. Using the email address, we will ask them to make a witness request. </p>
+<h1 class="govuk-heading-l">Enter witness details</h1>
+<p class="govuk-body">We will send them an email asking them to complete a witness report. </p>
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     {% set errorHTML %}
@@ -59,15 +59,15 @@ errorList: [
         There is a problem
       </h2>
       <div class="govuk-error-summary__body">
-        
+
         <ul class="govuk-list govuk-error-summary__list">
-        
+
           <li>
-          
+
             <a href="#policeQuestion">Select yes if anyone called the police</a>
-          
+
           </li>
-        
+
         </ul>
       </div>
     </div>
@@ -77,7 +77,7 @@ errorList: [
 
     {{ govukInput({
       label: {
-        text: "Witness's full name"
+        text: "Full name"
       },
       id: "full-name",
       classes: "govuk-!-width-one-third",
@@ -86,7 +86,7 @@ errorList: [
       autocomplete: "name",
       spellcheck: false,
       errorMessage: {
-        text: "Witness name cannot be blank"
+        text: "Enter the name of the witness"
       }
     }) }}
     {% from "govuk/components/input/macro.njk" import govukInput %}
@@ -103,7 +103,7 @@ errorList: [
   autocomplete: "email",
   spellcheck: false,
   errorMessage: {
-    text: "Email address cannot be blank"
+    text: "Enter an email address"
   }
 }) }}
 <div class="govuk-button-group">
@@ -114,11 +114,10 @@ errorList: [
       text: "Continue",
       href: "01list_witness"
     }) }}
-    
-    
+
+
     {% endblock %}
     </div>
   </fieldset>
 
 </div>
-
