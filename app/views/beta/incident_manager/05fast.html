@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Have you reported this as a Fast Track Incident using the SOARS? - Agent Safeguarding
+Have you reported this as a Fast Track Incident? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -33,11 +33,11 @@ Have you reported this as a Fast Track Incident using the SOARS? - Agent Safegua
       {% include "templates/v3/govuk-caption-l.njk" %}
 
       {% set incidentHTML %}
-      Immediate action will be appropriate where there has been a serious incident connected with DWP’s business. Serious incidents are known as Fast Track Incidents (FTIs).
-      Find out more <a href="https://intranet.dwp.gov.uk/page/fast-track-serious-incident-reporting">about FTIs and how to report them using SOARS</a>.
+A <a href="https://intranet.dwp.gov.uk/page/fast-track-serious-incident-reporting">Fast Track Incident (FTI)</a> is a serious incident which affects the health and safety of DWP or third-party staff. Because of the serious nature or sensitivity of FTIs, you must immediately notify senior management.
+
       {% endset -%}
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
-    
+
       {% set textPRN %}
       {{ govukInput({
         id: "prn",
@@ -53,7 +53,7 @@ Have you reported this as a Fast Track Incident using the SOARS? - Agent Safegua
         name: "prnQuestion",
         fieldset: {
           legend: {
-            text: "Have you reported this as a Fast Track Incident using the SOARS?",
+            text: "Have you reported this as a Fast Track Incident in SOARS?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
@@ -68,7 +68,7 @@ Have you reported this as a Fast Track Incident using the SOARS? - Agent Safegua
         },
         {
           value: "maybe",
-          text: "Maybe"
+          text: "Not yet, but I intend to"
         },
       {
             value: "no",
@@ -76,7 +76,7 @@ Have you reported this as a Fast Track Incident using the SOARS? - Agent Safegua
           }
         ]
       }) }}
-      
+
       <div class="govuk-button-group">
       {% from "govuk/components/button/macro.njk" import govukButton %}
       {{ govukButton({
@@ -89,4 +89,3 @@ Have you reported this as a Fast Track Incident using the SOARS? - Agent Safegua
   </form>
 
 </div>
-
