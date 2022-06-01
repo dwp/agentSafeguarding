@@ -12,7 +12,7 @@
     "test": "npm run lint && gulp generate-assets && jest"
   },
   "dependencies": {
-    "@dwp/dwp-frontend": "^2.0.10",
+    "@dwp/dwp-frontend": "^2.1.0",
     "@ministryofjustice/frontend": "^1.4.1",
     "acorn": "^7.1.1",
     "ansi-colors": "^4.1.1",
