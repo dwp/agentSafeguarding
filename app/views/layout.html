@@ -43,7 +43,7 @@
 {{ dwpHeader({
 name: "Agent Safeguarding",
 serviceHref: '/',
-container:true
+container: "govuk-width-container"
 }) }} 
 {% endblock %}
 
@@ -51,20 +51,11 @@ container:true
 
 {% if useAutoStoreData %}
   {% block footer %}
-    {{ govukFooter({
-      meta: {
-        items: [
-          {
-            href: "https://govuk-prototype-kit.herokuapp.com/",
-            text: "GOV.UK Prototype Kit " + releaseVersion
-          },
-          {
-            href: "/prototype-admin/clear-data",
-            text: "Clear data"
-          }
-        ]
-      }
-    }) }}
+  {% from "internal-services-footer/macro.njk" import dwpFooter %}
+
+  {{ dwpFooter({
+  
+  }) }} 
   {% endblock %}
 {% endif %}
 
