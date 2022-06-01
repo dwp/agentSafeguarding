@@ -33,64 +33,61 @@ href: "javascript:history.back()"
 
 {% set html %}
 <h3 class="govuk-notification-banner__heading">Add any comments, information or clarification that you think will help decision makers set appropriate safety measures.</h3>
-  <p class="govuk-body">Keep to the facts and be as specific as possible.</p>
-    <p class="govuk-body">Do not include the names of any DWP staff in your answers.</p>
+<p class="govuk-body">Keep to the facts and be as specific as possible.</p>
+<p class="govuk-body">Do not include the names of any DWP staff in your answers.</p>
 {% endset %}
 
 {{ govukNotificationBanner({
 html: html
 }) }}
 <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-        {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
-        {{ govukCharacterCount({
-        id: "label-as-page-heading",
-        name: "label-as-page-heading",
-        rows: "10",
-        maxlength: 3000
-        }) }}
-        <h2 class="govuk-heading-s">Confirm that you have:</h2>
-        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+    {{ govukCharacterCount({
+    id: "label-as-page-heading",
+    name: "label-as-page-heading",
+    rows: "10",
+    maxlength: 3000
+    }) }}
+    <h2 class="govuk-heading-s">Confirm that you have:</h2>
+    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
-        {{ govukCheckboxes({
-          idPrefix: "checklist",
-          name: "checklist",
-          items: [
-            {
-              value: "read",
-              text: "read the whole incident report"
-            },
-            {
-              value: "sources",
-              text: "read, viewed or listened to all information in the report"
-            },
-            {
-                value: "witnesses",
-                text: "added all witnesses to the incident report"
-            },
-            {
-                value: "recommendations",
-                text: "recommended safety measures, and given reasons for each recommendation"
-            },
-            {
-                value: "comments",
-                text: "added all relevant comments and information that will help decision makers"
-            }
+    {{ govukCheckboxes({
+    idPrefix: "checklist",
+    name: "checklist",
+    items: [
+    {
+    value: "read",
+    text: "read the whole incident report"
+    },
+    {
+    value: "sources",
+    text: "read, viewed or listened to all information in the report"
+    },
+    {
+    value: "witnesses",
+    text: "added all witnesses to the incident report"
+    },
+    {
+    value: "recommendations",
+    text: "recommended safety measures, and given reasons for each recommendation"
+    },
+    {
+    value: "comments",
+    text: "added all relevant comments and information that will help decision makers"
+    }
 
 
-          ]
-        }) }}
+    ]
+    }) }}
 
-        {% from "govuk/components/button/macro.njk" import govukButton %}
-        <div class="govuk-button-group">
-
-            {{ govukButton({
-            text: "Submit",
-            href: "end"
-            }) }}
-
-        </div>
-    </fieldset>
-
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <div class="govuk-button-group">  
+      {{ govukButton({
+      text: "Submit",
+      href: "end"
+      }) }}
+    </div>
+  </fieldset>
 </div>
 {% endblock %}

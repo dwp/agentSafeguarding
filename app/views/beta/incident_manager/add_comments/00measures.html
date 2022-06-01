@@ -30,7 +30,8 @@ href: "javascript:history.back()"
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 {% set hintText %}
 <p class="govuk-body">Describe the measures you think are appropriate to keep your colleagues safe.</p>
-<p class="govuk-body"><b>You must include reasons for each measure.</b> </p><br>
+<p class="govuk-body govuk-!-font-weight-bold">You must include reasons for each measure.</p>
+<div class="govuk-!-padding-bottom-7"></div>
 <p class="govuk-body">Examples of safety measures include (but are not limited to): </p>
 <ul class="govuk-list govuk-list--bullet">
   <li>sending a warning letter to this customer</li>
@@ -39,60 +40,57 @@ href: "javascript:history.back()"
   <li>not arranging any home visits with this customer </li>
   <li>only dealing with this customer by post</li>
   <li>banning this customer from a particular location </li>
-
 </ul>
-<br>
+<div class="govuk-!-padding-bottom-7"></div>
 <p class="govuk-body govuk-!-font-weight-bold">A decision maker will review your recommendations before they make a decision about this incident.</p>
-
 {% endset %}
 
 <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-        {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
-        {{ govukCharacterCount({
-        id: "recommendations",
-        name: "recommendations",
-        maxlength: 3000,
-        rows: "10",
-        label: {
-          text: "Recommend safety measures",
-          classes: "govuk-label--l",
-          isPageHeading: true
-        },
-        hint: {
-          html: hintText
-        }
-        }) }}
-        <h2 class="govuk-heading-s">Confirm you have:</h2>
-        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+    {{ govukCharacterCount({
+    id: "recommendations",
+    name: "recommendations",
+    maxlength: 3000,
+    rows: "10",
+    label: {
+    text: "Recommend safety measures",
+    classes: "govuk-label--l",
+    isPageHeading: true
+    },
+    hint: {
+    html: hintText
+    }
+    }) }}
+    <h2 class="govuk-heading-s">Confirm you have:</h2>
+    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
-        {{ govukCheckboxes({
-          idPrefix: "checklist",
-          name: "checklist",
-          items: [
-            {
-              value: "measures",
-              text: "included all safety measures you think are appropriate"
-            },
-            {
-                value: "justified",
-                text: "given a reason for each recommendation"
-            }
+    {{ govukCheckboxes({
+    idPrefix: "checklist",
+    name: "checklist",
+    items: [
+    {
+    value: "measures",
+    text: "included all safety measures you think are appropriate"
+    },
+    {
+    value: "justified",
+    text: "given a reason for each recommendation"
+    }
 
 
-          ]
-        }) }}
+    ]
+    }) }}
 
-        {% from "govuk/components/button/macro.njk" import govukButton %}
-        <div class="govuk-button-group">
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <div class="govuk-button-group">
 
-            {{ govukButton({
-            text: "Continue",
-            href: "02comments"
-            }) }}
+      {{ govukButton({
+      text: "Continue",
+      href: "02comments"
+      }) }}
 
-        </div>
-    </fieldset>
-
+    </div>
+  </fieldset>
 </div>
 {% endblock %}
