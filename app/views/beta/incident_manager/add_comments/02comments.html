@@ -30,8 +30,10 @@ href: "javascript:history.back()"
 <h1 class="govuk-heading-l">Add comments</h1>
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
+
 {% set html %}
-<h3 class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.</h3>
+<h3 class="govuk-notification-banner__heading">Add any comments, information or clarification that you think will help decision makers set appropriate safety measures.</h3>
+  <p class="govuk-body">Keep to the facts and be as specific as possible.</p>
     <p class="govuk-body">Do not include the names of any DWP staff in your answers.</p>
 {% endset %}
 
@@ -60,7 +62,7 @@ html: html
             },
             {
               value: "sources",
-              text: "read or listened to all sources of information in the report"
+              text: "read, viewed or listened to all information in the report"
             },
             {
                 value: "witnesses",
@@ -72,7 +74,7 @@ html: html
             },
             {
                 value: "comments",
-                text: "added any relevant comments or information to help make a decision about appropriate safety measures"
+                text: "added all relevant comments and information that will help decision makers"
             }
 
 
