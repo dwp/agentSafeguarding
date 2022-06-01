@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Add comments that help clarify the report - Agent Safeguarding
+Add comments - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -27,13 +27,12 @@ href: "javascript:history.back()"
 
 {% block content %}
 {% include "templates/v3/govuk-caption-l.njk" %}
-<h1 class="govuk-heading-l">Add comments that help clarify the report</h1>
+<h1 class="govuk-heading-l">Add comments</h1>
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
 {% set html %}
 <h3 class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.</h3>
-    <p class="govuk-body">Do not include the names of any DWP staff in your answers.<br>
-      You must comment on all uploaded information to indicate relevant details.</p>
+    <p class="govuk-body">Do not include the names of any DWP staff in your answers.</p>
 {% endset %}
 
 {{ govukNotificationBanner({
@@ -48,7 +47,7 @@ html: html
         rows: "10",
         maxlength: 3000
         }) }}
-        <h2 class="govuk-heading-s">Please confirm you have considered the following:</h2>
+        <h2 class="govuk-heading-s">Confirm that you have:</h2>
         {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
         {{ govukCheckboxes({
@@ -57,29 +56,29 @@ html: html
           items: [
             {
               value: "read",
-              text: "I have read all information provided in the incident report"
+              text: "read the whole incident report"
             },
             {
               value: "sources",
-              text: "I have viewed or listened to all sources of information in the report"
+              text: "read or listened to all sources of information in the report"
             },
             {
                 value: "witnesses",
-                text: "I have added the contact details of all the witnesses to the incident report"
+                text: "added all witnesses to the incident report"
             },
             {
                 value: "recommendations",
-                text: "I have made recommendations and stated why I think they are appropriate"
+                text: "recommended safety measures, and given reasons for each recommendation"
             },
             {
                 value: "comments",
-                text: "I have made appropriate comments, clarifications and added any information necessary to make an appropriate decision on safeguarding measures"
+                text: "added any relevant comments or information to help make a decision about appropriate safety measures"
             }
 
 
           ]
         }) }}
-        
+
         {% from "govuk/components/button/macro.njk" import govukButton %}
         <div class="govuk-button-group">
 
