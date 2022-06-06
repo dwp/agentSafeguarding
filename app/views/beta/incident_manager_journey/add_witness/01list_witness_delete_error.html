@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Did anyone call the police? - Agent Safeguarding
+Are you sure you want to remove this witness from the list? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,7 +13,7 @@ Did anyone call the police? - Agent Safeguarding
   tag: {
     text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="01police_error">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 {% include "templates/v2/header_searchlight.njk" %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -22,22 +22,20 @@ Did anyone call the police? - Agent Safeguarding
   text: "Back",
   href: "javascript:history.back()"
 }) }}
+
 {% endblock %}
 
 {% block content %}
 
-
 <div class="govuk-form-group">
-  <form class="form" action="test" method="post">
-
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
     {{ govukErrorSummary({
     titleText: "There is a problem",
     errorList: [
       {
-        text: "Select yes if someone called the police",
-        href: "#policeQuestion"
+        text: "Select yes if you want to remove Sartaq Matcha from the witness list.",
+        href: "#removeWitness"
       }
     ]
   }) }}
@@ -46,22 +44,23 @@ Did anyone call the police? - Agent Safeguarding
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
     {{ govukRadios({
-      idPrefix: "policeQuestion",
-      name: "policeQuestion",
+      idPrefix: "removeWitness",
+      name: "removeWitness",
       fieldset: {
         legend: {
-          text: "Did anyone call the police?",
+          text: "Are you sure you want to remove Sartaq Matcha from the witness list?",
           isPageHeading: true,
           classes: "govuk-fieldset__legend--l"
         }
       },
       hint: {
-        text: ""
+        text: "We have not yet sent an email asking them to complete a witness report."
       },
       items: [
         {
           value: "yes",
           text: "Yes"
+
         },
         {
           value: "no",
@@ -69,7 +68,7 @@ Did anyone call the police? - Agent Safeguarding
         }
       ],
       errorMessage: {
-        text: "Select yes if someone called the police"
+        text: "Select yes if you want to remove Sartaq Matcha from the witness list."
       }
     }) }}
     <div class="govuk-button-group">
@@ -77,11 +76,13 @@ Did anyone call the police? - Agent Safeguarding
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
-      text: "Continue"
+      text: "Continue",
+      href: "01list_witness3_no_witnesses"
     }) }}
+
 
     {% endblock %}
     </div>
   </fieldset>
-</form>
+
 </div>

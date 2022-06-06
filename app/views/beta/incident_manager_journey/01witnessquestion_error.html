@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Did anyone call the police? - Agent Safeguarding
+Add witness? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,7 +13,7 @@ Did anyone call the police? - Agent Safeguarding
   tag: {
     text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="01police_error">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 {% include "templates/v2/header_searchlight.njk" %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -25,38 +25,34 @@ Did anyone call the police? - Agent Safeguarding
 {% endblock %}
 
 {% block content %}
-
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{{ govukErrorSummary({
+titleText: "There is a problem",
+errorList: [
+  {
+    text: "Select yes to add witness",
+    href: "#witnessQuestion"
+  }
+]
+}) }}
 
 <div class="govuk-form-group">
-  <form class="form" action="test" method="post">
+  <form class="form" action="route_witness" method="post">
 
   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
-    {{ govukErrorSummary({
-    titleText: "There is a problem",
-    errorList: [
-      {
-        text: "Select yes if someone called the police",
-        href: "#policeQuestion"
-      }
-    ]
-  }) }}
-  {% include "templates/v3/govuk-caption-l.njk" %}
+    {% include "templates/v3/govuk-caption-l.njk" %}
 
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
     {{ govukRadios({
-      idPrefix: "policeQuestion",
-      name: "policeQuestion",
+      idPrefix: "witnessQuestion",
+      name: "witnessQuestion",
       fieldset: {
         legend: {
-          text: "Did anyone call the police?",
+          text: "Add witness?",
           isPageHeading: true,
           classes: "govuk-fieldset__legend--l"
         }
-      },
-      hint: {
-        text: ""
       },
       items: [
         {
@@ -69,7 +65,7 @@ Did anyone call the police? - Agent Safeguarding
         }
       ],
       errorMessage: {
-        text: "Select yes if someone called the police"
+        text: "Select yes to add witness"
       }
     }) }}
     <div class="govuk-button-group">
