@@ -13,7 +13,7 @@ Add comments - Agent Safeguarding
 tag: {
 text: "beta"
 },
-html: 'This is a new service – your <a class="govuk-link" href="04comments_error">feedback</a> will help us to improve it.'
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 {% include "templates/v2/header_searchlight.njk" %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -26,6 +26,16 @@ href: "javascript:history.back()"
 {% endblock %}
 
 {% block content %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{{ govukErrorSummary({
+titleText: "There is a problem",
+errorList: [
+{
+  text: "Confirm you have reviewed all the required information.",
+  href: "#checklist"
+}
+]
+}) }}
 {% include "templates/v3/govuk-caption-l.njk" %}
 <h1 class="govuk-heading-l">Add comments and measures</h1>
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
@@ -99,9 +109,10 @@ html: html
     value: "justified",
     text: "given a reason for each recommendation"
     }
-
-
-    ]
+    ],
+    errorMessage: {
+      text: "Confirm you have reviewed all the required information."
+    }
     }) }}
     <p class="govuk-body">After you submit, this incident will be sent to a decisionmaker to review.</p>
     <p class="govuk-body govuk-!-font-weight-bold">You will not be able to edit this report once submitted.</p>
