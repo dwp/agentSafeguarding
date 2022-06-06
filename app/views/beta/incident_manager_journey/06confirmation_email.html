@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+End of journey
+{% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+	text: "Back",
+	href: "javascript:history.back()"
+  }) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+<style>
+	.nowrapper {
+		white-space: nowrap;
+	}
+</style>
+<h1 class="govuk-heading-m">Subject: Incident review complete <span class="nowrapper">INC-123-456-789</span> </h1>
+<p class="govuk-body">Thank you for reviewing this incident. 
+	<p class="govuk-body">If required, log this as a fast track incident on SOARS. </p>
+	<p class="govuk-body">The incident has been forwarded to a case reviewer who may contact you regarding next steps. You will be notified once a case reviewer is assigned. If you have anything to add, contact the case reviewer direct.</p>  
+</p>
+<br><br><br><br>
+<hr>
+<p class="govuk-body">END OF EMAIL</p>
+<p class="govuk-body">Notes:</p>
+<ul class="govuk-list  govuk-list--bullet">
+	<li>This email was triggered by the confirmation page of the incident manager linear journey</li>
+	<li>This is the end of this prototype. Go <a href="/">back to index</a></li>
+
+</ul>
+
+<a href="00add_witness">< Return to beginning of journey.</a>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Start of journey - email prompt
+{% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+<style>
+	.nowrapper {
+		white-space: nowrap;
+	}
+</style>
+<h1 class="govuk-heading-m">Subject: Review Incident <span class="nowrapper">INC-123-456-789</span> now</h1>
+<p class="govuk-body">You have been identified as the incident manager for incident INC-123-456-789. 
+	<p class="govuk-body">Please review this incident adding witnesses, comments and recommendations. If required, log this as a fast track incident on SOARS. </p>
+	<p class="govuk-body">Once you have reviewed this incident, it will be forwarded to a case reviewer.</p>
+</p>
+
+<p class="govuk-body"><a href="00incident">Log in to Searchlight</a> to review incident.</p>
+
+<br><br><br><br>
+<hr>
+<p class="govuk-body">END OF EMAIL</p>
+<p class="govuk-body">Notes:</p>
+
+<ul class="govuk-list  govuk-list--bullet">
+	<li>This email was triggered by the confirmation page of the incident report journey</li>
+	<li>This prototype links straight to the first question of the journey, however, the journey will start with Searchlight login and a dashboarad screen TBC</li>
+
+</ul>
+
+<p class="govuk-body"><a href="00add_witness">
+		< Return to beginning of journey.</a>
+</p>
+{% endblock %}
