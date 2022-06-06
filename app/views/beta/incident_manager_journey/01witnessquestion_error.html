@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Add witness? - Agent Safeguarding
+Were there any witnesses to this incident? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -30,7 +30,7 @@ Add witness? - Agent Safeguarding
 titleText: "There is a problem",
 errorList: [
   {
-    text: "Select yes to add witness",
+    text: "Select yes if anyone witnessed this incident.",
     href: "#witnessQuestion"
   }
 ]
@@ -49,7 +49,7 @@ errorList: [
       name: "witnessQuestion",
       fieldset: {
         legend: {
-          text: "Add witness?",
+          text: "Were there any witnesses to this incident?",
           isPageHeading: true,
           classes: "govuk-fieldset__legend--l"
         }
@@ -65,7 +65,7 @@ errorList: [
         }
       ],
       errorMessage: {
-        text: "Select yes to add witness"
+        text: "Select yes if anyone witnessed this incident."
       }
     }) }}
     <div class="govuk-button-group">
