@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Start of journey
+Overview of journey
 {% endblock %}
 {% block beforeContent %}
 {{ govukBackLink({
@@ -14,7 +14,7 @@ href: "javascript:history.back()"
 
 
 {% block content %}
-<h1 class="govuk-heading-xl">Start of journey</h1>
+<h1 class="govuk-heading-xl">Overview of journey</h1>
 <img src="/public/images/linear-journey/flow.png" width="100%" height="100%" >
 <p class="govuk-body"><a href="00emailprompt">Email 1</a> (To Line Manager when they ARE the Incident Manager)
 </p>
@@ -22,7 +22,5 @@ href: "javascript:history.back()"
 </p>
 <p class="govuk-body"><a href="00emailprompt_3">Email 3</a> (To Incident Manager when they ARE NOT the Line Manager)
 </p>
-<p class="govuk-body"><a href="00add_witness">
-		< Return to beginning of journey.</a>
-</p>
+
 {% endblock %}
