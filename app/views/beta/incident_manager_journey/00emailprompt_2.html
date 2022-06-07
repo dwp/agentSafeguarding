@@ -19,13 +19,22 @@ href: "javascript:history.back()"
 		white-space: nowrap;
 	}
 </style>
-<h1 class="govuk-heading-m">Subject: Review Incident <span class="nowrapper">INC-123-456-789</span> now</h1>
-<p class="govuk-body">You have been identified as the incident manager for incident INC-123-456-789.
-	<p class="govuk-body">Please review this incident adding witnesses, comments and recommendations. If required, log this as a fast track incident on SOARS. </p>
-	<p class="govuk-body">Once you have reviewed this incident, it will be forwarded to a case reviewer.</p>
-</p>
+<h1 class="govuk-heading-m"><i>Email for LINE MANAGER</i></h1>
+<br><br>
+<h1 class="govuk-heading-m">(Subject line) URGENT: Review incident report <span class="nowrapper">INC-123-456-789</span></h1>
+<p class="govuk-body">Dear [Name Surname],
+	<p class="govuk-body">Someone in your team reported this incident at 14.03 on 7 June 2022. </p>
+	<p class="govuk-body">As their line manager, you have a duty of care to provide them with support, and to help them access any additional support they need.</p>
+	<p class="govuk-body">For security reasons, we cannot provide any information about the incident in this email. </p>
 
-<p class="govuk-body"><a href="00incident">Log in to Searchlight</a> to review incident.</p>
+</p>
+<br><br>
+<h2 class="govuk-heading-m">What happens next</h2>
+		<p class="govuk-body">We’ve sent a notification to the incident manager who is best placed to review the incident report. Once they’ve reviewed it, we will forward it to a case reviewer and then to a decision maker.</p>
+
+		<p class="govuk-body">Your team member will receive an email within 48 hours to tell them the decision about this customer. </p>
+<br><br>
+<p class="govuk-body">Thank you, <br>Agent Safeguarding. </p>
 
 <br><br><br><br>
 <hr>
@@ -34,7 +43,15 @@ href: "javascript:history.back()"
 
 <ul class="govuk-list  govuk-list--bullet">
 	<li>This email is triggered by the confirmation page of the incident report journey</li>
-	<li>This prototype links straight to the first question of the journey: in reality, the journey will start with Searchlight login and a dashboard screen (TBC)</li>
+	<li>This prototype links straight to the first question of the journey: in reality, the journey will start with Searchlight sign in and a dashboard screen (TBC)</li>
+	<li>There are three versions of content for this email. Which one the incident manager sees will depend on what the incident reporter selected on <a class="govuk-link" href="report_incident/reportv8/acting_managerv1">the 'Identify appropriate manager' screen</a>:</li><br>
+
+<ol class="govuk-list  govuk-list--number">
+<li>If the incident reporter selected 'My line manager' on <a class="govuk-link" href="report_incident/reportv8/acting_managerv1">that screen</a> to indicate that <b>the line manager and the incident manager are the same person</b>, use the content as it appears on this page.</li><br>
+<li>If the incident reporter selected 'Another manager' on <a class="govuk-link" href="report_incident/reportv8/acting_managerv1">that screen</a> to indicate that the line manager and the incident manager are different people, click <a class="govuk-link" href="00emailprompt_2">here</a> to view the content for the email that should go to the <b>line manager</b>.</li><br>
+<li>If the incident reporter selected 'Another manager' on <a class="govuk-link" href="report_incident/reportv8/acting_managerv1">that screen</a> to indicate that the line manager and the incident manager are different people, click <a class="govuk-link" href="00emailprompt_3">here</a> to view the content for the email that should go to the <b>incident manager</b>.</li>
+
+</ol>
 </ul>
 
 <p class="govuk-body"><a href="00add_witness">
