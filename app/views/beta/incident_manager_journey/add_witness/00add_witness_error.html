@@ -10,17 +10,17 @@ Enter witness details - Agent Safeguarding
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 {{ govukPhaseBanner({
-  tag: {
-    text: "beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 {% include "templates/v2/header_searchlight.njk" %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
 {{ govukBackLink({
-  text: "Back",
-  href: "javascript:history.back()"
+text: "Back",
+href: "javascript:history.back()"
 }) }}
 
 {% endblock %}
@@ -28,56 +28,57 @@ Enter witness details - Agent Safeguarding
 {% block content %}
 {% set errorHTML %}
 
-    <ul class="govuk-list govuk-error-summary__list">
-      <li>
-        <a href="#full-name">Enter the name of the witness</a>
-      </li>
-      <li>
-        <a href="#email">Enter an email address</a>
-      </li>
-    </ul>
+<ul class="govuk-list govuk-error-summary__list">
+  <li>
+    <a href="#full-name">Enter the name of the witness</a>
+  </li>
+  <li>
+    <a href="#email">Enter an email address</a>
+  </li>
+</ul>
 
 {% endset %}
 {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
 {{ govukErrorSummary({
 titleText: "There is a problem",
 errorList: [
-  {
-    html: errorHTML
-  }
+{
+html: errorHTML
+}
 ]
 }) }}
 {% include "templates/v3/govuk-caption-l.njk" %}
 
-<h1 class="govuk-heading-l">Enter witness details</h1>
+<h1 class="govuk-heading-l" id="page-title">Enter witness details</h1>
 <p class="govuk-body">We will send them an email asking them to complete a witness report. </p>
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-    {% set errorHTML %}
-    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
-      <h2 class="govuk-error-summary__title" id="error-summary-title">
-        There is a problem
-      </h2>
-      <div class="govuk-error-summary__body">
+  <form class="form" action="route" method="post">
+    <fieldset class="govuk-fieldset" aria-describedby="page-title">
+      {% set errorHTML %}
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
 
-        <ul class="govuk-list govuk-error-summary__list">
+          <ul class="govuk-list govuk-error-summary__list">
 
-          <li>
+            <li>
 
-            <a href="#policeQuestion">Select yes if anyone called the police</a>
+              <a href="#policeQuestion">Select yes if anyone called the police</a>
 
-          </li>
+            </li>
 
-        </ul>
+          </ul>
+        </div>
       </div>
-    </div>
-    {% endset %}
+      {% endset %}
 
-    {% from "govuk/components/input/macro.njk" import govukInput %}
+      {% from "govuk/components/input/macro.njk" import govukInput %}
 
-    {{ govukInput({
+      {{ govukInput({
       label: {
-        text: "Full name"
+      text: "Full name"
       },
       id: "full-name",
       classes: "govuk-!-width-one-third",
@@ -86,38 +87,38 @@ errorList: [
       autocomplete: "name",
       spellcheck: false,
       errorMessage: {
-        text: "Enter the name of the witness"
+      text: "Enter the name of the witness"
       }
-    }) }}
-    {% from "govuk/components/input/macro.njk" import govukInput %}
+      }) }}
+      {% from "govuk/components/input/macro.njk" import govukInput %}
 
-{{ govukInput({
-  label: {
-    text: "Email address"
-  },
-  classes: "govuk-!-width-one-third",
+      {{ govukInput({
+      label: {
+      text: "Email address"
+      },
+      classes: "govuk-!-width-one-third",
 
-  id: "email",
-  name: "email",
-  type: "email",
-  autocomplete: "email",
-  spellcheck: false,
-  errorMessage: {
-    text: "Enter an email address"
-  }
-}) }}
-<div class="govuk-button-group">
+      id: "email",
+      name: "email",
+      type: "email",
+      autocomplete: "email",
+      spellcheck: false,
+      errorMessage: {
+      text: "Enter an email address"
+      }
+      }) }}
+      <div class="govuk-button-group">
 
-    {% from "govuk/components/button/macro.njk" import govukButton %}
+        {% from "govuk/components/button/macro.njk" import govukButton %}
 
-    {{ govukButton({
-      text: "Continue",
-      href: "01list_witness"
-    }) }}
+        {{ govukButton({
+        text: "Continue",
+        href: "01list_witness"
+        }) }}
 
 
-    {% endblock %}
-    </div>
-  </fieldset>
-
+        {% endblock %}
+      </div>
+    </fieldset>
+  </form>
 </div>

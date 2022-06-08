@@ -27,7 +27,7 @@ href: "javascript:history.back()"
 
 {% block content %}
 {% include "templates/v3/govuk-caption-l.njk" %}
-<h1 class="govuk-heading-l">Add comments and measures</h1>
+<h1 class="govuk-heading-l" id="page-title">Add comments and measures</h1>
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
 
@@ -56,7 +56,7 @@ html: html
 <p class="govuk-body govuk-!-font-weight-bold">A decision maker will review your recommendations before they make a decision about this incident.</p>
 
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+  <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
     {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
     {{ govukCharacterCount({
     id: "label-as-page-heading",
@@ -68,7 +68,7 @@ html: html
       classes: "govuk-body"
         }
     }) }}
-    <h2 class="govuk-heading-s">Confirm that you have:</h2>
+    <h2 class="govuk-heading-s">Confirm that you have:<span class="govuk-warning-text__assistive"> done the following</span></h2>
     {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
     {{ govukCheckboxes({

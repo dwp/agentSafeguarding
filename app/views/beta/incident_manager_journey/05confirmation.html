@@ -22,7 +22,6 @@ Recommendations and comments submitted - Agent Safeguarding
 
 {% block content %}
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     {% from "govuk/components/panel/macro.njk" import govukPanel %}
     {% set refHTML %}
     <div class="govuk-panel__body">Incident number: <br><strong><span aria-hidden="true">INC-</span><span aria-hidden="false">123-456-789</span></strong></div>
@@ -30,7 +29,9 @@ Recommendations and comments submitted - Agent Safeguarding
     {% endset %}
     {{ govukPanel({
       titleText: "You have submitted recommendations and comments",
-      html: refHTML
+      html: refHTML,
+      id: "panel",
+      name: "panel"
     }) }}
 <br>
     <p class="govuk-body">We've received your recommendations and comments, and a decision maker will review them.</p>
@@ -43,8 +44,7 @@ Recommendations and comments submitted - Agent Safeguarding
     <p class="govuk-body">
       <a href="#" class="govuk-link">What did you think of this service?</a> (takes two minutes)
     </p>
-
-
+    
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
@@ -52,7 +52,5 @@ Recommendations and comments submitted - Agent Safeguarding
       href: "end"
     }) }}
 
-
     {% endblock %}
-  </fieldset>
 </div>

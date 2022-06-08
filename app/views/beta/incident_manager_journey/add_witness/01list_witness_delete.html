@@ -29,13 +29,13 @@ Are you sure you want to remove this witness from the list? - Agent Safeguarding
 {% include "templates/v3/govuk-caption-l.njk" %}
 
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+  <fieldset class="govuk-fieldset" aria-describedby="removeWitness">
 
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
     {{ govukRadios({
-      idPrefix: "policeQuestion",
-      name: "policeQuestion",
+      idPrefix: "removeWitness",
+      name: "removeWitness",
       fieldset: {
         legend: {
           text: "Are you sure you want to remove Sartaq Matcha from the witness list?",

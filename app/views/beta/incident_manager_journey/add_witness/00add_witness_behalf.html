@@ -28,15 +28,16 @@ Witness details not recognised - Agent Safeguarding
 {% block content %}
 {% include "templates/v3/govuk-caption-l.njk" %}
 
-<h1 class="govuk-heading-l">Witness details not recognised</h1>
+<h1 class="govuk-heading-l" id="page-title">Witness details not recognised</h1>
 <p class="govuk-body">The details you entered do not belong to a DWP colleague with accesss to this service.</p> <p class="govuk-body">You can: </p>
 <ul class="govuk-list govuk-list--bullet">
   <li>enter a different email address and select Retry</li>
   <li>complete a witness report on behalf of the witness </li>
 </ul>
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+  <fieldset class="govuk-fieldset" aria-describedby="page-title">
     <br>
+
 
     {% from "govuk/components/input/macro.njk" import govukInput %}
 

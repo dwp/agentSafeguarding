@@ -28,11 +28,11 @@ Have you added all witnesses? - Agent Safeguarding
 {% block content %}
 {% include "templates/v3/govuk-caption-l.njk" %}
 
-<h1 class="govuk-heading-l">Have you added everyone who witnessed this incident?</h1>
+<h1 class="govuk-heading-l" id="page-title">Have you added everyone who witnessed this incident?</h1>
 <p class="govuk-body">Check you have added all witnesses and that their details are correct.
 </p>
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+  <fieldset class="govuk-fieldset" aria-describedby="page-title">
 
     {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
