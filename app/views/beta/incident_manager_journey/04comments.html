@@ -62,7 +62,11 @@ html: html
     id: "label-as-page-heading",
     name: "label-as-page-heading",
     rows: "12",
-    maxlength: 3000
+    maxlength: 3000,
+    label: {
+      text: "Comments and measures",
+      classes: "govuk-body"
+        }
     }) }}
     <h2 class="govuk-heading-s">Confirm that you have:</h2>
     {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
