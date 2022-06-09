@@ -51,7 +51,7 @@ html: html
   <li>send a warning letter to this customer</li>
   <li>only arrange appointments with this customer in a screened environment</li>
   <li>only see this customer when accompanied by colleagues </li>
-  <li>not arrange any home visits with this customer </li>
+  <li>do not arrange any home visits with this customer </li>
   <li>only deal with this customer by post</li>
   <li>ban this customer from a particular location </li>
 </ul>
@@ -72,7 +72,7 @@ html: html
       classes: "govuk-body"
         }
     }) }}
-    <h2 class="govuk-heading-s">Confirm that you have:<span class="govuk-warning-text__assistive"> done the following</span></h2>
+    <h2 class="govuk-heading-s">Confirm that you have done all of the following:</h2>
     {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
     {{ govukCheckboxes({
     idPrefix: "checklist",
@@ -103,7 +103,7 @@ html: html
     ]
     }) }}
 
-
+<br>
     <p class="govuk-body">When you click Submit, we will send your review to a case reviewer and then to a decision maker.</p>
     <p class="govuk-body govuk-!-font-weight-bold">You will not be able to edit any information after you click Submit.</p>
 
