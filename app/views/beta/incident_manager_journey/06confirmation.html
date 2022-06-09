@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Recommendations and comments submitted - Agent Safeguarding
+Review submitted - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,13 +28,19 @@ Recommendations and comments submitted - Agent Safeguarding
 
     {% endset %}
     {{ govukPanel({
-      titleText: "You have submitted recommendations and comments",
+      titleText: "You have submitted your review",
       html: refHTML,
       id: "panel",
       name: "panel"
     }) }}
 <br>
-    <p class="govuk-body">We've received your recommendations and comments, and a decision maker will review them.</p>
+    <p class="govuk-body">We've received your recommendations and comments. A decision maker will review these with the original incident report.</p>
+  <p class="govuk-body">We will email the witnesses you told us about, and ask them to complete a witness report.</p>
+
+  <p class="govuk-body">
+    We aim to make a decision about this incident within 48 hours. We will email you to tell you what the decision is.
+  </p>
+  <br>
 
     <p class="govuk-body">
       You can <a href="#" class="govuk-link">email us</a> about this incident report. You must give us the incident number on this page.
@@ -44,7 +50,7 @@ Recommendations and comments submitted - Agent Safeguarding
     <p class="govuk-body">
       <a href="#" class="govuk-link">What did you think of this service?</a> (takes two minutes)
     </p>
-    
+
     {% from "govuk/components/button/macro.njk" import govukButton %}
 
     {{ govukButton({
