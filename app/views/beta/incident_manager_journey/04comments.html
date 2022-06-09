@@ -107,13 +107,11 @@ html: html
 
     ]
     }) }}
-    <p class="govuk-body">After you submit, this incident will be sent to a decisionmaker to review.</p>
-    <p class="govuk-body govuk-!-font-weight-bold">You will not be able to edit this report once submitted.</p>
     {% from "govuk/components/button/macro.njk" import govukButton %}
     <div class="govuk-button-group">
       {{ govukButton({
-      text: "Submit",
-      href: "05confirmation"
+      text: "Continue",
+      href: "05check"
       }) }}
     </div>
   </fieldset>
