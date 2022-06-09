@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Review submitted - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="00add_witness_error">feedback</a> will help us to improve it.'
+}) }}
+{% include "templates/v2/header_searchlight.njk" %}
+
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+    {% from "govuk/components/panel/macro.njk" import govukPanel %}
+    {% set refHTML %}
+    <div class="govuk-panel__body">Incident number: <br><strong><span aria-hidden="true">INC-</span><span aria-hidden="false">123-456-789</span></strong></div>
+
+    {% endset %}
+    {{ govukPanel({
+      titleText: "You have submitted your review",
+      html: refHTML,
+      id: "panel",
+      name: "panel"
+    }) }}
+<br>
+
+  <p class="govuk-body">We've received your recommendations and comments, and the witness details you told us about. We will email the witnesses and ask them to complete a witness report.</p>
+
+  <p class="govuk-body">  A decision maker will review your recommendations and comments and the witness reports together with the original incident report.</p>
+  <p class="govuk-body">
+    We aim to make a decision about this incident within 48 hours. We will email you to tell you what the decision is.
+  </p>
+  <br>
+
+    <p class="govuk-body">
+      You can <a href="#" class="govuk-link">email us</a> about this incident report. You must give us the incident number on this page.
+    </p>
+
+    <br>
+    <p class="govuk-body">
+      <a href="#" class="govuk-link">What did you think of this service?</a> (takes two minutes)
+    </p>
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Continue",
+      href: "end"
+    }) }}
+
+    {% endblock %}
+</div>
