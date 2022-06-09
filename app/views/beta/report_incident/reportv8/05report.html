@@ -190,73 +190,65 @@ What type of interaction was it? – Agent Safeguarding
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <form action="/form-handler" method="post" novalidate>
-
           <div class="govuk-form-group">
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    What type of interaction was it?
-                  </h1>
-                </legend>
-                <div id="contact-hint" class="govuk-hint">
-                  Select one option.
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  What type of interaction was it?
+                </h1>
+              </legend>
+              <div id="contact-hint" class="govuk-hint">
+                Select one option.
+              </div>
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    In person
+                    <div id="nationality-hint" class="govuk-hint">
+                      For example, at a job centre or a customer's house
+                    </div>
+                  </label>
                 </div>
-                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-                    <label class="govuk-label govuk-radios__label" for="contact">
-                      In person
-                      <div id="nationality-hint" class="govuk-hint">
-                        For example, at a job centre or a customer's house
-                      </div>
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-                    <label class="govuk-label govuk-radios__label" for="contact">
-                      Social media
-                      <div id="nationality-hint" class="govuk-hint">
-                        Comments, posts and videos on any social media platform
-                      </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-                    <label class="govuk-label govuk-radios__label" for="contact">
-                      Telephone
-                      <div id="nationality-hint" class="govuk-hint">
-                        Including voice mails and text messages
-                      </div>
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-                    <label class="govuk-label govuk-radios__label" for="contact">
-                      Written
-                      <div id="nationality-hint" class="govuk-hint">
-                        Letters, emails, web chat or comments in journal
-                      </div>
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-                    <label class="govuk-label govuk-radios__label" for="contact">
-                      Video call
-                      <div id="nationality-hint" class="govuk-hint">
-                        For example, an appointment over Microsoft Teams
-                      </div>
-                    </label>
-                  </div>
-
-                    </label>
-                  </div>
-
-
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Social media
+                    <div id="nationality-hint" class="govuk-hint">
+                      Comments, posts and videos on any social media platform
+                    </div>
+                  </label>
                 </div>
-
-              </fieldset>
-            </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Telephone
+                    <div id="nationality-hint" class="govuk-hint">
+                      Including voice mails and text messages
+                    </div>
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Written
+                    <div id="nationality-hint" class="govuk-hint">
+                      Letters, emails, web chat or comments in journal
+                    </div>
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Video call
+                    <div id="nationality-hint" class="govuk-hint">
+                      For example, an appointment over Microsoft Teams
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
           </div>
-
 
           <a href="06report.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
             Continue
