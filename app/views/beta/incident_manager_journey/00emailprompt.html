@@ -48,7 +48,16 @@ href: "javascript:history.back()"
 <br><br><br><br>
 <hr>
 <p class="govuk-body">END OF EMAIL</p>
+<div class="govuk-button-group">
 
+	{% from "govuk/components/button/macro.njk" import govukButton %}
+
+	{{ govukButton({
+		text: "Start",
+		href: "00incident",
+		isStartButton: true
+	  }) }}
+</div>
 <p class="govuk-body"><a href="00_start">
 		< Return to beginning of journey.</a>
 </p>
