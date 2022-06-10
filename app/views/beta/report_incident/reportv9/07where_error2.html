@@ -12,7 +12,7 @@ Where were you during the incident? - Agent Safeguarding
   tag: {
   text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="07where_error2">feedback</a> will help us to improve it.'
   }) }}
 </section>
 {% include "templates/v2/header_searchlight.njk" %}
@@ -28,6 +28,16 @@ Where were you during the incident? - Agent Safeguarding
 
 {% block content %}
 <div class="govuk-form-group">
+  {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+  {{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+  {
+  text: "Tell us where the incident happened",
+  href: "#somewhereelse-text"
+  }
+  ]
+  }) }}
   <fieldset class="govuk-fieldset" aria-describedby="location">
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
     {% set somewhereHtml %}
@@ -35,6 +45,9 @@ Where were you during the incident? - Agent Safeguarding
       id: "somewhereelse-text",
       name: "somewhereelse-text",
       classes: "govuk-!-width-one-third",
+      errorMessage: {
+  text: "Tell us where the incident happened"
+},
       label: {
         text: "Incident location"
       }
@@ -78,6 +91,7 @@ Where were you during the incident? - Agent Safeguarding
         {
           value: "somewhereelse",
           text: "Somewhere else",
+          checked: true,
           conditional: {
             html: somewhereHtml
           }
@@ -91,7 +105,7 @@ Where were you during the incident? - Agent Safeguarding
 
       {{ govukButton({
       text: "Continue",
-      href: "07discrimination"
+      href: "08discrimination"
       }) }}
 
     </div>

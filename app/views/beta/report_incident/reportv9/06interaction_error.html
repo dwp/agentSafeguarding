@@ -12,7 +12,7 @@ What type of interaction was it? - Agent Safeguarding
   tag: {
   text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="05interaction_error">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
 </section>
 {% include "templates/v2/header_searchlight.njk" %}
@@ -28,6 +28,16 @@ What type of interaction was it? - Agent Safeguarding
 
 {% block content %}
 <div class="govuk-form-group">
+  {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+  {{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+  {
+  text: "Select the type of interaction",
+  href: "#interaction"
+  }
+  ]
+  }) }}
   <fieldset class="govuk-fieldset" aria-describedby="interaction">
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -43,6 +53,9 @@ What type of interaction was it? - Agent Safeguarding
       },
       hint: {
         text: "Select one option."
+      },
+      errorMessage: {
+        text: "Select the type of interaction"
       },
       items: [
         {
@@ -89,7 +102,7 @@ What type of interaction was it? - Agent Safeguarding
 
       {{ govukButton({
       text: "Continue",
-      href: "06where"
+      href: "07where"
       }) }}
 
     </div>

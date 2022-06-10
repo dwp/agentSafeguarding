@@ -12,7 +12,7 @@ Do you feel the incident was motivated by any of the following types of discrimi
   tag: {
   text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="07discrimination_error">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
 </section>
 {% include "templates/v2/header_searchlight.njk" %}
@@ -28,6 +28,16 @@ Do you feel the incident was motivated by any of the following types of discrimi
 
 {% block content %}
 <div class="govuk-form-group">
+  {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+  {{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+  {
+  text: "Tell us if the incident was motivated by discrimination",
+  href: "#discrimination"
+  }
+  ]
+  }) }}
   <fieldset class="govuk-fieldset" aria-describedby="discrimination">
     {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
@@ -40,6 +50,9 @@ Do you feel the incident was motivated by any of the following types of discrimi
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
+  },
+  errorMessage: {
+    text: "Tell us if the incident was motivated by discrimination"
   },
   hint: {
     text: "Select all that apply."
@@ -98,7 +111,7 @@ Do you feel the incident was motivated by any of the following types of discrimi
 
       {{ govukButton({
       text: "Continue",
-      href: "08"
+      href: "09describe"
       }) }}
 
     </div>
