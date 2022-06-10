@@ -33,7 +33,7 @@ Were you involved in the incident? - Agent Safeguarding
   titleText: "There is a problem",
   errorList: [
   {
-  text: "Select yes if you are reporting an incident you were involved in",
+  text: "Select yes if you were involved in this incident",
   href: "#on-behalf"
   }
   ]
@@ -78,19 +78,19 @@ Were you involved in the incident? - Agent Safeguarding
     name: "on-behalf",
     fieldset: {
     legend: {
-    text: "Are you reporting an incident you were involved in?",
+    text: "Are you reporting an incident that you were involved in?",
     isPageHeading: true,
     classes: "govuk-fieldset__legend--l"
     }
     },
     items: [
     {
-    value: "no",
-    text: "No"
+    value: "yes",
+    text: "Yes"
     },
     {
-    value: "yes",
-    text: "Yes, I'm reporting this on behalf of someone else",
+    value: "no",
+    text: "No, I am reporting this on behalf of someone else",
     conditional: {
     html: emailHtml
     }
@@ -100,7 +100,7 @@ Were you involved in the incident? - Agent Safeguarding
     text: "Select one option."
     },
     errorMessage: {
-    text: "Select yes if you are reporting on behalf of someone else"
+    text: "Select yes if you were involved in this incident"
     }
     }) }}
     <div class="govuk-button-group">

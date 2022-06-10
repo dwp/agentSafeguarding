@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Are you reporting this on behalf of someone else? - Agent Safeguarding
+Were you involved in the incident? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -97,19 +97,19 @@ Are you reporting this on behalf of someone else? - Agent Safeguarding
     name: "on-behalf",
     fieldset: {
     legend: {
-    text: "Are you reporting this on behalf of someone else?",
+    text: "Are you reporting an incident that you were involved in?",
     isPageHeading: true,
     classes: "govuk-fieldset__legend--l"
     }
     },
     items: [
     {
-    value: "no",
-    text: "No"
+    value: "yes",
+    text: "Yes"
     },
     {
-    value: "yes",
-    text: "Yes, I'm reporting this on behalf of someone else",
+    value: "no",
+    text: "No, I am reporting this on behalf of someone else",
     checked: true,
     conditional: {
     html: emailHtml
