@@ -12,7 +12,7 @@ What do you want to report? - Agent Safeguarding
 tag: {
 text: "beta"
 },
-html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+html: 'This is a new service – your <a class="govuk-link" href="01report">feedback</a> will help us to improve it.'
 }) }}
 </section>
 {% include "templates/v2/header_searchlight.njk" %}
@@ -57,14 +57,14 @@ href: "javascript:history.back()"
       value: "yes",
       text: "An incident that has already happened",
       hint: {
-        text: "For example, a customer's unacceptable behaviour"
-      } 
+        text: "For example, a customer has been verbally abusive to their work coach, or made threats in their journal"
+      }
       },
       {
       value: "no",
-      text: "A concern that something might happen in future",
+      text: "A concern that something might happen that will risk colleagues' safety",
       hint: {
-        text: "For example, information on a Capability for Work questionnaire indicates a risk to DWP staff"
+        text: "For example, information on a UC50 form indicates there is a risk to staff"
       }
       }
       ],
@@ -81,7 +81,7 @@ href: "javascript:history.back()"
 
         {{ govukButton({
         text: "Continue",
-        href: "02report"
+        href: "02behalf"
         }) }}
 
       </div>
