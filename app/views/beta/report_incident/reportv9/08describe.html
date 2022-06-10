@@ -9,7 +9,7 @@
   tag: {
   text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="08describe_error">feedback</a> will help us to improve it.'
   }) }}
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
@@ -23,40 +23,6 @@
 {% endblock %}
 {% block content %}
   <div class="govuk-form-group">
-    {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
-    {{ govukErrorSummary({
-    titleText: "There is a problem",
-    errorList: [
-    {
-    text: "Tell us why the customer was in contact with us",
-    href: "#why"
-    },
-    {
-    text: "Tell us how the incident started",
-    href: "#how"
-    },
-    {
-    text: "Tell us about the customer's behaviour",
-    href: "#what"
-    },
-    {
-    text: "Tell us what happened next",
-    href: "#next"
-    },
-    {
-    text: "Select yes if there were witnesses to the incident",
-    href: "#witnesses"
-    },
-    {
-    text: "Tell us how the interaction ended",
-    href: "#end"
-    },
-    {
-    text: "Tell us how you felt during the incident",
-    href: "#feel"
-    }
-    ]
-    }) }}
     <fieldset class="govuk-fieldset" aria-describedby="page-title">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <h1 class="govuk-fieldset__heading" id="page-title">
@@ -81,9 +47,6 @@
     text: "1. Why was the customer in contact with us?",
     classes: "govuk-label--s"
   },
-  errorMessage: {
-    text: "Tell us why the customer was in contact with us"
-  },
   hint: {
     text: "For example: I called John for a routine welfare check."
   }
@@ -100,9 +63,6 @@
   label: {
     text: "2. How did the incident start? Was there a specific trigger?",
     classes: "govuk-label--s"
-  },
-  errorMessage: {
-    text: "Tell us how the incident started"
   },
   hint: {
     html: howhintHTML
@@ -121,9 +81,6 @@
     text: "3. What were the issues with the customer’s behaviour?",
     classes: "govuk-label--s"
   },
-  errorMessage: {
-    text: "Tell us about the customer's behaviour"
-  },
   hint: {
     html: whathintHTML
   }
@@ -140,9 +97,6 @@
   label: {
     text: "4. Tell us what happened next. How did you try to resolve the situation, and how did the customer react?",
     classes: "govuk-label--s"
-  },
-  errorMessage: {
-    text: "Tell us what happened next"
   },
   hint: {
     html: nexthintHTML
@@ -169,9 +123,6 @@
   ],
   hint: {
   text: "Select one option."
-  },
-  errorMessage: {
-  text: "Select yes if there were witnesses to the incident"
   }
   }) }}
             {% set endhintHTML %}
@@ -185,9 +136,6 @@
   label: {
     text: "6. How did your interaction with the customer end?",
     classes: "govuk-label--s"
-  },
-  errorMessage: {
-    text: "Tell us how the interaction ended"
   },
   hint: {
     html: endhintHTML
@@ -204,9 +152,6 @@
   label: {
     text: "7. How did you feel during the incident?",
     classes: "govuk-label--s"
-  },
-  errorMessage: {
-    text: "Tell us how you felt during the incident"
   },
   hint: {
     html: feelhintHTML
