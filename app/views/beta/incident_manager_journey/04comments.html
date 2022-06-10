@@ -35,7 +35,11 @@ href: "javascript:history.back()"
 
 
 {% set html %}
-
+<style>
+  .govuk-notification-banner__heading{
+    max-width: none
+  }
+</style>
 <p class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.</p>
 <p class="govuk-notification-banner__heading">Include reasons for each recommendation.</p>
 <p class="govuk-notification-banner__heading">Do not include the names of any DWP staff in your answers.</p>
@@ -45,7 +49,6 @@ href: "javascript:history.back()"
 html: html
 }) }}
 
-<div class="govuk-!-padding-bottom-7"></div>
 <p class="govuk-body">Examples of recommended safety measures include (but are not limited to): </p>
 <ul class="govuk-list govuk-list--bullet">
   <li>send a warning letter to this customer</li>
@@ -55,10 +58,7 @@ html: html
   <li>only deal with this customer by post</li>
   <li>ban this customer from a particular location </li>
 </ul>
-<div class="govuk-!-padding-bottom-7"></div>
 <p class="govuk-body govuk-!-font-weight-bold">A decision maker will review your comments and recommendations before they make a decision about this incident.</p>
-<br>
-
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
     {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
