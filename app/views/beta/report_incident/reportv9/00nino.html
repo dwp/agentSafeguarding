@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+National Insurance number - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+<section aria-label="Beta banner" role="region">
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="01report_error">feedback</a> will help us to improve it.'
+}) }}
+</section>
+{% include "templates/v2/header_searchlight.njk" %}
+<section aria-label="Back" role="region">
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+</section>
+{% endblock %}
+
+{% block content %}
+
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{{ govukInput({
+label: {
+text: "National Insurance number",
+classes: "govuk-label--l",
+isPageHeading: true
+},
+classes: "govuk-input--width-10",
+hint: {
+text: "For example, ‘QQ 12 34 56 C’."
+},
+id: "nino",
+name: "nino"
+}) }}
+<div class="govuk-button-group">
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {{ govukButton({
+  text: "Start",
+  href: "01report",
+  isStartButton: true
+
+  }) }}
+
+</div>
+
+{% endblock %}

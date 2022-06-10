@@ -1,0 +1,18 @@
+{% from "key-details-bar/macro.njk" import dwpKeyDetailsBar %}
+
+{{ dwpKeyDetailsBar({
+primaryIdentifier: {
+text: 'Name:',
+value: 'Robert De Silva'
+},
+secondaryIdentifier: {
+text: 'National Insurance number:',
+value: 'QQ 12 34 56 X'
+},
+additionalData: [
+{
+value: "4 June 1972",
+text: "Date of birth:"
+}
+]
+}) }} 
