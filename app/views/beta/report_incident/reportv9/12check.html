@@ -1,0 +1,158 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+{% block pageTitle %}
+  Check your answers - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="12check2.html">feedback</a> will help us to improve it.'
+}) }}
+  {% include "templates/v2/header_searchlight.njk" %}
+  {{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+  {% include "templates/v3/govuk-caption-l.njk" %}
+  <h1 class="govuk-heading-l" id="page-title">
+    Check your answers
+  </h1>
+
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Your details"
+      },
+      value: {
+        text: "Whitney Earl (whitneyearl@dwp.gov.uk) on behalf of Mike Black"
+      }
+    },
+    {
+      key: {
+        text: "Your Line Manager"
+      },
+      value: {
+        text: "Sarah Linemanager (sarah.linemanager@dwp.gov.uk)"
+      }
+    },
+    {
+      key: {
+        text: "Reviewing manager"
+      },
+      value: {
+        html: "Sartaq Matcha (sartaq.matcha@dwp.gov.uk)"
+      }
+    },
+    {
+      key: {
+        text: "When did the incident happen?"
+      },
+      value: {
+        html: "13 June 2022 at 15:30"
+      }
+    },
+    {
+      key: {
+        text: "What type of interaction was it?"
+      },
+      value: {
+        html: "In-person"
+      }
+    },
+    {
+      key: {
+        text: "Where were you during the incident?"
+      },
+      value: {
+        html: "The office you're based at"
+      }
+    },
+    {
+      key: {
+        text: "Do you feel the incident was motivated by any of the following types of discrimination?"
+      },
+      value: {
+        html: "<ul class='govuk-list govuk-list--bullet'><li>Age</li><li>Being married or in a civil partnership</li></ul>"
+      }
+    },
+    {
+      key: {
+        text: "Describe the incident"
+      },
+      value: {
+        html: "
+        <div class='govuk-!-padding-bottom-7'>
+        <p class='govuk-body  govuk-!-font-weight-bold'>1. Why was the customer in contact with us?</p>
+        <p class='govuk-body'>I called John for a routine welfare check.</p>
+        </div>
+
+        <div class='govuk-!-padding-bottom-7'>
+        <p class='govuk-body  govuk-!-font-weight-bold'>2. How did the incident start? Was there a specific trigger?</p>
+        <p class='govuk-body'>I asked John to come into the office next week, and he raised his voice and shouted 'I’m not coming to the job centre.'</p>
+        </div>
+        
+        <div class='govuk-!-padding-bottom-7'>
+        <p class='govuk-body  govuk-!-font-weight-bold'>3. What were the issues with the customer’s behaviour?</p>
+        <p class='govuk-body'>John said 'I'm not answering your questions'</p>
+        </div>
+        
+        <div class='govuk-!-padding-bottom-7'>
+        <p class='govuk-body  govuk-!-font-weight-bold'>4. Tell us what happened next. How did you try to resolve the situation, and how did the customer react?</p>
+        <p class='govuk-body'>I said, 'Stop swearing at me. I am trying to help you.' But the customer continued to shout and said, 'You're not helping me at all.'</p>
+        </div>
+        
+        <div class='govuk-!-padding-bottom-7'>
+        <p class='govuk-body  govuk-!-font-weight-bold'>5. Were there any witnesses to this incident?</p>
+        <p class='govuk-body'>Yes</p>
+        </div>
+        
+        <div class='govuk-!-padding-bottom-7'>
+        <p class='govuk-body  govuk-!-font-weight-bold'>6. How did your interaction with the customer end?</p>
+        <p class='govuk-body'>I terminated the call</p>
+        </div>
+        
+        <div class='govuk-!-padding-bottom-7'>
+        <p class='govuk-body  govuk-!-font-weight-bold'>7. How did you feel during the incident?</p>
+        <p class='govuk-body'>I was very upset</p>
+        </div>
+        "
+      }
+    },
+    {
+      key: {
+        text: "Added files"
+      },
+      value: {
+        html: "ADD IN THE FILE LIST"
+      }
+    }
+  ]
+}) }}
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
+      <div class="govuk-!-padding-bottom-7"></div>
+      <h2 class="govuk-heading-m">Ready to submit?</h2>
+      <p class="govuk-body">If you need to edit any information use the back link near the top of this page.</p>
+      <p class="govuk-body">After you submit, this incident will be sent to the reviewing manager to review.</p>
+      <p class="govuk-body govuk-!-font-weight-bold">You will not be able to edit this report once submitted.</p>
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+      <div class="govuk-button-group">
+        {{ govukButton(
+            {
+              text: "Submit", 
+              href: "13confirm"
+            }
+          ) 
+          }}
+      </div>
+    </fieldset>
+  </div>
+{% endblock %}
