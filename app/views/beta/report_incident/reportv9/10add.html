@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Do you want to add files to your report? - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+  tag: {
+  text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="10add_error">feedback</a> will help us to improve it.'
+  }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+    {{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+  }) }}
+  </section>
+{% endblock %}
+{% block content %}
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="add-files">
+      {{ govukRadios({
+    idPrefix: "add-files",
+    name: "add-files",
+    fieldset: {
+    legend: {
+    text: "Do you want to add files to your report?",
+    isPageHeading: true,
+    classes: "govuk-fieldset__legend--l"
+    }
+    },
+    items: [
+    {
+    value: "yes",
+    text: "Yes"
+    },
+    {
+    value: "no",
+    text: "No"
+    }
+    ],
+    hint: {
+    text: "You can add files that contain evidence about the incident."
+    }
+    }) }}
+      <div class="govuk-button-group">
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+        {{ govukButton({
+      text: "Continue",
+      href: "11a_upload"
+      }) }}
+      </div>
+    </fieldset>
+  </div>
+{% endblock %}

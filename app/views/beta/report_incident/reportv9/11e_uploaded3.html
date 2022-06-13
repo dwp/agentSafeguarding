@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Add files - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+  tag: {
+  text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="11g_upload_error">feedback</a> will help us to improve it.'
+  }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+    {{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+  }) }}
+  </section>
+{% endblock %}
+{% block content %}
+ <style>
+    .myDiv {
+      border: 3px outset black;
+      background-color: white;
+      text-align: left;
+      border-style: dashed;
+      padding: 80px 30px 30px 15px;
+      margin-bottom: 30px;
+      width: fit-content;
+    }
+    .fullwidth {
+      padding: 0 15px !important
+    }
+    input[type='file'] {
+      display: none;
+    }
+    .mylabel {
+      background-color: white;
+      box-shadow: none;
+      border-left: 0
+    }
+    .govuk-notification-banner__heading {
+      max-width: none
+    }
+    .filter-green {
+      filter: invert(28%) sepia(56%) saturate(1218%) hue-rotate(115deg) brightness(98%) contrast(103%);
+      position: relative;
+      top: 5px;
+    }
+    .nobottommnargin {
+      margin-bottom: 0
+    }
+    input[type='file'] {
+      display: none;
+    }
+    .mylabel {
+      background-color: white;
+      box-shadow: none;
+      border-left: 0
+    }
+  </style>
+  {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+  {{ govukNotificationBanner({
+    html: '<p class="govuk-notification-banner__heading">3 files uploaded</p>',
+    type: 'success'
+  }) }}
+  <h1 class="govuk-heading-xl">Add files</h1>
+  <h2 class="govuk-heading-m">Files added</h2>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dd class="govuk-summary-list__value">
+        <svg class="moj-banner__icon filter-green" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+          <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z"></path>
+        </svg>
+        <span class="govuk-success-colour">evidence.jpg</span>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          Delete<span class="govuk-visually-hidden">
+            file 1</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dd class="govuk-summary-list__value">
+        <svg class="moj-banner__icon filter-green" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+          <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z"></path>
+        </svg>
+        <span class="govuk-success-colour">more_evidence.jpg</span>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          Delete<span class="govuk-visually-hidden">
+            file 1</span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dd class="govuk-summary-list__value">
+        <svg class="moj-banner__icon filter-green" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+          <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z"></path>
+        </svg>
+        <span class="govuk-success-colour">definite_evidence.jpg</span>
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="#">
+          Delete<span class="govuk-visually-hidden">
+            file 1</span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+  <label class="govuk-label govuk-label--m" for="documents">
+    Upload files
+  </label>
+  <div class="myDiv">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-1">
+        <span class="govuk-button govuk-button--secondary mylabel">Drag and drop files here or
+        </span>
+        <span class="govuk-button govuk-button--secondary myfileupload">
+          Choose files
+        </span>
+      </label>
+      <input class="govuk-file-upload hidevalue" id="file-upload-1" name="file-upload-1" type="file" title=" asd"></div>
+    </div>
+    <div class="govuk-button-group">
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+      {{ govukButton({
+      text: "Continue",
+      href: "11f_upload_deleted"
+      }) }}
+    </div>
+  </div>
+{% endblock %}

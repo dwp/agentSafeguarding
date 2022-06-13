@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Confirm your details? - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+  tag: {
+  text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="00reporter_error">feedback</a> will help us to improve it.'
+  }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+    {{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+  }) }}
+  </section>
+{% endblock %}
+{% block content %}
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="line-manager">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading" id="page-title">
+          Confirm your details
+        </h1>
+      </legend>
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {{ govukInput({
+    id: "first-name",
+    name: "first-name",
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Your first name"
+    }
+    }) }}
+      {{ govukInput({
+    id: "last-name",
+    name: "last-name",
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Your last name"
+    }
+    }) }}
+      {{ govukInput({
+    id: "email",
+    name: "email",
+    type: "email",
+    autocomplete: "email",
+    spellcheck: false,
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Your email address"
+    }, 
+    hint: {
+      text: "Enter your email address as it appears on the Global Address List"
+    }
+    }) }}
+      <div class="govuk-button-group">
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+        {{ govukButton({
+  text: "Continue",
+  href: "01report"
+  }) }}
+      </div>
+    </fieldset>
+  </div>
+{% endblock %}
