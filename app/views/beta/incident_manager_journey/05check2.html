@@ -10,7 +10,7 @@
 tag: {
 text: "beta"
 },
-html: 'This is a new service – your <a class="govuk-link" href="05check2">feedback</a> will help us to improve it.'
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
   {% include "templates/v2/header_searchlight.njk" %}
   {{ govukBackLink({
@@ -37,35 +37,18 @@ href: "javascript:history.back()"
     }
   </style>
   {% set witness1HTML %}
-  <span class="govuk-visually-hidden">Witness</span>
-  Sartaq Matcha (sartaq.matcha@dwp.gov.uk)
+
   {% endset %}
-  {% set witness2HTML %}
-  <span class="govuk-visually-hidden">Witness</span>
-  Ted Lady (ted.lady@dwp.gov.uk)
-  {% endset %}
-  {% set witnessesHTML %}{{ govukSummaryList({
-    id: "witnesslist",
-      rows: [
-        {
-          value: {
-            html: witness1HTML
-          }
-        },
-        {
-          value: {
-            html: witness2HTML
-          }
-        }
-      ]
-    }) }}{% endset %}{{ govukSummaryList({
+
+    
+    {{ govukSummaryList({
   rows: [
     {
       key: {
         text: "Witnesses"
       },
       value: {
-        html: witnessesHTML
+        text: "There are no witnesses to this incident"
       }
     },
     {
@@ -73,7 +56,7 @@ href: "javascript:history.back()"
         text: "Police action"
       },
       value: {
-        text: "The police were called and arrested the customer. Ref number 12345678"
+        text: "The police were not called"
       }
     },
     {
@@ -81,7 +64,7 @@ href: "javascript:history.back()"
         text: "Comments and recommendations"
       },
       value: {
-        html: "There were other witnesses to the incident but we do not have contact details."
+        html: "No Comments"
       }
     }
   ]
