@@ -10,7 +10,7 @@
 tag: {
 text: "beta"
 },
-html: 'This is a new service – your <a class="govuk-link" href="12check2">feedback</a> will help us to improve it.'
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
   {% include "templates/v2/header_searchlight.njk" %}
   {{ govukBackLink({
@@ -101,27 +101,7 @@ href: "javascript:history.back()"
 {% endset %}
 {% set filesHTML%}
 {% from "govuk/components/table/macro.njk" import govukTable %}
-
-{{ govukTable({
-  firstCellIsHeader: true,
-  rows: [
-    [
-      {
-        html: "<span class='govuk-visually-hidden'>File name:</span> emailtome.msg"
-      }
-    ],
-    [
-      {
-        html: "<span class='govuk-visually-hidden'>File name:</span> screen_shot.png"
-      }
-    ],
-    [
-      {
-        html: "<span class='govuk-visually-hidden'>File name:</span> letter_l.pdf"
-      }
-    ]
-  ]
-}) }}
+No files attached to report
 {% endset%}
 
 {{ govukSummaryList({
@@ -131,7 +111,7 @@ href: "javascript:history.back()"
         text: "Your details"
       },
       value: {
-        text: "Whitney Earl (whitneyearl@dwp.gov.uk) on behalf of Mike Black"
+        text: "Whitney Earl (whitneyearl@dwp.gov.uk)"
       }
     },
     {
@@ -140,14 +120,6 @@ href: "javascript:history.back()"
       },
       value: {
         text: "Sarah Linemanager (sarah.linemanager@dwp.gov.uk)"
-      }
-    },
-    {
-      key: {
-        text: "Reviewing manager"
-      },
-      value: {
-        html: "Sartaq Matcha (sartaq.matcha@dwp.gov.uk)"
       }
     },
     {
@@ -168,7 +140,7 @@ href: "javascript:history.back()"
     },
     {
       key: {
-        text: "Where were you during the incident?"
+        text: "In office"
       },
       value: {
         html: "Car Park"
@@ -179,7 +151,7 @@ href: "javascript:history.back()"
         text: "Do you feel the incident was motivated by any of the following types of discrimination?"
       },
       value: {
-        html: "<ul class='govuk-list govuk-list--bullet'><li>Age</li><li>Being married or in a civil partnership</li></ul>"
+        html: "None"
       }
     },
     {
