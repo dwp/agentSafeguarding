@@ -10,7 +10,7 @@
 tag: {
 text: "beta"
 },
-html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+html: 'This is a new service – your <a class="govuk-link" href="12check">feedback</a> will help us to improve it.'
 }) }}
   {% include "templates/v2/header_searchlight.njk" %}
   {{ govukBackLink({
@@ -101,7 +101,7 @@ href: "javascript:history.back()"
 {% endset %}
 {% set filesHTML%}
 {% from "govuk/components/table/macro.njk" import govukTable %}
-No files added to report
+None
 {% endset%}
 
 {{ govukSummaryList({
@@ -116,10 +116,18 @@ No files added to report
     },
     {
       key: {
-        text: "Your Line Manager"
+        text: "Who is your line manager?"
       },
       value: {
         text: "Sarah Linemanager (sarah.linemanager@dwp.gov.uk)"
+      }
+    },
+    {
+      key: {
+        text: "Who is the most appropriate manager to review this report?"
+      },
+      value: {
+        html: "Sartaq Matcha (sartaq.matcha@dwp.gov.uk)"
       }
     },
     {
@@ -140,7 +148,7 @@ No files added to report
     },
     {
       key: {
-        text: "In office"
+        text: "Where were you during the incident? "
       },
       value: {
         html: "Car Park"
@@ -148,7 +156,7 @@ No files added to report
     },
     {
       key: {
-        text: "Do you feel the incident was motivated by any of the following types of discrimination?"
+        text: "Do you feel the incident was motivated by any type of discrimination?"
       },
       value: {
         html: "None"
@@ -164,7 +172,7 @@ No files added to report
     },
     {
       key: {
-        text: "Added files"
+        text: "Files added"
       },
       value: {
         html: filesHTML
@@ -177,18 +185,18 @@ No files added to report
 </div>
   <div class="govuk-form-group ">
     <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
-      <h2 class="govuk-heading-m">Ready to submit?</h2>
-      <p class="govuk-body">If you need to edit any information use the back link near the top of this page.</p>
-      <p class="govuk-body">After you submit, this incident will be sent to the reviewing manager to review.</p>
-      <p class="govuk-body govuk-!-font-weight-bold">You will not be able to edit this report once submitted.</p>
+      <h2 class="govuk-heading-m">Are you ready to submit your report?</h2>
+      <p class="govuk-body">If you need to change anything in your report, use the back link near the top of this page.</p>
+      <p class="govuk-body">When you click Submit, we will send your report to the appropriate manager to review.</p>
+      <p class="govuk-body govuk-!-font-weight-bold">You will not be able to change anything in your report after you click Submit.</p>
       {% from "govuk/components/button/macro.njk" import govukButton %}
       <div class="govuk-button-group">
         {{ govukButton(
             {
-              text: "Submit", 
+              text: "Submit",
               href: "13confirm"
             }
-          ) 
+          )
           }}
       </div>
     </fieldset>
