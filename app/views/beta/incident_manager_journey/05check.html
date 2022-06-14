@@ -62,7 +62,7 @@ href: "javascript:history.back()"
   rows: [
     {
       key: {
-        text: "Witnesses"
+        text: "Did anyone witness this incident?"
       },
       value: {
         html: witnessesHTML
@@ -70,10 +70,10 @@ href: "javascript:history.back()"
     },
     {
       key: {
-        text: "Police action"
+        text: "Did anyone call the police?"
       },
       value: {
-        text: "The police were called and arrested the customer. Ref number 12345678"
+        text: "The police were called and arrested the customer. The crime ref number is 12345678"
       }
     },
     {
@@ -86,20 +86,22 @@ href: "javascript:history.back()"
     }
   ]
 }) }}
+<br>
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
-      <h2 class="govuk-heading-m">Ready to submit?</h2>
-      <p class="govuk-body">If you need to edit any information use the back link near the top of this page.</p>
-      <p class="govuk-body">After you submit, this incident will be sent to a decisionmaker to review.</p>
-      <p class="govuk-body govuk-!-font-weight-bold">You will not be able to edit this report once submitted.</p>
+      <h2 class="govuk-heading-m">Are you ready to submit your review?</h2>
+      <p class="govuk-body">If you need to change anything in your review of this incident report, use the back link near the top of this page.</p>
+      <p class="govuk-body">When you click Submit, we will send your review to a case reviewer and then to a decision maker.</p>
+      <p class="govuk-body govuk-!-font-weight-bold">You will not be able to change anything in your review after you click Submit.</p>
+
       {% from "govuk/components/button/macro.njk" import govukButton %}
       <div class="govuk-button-group">
         {{ govukButton(
             {
-              text: "Submit", 
+              text: "Submit",
               href: "06confirmation"
             }
-          ) 
+          )
           }}
       </div>
     </fieldset>
