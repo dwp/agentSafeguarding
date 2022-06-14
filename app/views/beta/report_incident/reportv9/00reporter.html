@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Confirm your details? - Agent Safeguarding
+  Enter your details - Agent Safeguarding
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
@@ -26,7 +26,7 @@
     <fieldset class="govuk-fieldset" aria-describedby="line-manager">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <h1 class="govuk-fieldset__heading" id="page-title">
-          Confirm your details
+          Enter your details
         </h1>
       </legend>
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -55,7 +55,7 @@
     classes: "govuk-!-width-one-third",
     label: {
     text: "Your email address"
-    }, 
+    },
     hint: {
       text: "Enter your email address as it appears on the Global Address List"
     }

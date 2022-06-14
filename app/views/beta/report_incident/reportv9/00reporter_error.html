@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Confirm your details? - Agent Safeguarding
+Enter your details - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -12,7 +12,7 @@ Confirm your details? - Agent Safeguarding
   tag: {
   text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="00reporter">feedback</a> will help us to improve it.'
   }) }}
 </section>
 {% include "templates/v2/header_searchlight.njk" %}
@@ -51,7 +51,7 @@ Confirm your details? - Agent Safeguarding
   <fieldset class="govuk-fieldset" aria-describedby="line-manager">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading" id="page-title">
-        Confirm your details
+        Enter your details
       </h1>
     </legend>
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -90,7 +90,7 @@ Confirm your details? - Agent Safeguarding
     },
     errorMessage: {
     text: "Enter your email address, in the format name@example.com"
-    },    
+    },
     hint: {
       text: "Enter your email address as it appears on the Global Address List"
     }
