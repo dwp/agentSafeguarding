@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Add reporting user - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+
+{% endblock %}
+{% block content %}
+  <div class="govuk-form-group">
+    
+    <fieldset class="govuk-fieldset" aria-describedby="page-title">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading" id="page-title">
+          Add reporting user
+        </h1>
+      </legend>
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {{ govukInput({
+      id: "user-id",
+      name: "user-id",
+      inputmode: "numeric",
+    pattern: "[0-9]*",
+    spellcheck: false,
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their user ID"
+    }
+    }) }}
+      {{ govukInput({
+    id: "first-name",
+    name: "first-name",
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their first name"
+    }
+    }) }}
+      {{ govukInput({
+    id: "last-name",
+    name: "last-name",
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their last name"
+    }
+    }) }}
+      {{ govukInput({
+    id: "email",
+    name: "email",
+    type: "email",
+    autocomplete: "email",
+    spellcheck: false,
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their email address"
+    }
+    }) }}
+      <div class="govuk-button-group">
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+        {{ govukButton({
+  text: "Submit",
+  href: "01success"
+  }) }}
+      </div>
+    </fieldset>
+  </div>
+{% endblock %}

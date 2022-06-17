@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Error: Add reporting user - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+
+{% endblock %}
+{% block content %}
+  <div class="govuk-form-group">
+    {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+    {{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+  {
+  text: "Enter their user ID",
+  href: "#user-id"
+  },
+  {
+  text: "Enter their first name",
+  href: "#first-name"
+  },
+  {
+  text: "Enter their last name",
+  href: "#last-name"
+  },
+  {
+  text: "Enter their email address, in the format name@example.com",
+  href: "#email"
+  }
+
+
+  ]
+  }) }}
+    <fieldset class="govuk-fieldset" aria-describedby="page-title">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading" id="page-title">
+          Add reporting user
+        </h1>
+      </legend>
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {{ govukInput({
+      id: "user-id",
+      name: "user-id",
+      inputmode: "numeric",
+    pattern: "[0-9]*",
+    spellcheck: false,
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their user ID"
+    },
+    errorMessage: {
+    text: "Enter their user ID"
+    }
+    }) }}
+      {{ govukInput({
+    id: "first-name",
+    name: "first-name",
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their first name"
+    },
+    errorMessage: {
+    text: "Enter their first name"
+    }
+    }) }}
+      {{ govukInput({
+    id: "last-name",
+    name: "last-name",
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their last name"
+    },
+    errorMessage: {
+    text: "Enter their last name"
+    }
+    }) }}
+      {{ govukInput({
+    id: "email",
+    name: "email",
+    type: "email",
+    autocomplete: "email",
+    spellcheck: false,
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their email address"
+    },
+    errorMessage: {
+    text: "Enter their email address, in the format name@example.com"
+    }
+    }) }}
+      <div class="govuk-button-group">
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+        {{ govukButton({
+  text: "Submit",
+  href: "01success"
+  }) }}
+      </div>
+    </fieldset>
+  </div>
+{% endblock %}
