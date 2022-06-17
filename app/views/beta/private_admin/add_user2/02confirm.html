@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Report submitted - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+  {% from "govuk/components/panel/macro.njk" import govukPanel %}
+  {% set refHTML %}
+  <div class="govuk-panel__body">
+
+      <span aria-hidden="false">Mike Black</span>
+
+  </div>
+  {% endset %}
+  {{ govukPanel({
+    titleText: "Successfully added user",
+    html: refHTML,
+    id: "panel",
+    name: "panel"
+  }) }}
+  <p class="govuk-body">We've successfully added the above user.</p>
+  <h2 class="govuk-heading-m">What happens next</h2>
+  <p class="govuk-body">
+    You may close this page or add another user by clicking the button below.
+  </p>
+
+        <div class="govuk-button-group">
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+        {{ govukButton({
+  text: "Add another user",
+  href: "00adduser"
+  }) }}
+      </div>
+{% endblock %}
