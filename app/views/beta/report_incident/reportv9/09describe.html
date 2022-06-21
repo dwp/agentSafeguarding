@@ -22,13 +22,6 @@
   </section>
 {% endblock %}
 {% block content %}
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="page-title">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading" id="page-title">
-          Describe the incident
-        </h1>
-      </legend>
       <style>
         .govuk-notification-banner__heading {
           max-width: none
@@ -39,6 +32,14 @@
   html: '<p class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.<br>
   Do not include the names of any DWP staff in your answers.</p>'
 }) }}
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="page-title">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading" id="page-title">
+          Describe the incident
+        </h1>
+      </legend>
+
       {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
       {{ govukTextarea({
   name: "why",

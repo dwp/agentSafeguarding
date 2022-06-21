@@ -12,7 +12,6 @@
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
   </section>
-  {% include "templates/v2/header_searchlight.njk" %}
 {% endblock %}
 {% block content %}
   {% from "govuk/components/panel/macro.njk" import govukPanel %}
@@ -20,8 +19,7 @@
   <div class="govuk-panel__body">Your reference number:
     <br>
     <strong>
-      <span aria-hidden="true">INC-</span>
-      <span aria-hidden="false">123-456-789</span>
+      <span aria-hidden="true">INC-</span><span aria-hidden="false">123-456-789</span>
     </strong>
   </div>
   {% endset %}
