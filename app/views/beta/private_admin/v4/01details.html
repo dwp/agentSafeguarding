@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+Copy an incident report from Agent Safeguarding
 {% endblock %}
 {% block content %}
   <div class="govuk-form-group">
@@ -13,7 +13,7 @@
     </legend>
     <p>Follow the instructions below to enter this report in the current service.</p>
     <br>
-      <h3 class="govuk-heading-m nobottommargin">Examples</h3>
+      <h2 class="govuk-heading-m nobottommargin">Examples</h2>
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key"></dt>
@@ -71,9 +71,9 @@ Use another DWP system
           </div>
         </dl>
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-          <h1 class="govuk-fieldset__heading">
+          <h2 class="govuk-fieldset__heading">
             Incident: INC-000-000-001
-          </h1>
+          </h2>
         </legend>
         <br>
           <p>Create a new incident report in the current service and navigate to the
@@ -480,9 +480,7 @@ Use another DWP system
                 </div>
               </dl>
               <div class="width100">
-                <p class="govuk-body nobottommargin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nulla vel eros malesuada sodales. Fusce at luctus tortor. In feugiat, risus sit amet venenatis feugiat, neque metus gravida nulla, ac eleifend
-                      ante turpis a
-                      turpis. Vestibulum nec massa at dolor aliquet malesuada. Vestibulum at posuere ante, nec euismod eros.</p>
+                <p class="govuk-body nobottommargin">The customer was agitated at the start of the meeting. As they left they turned and called me a "silly cow". My colleague Mike overheard this and offered suport. </p>
               </div>
               <dl class="govuk-summary-list govuk-!-margin-bottom-9">
                 <div class="govuk-summary-list__row">
@@ -574,16 +572,31 @@ Use another DWP system
                       Click the Save button. Do not click Publish.
                     </strong>
                   </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <h3 class="govuk-heading-m">Enter the Incident ID number for this report</h3>
-                      <div id="more-detail-hint" class="govuk-hint">
-                        You can find this in the top left corner of the 'Email Action Required' screen in the current service.
-                      </div>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-5" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
-                    </div>
-                    <br></br>
-                    <a href="01details_error.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-                      Close
-                    </a>
+
+
+                        <div class="govuk-form-group">
+
+
+    {{ govukInput({
+  label: {
+    text: "Enter the Incident ID number for this report",
+    classes: "govuk-label--m",
+    inputmode: "numeric",
+    pattern: "[0-9]*"
+
+  },
+  classes: "govuk-input--width-5",
+  hint: {
+    text: "You can find this in the top left corner of the 'Email Action Required' screen in the current service."
+  },
+  id: "referralid",
+  name: "referralid"
+}) }}
+</div>    <div class="govuk-form-group">
+{{ govukButton({
+  text: "Close"
+}) }}
+
+
+</div>
                   {% endblock %}

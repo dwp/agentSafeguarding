@@ -1,38 +1,26 @@
-
 {% extends "layout.html" %}
-
 {% block pageTitle %}
   GOV.UK Prototype Kit
 {% endblock %}
-
-
-
 {% block content %}
-
-<div class="govuk-width-container">
-  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Someone is already working on this report</h1>
-        <p class="govuk-body">
-          Do you want to go back and select another report from the list?
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-l">Someone is already working on this report</h1>
+          <p class="govuk-body">
+            Do you want to go back and select another report from the list?
+          </div>
+        </div>
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Go back to the list
+          </button>
+          <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+            Continue to this report
+          </button>
+        </div>
       </div>
-      <br>
-    </div>
-    <div class="govuk-button-group">
-
-      <button class="govuk-button" data-module="govuk-button">
-        Go back to the list
-      </button>
-
-      <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-        Continue to this report
-
-    </button>
-    </div>
-
-  </main>
-</div>
-
-
+    </main>
+  </div>
 {% endblock %}
