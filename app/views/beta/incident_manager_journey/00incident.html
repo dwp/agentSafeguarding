@@ -4,10 +4,12 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Enter witness details - Agent Safeguarding
+Incident report - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
+<section aria-label="Beta banner" role="region">
+
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 {{ govukPhaseBanner({
 tag: {
@@ -15,14 +17,16 @@ text: "beta"
 },
 html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
+</section>
 {% include "templates/v2/header_searchlight.njk" %}
+<section aria-label="Back" role="region">
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
 {{ govukBackLink({
 text: "Back",
 href: "javascript:history.back()"
 }) }}
-
+</section>
 {% endblock %}
 
 {% block content %}
@@ -44,11 +48,11 @@ href: "javascript:history.back()"
             <td class="govuk-table__cell">8 February 2022 at 10:30</td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><span class="govuk-warning-text__assistive">Incident</span>Incident reported</th>
+            <th scope="row" class="govuk-table__header">Incident reported</th>
             <td class="govuk-table__cell">8 February 2022 at 14:31</td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><span class="govuk-warning-text__assistive">Incident</span>Incident type</th>
+            <th scope="row" class="govuk-table__header">Interaction type</th>
             <td class="govuk-table__cell">In-person</td>
           </tr>
           <tr class="govuk-table__row">
