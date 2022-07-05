@@ -106,6 +106,18 @@ router.post('/beta/incident_manager/add_witness/route', function (req, res) {
 
 })
 
+// Run this code when a form is submitted to '09recorddata' in report journey just go to next screen, but the post submission means the data is stored?
+
+router.post('/beta/report_incident/reportv9usertesting/09recorddata', function (req, res) {
+
+  // Make a variable and give it the value from 'prnQuestion'
+
+    // Send user to next page display_description or 10add
+    res.redirect('display_description')
+  
+
+})
+
 
 
 // Add your routes here - above the module.exports line
