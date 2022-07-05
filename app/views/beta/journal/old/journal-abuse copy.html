@@ -1,0 +1,116 @@
+{% extends "layout_unbranded.html" %}
+{% block pageTitle %}
+  Journal entries
+{% endblock %}
+{% block content %}
+  <style>
+    .nowrapping {
+      white-space: nowrap;
+    }
+  </style>
+  {{ govukTable({
+  caption: "Journal entries",
+  captionClasses: "govuk-table__caption--m",
+  head: [
+    {
+      text: "Date and time"
+    },
+    {
+      text: "Message"
+    },
+    {
+      text: "Added by"
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "<span class='nowrapping'>13 July 2022 at 1:08am</span>"
+      },
+      {
+        html: "I'm going to hunt you down and hurt you"
+      },
+      {
+        html: "<span class='nowrapping'>Robert De Silva</span>"
+      }
+    ],
+    [
+      {
+        html: "<span class='nowrapping'>27 May 2022 at 1:39pm</span>"
+      },
+      {
+        text: "Hi Robert, this message is to confirm that it is me who you are currently speaking with on the phone"
+      },
+      {
+        html: "<p>Whitney</p><p><span class='nowrapping'>Jobcentre Plus</span></p>"
+      }
+    ],
+    [
+      {
+        html: "<span class='nowrapping'>27 May 2022 at 1:33pm</span>"
+      },
+      {
+        html: "Hi Robert, please expect a call from me, your work coach, on Wednesday afternoon at 2pm.<br><br>
+                Please be aware that this might show as an 0800 or witheld number. <br><br>
+                Looking forward to speaking then"
+      },
+      {
+        html: "<p>Whitney</p><p><span class='nowrapping'>Jobcentre Plus</span></p>"
+      }
+    ],
+    [
+      {
+        html: "<span class='nowrapping'>27 May 2022 at 1:22pm</span>"
+      },
+      {
+        html: "Thank you<br><br>
+               <details class='govuk-details' data-module='govuk-details'>
+  <summary class='govuk-details__summary'>
+    <span class='govuk-details__summary-text'>
+      Send reply
+    </span>
+  </summary>
+  <div class='govuk-details__text'>
+    <div class='govuk-form-group'>
+  <h2 class='govuk-label-wrapper'><label class='govuk-label govuk-label--s' for='more-detail'>
+      Write your reply
+    </label>
+  </h2>
+
+  <textarea class='govuk-textarea' id='more-detail' name='more-detail' rows='5' aria-describedby='more-detail-hint'></textarea>
+</div>
+<button class='govuk-button' data-module='govuk-button'>
+  Send reply
+</button>  </div>
+</details>"
+      },
+      {
+        html: "<p>Whitney</p><p><span class='nowrapping'>Jobcentre Plus</span></p>"
+      }
+    ],
+    [
+      {
+        html: "<span class='nowrapping'>22 May 2022 at 2:16pm</span>"
+      },
+      {
+        html: "Confirm your identity online completed"
+      },
+      {
+        html: "<span class='nowrapping'>Robert De Silva</span>"
+      }
+    ],
+    [
+      {
+        html: "<span class='nowrapping'>22 May 2022 at 2:15pm</span>"
+      },
+      {
+        html: "<a href=''>Your commitments</a>"
+      },
+      {
+        html: "<span class='nowrapping'>Robert De Silva</span>"
+      }
+    ]
+
+  ]
+}) }}
+{% endblock %}

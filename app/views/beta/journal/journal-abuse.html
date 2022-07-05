@@ -1,0 +1,64 @@
+{% extends "layout_unbranded.html" %}
+{% block pageTitle %}
+  Journal entries
+{% endblock %}
+{% block content %}
+  <style>
+    .nowrapping {
+      white-space: nowrap;
+    }
+  </style>
+  {{ govukTable({
+  caption: "Journal entries",
+  captionClasses: "govuk-table__caption--m",
+  head: [
+    {
+      text: "Date and time"
+    },
+    {
+      text: "Message"
+    },
+    {
+      text: "Added by"
+    }
+  ],
+  rows: [
+    [
+      {
+        html: "<span class='nowrapping'>13 July 2022 at 1:08am</span>"
+      },
+      {
+        html: "I'm going to hunt you down and hurt you"
+      },
+      {
+        html: "<span class='nowrapping'>Robert De Silva</span>"
+      }
+    ],
+    [
+      {
+        html: "<span class='nowrapping'>27 May 2022 at 1:39pm</span>"
+      },
+      {
+        text: "Hi Robert, this message is to confirm that it is me who you are currently speaking with on the phone"
+      },
+      {
+        html: "<p>Whitney</p><p><span class='nowrapping'>Jobcentre Plus</span></p>"
+      }
+    ],
+    [
+      {
+        html: "<span class='nowrapping'>27 May 2022 at 1:33pm</span>"
+      },
+      {
+        html: "<p>Hi Robert, please expect a call from me, your work coach, on Wednesday afternoon at 2pm.</p>
+                <p>Please be aware that this might show as an 0800 or witheld number.</p>
+                <p>Looking forward to speaking then</p>"
+      },
+      {
+        html: "<p>Whitney</p><p><span class='nowrapping'>Jobcentre Plus</span></p>"
+      }
+    ]
+
+  ]
+}) }}
+{% endblock %}
