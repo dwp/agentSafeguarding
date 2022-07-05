@@ -6,161 +6,164 @@
   <section aria-label="Beta banner" role="region">
     {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
-  tag: {
-  text: "beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="09describe_error">feedback</a> will help us to improve it.'
-  }) }}
+      tag: {
+        text: "beta"
+      },
+      html: 'This is a new service – your <a class="govuk-link" href="09describe_error">feedback</a> will help us to improve it.'
+      }) 
+    }}
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
-  text: "Back",
-  href: "javascript:history.back()"
-  }) }}
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
   </section>
 {% endblock %}
 {% block content %}
-  <style>
-    .govuk-notification-banner__heading {
-      max-width: none
-    }
-  </style>
   {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
   {{ govukNotificationBanner({
-  html: '<p class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.<br>
-  Do not include the names of any DWP staff in your answers.</p>'
-}) }}
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="page-title">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading" id="page-title">
-          Describe the incident
-        </h1>
-      </legend>
-      {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
-      {{ govukTextarea({
-  name: "why",
-  id: "why",
-  label: {
-    html: "<h2 class='govuk-label--s'><span class='govuk-visually-hidden'>Question</span>1.<span class='govuk-visually-hidden'>of 7</span> Why was the customer in contact with us?</h2>"
-  },
-  hint: {
-    text: "For example: I called John for a routine welfare check."
-  }
-}) }}
-      {% set howhintHTML %}
-      <div>
-        <p class="govuk-hint">Please report the exact words that everyone used.</p>
-        <p class="govuk-hint">For example: I asked John to come into the office next week, and he raised his voice and shouted <q>I’m not coming to the job centre.</q></p>
-      </div>
-      {% endset %}
-      {{ govukTextarea({
-  name: "how",
-  id: "how",
-  label: {
-    html: "<h2 class='govuk-label--s'><span class='govuk-visually-hidden'>Question</span>2.<span class='govuk-visually-hidden'>of 7</span> How did the incident start? Was there a specific trigger?</h2>"
-  },
-  hint: {
-    html: howhintHTML
-  }
-}) }}
-      {% set whathintHTML %}
-      <div>
-        <p class="govuk-hint">Tell us what they said and did, and report the exact words that everyone used.</p>
-        <p class="govuk-hint">For example: John said <q>I'm not answering your questions.</q></p>
-      </div>
-      {% endset %}
-      {{ govukTextarea({
-  name: "what",
-  id: "what",
-  label: {
-    html: "<h2 class='govuk-label--s'><span class='govuk-visually-hidden'>Question</span>3.<span class='govuk-visually-hidden'>of 7</span> What were the issues with the customer’s behaviour?</h2>"
-  },
-  hint: {
-    html: whathintHTML
-  }
-}) }}
-      {% set nexthintHTML %}
-      <div>
-        <p class="govuk-hint">Please report the exact words that everyone used.</p>
-        <p class="govuk-hint">For example: I said, <q>Stop swearing at me. I am trying to help you.</q> But the customer continued to shout and said, <q>You're not helping me at all.</q></p>
-      </div>
-      {% endset %}
-      {% set yesHTML %}
-<label class='govuk-label govuk-radios__label' for='witnesses'>Yes<span class='govuk-visually-hidden'>, there were witnesses to this incident (Question 5 of 7)</span></label>
-      {% endset %}
-
-      {{ govukTextarea({
-  name: "next",
-  id: "next",
-  label: {
-    html: "<h2 class='govuk-label--s'><span class='govuk-visually-hidden'>Question</span>4.<span class='govuk-visually-hidden'>of 7</span> Tell us what happened next. How did you try to resolve the situation, and how did the customer react?</h2>"
-  },
-  hint: {
-    html: nexthintHTML
-  }
-}) }}
-      {{ govukRadios({
-  idPrefix: "witnesses",
-  name: "witnesses",
-  fieldset: {
-  legend: {
-    html: "<h2 class='govuk-label--s'><span class='govuk-visually-hidden'>Question</span>5.<span class='govuk-visually-hidden'>of 7</span> Were there any witnesses to this incident?</h2>"
-  }
-  },
-  items: [
-    {
-  value: "yes",
-  text: "Yes"
-  },
-  { 
-    value: "no",
-    text: "No"
-    }
-  ],
-  hint: {
-  text: "Select one option."
-  }
+    html: '<p class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.</p>
+    <p class="govuk-notification-banner__heading">Do not include the names of any DWP staff in your answers.</p>'
   }) }}
-      {% set endhintHTML %}
-      <div>
-        For example: I terminated the call.
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="page-title">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading" id="page-title">
+              Describe the incident
+            </h1>
+          </legend>
+          {{ govukTextarea({
+            name: "why",
+            id: "why",
+            label: {
+              html: "<h2 class='govuk-label--s'><span class='govuk-visually-hidden'>Question </span>1.<span class='govuk-visually-hidden'>of 7.</span> Why was the customer in contact with us?</h2>"
+            },
+            hint: {
+              text: "For example: I called John for a routine welfare check."
+            }
+          }) }}
+          {% set howhintHTML %}
+              <p class="govuk-hint">Please report the exact words that everyone used.</p>
+              <p class="govuk-hint">For example: I asked John to come into the office next week, and he raised his voice and shouted
+                <q>I’m not coming to the job centre.</q>
+              </p>
+          {% endset %}
+          {{ govukTextarea({
+            name: "how",
+            id: "how",
+            label: {
+              html: "<h2 class='govuk-label--s'><span class='govuk-visually-hidden'>Question </span>2.<span class='govuk-visually-hidden'>of 7.</span> How did the incident start? Was there a specific trigger?</h2>"
+            },
+            hint: {
+              html: howhintHTML
+            }
+          }) }}
+          {% set whathintHTML %}
+          <div>
+            <p class="govuk-hint">Tell us what they said and did, and report the exact words that everyone used.</p>
+            <p class="govuk-hint">For example: John said
+              <q>I'm not answering your questions.</q>
+            </p>
+          </div>
+          {% endset %}
+          {{ govukTextarea({
+            name: "what",
+            id: "what",
+            label: {
+              html: "<h2 class='govuk-label--s'><span class='govuk-visually-hidden'>Question </span>3.<span class='govuk-visually-hidden'>of 7.</span> What were the issues with the customer’s behaviour?</h2>"
+            },
+            hint: {
+              html: whathintHTML
+            }
+          }) }}
+          {% set nexthintHTML %}
+          <div>
+            <p class="govuk-hint">Please report the exact words that everyone used.</p>
+            <p class="govuk-hint">For example: I said,
+              <q>Stop swearing at me. I am trying to help you.</q>
+              But the customer continued to shout and said,
+              <q>You're not helping me at all.</q>
+            </p>
+          </div>
+          {% endset %}
+          {% set yesHTML %}
+            <label class='govuk-label govuk-radios__label' for='witnesses'>Yes<span class='govuk-visually-hidden'>, there were witnesses to this incident (Question 5 of 7)</span>
+            </label>
+          {% endset %}
+          {{ govukTextarea({
+            name: "next",
+            id: "next",
+            label: {
+              html: "<h2 class='govuk-label--s'><span class='govuk-visually-hidden'>Question </span>4.<span class='govuk-visually-hidden'>of 7.</span> Tell us what happened next. How did you try to resolve the situation, and how did the customer react?</h2>"
+            },
+            hint: {
+              html: nexthintHTML
+            }
+          }) }}
+          {{ govukRadios({
+            idPrefix: "witnesses",
+            name: "witnesses",
+            fieldset: {
+              legend: {
+                html: "<h2 class='govuk-label--s'><span class='govuk-visually-hidden'>Question </span>5.<span class='govuk-visually-hidden'>of 7.</span> Were there any witnesses to this incident?</h2>"
+              }
+            },
+            items: [
+              {
+                value: "yes",
+                text: "Yes"
+              },
+              {
+                value: "no",
+                text: "No"
+              }
+            ],
+              hint: {
+              text: "Select one option."
+            }
+          }) }}
+          {% set endhintHTML %}
+            <div>
+              For example: I terminated the call.
+            </div>
+          {% endset %}
+          {{ govukTextarea({
+            name: "end",
+            id: "end",
+            label: {
+              html: "<h2 class='govuk-label--s'><span class='govuk-visually-hidden'>Question </span>6.<span class='govuk-visually-hidden'>of 7.</span> How did your interaction with the customer end?</h2>"
+            },
+            hint: {
+              html: endhintHTML
+            }
+          }) }}
+          {% set feelhintHTML %}
+          <div>
+            Include emotional, mental and physical effects.
+          </div>
+          {% endset %}
+          {{ govukTextarea({
+            name: "feel",
+            id: "feel",
+            label: {
+              html: "<h2 class='govuk-label--s'><span class='govuk-visually-hidden'>Question </span>7.<span class='govuk-visually-hidden'>of 7.</span> How did you feel during the incident?</h2>"
+            },
+            hint: {
+              html: feelhintHTML
+            }
+          }) }}
+          <div class="govuk-button-group">
+            {{ govukButton({
+              text: "Continue",
+              href: "10add"
+            }) }}
+          </div>
+        </fieldset>
       </div>
-      {% endset %}
-      {{ govukTextarea({
-  name: "end",
-  id: "end",
-  label: {
-    html: "<h2 class='govuk-label--s'><span class='govuk-visually-hidden'>Question</span>6.<span class='govuk-visually-hidden'>of 7</span> How did your interaction with the customer end?</h2>"
-  },
-  hint: {
-    html: endhintHTML
-  }
-}) }}
-      {% set feelhintHTML %}
-      <div>
-        Include emotional, mental and physical effects.
-      </div>
-      {% endset %}
-      {{ govukTextarea({
-  name: "feel",
-  id: "feel",
-  label: {
-    html: "<h2 class='govuk-label--s'><span class='govuk-visually-hidden'>Question</span>7.<span class='govuk-visually-hidden'>of 7</span> How did you feel during the incident?</h2>"
-  },
-  hint: {
-    html: feelhintHTML
-  }
-}) }}
-      <div class="govuk-button-group">
-        {% from "govuk/components/button/macro.njk" import govukButton %}
-        {{ govukButton({
-      text: "Continue",
-      href: "10add"
-      }) }}
-      </div>
-    </fieldset>
+    </div>
   </div>
 {% endblock %}
