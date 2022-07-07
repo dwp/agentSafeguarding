@@ -29,29 +29,17 @@ href: "javascript:history.back()"
 {% include "templates/v3/govuk-caption-l.njk" %}
 
 <h1 class="govuk-heading-l" id="page-title">Enter witness details</h1>
-<p class="govuk-body">We will send them an email asking them to complete a witness report. </p>
+<p class="govuk-body">We will send an email to a DWP colleague asking them to complete a witness report. </p>
+<p class="govuk-body">If the witness does not have access to this system, the DWP colleague referenced here will submit the witness report on their behalf.</p>
+
 <div class="govuk-form-group">
   <form class="form" action="route" method="post">
     <fieldset class="govuk-fieldset" aria-describedby="page-title">
 
-      {% from "govuk/components/input/macro.njk" import govukInput %}
 
       {{ govukInput({
       label: {
-      text: "Full name"
-      },
-      id: "full-name",
-      classes: "govuk-!-width-one-third",
-
-      name: "full-name",
-      autocomplete: "name",
-      spellcheck: false
-      }) }}
-      {% from "govuk/components/input/macro.njk" import govukInput %}
-
-      {{ govukInput({
-      label: {
-      text: "Email address"
+      text: "DWP colleague email address"
       },
       classes: "govuk-!-width-one-third",
 
@@ -61,9 +49,24 @@ href: "javascript:history.back()"
       autocomplete: "email",
       spellcheck: false
       }) }}
+
+      {{ govukInput({
+      label: {
+      text: "Witness's full name"
+      },
+      id: "full-name",
+      classes: "govuk-!-width-one-third",
+
+      name: "full-name",
+      autocomplete: "name",
+      spellcheck: false, 
+      hint: {
+      text: "Only required if the witness is not a DWP colleague"
+      }
+      }) }}
+
       <div class="govuk-button-group">
 
-        {% from "govuk/components/button/macro.njk" import govukButton %}
 
         {{ govukButton({
         text: "Continue"
