@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Add comments and recommendations - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% include "templates/v2/header_searchlight.njk" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{{ govukErrorSummary({
+titleText: "There is a problem",
+errorList: [
+{
+  text: "Confirm you have reviewed all the required information.",
+  href: "#checklist"
+}
+]
+}) }}
+{% include "templates/v3/govuk-caption-l.njk" %}
+<h1 class="govuk-heading-l" id="page-title">Add comments and recommendations</h1>
+<p class="govuk-body">Add any comments or recommendations that you think will help decision makers set appropriate safety measures.</p>
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+
+
+{% set html %}
+<style>
+  .govuk-notification-banner__heading{
+    max-width: none
+  }
+</style>
+<p class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.</p>
+<p class="govuk-notification-banner__heading">Include reasons for each recommendation.</p>
+<p class="govuk-notification-banner__heading">Do not include the names of any DWP staff in your answers.</p>
+{% endset %}
+
+{{ govukNotificationBanner({
+html: html
+}) }}
+
+<p class="govuk-body">Examples of recommended safety measures include (but are not limited to): </p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>send a warning letter to this customer</li>
+  <li>only arrange appointments with this customer in a screened environment</li>
+  <li>only see this customer when accompanied by colleagues </li>
+  <li>do not arrange any home visits with this customer </li>
+  <li>only deal with this customer by post</li>
+  <li>ban this customer from a particular location </li>
+</ul>
+<p class="govuk-body govuk-!-font-weight-bold">A decision maker will review your comments and recommendations before they make a decision about this incident.</p>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
+    {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+    {{ govukCharacterCount({
+    id: "label-as-page-heading",
+    name: "label-as-page-heading",
+    rows: "12",
+    maxlength: 3000,
+    label: {
+      text: "Comments and recommendations",
+      classes: "govuk-body"
+        }
+    }) }}
+
+<h2 class="govuk-heading-s">Confirm that you have done all of the following:</h2>
+    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+    {{ govukCheckboxes({
+    idPrefix: "checklist",
+    name: "checklist",
+    items: [
+
+    {
+    value: "sources",
+    text: "read, viewed or listened to all information and evidence in the report"
+    },
+    {
+    value: "witnesses",
+    text: "added all witnesses to the incident report"
+    },
+    {
+    value: "comments",
+    text: "added all relevant comments and information that will help decision makers"
+    },
+    {
+    value: "recommendations",
+    text: "recommended all safety measures you think are appropriate"
+    },
+  {
+  value: "justified",
+  text: "added a reason for each recommendation"
+  }
+    ],
+    errorMessage: {
+      text: "Confirm you have reviewed all the required information."
+    }
+    }) }}
+
+      
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+    <div class="govuk-button-group">
+      {{ govukButton({
+      text: "Continue",
+      href: "05check"
+      }) }}
+    </div>
+  </fieldset>
+</div>
+{% endblock %}

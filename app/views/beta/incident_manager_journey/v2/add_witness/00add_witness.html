@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Enter witness details - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="00add_witness_error">feedback</a> will help us to improve it.'
+}) }}
+{% include "templates/v2/header_searchlight.njk" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+{% include "templates/v3/govuk-caption-l.njk" %}
+
+<h1 class="govuk-heading-l" id="page-title">Enter witness details</h1>
+<p class="govuk-body">We will send them an email asking them to complete a witness report. </p>
+<div class="govuk-form-group">
+  <form class="form" action="route" method="post">
+    <fieldset class="govuk-fieldset" aria-describedby="page-title">
+
+      {% from "govuk/components/input/macro.njk" import govukInput %}
+
+      {{ govukInput({
+      label: {
+      text: "Full name"
+      },
+      id: "full-name",
+      classes: "govuk-!-width-one-third",
+
+      name: "full-name",
+      autocomplete: "name",
+      spellcheck: false
+      }) }}
+      {% from "govuk/components/input/macro.njk" import govukInput %}
+
+      {{ govukInput({
+      label: {
+      text: "Email address"
+      },
+      classes: "govuk-!-width-one-third",
+
+      id: "email",
+      name: "email",
+      type: "email",
+      autocomplete: "email",
+      spellcheck: false
+      }) }}
+      <div class="govuk-button-group">
+
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+        text: "Continue"
+        }) }}
+
+
+        {% endblock %}
+      </div>
+    </fieldset>
+  </form>
+</div>

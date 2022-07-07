@@ -52,10 +52,18 @@ container: "govuk-width-container"
 {% if useAutoStoreData %}
   {% block footer %}
   {% from "internal-services-footer/macro.njk" import dwpFooter %}
+{{ dwpFooter({
+meta: {
+visuallyHiddenTitle: "Meta links",
+items: [
+{
+  href: "/prototype-admin/clear-data",
+  text: "Clear data"
+}
+]
+}
+}) }}
 
-  {{ dwpFooter({
-  
-  }) }} 
   {% endblock %}
 {% endif %}
 

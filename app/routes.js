@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 // end-to-end journey: police yes no
-router.post('/beta/incident_manager_journey/route_police', function (req, res) {
+router.post('/beta/incident_manager_journey/v1/route_police', function (req, res) {
 
   // Make a variable and give it the value from 'prnQuestion'
   var werePoliceCalled = req.session.data['policeQuestion']
@@ -10,16 +10,16 @@ router.post('/beta/incident_manager_journey/route_police', function (req, res) {
   // Check whether the variable matches a condition
   if (werePoliceCalled == "no"){
     // Send user to next page
-    res.redirect('/beta/incident_manager_journey/04comments')
+    res.redirect('/beta/incident_manager_journey/v1/04comments')
   } else {
     // Send user to ineligible page
-    res.redirect('/beta/incident_manager_journey/03action')
+    res.redirect('/beta/incident_manager_journey/v1/03action')
   }
 
 })
 
 // end-to-end journey: mike black - route to outside DWP route - add on behalf
-router.post('/beta/incident_manager_journey/add_witness/route', function (req, res) {
+router.post('/beta/incident_manager_journey/v1/add_witness/route', function (req, res) {
 
   // Make a variable and give it the value from 'prnQuestion'
   var inDWP = req.session.data['full-name'].toLowerCase()
@@ -38,7 +38,7 @@ router.post('/beta/incident_manager_journey/add_witness/route', function (req, r
 
 
 // end-to-end journey: 'yes' to 'add witness'
-router.post('/beta/incident_manager_journey/route_witness', function (req, res) {
+router.post('/beta/incident_manager_journey/v1/route_witness', function (req, res) {
 
   // Make a variable and give it the value from 'prnQuestion'
   var addWitness = req.session.data['witnessQuestion']
@@ -46,10 +46,10 @@ router.post('/beta/incident_manager_journey/route_witness', function (req, res) 
   // Check whether the variable matches a condition
   if (addWitness == "no"){
     // Send user to next page
-    res.redirect('/beta/incident_manager_journey/02police')
+    res.redirect('/beta/incident_manager_journey/v1/02police')
   } else {
     // Send user to ineligible page
-    res.redirect('/beta/incident_manager_journey/add_witness/00add_witness')
+    res.redirect('/beta/incident_manager_journey/v1/add_witness/00add_witness')
   }
 
 })
@@ -106,15 +106,27 @@ router.post('/beta/incident_manager/add_witness/route', function (req, res) {
 
 })
 
-// Run this code when a form is submitted to '09recorddata' in report journey just go to next screen, but the post submission means the data is stored?
+// Run this code when a form is submitted to '09recorddata' in report journey just go to next screen, but the post submission means the data is stored
 
 router.post('/beta/report_incident/reportv9usertesting/09recorddata', function (req, res) {
 
   // Make a variable and give it the value from 'prnQuestion'
+  var whyField = req.session.data['why']
+  var howField = req.session.data['how']
+  var whatField = req.session.data['what']
+  var nextField = req.session.data['next']
+  var witnessesField = req.session.data['witnesses']
+  var endField = req.session.data['end']
+  var feelField = req.session.data['feel']
 
-    // Send user to next page display_description or 10add
+    // Check whether the variable matches a condition
+    if (whyField == "" || howField == "" || whatField == "" || nextField == "" || witnessesField == "" || endField == "" || feelField == ""){
+    // Send user to next page display_description
+    res.redirect('09describe_error')
+    } else {
+    // Send user to next page display_description
     res.redirect('display_description')
-  
+    }
 
 })
 

@@ -1,0 +1,57 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+End of journey
+{% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+	text: "Back",
+	href: "javascript:history.back()"
+  }) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+<style>
+	.nowrapper {
+		white-space: nowrap;
+	}
+</style>
+
+<h1 class="govuk-heading-m">Subject line: Incident report review complete (<span class="nowrapper">INC-123-456-789</span>)</h1>
+<p class="govuk-body">Dear [Name Surname],
+	<p class="govuk-body">Thank you for completing your review of this incident report. </p>
+	<p class="govuk-body">If required, you should also report this as a Fast Track Incident in the Safety Online – Accident Reporting System (SOARS). </p>
+
+</p>
+<br><br>
+<h2 class="govuk-heading-m">What happens next</h2>
+		<p class="govuk-body">We will assign a case reviewer to the incident. They may contact you.</p>
+
+		<p class="govuk-body">We will notify you when we've assigned a case reviewer. If you have any further information to add to the report, you should contact the case reviewer directly.</p>
+
+<p class="govuk-body">Once they've completed their review, we will send the report to a decision maker.</p>
+
+		<p class="govuk-body">The person who originally reported the incident will receive an email within 48 hours to tell them the decision about this customer. </p>
+<br><br>
+<p class="govuk-body">Thank you, <br>Agent Safeguarding. </p>
+
+
+
+<br><br><br><br>
+<hr>
+<p class="govuk-body">END OF EMAIL</p>
+
+
+<p class="govuk-body">Notes:</p>
+<ul class="govuk-list  govuk-list--bullet">
+	<li>This email is triggered by the confirmation page of the incident manager linear journey</li>
+	<li>This is the end of this prototype. Go <a href="/">back to index</a></li>
+
+</ul>
+
+<p class="govuk-body"><a href="00_start">< Return to beginning of journey.</a></p>
+{% endblock %}

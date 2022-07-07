@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Start of journey
+{% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+<h1 class="govuk-heading-xl">Start of journey</h1>
+<p class="govuk-body">Once the incident manager has signed into searchlight and followed the menu link to this service, we will display the <a href="00incident">first screen</a>.</p>
+<p class="govuk-body"><a href="00_start">
+	<div class="govuk-button-group">
+
+		{% from "govuk/components/button/macro.njk" import govukButton %}
+	
+		{{ govukButton({
+			text: "Start",
+			href: "00incident",
+			isStartButton: true
+		  }) }}
+	</div>
+
+<p class="govuk-body"><a href="00_start">< Return to Overview</a></p>
+
+</p>
+{% endblock %}

@@ -1,0 +1,117 @@
+
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+{% block pageTitle %}
+  Did anyone witness this incident? - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+  {{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="01witnessquestion_error">feedback</a> will help us to improve it.'
+}) }}
+  {% include "templates/v2/header_searchlight.njk" %}
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+  {% include "templates/v3/govuk-caption-l.njk" %}
+  <section aria-label="Incident witnesses" role="region">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Review witness reports</h1>
+        <p class="govuk-body ">Access the witness reports below by clicking on the links. Make additional witness requests by clicking on the "Add another witness" button or continue.
+        </p>
+      </div>
+    </div>
+    {% set wit1Html %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-l" id="wit">
+          <span class="govuk-visually-hidden dispnone">Witness report from</span>Mike Black
+        </h3>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h4 class="govuk-heading-m">Description</h4>
+        <p class="govuk-body">I saw the customer stand up abruptly. He then lent over the desk and shouted at my colleague. I approached, asked the customer to calm down. He  turned toward me and called me a "power-hungry dictator". I told him that was inappropriate and asked him to leave. I escorted him out with no further problems.
+        </p>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h4 class="govuk-heading-m">Contact details</h4>
+        {{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Full name"
+      },
+      value: {
+        text: "Sartaq Matcha on behalf of Mike Black"
+      }
+    },
+    {
+      key: {
+        text: "Email address"
+      },
+      value: {
+        text: "sartaq.matcha@dwp.gov.uk"
+      }
+    },
+    {
+      key: {
+        text: "Reference number"
+      },
+      value: {
+        html: "<span aria-hidden='true'>WIT-</span>999-000-001"
+      }
+    }
+  ]
+}) }}
+      </div>
+    </div>
+    {% endset -%}
+    {% set wit2Html %}
+    {% endset -%}
+    {{ govukTabs({
+  items: [
+    {
+      label: "Mike Black",
+      id: "wit1",
+      panel: {
+        html: wit1Html
+      }
+    },
+    {
+      label: "Sartaq Matcha",
+      id: "wit2",
+      panel: {
+        html: wit2Html
+      }
+    }
+  ]
+}) }}
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="witnessQuestion">
+        <div class="govuk-button-group">
+          {{ govukButton({
+  text: "Add another witness",
+  classes: "govuk-button--secondary",
+        href: "add_witness/00add_witness"
+}) }}
+          {{ govukButton({
+      text: "Continue",
+      href: "02police"
+    }) }}
+        </div>
+      </fieldset>
+    </div>
+  </section>
+{% endblock %}
