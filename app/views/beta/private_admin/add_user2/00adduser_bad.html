@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  How not to write a page
+{% endblock %}
+{% block beforeContent %}
+<br><br><br>
+
+
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h2 class="govuk-fieldset__heading" id="page-title">
+          Add reporting user
+        </h2>
+      </legend>
+      {% endblock %}
+{% block content %}
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="page-title">
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {{ govukInput({
+
+      inputmode: "numeric",
+    pattern: "[0-9]*",
+    spellcheck: false,
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their user I.D."
+    }
+    }) }}
+
+    <div class="govuk-form-group">
+  <label class="govuk-label" for="name">
+    Their first name
+  </label>
+  <input class="govuk-input govuk-!-width-one-third" id="name" name="name" type="text" tabindex="-1">
+</div>
+<style>#fixed {font-size:19px !important}</style>
+    <div class="govuk-form-group">
+  <label class="govuk-label" for="name">
+    <span id="fixed">Their last name</span>
+  </label>
+  <input class="govuk-input govuk-!-width-one-third" id="name" name="name" type="text" tabindex="100">
+</div>
+
+
+      {{ govukInput({
+    id: "email",
+    name: "email",
+    type: "email",
+    autocomplete: "email",
+    spellcheck: false,
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their email address"
+    }
+    }) }}
+      <div class="govuk-button-group">
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+        {{ govukButton({
+  text: "Submit",
+  href: "02confirm"
+  }) }}
+      </div>
+    </fieldset>
+  </div>
+{% endblock %}
