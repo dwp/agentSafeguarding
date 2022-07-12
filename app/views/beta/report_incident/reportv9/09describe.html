@@ -22,13 +22,12 @@
   </section>
 {% endblock %}
 {% block content %}
-  {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+      <div class="govuk-grid-column-full-width">
+          {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
   {{ govukNotificationBanner({
     html: '<p class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.</p>
     <p class="govuk-notification-banner__heading">Do not include the names of any DWP staff in your answers.</p>'
   }) }}
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="page-title">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -165,5 +164,4 @@
         </fieldset>
       </div>
     </div>
-  </div>
 {% endblock %}
