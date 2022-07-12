@@ -1,0 +1,151 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+{% block pageTitle %}
+  Check your answers - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="12check2">feedback</a> will help us to improve it.'
+}) }}
+  {% include "templates/v2/header_searchlight.njk" %}
+  {{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+  <h1 class="govuk-heading-l" id="page-title">
+    Answers
+  </h1>
+  <style>
+    .govuk-summary-list__value .govuk-summary-list__row:last-child .govuk-summary-list__value {
+      margin-bottom: 0;
+      border-bottom: 0
+    }
+    .govuk-summary-list__value .govuk-summary-list__row:last-child .govuk-summary-list__key {
+      margin-bottom: 0;
+      border-bottom: 0
+    }
+    .govuk-summary-list__value {
+      padding-right: 0;
+    }
+    .govuk-table__body .govuk-table__row:last-child th,
+    .govuk-table__body .govuk-table__row:last-child td {
+      margin-bottom: 0;
+      border-bottom: 0
+    }
+  </style>
+  <div class="govuk-!-padding-bottom-7">
+    {% set answerOne %}
+    <p>{{ data['why'] }}</p>
+    {% endset %}
+    {% set answerOneb %}
+    <p>{{ data['whyb'] }}</p>
+    {% endset %}
+    {% set answerTwo %}
+    <p>{{ data['how'] }}</p>
+    {% endset %}
+    {% set answerTwob %}
+    <p>{{ data['howb'] }}</p>
+    {% endset %}
+    {% set answerThree %}
+    <p>{{ data['what'] }}</p>
+    {% endset %}
+    {% set answerThreeb %}
+    <p>{{ data['whatb'] }}</p>
+    {% endset %}
+    {% set answerFour %}
+    <p>{{ data['next'] }}</p>
+    {% endset %}
+    {% set answerFourb %}
+    <p>{{ data['nextb'] }}</p>
+    {% endset %}
+    {% set answerFive %}
+    <p>{{ data['witnesses'] }}</p>
+    {% endset %}
+    {% set answerFiveb %}
+    <p>{{ data['witnessesb'] }}</p>
+    {% endset %}
+    {% set answerSix %}
+    <p>{{ data['end'] }}</p>
+    {% endset %}
+    {% set answerSixb %}
+    <p>{{ data['endb'] }}</p>
+    {% endset %}
+    {% set answerSeven %}
+    <p>{{ data['feel'] }}</p>
+    {% endset %}
+    {% set answerSevenb %}
+    <p>{{ data['feelb'] }}</p>
+    {% endset %}
+
+    {{ govukTable({
+  caption: "Answers summmary",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Question"
+    },
+    {
+      text: "First answer"
+    },
+    {
+      text: "Answer after error"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Are you reporting an incident that you were involved in?"
+      },
+      {
+        text: data['on-behalf']
+      },
+      {
+        text: data['on-behalf2']
+      }
+    ],
+        [
+      {
+        text: "First name"
+      },
+      {
+        text: data['first-name']
+      },
+      {
+        text: data['first-name2']
+      }
+    ],
+        [
+      {
+        text: "Last name"
+      },
+      {
+        text: data['last-name']
+      },
+      {
+        text: data['last-name2']
+      }
+    ],
+        [
+      {
+        text: "email"
+      },
+      {
+        text: data['email']
+      },
+      {
+        text: data['email2']
+      }
+    ]
+]
+}) }}
+    <a href="/prototype-admin/clear-data">Clear data</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Start of journey
+{% endblock %}
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
+
+{% block content %}
+<h1 class="govuk-heading-xl">Research</h1>
+<p class="govuk-body">When instructed, press start to access the tasks</p>
+	<div class="govuk-button-group">
+
+		{% from "govuk/components/button/macro.njk" import govukButton %}
+	
+		{{ govukButton({
+			text: "Start task 1 - On behalf of someone else",
+			href: "20220714/onbehalf/02behalf",
+			isStartButton: true
+		  }) }}
+		{{ govukButton({
+			text: "Start task 2 - In person",
+			href: "20220714/video/09describe",
+			isStartButton: true
+		  }) }}
+		{{ govukButton({
+			text: "Start task 3 - Journal",
+			href: "20220714/journal/09describe",
+			isStartButton: true
+		  }) }}
+	</div>
+
+
+</p>
+{% endblock %}
