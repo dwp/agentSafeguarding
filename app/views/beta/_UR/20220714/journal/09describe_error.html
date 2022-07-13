@@ -55,16 +55,16 @@
           Describe the incident
         </h1>
       </legend>
-      {% set valueWhy %}{{ data['why2']|safe }}{% endset %}
-      {% set valueWhat %}{{ data['what2']|safe }}{% endset %}
-      {% set valueNext %}{{ data['next2']|safe }}{% endset %}
-      {% set valueEnd %}{{ data['end2']|safe }}{% endset %}
-      {% set valueFeel %}{{ data['feel2']|safe }}{% endset %}
+      {% set valueWhy %}{{ data['why2b']|safe }}{% endset %}
+      {% set valueWhat %}{{ data['what2b']|safe }}{% endset %}
+      {% set valueNext %}{{ data['next2b']|safe }}{% endset %}
+      {% set valueEnd %}{{ data['end2b']|safe }}{% endset %}
+      {% set valueFeel %}{{ data['feel2b']|safe }}{% endset %}
 
       {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
       {{ govukTextarea({
-  name: "why2",
-  id: "why2",
+  name: "why2b",
+  id: "why2b",
   label: {
     text: "1. Why was the customer in contact with us?",
     classes: "govuk-label--s"
@@ -81,8 +81,8 @@
         </div>
         {% endset %}
         {{ govukTextarea({
-  name: "how2",
-  id: "how2",
+  name: "how2b",
+  id: "how2b",
   label: {
     text: "2. How did the incident start? Was there a specific trigger?",
     classes: "govuk-label--s"
@@ -101,8 +101,8 @@
           </div>
           {% endset %}
           {{ govukTextarea({
-  name: "what2",
-  id: "what2",
+  name: "what2b",
+  id: "what2b",
   label: {
     text: "3. What were the issues with the customer’s behaviour?",
     classes: "govuk-label--s"
@@ -119,8 +119,8 @@
             </div>
             {% endset %}
             {{ govukTextarea({
-  name: "next2",
-  id: "next2",
+  name: "next2b",
+  id: "next2b",
   label: {
     text: "4. Tell us what happened next. How did you try to resolve the situation, and how did the customer react?",
     classes: "govuk-label--s"
@@ -131,8 +131,8 @@
   value: valueNext
 }) }}
             {{ govukRadios({
-  idPrefix: "witnesses2",
-  name: "witnesses2",
+  idPrefix: "witnesses2b",
+  name: "witnesses2b",
   fieldset: {
   legend: {
   text: "5. Were there any witnesses to this incident?",
@@ -142,7 +142,7 @@
   items: [
     {
   value: "yes",
-  text: "Yes",
+  text: "Yes"
   },
   {
     value: "no",
@@ -162,8 +162,8 @@
             </div>
             {% endset %}
             {{ govukTextarea({
-  name: "end2",
-  id: "end2",
+  name: "end2b",
+  id: "end2b",
   label: {
     text: "6. How did your interaction with the customer end?",
     classes: "govuk-label--s"
@@ -180,8 +180,8 @@
             </div>
             {% endset %}
             {{ govukTextarea({
-  name: "feel2",
-  id: "feel2g",
+  name: "feel2b",
+  id: "feel2b",
   label: {
     text: "7. How did you feel during the incident?",
     classes: "govuk-label--s"

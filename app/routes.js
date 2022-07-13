@@ -119,24 +119,24 @@ router.post('/beta/_UR/20220714/video/09recorddata', function (req, res) {
   var feelField = req.session.data['feel']
 
   // set field values for error page from submitted values 
-  if (whyField == "") {
-    req.session.data['why'] = "BLANK" + witnessesField
-  }
+  // if (whyField == "") {
+  //   req.session.data['why'] = "BLANK" + witnessesField
+  // }
 
   if (howField == "") {
-    req.session.data['how'] = "BLANK"
+    // req.session.data['how'] = "BLANK"
     req.session.data['howb'] = "I asked him what he had done in his job search"
   } else {
     req.session.data['howb'] = howField
   }
   if (whatField == "") {
-    req.session.data['what'] = "BLANK"
+    // req.session.data['what'] = "BLANK"
     req.session.data['whatb'] = "he said - youre no use you stupid cow!"
   } else {
     req.session.data['whatb'] = whatField
   }
   if (nextField == "") {
-    req.session.data['next'] = "BLANK"
+    // req.session.data['next'] = "BLANK"
     req.session.data['nextb'] = "Please dont call me names, I'm trying to help you"
   } else {
     req.session.data['nextb'] = nextField
@@ -150,17 +150,17 @@ router.post('/beta/_UR/20220714/video/09recorddata', function (req, res) {
   } else {
     req.session.data['witnessesYesb'] = true
     req.session.data['witnessesNob'] = false
-    req.session.data['witnesses'] = "BLANK"
+    // req.session.data['witnesses'] = "BLANK"
   }
 
   if (endField == "") {
-    req.session.data['end'] = "BLANK"
+    // req.session.data['end'] = "BLANK"
     req.session.data['endb'] = "He walked out"
   } else {
     req.session.data['endb'] = endField
   }
   if (feelField == "") {
-    req.session.data['feel'] = "BLANK"
+    // req.session.data['feel'] = "BLANK"
     req.session.data['feelb'] = "I was upset"
   } else {
     req.session.data['feelb'] = feelField
@@ -203,24 +203,25 @@ router.post('/beta/_UR/20220714/journal/09recorddata', function (req, res) {
 
 
   if (whyField == "") {
-    req.session.data['why2'] = "I asked him what he had done in his job search"
+    req.session.data['why2b'] = "I dont know"
   }
   // force blank
-  req.session.data['how2'] = ""
+  req.session.data['how2b'] = ""
 
   if (whatField == "") {
-    req.session.data['what2'] = "he said - youre no use you stupid cow!"
+    req.session.data['what2b'] = "He threatened me"
   }
   if (nextField == "") {
-    req.session.data['next2'] = "I asked him what he had done in his job search"
-    // force blank
-    req.session.data['witnesses2'] = ""
+    req.session.data['next2b'] = "Nothing yet"
   }
+  // force blank
+  req.session.data['witnesses2b'] = ""
+
   if (endField == "") {
-    req.session.data['end2'] = "He walked out"
+    req.session.data['end2b'] = "No follow up"
   }
   if (feelField == "") {
-    req.session.data['feel2'] = "I was upset"
+    req.session.data['feel2b'] = "I was/am scared"
   }
   res.redirect('09describe_error')
 })
@@ -228,31 +229,6 @@ router.post('/beta/_UR/20220714/journal/09recorddata', function (req, res) {
 // Run this code when a form is submitted to '09recorddata' in report journey just go to next screen, but the post submission means the data is stored
 router.post('/beta/_UR/20220714/journal/09recorddata2', function (req, res) {
 
-  // Make a variable and give it the value from 'prnQuestion'
-  var whyField = req.session.data['why2']
-  var howField = req.session.data['how2']
-  var whatField = req.session.data['what2']
-  var nextField = req.session.data['next2']
-  var witnessesField = req.session.data['witnesses2']
-  var endField = req.session.data['end2']
-  var feelField = req.session.data['feel2']
-
-
-  if (whyField == "") {
-    req.session.data['why2'] = "Attending regular fortnightly appointment to review job-seeking activity."
-  }
-  if (whatField == "") {
-    req.session.data['what2'] = "he said - youre no use you stupid cow!"
-  }
-  if (nextField == "") {
-    req.session.data['next2'] = "I asked him what he had done in his job search"
-  }
-  if (endField == "") {
-    req.session.data['end2'] = "He walked out"
-  }
-  if (feelField == "") {
-    req.session.data['feel2'] = "I was upset"
-  }
   res.redirect('display_description')
 })
 

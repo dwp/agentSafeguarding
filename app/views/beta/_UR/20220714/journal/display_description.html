@@ -45,84 +45,143 @@ href: "javascript:history.back()"
 {% set answerOne %}
 <p>{{ data['why2'] }}</p>
 {% endset %}
+{% set answerOneb %}
+<p>{{ data['why2b'] }}</p>
+{% endset %}
 {% set answerTwo %}
 <p>{{ data['how2'] }}</p>
+{% endset %}
+{% set answerTwob %}
+<p>{{ data['how2b'] }}</p>
 {% endset %}
 {% set answerThree %}
 <p>{{ data['what2'] }}</p>
 {% endset %}
+{% set answerThreeb %}
+<p>{{ data['what2b'] }}</p>
+{% endset %}
 {% set answerFour %}
 <p>{{ data['next2'] }}</p>
+{% endset %}
+{% set answerFourb %}
+<p>{{ data['next2b'] }}</p>
 {% endset %}
 {% set answerFive %}
 <p>{{ data['witnesses2'] }}</p>
 {% endset %}
+{% set answerFiveb %}
+<p>{{ data['witnesses2b'] }}</p>
+{% endset %}
 {% set answerSix %}
 <p>{{ data['end2'] }}</p>
+{% endset %}
+{% set answerSixb %}
+<p>{{ data['end2b'] }}</p>
 {% endset %}
 {% set answerSeven %}
 <p>{{ data['feel2'] }}</p>
 {% endset %}
+{% set answerSevenb %}
+<p>{{ data['feel2b'] }}</p>
+{% endset %}
 
-{{ govukSummaryList({
-  rows: [
+    {{ govukTable({
+  caption: "Answers summmary",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  head: [
     {
-      key: {
+      text: "Question"
+    },
+    {
+      text: "First answer"
+    },
+    {
+      text: "Answer after error"
+    }
+  ],
+  rows: [
+    [
+      {
         text: "1. Why was the customer in contact with us?"
       },
-      value: {
+      {
         html: answerOne
+      },
+      {
+        html: answerOneb
       }
-    },    {
-      key: {
+    ],
+        [
+      {
         text: "2. How did the incident start? Was there a specific trigger?"
       },
-      value: {
+      {
         html: answerTwo
+      },
+      {
+        html: answerTwob
       }
-    },    {
-      key: {
+    ],
+        [
+      {
         text: "3. What were the issues with the customer’s behaviour?"
       },
-      value: {
+      {
         html: answerThree
+      },
+      {
+        html: answerThreeb
       }
-    },    {
-      key: {
+    ],
+        [
+      {
         text: "4. Tell us what happened next. How did you try to resolve the situation, and how did the customer react?"
       },
-      value: {
+      {
         html: answerFour
+      },
+      {
+        html: answerFourb
       }
-    },    {
-      key: {
+    ],
+        [
+      {
         text: "5. Were there any witnesses to this incident?"
       },
-      value: {
+      {
         html: answerFive
+      },
+      {
+        html: answerFiveb
       }
-    },    {
-      key: {
+    ],
+        [
+      {
         text: "6. How did your interaction with the customer end?"
       },
-      value: {
+      {
         html: answerSix
+      },
+      {
+        html: answerSixb
       }
-    },    {
-      key: {
+    ],
+        [
+      {
         text: "7. How did you feel during the incident?"
       },
-      value: {
+      {
         html: answerSeven
+      },
+      {
+        html: answerSevenb
       }
-    }
+    ]
 
-  ]
+]
 }) }}
-
-<a href="/prototype-admin/clear-data">Clear data</a>
-
-
-</div>
+    <a href="/prototype-admin/clear-data">Clear data</a>
+  </div>
 
 {% endblock %}
