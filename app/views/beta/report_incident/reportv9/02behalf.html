@@ -27,79 +27,83 @@ Were you involved in the incident? - Agent Safeguarding
 {% endblock %}
 
 {% block content %}
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="on-behalf">
-    {% from "govuk/components/radios/macro.njk" import govukRadios %}
-    {% set emailHtml %}
-    {{ govukInput({
-    id: "first-name",
-    name: "first-name",
-    classes: "govuk-!-width-one-third",
-    label: {
-    text: "Their first name"
-    }
-    }) }}
-    {{ govukInput({
-    id: "last-name",
-    name: "last-name",
-    classes: "govuk-!-width-one-third",
-    label: {
-    text: "Their last name"
-    }
-    }) }}
-    {{ govukInput({
-      id: "email",
-      name: "email",
-      type: "email",
-      autocomplete: "email",
-      spellcheck: false,
-      classes: "govuk-!-width-one-third",
-      label: {
-      text: "Their email address"
-      }
-      }) }}
-
-    {% endset -%}
-
-
-
-    {{ govukRadios({
-    idPrefix: "on-behalf",
-    name: "on-behalf",
-    fieldset: {
-    legend: {
-    text: "Are you reporting an incident that you were involved in?",
-    isPageHeading: true,
-    classes: "govuk-fieldset__legend--l"
-    }
-    },
-    items: [
-    {
-    value: "yes",
-    text: "Yes"
-    },
-    {
-    value: "no",
-    text: "No, I am reporting this on behalf of someone else",
-    conditional: {
-    html: emailHtml
-    }
-    }
-    ],
-    hint: {
-    text: "Select one option."
-    }
-    }) }}
-    <div class="govuk-button-group">
-
-      {% from "govuk/components/button/macro.njk" import govukButton %}
-
-      {{ govukButton({
-      text: "Continue",
-      href: "03line_manager"
-      }) }}
-
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="on-behalf">
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% set emailHtml %}
+        {{ govukInput({
+        id: "first-name",
+        name: "first-name",
+        classes: "govuk-!-width-one-third",
+        label: {
+        text: "Their first name"
+        }
+        }) }}
+        {{ govukInput({
+        id: "last-name",
+        name: "last-name",
+        classes: "govuk-!-width-one-third",
+        label: {
+        text: "Their last name"
+        }
+        }) }}
+        {{ govukInput({
+          id: "email",
+          name: "email",
+          type: "email",
+          autocomplete: "email",
+          spellcheck: false,
+          classes: "govuk-!-width-one-third",
+          label: {
+          text: "Their email address"
+          }
+          }) }}
+  
+        {% endset -%}
+  
+  
+  
+        {{ govukRadios({
+        idPrefix: "on-behalf",
+        name: "on-behalf",
+        fieldset: {
+        legend: {
+        text: "Were you involved in this incident?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+        }
+        },
+        items: [
+        {
+        value: "yes",
+        text: "Yes"
+        },
+        {
+        value: "no",
+        text: "No, I am reporting this on behalf of someone else",
+        conditional: {
+        html: emailHtml
+        }
+        }
+        ],
+        hint: {
+        text: "Select one option."
+        }
+        }) }}
+        <div class="govuk-button-group">
+  
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+  
+          {{ govukButton({
+          text: "Continue",
+          href: "03line_manager"
+          }) }}
+  
+        </div>
+      </fieldset>
     </div>
-  </fieldset>
+  </div>
 </div>
 {% endblock %}
