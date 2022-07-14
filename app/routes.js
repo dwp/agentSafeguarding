@@ -201,28 +201,55 @@ router.post('/beta/_UR/20220714/journal/09recorddata', function (req, res) {
   var endField = req.session.data['end2']
   var feelField = req.session.data['feel2']
 
-
   if (whyField == "") {
+    // req.session.data['how'] = "BLANK"
     req.session.data['why2b'] = "I dont know"
+  } else {
+    req.session.data['why2b'] = howField
   }
-  // force blank
-  req.session.data['how2b'] = ""
-
+  if (howField == "") {
+    // req.session.data['how'] = "BLANK"
+    req.session.data['how2b'] = "I dont know"
+  } else {
+    req.session.data['how2b'] = howField
+  }
   if (whatField == "") {
-    req.session.data['what2b'] = "He threatened me"
+    // req.session.data['what'] = "BLANK"
+    req.session.data['what2b'] = "he threatened me"
+  } else {
+    req.session.data['what2b'] = whatField
   }
   if (nextField == "") {
-    req.session.data['next2b'] = "Nothing yet"
+    // req.session.data['next'] = "BLANK"
+    req.session.data['next2b'] = "nothing yet"
+  } else {
+    req.session.data['next2b'] = nextField
   }
-  // force blank
-  req.session.data['witnesses2b'] = ""
+  if (witnessesField = "yes") {
+    req.session.data['witnessesYes2'] = true
+    req.session.data['witnessesYes2b'] = true
+  } else if (witnessesField = "no") {
+    req.session.data['witnessesNo2'] = true
+    req.session.data['witnessesNo2b'] = true
+  } else {
+    req.session.data['witnessesYes2b'] = true
+    req.session.data['witnessesNo2b'] = false
+    // req.session.data['witnesses'] = "BLANK"
+  }
 
   if (endField == "") {
+    // req.session.data['end'] = "BLANK"
     req.session.data['end2b'] = "No follow up"
+  } else {
+    req.session.data['end2b'] = endField
   }
   if (feelField == "") {
-    req.session.data['feel2b'] = "I was/am scared"
+    // req.session.data['feel'] = "BLANK"
+    req.session.data['feel2b'] = "I was scared"
+  } else {
+    req.session.data['feel2b'] = feelField
   }
+
   res.redirect('09describe_error')
 })
 
