@@ -205,7 +205,7 @@ router.post('/beta/_UR/20220714/journal/09recorddata', function (req, res) {
     // req.session.data['how'] = "BLANK"
     req.session.data['why2b'] = "I dont know"
   } else {
-    req.session.data['why2b'] = howField
+    req.session.data['why2b'] = whyField
   }
   if (howField == "") {
     // req.session.data['how'] = "BLANK"
