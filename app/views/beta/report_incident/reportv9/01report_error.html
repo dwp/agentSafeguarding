@@ -39,6 +39,8 @@ href: "javascript:history.back()"
       }
     ]
   }) }}
+    <form class="form" action="route_incident" method="post">
+
     <fieldset class="govuk-fieldset" aria-describedby="report-type">
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
@@ -80,12 +82,12 @@ href: "javascript:history.back()"
         {% from "govuk/components/button/macro.njk" import govukButton %}
 
         {{ govukButton({
-        text: "Continue",
-        href: "02behalf"
+        text: "Continue"
         }) }}
 
       </div>
     </fieldset>
+    </form>
 </div>
 
 
