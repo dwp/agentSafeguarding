@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Report submitted - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+  tag: {
+  text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+  </section>
+{% endblock %}
+{% block content %}
+  {% from "govuk/components/panel/macro.njk" import govukPanel %}
+  {% set refHTML %}
+  <div class="govuk-panel__body">Your reference number:
+    <br>
+    <strong>
+      <span aria-hidden="true">CON-</span><span aria-hidden="false">123-456-789</span>
+    </strong>
+  </div>
+  {% endset %}
+  {{ govukPanel({
+    titleText: "Safety concern submitted",
+    html: refHTML,
+    id: "panel",
+    name: "panel"
+  }) }}
+  <p class="govuk-body">We've received the safety concern you reported.</p>
+  <h2 class="govuk-heading-m">What happens next</h2>
+  <p class="govuk-body">
+We aim to make a decision about this within 48 hours.
+  </p>
+
+  <p class="govuk-body">
+    You can
+    <a href="#" class="govuk-link">email us</a>
+about the safety concern you submitted. You must give us the reference number at the top of the page.
+  </p>
+  <p class="govuk-body">
+    Make a note of your reference number before you close this tab, or print or save this page.
+  </p>
+  <p class="govuk-body">
+    <a href="#" class="govuk-link">What did you think of this service?</a>
+    (takes two minutes)
+  </p>
+{% endblock %}
