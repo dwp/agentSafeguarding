@@ -268,7 +268,7 @@ router.post('/beta/report_incident/reportv9/route_incident', function (req, res)
     // Check whether the variable matches a condition
     if (reportType == "incident") {
       // Send user to next page
-      res.redirect('00reporter')
+      res.redirect('02behalf')
     } else if (reportType == "concern") {
       // Send user to next page
       res.redirect('concern/00agentsource')
