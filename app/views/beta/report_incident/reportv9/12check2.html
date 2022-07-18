@@ -40,90 +40,10 @@ href: "javascript:history.back()"
     }
   </style>
 <div class="govuk-!-padding-bottom-7">
-{% set describeHTML%}
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "1. Why was the customer in contact with us?"
-      },
-      value: {
-        text: "I called John for a routine welfare check"
-      }
-    },    {
-      key: {
-        text: "2. How did the incident start? Was there a specific trigger?"
-      },
-      value: {
-        text: "I asked John to come into the office next week, and he raised his voice and shouted 'I’m not coming to the job centre.'"
-      }
-    },    {
-      key: {
-        text: "3. What were the issues with the customer’s behaviour?"
-      },
-      value: {
-        text: "John said 'I'm not answering your questions'"
-      }
-    },    {
-      key: {
-        text: "4. Tell us what happened next. How did you try to resolve the situation, and how did the customer react?"
-      },
-      value: {
-        text: "I said, 'Stop swearing at me. I am trying to help you.' But the customer continued to shout and said, 'You're not helping me at all.'"
-      }
-    },    {
-      key: {
-        text: "5. Were there any witnesses to this incident?"
-      },
-      value: {
-        text: "Yes"
-      }
-    },    {
-      key: {
-        text: "6. How did your interaction with the customer end?"
-      },
-      value: {
-        text: "I terminated the call"
-      }
-    },    {
-      key: {
-        text: "7. How did you feel during the incident?"
-      },
-      value: {
-        text: "I was very upset"
-      }
-    }
-
-  ]
-}) }}
-
-{% endset %}
-{% set filesHTML%}
-{% from "govuk/components/table/macro.njk" import govukTable %}
-
-{{ govukTable({
-  firstCellIsHeader: true,
-  rows: [
-    [
-      {
-        html: "<span class='govuk-visually-hidden'>File name:</span> emailtome.txt"
-      }
-    ],
-    [
-      {
-        html: "<span class='govuk-visually-hidden'>File name:</span> screen_shot.png"
-      }
-    ],
-    [
-      {
-        html: "<span class='govuk-visually-hidden'>File name:</span> letter_l.pdf"
-      }
-    ]
-  ]
-}) }}
-{% endset%}
-
-{{ govukSummaryList({
+    <h2 class="govuk-heading-m">
+    Overview
+  </h2>
+  {{ govukSummaryList({
   rows: [
     {
       key: {
@@ -180,25 +100,94 @@ href: "javascript:history.back()"
       value: {
         html: "<ul class='govuk-list govuk-list--bullet'><li>Age</li><li>Being married or in a civil partnership</li></ul>"
       }
-    },
-    {
-      key: {
-        text: "Describe the incident"
-      },
-      value: {
-        html: describeHTML
-      }
-    },
-    {
-      key: {
-        text: "Files added"
-      },
-      value: {
-        html: filesHTML
-      }
     }
   ]
 }) }}
+    <h2 class="govuk-heading-m">
+    Describe the incident
+  </h2>
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "1. Why was the customer in contact with us?"
+      },
+      value: {
+        text: "I called John for a routine welfare check"
+      }
+    },    {
+      key: {
+        text: "2. How did the incident start? Was there a specific trigger?"
+      },
+      value: {
+        text: "I asked John to come into the office next week, and he raised his voice and shouted 'I’m not coming to the job centre.'"
+      }
+    },    {
+      key: {
+        text: "3. What were the issues with the customer’s behaviour?"
+      },
+      value: {
+        text: "John said 'I'm not answering your questions'"
+      }
+    },    {
+      key: {
+        text: "4. Tell us what happened next. How did you try to resolve the situation, and how did the customer react?"
+      },
+      value: {
+        text: "I said, 'Stop swearing at me. I am trying to help you.' But the customer continued to shout and said, 'You're not helping me at all.'"
+      }
+    },    {
+      key: {
+        text: "5. Were there any witnesses to this incident?"
+      },
+      value: {
+        text: "Yes"
+      }
+    },    {
+      key: {
+        text: "6. How did your interaction with the customer end?"
+      },
+      value: {
+        text: "I terminated the call"
+      }
+    },    {
+      key: {
+        text: "7. How did you feel during the incident?"
+      },
+      value: {
+        text: "I was very upset"
+      }
+    }
+
+  ]
+}) }}
+    <h2 class="govuk-heading-m">
+    Files added
+  </h2>
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{{ govukTable({
+  firstCellIsHeader: true,
+  rows: [
+    [
+      {
+        html: "<span class='govuk-visually-hidden'>File name:</span> emailtome.txt"
+      }
+    ],
+    [
+      {
+        html: "<span class='govuk-visually-hidden'>File name:</span> screen_shot.png"
+      }
+    ],
+    [
+      {
+        html: "<span class='govuk-visually-hidden'>File name:</span> letter_l.pdf"
+      }
+    ]
+  ]
+}) }}
+
+
 
 
 </div>

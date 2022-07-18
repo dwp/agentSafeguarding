@@ -34,77 +34,76 @@ href: "javascript:history.back()"
     .govuk-summary-list__value {
       padding-right: 0;
     }
-    .govuk-table__body .govuk-table__row:last-child th, .govuk-table__body .govuk-table__row:last-child td {
+    .govuk-table__body .govuk-table__row:last-child th,
+    .govuk-table__body .govuk-table__row:last-child td {
       margin-bottom: 0;
       border-bottom: 0
     }
   </style>
-<div class="govuk-!-padding-bottom-7">
+        <h2 class="govuk-heading-m">
+    Describe the concern
+  </h2>
 
-{% set filesHTML%}
-{% from "govuk/components/table/macro.njk" import govukTable %}
-
-{{ govukTable({
-  firstCellIsHeader: true,
-  rows: [
-    [
-      {
-        html: "<span class='govuk-visually-hidden'>File name:</span> emailtome.txt"
-      }
-    ],
-    [
-      {
-        html: "<span class='govuk-visually-hidden'>File name:</span> screen_shot.png"
-      }
-    ],
-    [
-      {
-        html: "<span class='govuk-visually-hidden'>File name:</span> letter_l.pdf"
-      }
-    ]
-  ]
-}) }}
-{% endset%}
-
-{{ govukSummaryList({
+    {{ govukSummaryList({
   rows: [
     {
       key: {
         text: "Concern description"
       },
       value: {
-        text: "This is the description field"
-      }
-    },
-    {
-      key: {
-        text: "Files added"
-      },
-      value: {
-        html: filesHTML
+        text: "This is the description field. This is the description field. This is the description field. This is the description field. This is the description field. This is the description field. "
       }
     }
   ]
 }) }}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m">
+                Files added
+              </h2>
+                {% from "govuk/components/table/macro.njk" import govukTable %}
+                {{ govukTable({
+              firstCellIsHeader: true,
+              rows: [
+                [
+                  {
+            html: "<span class='govuk-visually-hidden'>File name:</span> emailtome.txt"
+                  }
+                ],
+                [
+                  {
+            html: "<span class='govuk-visually-hidden'>File name:</span> screen_shot.png"
+                  }
+                ],
+                [
+                  {
+            html: "<span class='govuk-visually-hidden'>File name:</span> letter_l.pdf"
+                  }
+                ]
+              ]
+            }) }}
+          </div>
+        </div>
 
-
-</div>
-  <div class="govuk-form-group ">
-    <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
-      <h2 class="govuk-heading-m">Are you ready to submit your report?</h2>
-      <p class="govuk-body">If you need to change anything in your report, use the back link near the top of this page.</p>
-      <p class="govuk-body">When you click Submit, we will send your report to the appropriate manager to review.</p>
-      <p class="govuk-body govuk-!-font-weight-bold">You will not be able to change anything in your report after you click Submit.</p>
-      {% from "govuk/components/button/macro.njk" import govukButton %}
-      <div class="govuk-button-group">
-        {{ govukButton(
-            {
-              text: "Submit",
-              href: "04confirm"
-            }
-          )
-          }}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group ">
+        <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
+          <h2 class="govuk-heading-m">Are you ready to submit your report?</h2>
+          <p class="govuk-body">If you need to change anything in your report, use the back link near the top of this page.</p>
+          <p class="govuk-body">When you click Submit, we will send your report to the appropriate manager to review.</p>
+          <p class="govuk-body govuk-!-font-weight-bold">You will not be able to change anything in your report after you click Submit.</p>
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+          <div class="govuk-button-group">
+            {{ govukButton(
+                {
+                  text: "Submit",
+                  href: "04confirm"
+                }
+              ) }}
+          </div>
+        </fieldset>
       </div>
-    </fieldset>
+    </div>
   </div>
 {% endblock %}
