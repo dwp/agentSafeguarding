@@ -2,23 +2,24 @@
 <!-- Set active submenu item -->
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
-{% block pageTitle %}
-  Error: Tell us about the safety concern you want to report - Keep Customer Interactions Safe
-{% endblock %}
 {% block beforeContent %}
-  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-  {{ govukPhaseBanner({
-tag: {
-text: "beta"
-},
-html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+      tag: {
+        text: "beta"
+      },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+      }) 
+    }}
+  </section>
   {% include "templates/v2/header_searchlight.njk" %}
-  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-  {{ govukBackLink({
-text: "Back",
-href: "javascript:history.back()"
-}) }}
+  <section aria-label="Back" role="region">
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">

@@ -6,19 +6,23 @@
   Tell us about the safety concern you want to report - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
-  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-  {{ govukPhaseBanner({
-tag: {
-text: "beta"
-},
-html: 'This is a new service – your <a class="govuk-link" href="01comments_error">feedback</a> will help us to improve it.'
-}) }}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+      tag: {
+        text: "beta"
+      },
+      html: 'This is a new service – your <a class="govuk-link" href="01comments_error">feedback</a> will help us to improve it.'
+      }) 
+    }}
+  </section>
   {% include "templates/v2/header_searchlight.njk" %}
-  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-  {{ govukBackLink({
-text: "Back",
-href: "javascript:history.back()"
-}) }}
+  <section aria-label="Back" role="region">
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
@@ -31,10 +35,9 @@ href: "javascript:history.back()"
       {{ govukNotificationBanner({
     html: html
     }) }}
-      <h1 class="govuk-heading-l" id="page-title">Tell us about the safety concern you want to report</h1>
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="page-title">
+        <fieldset class="govuk-fieldset" aria-describedby="description">
           {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
           {{ govukCharacterCount({
         id: "description",
@@ -42,8 +45,9 @@ href: "javascript:history.back()"
         rows: "12",
         maxlength: 2000,
         label: {
-          text: "Description",
-          classes: "govuk-body"
+          text: "Tell us about the safety concern you want to report",
+    classes: "govuk-label--l",
+    isPageHeading: true
             }
         }) }}
           <h2 class="govuk-heading-s">Please confirm you have considered and included, where relevant:</h2>
