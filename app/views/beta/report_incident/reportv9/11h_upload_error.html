@@ -67,7 +67,7 @@
   titleText: "There is a problem",
   errorList: [
   {
-  html: "You cannot add a file or combination of files larger than 1MB",
+  html: "Files must be smaller than 1MB in total",
   href: "#upload"
   }
   ]
@@ -76,10 +76,10 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         {{ govukDetails({
-  summaryText: "You cannot add more than 1MB at a time.",
-  html: "      
-        <p class='govuk-body'>You cannot add files that add up to more than 1MB. If each file is smaller than 1MB, add them one at a time. </p>
-        <p class='govuk-body'>To add larger files, click Continue and complete your report, then email the files to the email address provided on the confirmation page.</p>
+  summaryText: "You can only add 1MB of files at a time",
+  html: "
+        <p class='govuk-body'>If each file is smaller than 1MB, add files one at a time. </p>
+        <p class='govuk-body'>To add a file that is bigger than 1MB, click Continue on this screen and complete your report. You can email the files to the email address shown in the final screen, after you submit your report.</p>
 "
 }) }}
     </div>
