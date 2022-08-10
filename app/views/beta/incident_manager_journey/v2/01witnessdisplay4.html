@@ -30,45 +30,16 @@
         </p>
       </div>
     </div>
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-quarter">
-          <style>
-            nav.moj-side-navigation {
-              padding-top: 0;
-            }
-            .moj-side-navigation__item a:first-child {
-              display: none !important;
-            }
-          </style>
-          <div class="govuk-!-padding-bottom-9">
-                        <h2 class="govuk-heading-m">Witness reports</h2>
-            {%- from "moj/components/side-navigation/macro.njk" import mojSideNavigation -%}
-            {% set wit1HTML -%}
-            <a href="01witnessdisplay">
-              <span class="govuk-visually-hidden ">Witness report from</span>Mike Black<br>
-                <span aria-hidden="true">WIT-</span>999-000-001</a>
-              {% endset -%}
-              {% set wit2HTML -%}
-              <a href="01witnessdisplay">
-                <span class="govuk-visually-hidden ">Witness report from</span>Sartaq Matcha<br>
-                  <span aria-hidden="true">WIT-</span>999-000-002</a>
-                {% endset -%}
-                {{ mojSideNavigation({
-                label: 'Side',
-                items: [{
-                html: wit1HTML,
-                active: true
-                }, {
-          html: wit2HTML
-                }]
-                }) }}
-              </div>
-            </div>
-            <div class="govuk-grid-column-three-quarters">
-              <div>
-                <h3 class="govuk-heading-l" id="wit">
-                  <span class="govuk-visually-hidden dispnone">Witness report from</span>Mike Black</h3>
+    {% set wit1Html %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-l" id="wit">
+          <span class="govuk-visually-hidden dispnone">Witness report from</span>Mike Black
+        </h3>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
         <h4 class="govuk-heading-m">Description</h4>
         <p class="govuk-body">I saw the customer stand up abruptly. He then lent over the desk and shouted at my colleague. I approached, asked the customer to calm down. He  turned toward me and called me a "power-hungry dictator". I told him that was inappropriate and asked him to leave. I escorted him out with no further problems.
         </p>
@@ -101,24 +72,59 @@
     }
   ]
 }) }}
-              </div>
-            </div>
-          </div>
-          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="witnessQuestion">
-                <div class="govuk-button-group">
+      </div>
+    </div>
+    {% endset -%}
+    {% set wit2Html %}
+    <p class="govuk-body">Request to Sartaq Matcha (sartaq@dwp.gov.uk) sent 12 July 2022</p>
+            <div class="govuk-button-group">
+
+              {{ govukButton({
+        classes: "govuk-button--secondary",
+text: "Cancel witness request"
+    }) }}
                   {{ govukButton({
+        classes: "govuk-button--secondary",
+text: "Edit witness request"
+    }) }}
+    </div>
+    {% endset -%}
+    {{ govukTabs({
+  items: [
+    {
+      label: "Mike Black",
+      id: "wit1",
+      panel: {
+        html: wit1Html
+      }
+    },
+    {
+      label: "Sartaq Matcha",
+      id: "wit2",
+      panel: {
+        html: wit2Html
+      }
+    }
+  ]
+}) }}
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="witnessQuestion">
+        <div class="govuk-button-group">
+          {{ govukButton({
   text: "Add another witness",
   classes: "govuk-button--secondary",
         href: "add_witness/00add_witness"
 }) }}
-                  {{ govukButton({
+          {{ govukButton({
       text: "Continue",
       href: "02police"
     }) }}
-                </div>
-              </fieldset>
-            </div>
-          </section>
-        {% endblock %}
+        </div>
+      </fieldset>
+    </div>
+  </section>
+
+<hr>
+NOT PART OF DESIGN: Demo only - <a href="01witnessdisplay_none">Switch to no witnesses view</a>
+<hr>
+{% endblock %}

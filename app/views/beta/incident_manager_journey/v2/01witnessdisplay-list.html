@@ -3,7 +3,7 @@
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 {% block pageTitle %}
-  Did anyone witness this incident? - Agent Safeguarding
+  Witness list - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
@@ -24,10 +24,53 @@
   {% include "templates/v4/govuk-caption-l.njk" %}
   <section aria-label="Incident witnesses" role="region">
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Witness list</h1>
-        <p class="govuk-body ">There are no witnesses listed. 
-        </p>
+      <div class="govuk-grid-column-full">
+
+
+{{ govukTable({
+  caption: "Witness list",
+  captionClasses: "govuk-heading-xl",
+  isPageHeading: true,
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Witness"
+    },
+    {
+      text: "Status"
+    },
+    {
+      text: "Action"
+    }
+  ],
+  rows: [
+    [
+      {
+        text: "Mike Black"
+      },
+      {
+        text: "Complete: WIT-000-000-001 "
+      },
+      {
+        html: "<a href='01witness_report'>View</a>"
+      }
+    ],
+    [
+      {
+        text: "John Smith"
+      },
+      {
+        text: "Requested: sartaq@dwp.gov.uk"
+      },
+      {
+        html: "<a href='add_witness/00add_witness_filled'>Edit</a> | <a href='add_witness/01list_witness_delete'>Delete</a>"
+      }
+    ]
+
+  ]
+}) }}
+
+
       </div>
     </div>
 
@@ -35,7 +78,7 @@
       <fieldset class="govuk-fieldset" aria-describedby="witnessQuestion">
         <div class="govuk-button-group">
           {{ govukButton({
-  text: "Add a witness",
+  text: "Add another witness",
   classes: "govuk-button--secondary",
         href: "add_witness/00add_witness"
 }) }}
@@ -48,7 +91,7 @@
     </div>
   </section>
 <hr>
-NOT PART OF DESIGN: Demo only - <a href="01witnessdisplay-list">Switch to view showing witnesses already sent</a>
+NOT PART OF DESIGN: Demo only - <a href="01witnessdisplay">Switch to no witnesses view</a>
 <hr>
 
 {% endblock %}

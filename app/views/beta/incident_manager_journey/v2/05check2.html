@@ -19,23 +19,11 @@ href: "javascript:history.back()"
 }) }}
 {% endblock %}
 {% block content %}
-  {% include "templates/v3/govuk-caption-l.njk" %}
+  {% include "templates/v4/govuk-caption-l.njk" %}
   <h1 class="govuk-heading-l" id="page-title">
     Check your answers
   </h1>
-  <style>
-    .govuk-summary-list__value .govuk-summary-list__key {
-      background-color: red;
-      display: none
-    }
-    .govuk-summary-list__value .govuk-summary-list__row:last-child .govuk-summary-list__value {
-      margin-bottom: 0;
-      border-bottom: 0
-    }
-    .govuk-summary-list__value {
-      padding-right: 0;
-    }
-  </style>
+
   {% set witness1HTML %}
 
   {% endset %}

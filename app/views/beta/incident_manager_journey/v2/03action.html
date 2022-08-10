@@ -27,34 +27,38 @@ href: "javascript:history.back()"
 {% block content %}
 
 
-<div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="police-action">
-      {% include "templates/v3/govuk-caption-l.njk" %}
-
-      {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
-
-      {{ govukCharacterCount({
-        name: "police-action",
-        id: "police-action",
-        maxlength: 3000,
-
-        label: {
-          text: "What did the police do?",
-          isPageHeading: true,
-          classes: "govuk-label--l"
-      },
-        hint: {
-        text: "For example, the police may have issued a crime reference number, interviewed witnesses or arrested someone."
-      }
-      }) }}
-
-      {% from "govuk/components/button/macro.njk" import govukButton %}
-
-      {{ govukButton({
-        text: "Continue",
-        href: "04comments"
-      }) }}
-
-      {% endblock %}
-    </fieldset>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="police-action">
+          {% include "templates/v4/govuk-caption-l.njk" %}
+  
+          {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+  
+          {{ govukCharacterCount({
+            name: "police-action",
+            id: "police-action",
+            maxlength: 3000,
+  
+            label: {
+              text: "What did the police do?",
+              isPageHeading: true,
+              classes: "govuk-label--xl"
+          },
+            hint: {
+            text: "For example, the police may have issued a crime reference number, interviewed witnesses or arrested someone."
+          }
+          }) }}
+  
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+  
+          {{ govukButton({
+            text: "Continue",
+            href: "04comments"
+          }) }}
+  
+          {% endblock %}
+        </fieldset>
+    </div>
+  </div>
 </div>

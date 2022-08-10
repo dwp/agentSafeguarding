@@ -19,7 +19,7 @@ href: "javascript:history.back()"
 }) }}
 {% endblock %}
 {% block content %}
-  {% include "templates/v3/govuk-caption-l.njk" %}
+  {% include "templates/v4/govuk-caption-l.njk" %}
   <h1 class="govuk-heading-l" id="page-title">
     Check your answers
   </h1>
@@ -38,11 +38,11 @@ href: "javascript:history.back()"
   </style>
   {% set witness1HTML %}
   <span class="govuk-visually-hidden">Witness</span>
-  Sartaq Matcha (sartaq.matcha@dwp.gov.uk)
+   Mike Black (sartaq.matcha@dwp.gov.uk) WIT-000-000-001
   {% endset %}
   {% set witness2HTML %}
   <span class="govuk-visually-hidden">Witness</span>
-  Ted Lady (ted.lady@dwp.gov.uk)
+  John Smith (sartaq.matcha@dwp.gov.uk)
   {% endset %}
   {% set witnessesHTML %}{{ govukSummaryList({
     id: "witnesslist",
@@ -86,24 +86,27 @@ href: "javascript:history.back()"
     }
   ]
 }) }}
-<br>
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
-      <h2 class="govuk-heading-m">Are you ready to submit your review?</h2>
-      <p class="govuk-body">If you need to change anything in your review of this incident report, use the back link near the top of this page.</p>
-      <p class="govuk-body">When you click Submit, we will send your review to a case reviewer and then to a decision maker.</p>
-      <p class="govuk-body govuk-!-font-weight-bold">You will not be able to change anything in your review after you click Submit.</p>
 
-      {% from "govuk/components/button/macro.njk" import govukButton %}
-      <div class="govuk-button-group">
-        {{ govukButton(
-            {
-              text: "Submit",
-              href: "06confirmation"
-            }
-          )
-          }}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
+          <h2 class="govuk-heading-m">Are you ready to submit your review?</h2>
+          <p class="govuk-body">If you need to change anything in your review of this incident report, use the back link near the top of this page.</p>
+          <p class="govuk-body">When you click Submit, we will send your review to a case reviewer and then to a decision maker.</p>
+          <p class="govuk-body govuk-!-font-weight-bold">You will not be able to change anything in your review after you click Submit.</p>
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+          <div class="govuk-button-group">
+            {{ govukButton(
+                {
+                  text: "Submit",
+                  href: "06confirmation"
+                }
+              )
+              }}
+          </div>
+        </fieldset>
       </div>
-    </fieldset>
+    </div>
   </div>
 {% endblock %}

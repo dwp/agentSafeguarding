@@ -31,7 +31,7 @@ Did anyone call the police? - Agent Safeguarding
   <form class="form" action="route_police" method="post">
 
   <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
-    {% include "templates/v3/govuk-caption-l.njk" %}
+    {% include "templates/v4/govuk-caption-l.njk" %}
 
 
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -43,7 +43,7 @@ Did anyone call the police? - Agent Safeguarding
         legend: {
           text: "Did anyone call the police?",
           isPageHeading: true,
-          classes: "govuk-fieldset__legend--l"
+          classes: "govuk-fieldset__legend--xl"
         }
       },
       items: [
