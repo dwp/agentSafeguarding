@@ -40,7 +40,7 @@ href: "javascript:history.back()"
 
             {{ govukInput({
       label: {
-      text: "DWP colleague's email address"
+      text: "Their email address"
       },
       id: "witness-email",
       classes: "govuk-!-width-one-third",
@@ -56,24 +56,24 @@ href: "javascript:history.back()"
   ispageheader: true,
   fieldset: {
     legend: {
-      text: "Who will make the report on behalf of John Smith?",
+      text: "Who will create the witness report for John Smith?",
       classes: "govuk-fieldset__legend--xl"
     }
   },
   hint: {
-    text: "Select one option."
+    text: "We will send them an email, asking them to create a witness report on behalf of this colleague."
   },
   items: [
     {
       value: "you",
-      text: "You"
+      text: "Me"
     },
     {
       value: "DWPcolleague",
-      text: "Another DWP colleague", 
+      text: "A DWP colleague who can access this service",
       conditional: {
       html: colleagueOnbehalfHTML
-      
+
       }
     }
   ]
@@ -83,7 +83,7 @@ href: "javascript:history.back()"
 
 
         {{ govukButton({
-        text: "Send witness request email",
+        text: "Send email",
         href: "01sent"
         }) }}
 
