@@ -28,15 +28,15 @@ Are you sure you want to remove this witness? - Agent Safeguarding
 {% block content %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-  
+
     {% include "templates/v4/govuk-caption-l.njk" %}
-  <h1 class="govuk-heading-xl">Are you sure you want to delete this witness?</h1>
-  <p class="govuk-body">We will send them an email confirming that they do not need to complete a witness report.</p>
+  <h1 class="govuk-heading-xl">Are you sure you want to remove this witness?</h1>
+  <p class="govuk-body">We'll send them an email to confirm that they don't need to complete a witness report.</p>
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" aria-describedby="removeWitness">
-  
+
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
-  
+
 {#         {{ govukRadios({
           idPrefix: "removeWitness",
           name: "removeWitness",
@@ -54,7 +54,7 @@ Are you sure you want to remove this witness? - Agent Safeguarding
             {
               value: "yes",
               text: "Yes"
-  
+
             },
             {
               value: "no",
@@ -63,24 +63,24 @@ Are you sure you want to remove this witness? - Agent Safeguarding
           ]
         }) }} #}
         <div class="govuk-button-group">
-  
+
         {% from "govuk/components/button/macro.njk" import govukButton %}
               {{ govukButton({
       text: "Back to witness list",
       classes: "govuk-button--secondary",
             href: "../01witnessdisplay-list"
     }) }}
-  
+
         {{ govukButton({
           text: "Delete witness",
           href: "../01witnessdisplay"
         }) }}
-  
-  
+
+
         {% endblock %}
         </div>
       </fieldset>
-  
+
     </div>
   </div>
 </div>

@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Who is the witness? - Keep Customer Interactions Safe
+Who witnessed the incident? - Keep Customer Interactions Safe
 {% endblock %}
 
 {% block beforeContent %}
@@ -37,7 +37,7 @@ href: "javascript:history.back()"
 
       {{ govukInput({
       label: {
-      text: "Witness's full name"
+      text: "Their full name"
       },
       id: "witness-full-name",
       classes: "govuk-!-width-one-third",
@@ -49,7 +49,7 @@ href: "javascript:history.back()"
 {% set colleagueOnbehalfHTML %}
       {{ govukInput({
       label: {
-      text: "Witness's full name"
+      text: "Their full name"
       },
       id: "witness-full-name",
       classes: "govuk-!-width-one-third",
@@ -58,12 +58,21 @@ href: "javascript:history.back()"
       autocomplete: "name"
       }) }}
 
- 
+            {{ govukInput({
+      label: {
+      text: "Their email address"
+      },
+      id: "witness-email",
+      classes: "govuk-!-width-one-third",
+
+      name: "witness-email",
+      autocomplete: "email"
+      }) }}
 {% endset %}
 {% set colleagueHTML %}
             {{ govukInput({
       label: {
-      text: "Email address"
+      text: "Their email address"
       },
       id: "colleague-email",
       classes: "govuk-!-width-one-third",
@@ -72,12 +81,13 @@ href: "javascript:history.back()"
       autocomplete: "email"
       }) }}
 {% endset %}
+
 {{ govukRadios({
   idPrefix: "contact",
   name: "contact",
   fieldset: {
     legend: {
-      text: "Who is the witness?",
+      text: "Who witnessed the incident?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--xl"
     }
@@ -88,18 +98,18 @@ href: "javascript:history.back()"
   items: [
     {
       value: "you",
-      text: "You"
+      text: "Me"
     },
     {
       value: "DWPcolleague",
-      text: "Another DWP colleague", 
+      text: "A DWP colleague who can access this service",
       conditional: {
       html: colleagueHTML
       }
     },
     {
       value: "nonDWPcolleague",
-      text: "A colleague that does not have access to this system",
+      text: "A colleague without access to this service",
       conditional: {
       html: colleagueOnbehalfHTML
       }
