@@ -288,12 +288,12 @@ router.post('/beta/incident_manager_journey/v2/route_police', function (req, res
 
 
     // Check whether the variable matches a condition
-    if (policeCalled == "yes") {
+    if (policeCalled == "no") {
       // Send user to next page
-      res.redirect('03action')
+      res.redirect('04comments')
     } else {
       // Send user to ineligible page
-      res.redirect('04comments')
+      res.redirect('03action')
     }
 
 
