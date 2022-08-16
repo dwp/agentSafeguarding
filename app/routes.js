@@ -285,19 +285,30 @@ router.post('/beta/report_incident/reportv9/route_incident', function (req, res)
 router.post('/beta/incident_manager_journey/v2/route_police', function (req, res) {
   // Make a variable and give it the value from 'prnQuestion'
   var policeCalled = req.session.data['policeQuestion']
-
-
     // Check whether the variable matches a condition
     if (policeCalled == "no") {
-      // Send user to next page
-      res.redirect('04comments')
+      // Send user to 
+      res.redirect('11comments')
     } else {
-      // Send user to ineligible page
-      res.redirect('03action')
+      // Send user to 
+      res.redirect('10action')
     }
-
-
-  
+})
+// Route Incident Manager Journey - witness contact
+router.post('/beta/incident_manager_journey/v2/route_colleague', function (req, res) {
+  // Make a variable and give it the value from 'prnQuestion'
+  var onBehalf = req.session.data['contact']
+    // Check whether the variable matches a condition
+    if (onBehalf == "noaccess") {
+      // Send user to 
+      res.redirect('05confirm_witness2')
+    } else if (onBehalf == "access") {
+      // Send user to 
+      res.redirect('05confirm_witness1')
+    } else if (onBehalf == "me") {
+      // Send user to 
+      res.redirect('05confirm_witness')
+    }
 })
 
 // Add your routes here - above the module.exports line

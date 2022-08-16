@@ -1,0 +1,80 @@
+{% extends "layout_incident_landing.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+{% block pageTitle %}
+Who will create the witness report for Mike Black? - Keep Customer Interactions Safe
+{% endblock %}
+{% block beforeContent %}
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+  {{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="00add_witness_error">feedback</a> will help us to improve it.'
+}) }}
+  {% include "templates/v2/header_searchlight.njk" %}
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+  {{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+  {% include "templates/v4/govuk-caption-l.njk" %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+    
+      <div class="govuk-form-group">
+        <form class="form" action="route" method="post">
+          <fieldset class="govuk-fieldset" aria-describedby="page-title">
+            {% set colleagueOnbehalfHTML %}
+            {{ govukInput({
+          label: {
+          text: "Their email address"
+          },
+          id: "witness-email",
+          classes: "govuk-!-width-one-third",
+          name: "witness-email",
+          autocomplete: "email"
+          }) }}
+            {% endset %}
+            {{ govukRadios({
+        idPrefix: "contact",
+        name: "contact",
+        ispageheader: true,
+        fieldset: {
+          legend: {
+            text: "Who will create the witness report for Sartaq Matcha?",
+            classes: "govuk-fieldset__legend--xl"
+          }
+        },
+        hint: {
+          text: "We will send them an email, asking them to create a witness report on behalf of this colleague."
+        },
+        items: [
+          {
+            value: "you",
+            text: "Me"
+          },
+          {
+            value: "colleague",
+            text: "A colleague who can access this service",
+            conditional: {
+            html: colleagueOnbehalfHTML
+            }
+          }
+        ]
+      }) }}
+            <div class="govuk-button-group">
+              {{ govukButton({
+            text: "Send email",
+            href: "06sent2"
+            }) }}
+            {% endblock %}
+          </div>
+        </fieldset>
+      </form>
+      </div>
+    </div>
+  </div>

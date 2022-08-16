@@ -1,0 +1,258 @@
+{% extends "layout_incident_landing.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Keep Customer Interactions Safe
+{% endblock %}
+
+{% block beforeContent %}
+<section aria-label="Beta banner" role="region">
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+</section>
+<section aria-label="Back" role="region">
+
+{{ govukBackLink({
+text: "Back to Searchlight",
+href: "javascript:history.back()"
+}) }}
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-xl" id="page-title">My reports</h1>
+<h2 class="govuk-heading-l">Current reports</h1>
+
+<div class="govuk-!-padding-bottom-7">
+  {{ govukTable({
+    firstCellIsHeader: true,
+
+    head: [
+      {
+        text: "Reference"
+      },
+      {
+        text: "Customer"
+      },
+      {
+        text: "Reporter"
+      },
+      {
+        text: "Date of incident"
+      },
+      {
+        text: "Action"
+      }
+    ],
+    rows: [
+
+          [
+        {
+          text: "INC-123-456-789"
+        },
+        {
+          text: "Philip Da Silva"
+        },
+        {
+          text: "Whitney Earl"
+        },
+        {
+          text: "7 June 2022 at 11:09am "
+        },
+        {
+          html: "<a href='02incident'>Review incident</a>"
+        }
+      ]  ,
+          [
+        {
+          text: "WIT-000-888-511"
+        },
+        {
+          text: "Philip Da Silva"
+        },
+        {
+          text: "Me"
+        },
+        {
+          text: "8 June 2022 at 1:12pm "
+        },
+        {
+          html: "<a href='02incident'>Make witness report</a>"
+        }
+      ],      
+          [
+        {
+          text: "INC-111-456-342"
+        },
+        {
+          text: "Philip Da Silva"
+        },
+        {
+          text: "Me for Mike Black"
+        },
+        {
+          text: "9 June 2022 at 3:03pm "
+        },
+        {
+          html: "<a href='02incident'>Complete</a>"
+        }
+      ],
+          [
+        {
+          text: "WIT-111-111-690"
+        },
+        {
+          text: "Philip Da Silva"
+        },
+        {
+          text: "Me for Sartaq Assam "
+        },
+        {
+          text: "10 June 2022 at 6:09am "
+        },
+        {
+          html: "<a href='02incident'>Complete</a>"
+        }
+      ],
+                  [
+        {
+          text: "CON-000-456-789"
+        },
+        {
+          text: "Ann Other"
+        },
+        {
+          text: "Me"
+        },
+        {
+          text: "-"
+        },
+        {
+          html: "<a href='02incident'>Complete</a>"
+        }
+      ]
+    ]
+  }) }}
+</div>
+<h2 class="govuk-heading-l">Other reports</h1>
+
+{{ govukTable({
+
+  firstCellIsHeader: true,
+  head: [
+    {
+      text: "Reference"
+    },
+    {
+      text: "Customer"
+    },
+    {
+      text: "Reporter"
+    },
+    {
+      text: "Date of incident"
+    },
+    {
+      text: "Action"
+    }
+  ],
+  rows: [
+        [
+      {
+        text: "INC-000-000-001"
+      },
+      {
+        text: "Philip Da Silva"
+      },
+      {
+        text: "Me for Mike Black"
+      },
+      {
+        text: "1 June 2022 at 11:09am"
+      },
+      {
+        html: "<a href='02incident'>View</a>"
+      }
+    ],
+            [
+      {
+        text: "WIT-000-000-002"
+      },
+      {
+        text: "Philip Da Silva"
+      },
+      {
+        text: "Me"
+      },
+      {
+        text: "2 June 2022 at 3:09pm"
+      },
+      {
+        html: "<a href='02incident'>View</a>"
+      }
+    ],
+            [
+      {
+        text: "INC-222-999-999"
+      },
+      {
+        text: "Ann Other"
+      },
+      {
+        text: "Andra Hayes"
+      },
+      {
+        text: "3 June 2022 at 4:14pm"
+      },
+      {
+        html: "<a href='02incident'>View</a>"
+      }
+    ],
+            [
+      {
+        text: "INC-321-245-222"
+      },
+      {
+        text: "Philip Da Silva"
+      },
+      {
+        text: "Whitney Earl"
+      },
+      {
+        text: "4 June 2022 at 8:51pm"
+      },
+      {
+        html: "<a href='02incident'>View</a>"
+      }
+    ],
+                [
+        {
+          text: "CON-121-898-545"
+        },
+        {
+          text: "Ann Other"
+        },
+        {
+          text: "Ted Lady"
+        },
+        {
+          text: "-"
+        },
+        {
+          html: "<a href='02incident'>View</a>"
+        }
+      ]
+  ]
+}) }}
+ 
+{% endblock %}
