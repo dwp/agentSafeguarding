@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-What did the police do? - Keep Customer Intercations Safe
+Error: What did the police do? - Keep Customer Intercations Safe
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,7 +13,7 @@ What did the police do? - Keep Customer Intercations Safe
 tag: {
 text: "beta"
 },
-html: 'This is a new service – your <a class="govuk-link" href="10actionerror">feedback</a> will help us to improve it.'
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 {% include "templates/v2/header_searchlight.njk" %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -39,7 +39,9 @@ href: "javascript:history.back()"
             name: "police-action",
             id: "police-action",
             maxlength: 3000,
-  
+          errorMessage: {
+            text: "Please tell us what the police did"
+          },
             label: {
               text: "What did the police do?",
               isPageHeading: true,

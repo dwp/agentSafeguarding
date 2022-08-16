@@ -3,7 +3,7 @@
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 {% block pageTitle %}
-  Who witnessed the incident? - Keep Customer Interactions Safe
+  Error: Who witnessed the incident? - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
@@ -11,7 +11,7 @@
 tag: {
 text: "beta"
 },
-html: 'This is a new service – your <a class="govuk-link" href="04add_witnesserror">feedback</a> will help us to improve it.'
+html: 'This is a new service – your <a class="govuk-link" href="04add_witnesserror3">feedback</a> will help us to improve it.'
 }) }}
   {% include "templates/v2/header_searchlight.njk" %}
   {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -44,8 +44,7 @@ href: "javascript:history.back()"
             id: "witness-full-name",
             classes: "govuk-!-width-one-third",
             name: "witness-full-name",
-            autocomplete: "name",
-            value: "Mike Black"
+            autocomplete: "name"
           }) }}
         {% endset %}
         {% set accessHTML %}
@@ -56,7 +55,10 @@ href: "javascript:history.back()"
           id: "colleague-email",
           classes: "govuk-!-width-one-third",
           name: "witness-email",
-          autocomplete: "email"
+          autocomplete: "email",
+            errorMessage: {
+              text: "Tell us their email address"
+            }
           }) }}
         {% endset %}
         {{ govukRadios({
@@ -78,12 +80,12 @@ href: "javascript:history.back()"
               text: "A colleague who can access this service",
               conditional: {
               html: accessHTML
-              }
+              },
+              checked: true
             },
             {
               value: "noaccess",
               text: "A colleague without access to this service",
-              checked: true,
               conditional: {
               html: noaccessHTML
               }

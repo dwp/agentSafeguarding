@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Add comments and recommendations - Keep Customer Intercations Safe
+Error: Add comments and recommendations - Keep Customer Intercations Safe
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,7 +13,7 @@ Add comments and recommendations - Keep Customer Intercations Safe
 tag: {
 text: "beta"
 },
-html: 'This is a new service – your <a class="govuk-link" href="11commentserror">feedback</a> will help us to improve it.'
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 {% include "templates/v2/header_searchlight.njk" %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -63,6 +63,9 @@ href: "javascript:history.back()"
         name: "label-as-page-heading",
         rows: "12",
         maxlength: 3000,
+        errorMessage: {
+          text: "Tell us your comments and recommendations"
+        },
         label: {
           text: "Comments and recommendations",
           classes: "govuk-body"
@@ -71,36 +74,34 @@ href: "javascript:history.back()"
         <h2 class="govuk-heading-s">Confirm that you have:</h2>
         {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
         {{ govukCheckboxes({
-        idPrefix: "checklist",
-        name: "checklist",
-        items: [
-
-        {
-        value: "sources",
-        text: "read, viewed or listened to all information and evidence in the report"
-        },
-        {
-        value: "witnesses",
-        text: "added all witnesses to the incident report"
-        },
-        {
-        value: "comments",
-        text: "added all relevant comments and information that will help decision makers"
-        },
-        {
-        value: "recommendations",
-        text: "recommended all safety measures you think are appropriate"
-        },
-      {
-      value: "justified",
-      text: "added a reason for each recommendation"
-      }
-
-        ]
+          idPrefix: "checklist",
+          name: "checklist",
+          errorMessage: {
+            text: "Confirm that you have done all of the following"
+          },
+          items: [
+            {
+              value: "sources",
+              text: "read, viewed or listened to all information and evidence in the report"
+            },
+            {
+              value: "witnesses",
+              text: "added all witnesses to the incident report"
+            },
+            {
+              value: "comments",
+              text: "added all relevant comments and information that will help decision makers"
+            },
+            {
+              value: "recommendations",
+              text: "recommended all safety measures you think are appropriate"
+            },
+            {
+              value: "justified",
+              text: "added a reason for each recommendation"
+            }
+          ]
         }) }}
-
-
-
         {% from "govuk/components/button/macro.njk" import govukButton %}
         <div class="govuk-button-group">
           {{ govukButton({

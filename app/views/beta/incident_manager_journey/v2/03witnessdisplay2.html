@@ -11,7 +11,7 @@ Witness List - Keep Customer Interactions Safe
   tag: {
     text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="01witnessquestion_error">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
   {% include "templates/v2/header_searchlight.njk" %}
   {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -44,13 +44,23 @@ Witness List - Keep Customer Interactions Safe
           rows: [
             [
               {
-                text: "Mike Black"
+                text: "Sarah Sencha"
               },
               {
                 html: "<span class='govuk-visually-hidden'>Status: </span>Complete: <span class='govuk-visually-hidden'>Reference number: </span><span aria-hidden='true'>WIT-</span>000-000-001"
               },
               {
-                html: "<a href='07witness_report'>View <span class='govuk-visually-hidden'>Mike Black witness report</span></a>"
+                html: "<a href='07witness_report'>View <span class='govuk-visually-hidden'>Sarah Sencha witness report</span></a>"
+              }
+            ],            [
+              {
+                text: "Isla Yellow"
+              },
+              {
+                html: "<span class='govuk-visually-hidden'>Status: </span>Complete: <span class='govuk-visually-hidden'>Reference number: </span><span aria-hidden='true'>WIT-</span>000-000-002"
+              },
+              {
+                html: "<a href='07witness_report'>View <span class='govuk-visually-hidden'>Isla Yellow witness report</span></a>"
               }
             ],
             [

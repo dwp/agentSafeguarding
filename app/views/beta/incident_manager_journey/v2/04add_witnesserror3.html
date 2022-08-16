@@ -3,7 +3,7 @@
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 {% block pageTitle %}
-  Who witnessed the incident? - Keep Customer Interactions Safe
+  Error: Who witnessed the incident? - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
@@ -11,7 +11,7 @@
 tag: {
 text: "beta"
 },
-html: 'This is a new service – your <a class="govuk-link" href="04add_witnesserror">feedback</a> will help us to improve it.'
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
   {% include "templates/v2/header_searchlight.njk" %}
   {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -45,7 +45,9 @@ href: "javascript:history.back()"
             classes: "govuk-!-width-one-third",
             name: "witness-full-name",
             autocomplete: "name",
-            value: "Mike Black"
+            errorMessage: {
+              text: "Tell us their name"
+            }
           }) }}
         {% endset %}
         {% set accessHTML %}
@@ -83,10 +85,10 @@ href: "javascript:history.back()"
             {
               value: "noaccess",
               text: "A colleague without access to this service",
-              checked: true,
               conditional: {
               html: noaccessHTML
-              }
+              },
+              checked: true
             },
             {
               value: "me",

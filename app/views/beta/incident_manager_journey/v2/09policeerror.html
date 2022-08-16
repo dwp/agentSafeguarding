@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Did anyone call the police? - Keep Customer Intercations Safe
+Error: Did anyone call the police? - Keep Customer Intercations Safe
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,7 +13,7 @@ Did anyone call the police? - Keep Customer Intercations Safe
   tag: {
     text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="09policeerror">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 {% include "templates/v2/header_searchlight.njk" %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -39,6 +39,9 @@ Did anyone call the police? - Keep Customer Intercations Safe
     {{ govukRadios({
       idPrefix: "policeQuestion",
       name: "policeQuestion",
+      errorMessage: {
+        text: "Tell us if anyone called the police"
+      },
       fieldset: {
         legend: {
           text: "Did anyone call the police?",

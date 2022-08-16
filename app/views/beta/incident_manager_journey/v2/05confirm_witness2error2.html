@@ -3,7 +3,7 @@
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 {% block pageTitle %}
-Who will create the witness report for Mike Black? - Keep Customer Interactions Safe
+Error: Who will create the witness report for Mike Black? - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
@@ -11,7 +11,7 @@ Who will create the witness report for Mike Black? - Keep Customer Interactions 
 tag: {
 text: "beta"
 },
-html: 'This is a new service – your <a class="govuk-link" href="05confirm_witness2error">feedback</a> will help us to improve it.'
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
   {% include "templates/v2/header_searchlight.njk" %}
   {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -24,7 +24,6 @@ href: "javascript:history.back()"
   {% include "templates/v4/govuk-caption-l.njk" %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-    
       <div class="govuk-form-group">
         <form class="form" action="route" method="post">
           <fieldset class="govuk-fieldset" aria-describedby="page-title">
@@ -33,9 +32,12 @@ href: "javascript:history.back()"
           label: {
           text: "Their email address"
           },
-          id: "witness-email",
-          name: "witness-email",
-          autocomplete: "email"
+            id: "witness-email",
+            name: "witness-email",
+            autocomplete: "email",
+            errorMessage: {
+              text: "Tell us their email address"
+            }
           }) }}
             {% endset %}
             {{ govukRadios({
@@ -59,6 +61,7 @@ href: "javascript:history.back()"
           {
             value: "colleague",
             text: "A colleague who can access this service",
+            checked: true,
             conditional: {
             html: colleagueOnbehalfHTML
             }
