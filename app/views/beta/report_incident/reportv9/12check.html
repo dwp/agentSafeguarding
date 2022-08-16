@@ -22,11 +22,11 @@ href: "javascript:history.back()"
   <h1 class="govuk-heading-l" id="page-title">
     Check your answers
   </h1>
-<div class="govuk-!-padding-bottom-7">
+  <div class="govuk-!-padding-bottom-7">
     <h2 class="govuk-heading-m">
-    Overview
-  </h2>
-  {{ govukSummaryList({
+      Overview
+    </h2>
+    {{ govukSummaryList({
   rows: [
     {
       key: {
@@ -86,12 +86,12 @@ href: "javascript:history.back()"
     }
   ]
 }) }}
-</div>
-<div class="govuk-!-padding-bottom-7">
+  </div>
+  <div class="govuk-!-padding-bottom-7">
     <h2 class="govuk-heading-m">
-    Describe the incident
-  </h2>
-{{ govukSummaryList({
+      Describe the incident
+    </h2>
+    {{ govukSummaryList({
   rows: [
     {
       key: {
@@ -146,15 +146,13 @@ href: "javascript:history.back()"
 
   ]
 }) }}</div>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-!-padding-bottom-7">
-
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-!-padding-bottom-7">
         <h2 class="govuk-heading-m">
-        Files added
-          </h2>
+          Files added
+        </h2>
         {% from "govuk/components/table/macro.njk" import govukTable %}
-      
         {{ govukTable({
           firstCellIsHeader: true,
           rows: [
@@ -177,13 +175,9 @@ href: "javascript:history.back()"
         }) }}
       </div>
     </div>
-
-
-
-
-</div>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group ">
         <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
           <h2 class="govuk-heading-m">Are you ready to submit your report?</h2>
@@ -197,8 +191,7 @@ href: "javascript:history.back()"
                   text: "Submit",
                   href: "13confirm"
                 }
-              )
-              }}
+              ) }}
           </div>
         </fieldset>
       </div>

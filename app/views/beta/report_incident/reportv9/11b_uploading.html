@@ -70,10 +70,31 @@
     titleText: 'Working'
   }) }}
   <h1 class="govuk-heading-l">Add files</h1>
+    <p class="govuk-body">You cannot upload files larger than 1MB.</p>
+  <p class="govuk-body">You cannot upload more than 8MB in total.</p>
   <div class="moj-multi-file-upload">
     <div class="moj-multi-file__uploaded-files ">
-      <h2 class="govuk-heading-m">Files added</h2>
-      <dl class="govuk-summary-list">
+      {{ govukTable({
+  caption: "Files added",
+  captionClasses: "govuk-table__caption--m",
+
+  rows: [
+    [
+      {
+        text: "            'evidence.jpg'
+            <-PROGRESS BAR->
+              35% uploaded"
+      },
+      {
+        text: "1MB"
+      },
+      {
+        text: ""
+      }
+    ]
+  ]
+}) }}    
+      <!-- <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
           <dd class="govuk-summary-list__value">
             "evidence.jpg"
@@ -82,7 +103,7 @@
             </dd>
             <dd class="govuk-summary-list__actions"></dd>
           </div>
-        </dl>
+        </dl> -->
       </div>
     </div>
     <label class="govuk-label govuk-label--m" for="documents">
