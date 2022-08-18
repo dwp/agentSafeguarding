@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Are you sure you want to remove Ted Lady as a witness? - Keep Customer Intercations Safe
+Error: Are you sure you want to remove Ted Lady as a witness? - Keep Customer Intercations Safe
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,7 +13,7 @@ Are you sure you want to remove Ted Lady as a witness? - Keep Customer Intercati
   tag: {
     text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="08deletewitnesserror">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 {% include "templates/v2/header_searchlight.njk" %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -53,7 +53,10 @@ Are you sure you want to remove Ted Lady as a witness? - Keep Customer Intercati
                 value: "no",
                 text: "No"
               }
-            ]
+            ],
+            errorMessage: {
+              text: "Tell us if you want to remove Ted Lady as a witness?"
+            }
           }) }}
           <div class="govuk-button-group">
           {{ govukButton({
