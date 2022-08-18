@@ -6,13 +6,15 @@
 Error: Who will create the witness report for Mike Black? - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
   {{ govukPhaseBanner({
-    tag: {
-      text: "beta"
-    },
-    html: 'This is a new service – your <a class="govuk-link" href="05confirm_witness2error3">feedback</a> will help us to improve it.'
-  }) }}
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
   {% include "templates/v2/header_searchlight.njk" %}
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
   {{ govukBackLink({
 text: "Back",
 href: "javascript:history.back()"
@@ -34,7 +36,7 @@ href: "javascript:history.back()"
             name: "witness-email",
             autocomplete: "email",
             errorMessage: {
-              text: "Tell us their email address"
+              text: "The colleague must have access to this service"
             }
           }) }}
             {% endset %}

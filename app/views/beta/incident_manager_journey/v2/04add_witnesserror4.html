@@ -11,7 +11,7 @@
 tag: {
 text: "beta"
 },
-html: 'This is a new service – your <a class="govuk-link" href="04add_witnesserror4">feedback</a> will help us to improve it.'
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
   {% include "templates/v2/header_searchlight.njk" %}
   {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -44,7 +44,10 @@ href: "javascript:history.back()"
             id: "witness-full-name",
             classes: "govuk-!-width-one-third",
             name: "witness-full-name",
-            autocomplete: "name"
+            autocomplete: "name",
+            errorMessage: {
+              text: "Tell us their name"
+            }
           }) }}
         {% endset %}
         {% set accessHTML %}
@@ -55,10 +58,7 @@ href: "javascript:history.back()"
           id: "colleague-email",
           classes: "govuk-!-width-one-third",
           name: "witness-email",
-          autocomplete: "email",
-            errorMessage: {
-              text: "The colleague must have access to the system"
-            }
+          autocomplete: "email"
           }) }}
         {% endset %}
         {{ govukRadios({
@@ -80,15 +80,15 @@ href: "javascript:history.back()"
               text: "A colleague who can access this service",
               conditional: {
               html: accessHTML
-              },
-              checked: true
+              }
             },
             {
               value: "noaccess",
               text: "A colleague without access to this service",
               conditional: {
               html: noaccessHTML
-              }
+              },
+              checked: true
             },
             {
               value: "me",
