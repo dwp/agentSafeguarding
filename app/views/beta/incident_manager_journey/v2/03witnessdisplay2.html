@@ -3,7 +3,7 @@
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 {% block pageTitle %}
-Witness List - Keep Customer Interactions Safe
+Witnesses - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
@@ -26,7 +26,7 @@ Witness List - Keep Customer Interactions Safe
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         {{ govukTable({
-          caption: "Witness list",
+          caption: "Witnesses",
           captionClasses: "govuk-heading-xl",
           isPageHeading: true,
           firstCellIsHeader: true,
@@ -35,7 +35,7 @@ Witness List - Keep Customer Interactions Safe
               text: "Witness name"
             },
             {
-              text: "Request status"
+              text: "Status of witness report"
             },
             {
               text: "Action"
@@ -50,7 +50,7 @@ Witness List - Keep Customer Interactions Safe
                 html: "<span class='govuk-visually-hidden'>Status: </span>Complete: <span class='govuk-visually-hidden'>Reference number: </span><span aria-hidden='true'>WIT-</span>000-000-001"
               },
               {
-                html: "<a href='07witness_report'>View <span class='govuk-visually-hidden'>Sarah Sencha witness report</span></a>"
+                html: "<a href='07witness_report'>View witness report <span class='govuk-visually-hidden'>Sarah Sencha witness report</span></a>"
               }
             ],            [
               {
@@ -60,7 +60,7 @@ Witness List - Keep Customer Interactions Safe
                 html: "<span class='govuk-visually-hidden'>Status: </span>Complete: <span class='govuk-visually-hidden'>Reference number: </span><span aria-hidden='true'>WIT-</span>000-000-002"
               },
               {
-                html: "<a href='07witness_report'>View <span class='govuk-visually-hidden'>Isla Yellow witness report</span></a>"
+                html: "<a href='07witness_report'>View witness report <span class='govuk-visually-hidden'>Isla Yellow witness report</span></a>"
               }
             ],
             [

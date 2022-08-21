@@ -3,7 +3,7 @@
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 {% block pageTitle %}
-  Check your answers - Keep Customer Intercations Safe
+  Check your answers - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}{{ govukPhaseBanner({
@@ -34,7 +34,7 @@ href: "javascript:history.back()"
   </style>
   {% set witnessesHTML %}
         {{ govukTable({
-   
+
           rows: [
             [
               {
@@ -75,7 +75,7 @@ href: "javascript:history.back()"
   rows: [
     {
       key: {
-        text: "Witness list"
+        text: "Witnesses"
       },
       value: {
         html: witnessesHTML

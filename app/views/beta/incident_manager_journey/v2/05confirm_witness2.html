@@ -3,7 +3,7 @@
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 {% block pageTitle %}
-Who will create the witness report for Mike Black? - Keep Customer Interactions Safe
+Who will complete the witness report? - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
@@ -24,7 +24,7 @@ href: "javascript:history.back()"
   {% include "templates/v4/govuk-caption-l.njk" %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-    
+
       <div class="govuk-form-group">
         <form class="form" action="route" method="post">
           <fieldset class="govuk-fieldset" aria-describedby="page-title">
@@ -44,17 +44,17 @@ href: "javascript:history.back()"
         ispageheader: true,
         fieldset: {
           legend: {
-            text: "Who will create the witness report for Sartaq Matcha?",
+            text: "Who will complete the witness report for Sartaq Matcha?",
             classes: "govuk-fieldset__legend--xl"
           }
         },
         hint: {
-          text: "We will send them an email, asking them to create a witness report on behalf of this colleague."
+          text: "We will send them an email, asking them to complete a witness report on behalf of this colleague."
         },
         items: [
           {
             value: "you",
-            text: "Me"
+            text: "I will"
           },
           {
             value: "colleague",

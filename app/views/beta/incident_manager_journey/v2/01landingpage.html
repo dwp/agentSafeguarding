@@ -30,8 +30,8 @@ href: "javascript:history.back()"
 {% block content %}
 
 
-<h1 class="govuk-heading-xl" id="page-title">My reports</h1>
-<h2 class="govuk-heading-l">Current reports</h1>
+<h1 class="govuk-heading-xl" id="page-title">Your reports</h1>
+<h2 class="govuk-heading-l">Actions for you</h2>
 
 <div class="govuk-!-padding-bottom-7">
   {{ govukTable({
@@ -81,7 +81,7 @@ href: "javascript:history.back()"
           text: "Philip Da Silva"
         },
         {
-          text: "Me"
+          text: "You"
         },
         {
           text: "8 June 2022 at 1:12pm "
@@ -93,7 +93,7 @@ href: "javascript:history.back()"
     ]
   }) }}
 </div>
-<h2 class="govuk-heading-l">Other reports</h1>
+<h2 class="govuk-heading-l">Other actions</h2>
 
 {{ govukTable({
 
@@ -124,13 +124,13 @@ href: "javascript:history.back()"
         text: "Philip Da Silva"
       },
       {
-        text: "Me for Mike Black"
+        text: "You for Mike Black"
       },
       {
         text: "1 June 2022 at 11:09am"
       },
       {
-        html: "<a href='02incident'>View</a>"
+        html: "<a href='02incident'>View report</a>"
       }
     ],
             [
@@ -141,13 +141,13 @@ href: "javascript:history.back()"
         text: "Philip Da Silva"
       },
       {
-        text: "Me"
+        text: "You"
       },
       {
         text: "2 June 2022 at 3:09pm"
       },
       {
-        html: "<a href='02incident'>View</a>"
+        html: "<a href='02incident'>View report</a>"
       }
     ],
                 [
@@ -158,16 +158,16 @@ href: "javascript:history.back()"
           text: "Ann Other"
         },
         {
-          text: "Me"
+          text: "You"
         },
         {
-          text: "-"
+          text: "N/A"
         },
         {
-          html: "<a href='02incident'>View</a>"
+          html: "<a href='02incident'>View report</a>"
         }
       ]
   ]
 }) }}
- 
+
 {% endblock %}

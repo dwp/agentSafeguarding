@@ -3,7 +3,7 @@
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 {% block pageTitle %}
-Error: Who will create the witness report for Mike Black? - Keep Customer Interactions Safe
+Error: Who will complete the witness report? - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
@@ -36,7 +36,7 @@ href: "javascript:history.back()"
             name: "witness-email",
             autocomplete: "email",
             errorMessage: {
-              text: "The colleague must have access to this service"
+              text: "Enter their email address"
             }
           }) }}
             {% endset %}
@@ -46,17 +46,17 @@ href: "javascript:history.back()"
         ispageheader: true,
         fieldset: {
           legend: {
-            text: "Who will create the witness report for Sartaq Matcha?",
+            text: "Who will complete the witness report for Sartaq Matcha?",
             classes: "govuk-fieldset__legend--xl"
           }
         },
         hint: {
-          text: "We will send them an email, asking them to create a witness report on behalf of this colleague."
+          text: "We will send them an email, asking them to complete a witness report on behalf of this colleague."
         },
         items: [
           {
             value: "you",
-            text: "Me"
+            text: "I will"
           },
           {
             value: "colleague",
