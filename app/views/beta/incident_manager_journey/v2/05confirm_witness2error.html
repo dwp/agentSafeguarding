@@ -21,6 +21,15 @@ Error: Who will complete the witness report? - Keep Customer Interactions Safe
   }) }}
 {% endblock %}
 {% block content %}
+  {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Tell us who will complete the witness report",
+        href: "#contact"
+      }
+    ]
+  }) }}
   {% include "templates/v4/govuk-caption-l.njk" %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">

@@ -25,7 +25,15 @@ href: "javascript:history.back()"
 {% endblock %}
 
 {% block content %}
-
+  {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Tell us what the police did",
+        href: "#police-action"
+      }
+    ]
+  }) }}
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">

@@ -21,6 +21,15 @@ href: "javascript:history.back()"
 }) }}
 {% endblock %}
 {% block content %}
+  {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Enter their email address",
+        href: "#witness"
+      }
+    ]
+  }) }}
   {% include "templates/v4/govuk-caption-l.njk" %}
   <div class="govuk-form-group">
     <form class="form" action="route_colleague" method="post">
@@ -62,8 +71,8 @@ href: "javascript:history.back()"
           }) }}
         {% endset %}
         {{ govukRadios({
-          idPrefix: "contact",
-          name: "contact",
+          idPrefix: "witness",
+          name: "witness",
           fieldset: {
             legend: {
               text: "Who witnessed the incident?",

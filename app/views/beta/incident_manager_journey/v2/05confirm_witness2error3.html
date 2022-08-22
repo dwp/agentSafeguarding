@@ -21,6 +21,15 @@ href: "javascript:history.back()"
 }) }}
 {% endblock %}
 {% block content %}
+  {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "They must have access to this system",
+        href: "#witness-email"
+      }
+    ]
+  }) }}
   {% include "templates/v4/govuk-caption-l.njk" %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -36,7 +45,7 @@ href: "javascript:history.back()"
             name: "witness-email",
             autocomplete: "email",
             errorMessage: {
-              text: "Enter their email address"
+              text: "They must have access to this system"
             }
           }) }}
             {% endset %}

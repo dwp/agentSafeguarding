@@ -32,6 +32,19 @@ href: "javascript:history.back()"
 <p class="govuk-notification-banner__heading">Include reasons for each recommendation.</p>
 <p class="govuk-notification-banner__heading">Do not include the names of any DWP staff in your answers.</p>
 {% endset %}
+  {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Enter your comments and recommendations",
+        href: "#comments"
+      },
+      {
+        text: "Confirm you have reviewed all the required information",
+        href: "#checklist"
+      }
+    ]
+  }) }}
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -59,8 +72,8 @@ href: "javascript:history.back()"
       <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
         {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
         {{ govukCharacterCount({
-        id: "label-as-page-heading",
-        name: "label-as-page-heading",
+        id: "comments",
+        name: "comments",
         rows: "12",
         maxlength: 3000,
         errorMessage: {

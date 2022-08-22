@@ -21,6 +21,15 @@ href: "javascript:history.back()"
 }) }}
 {% endblock %}
 {% block content %}
+  {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "The colleague must have access to the system",
+        href: "#witness-email"
+      }
+    ]
+  }) }}
   {% include "templates/v4/govuk-caption-l.njk" %}
   <div class="govuk-form-group">
     <form class="form" action="route_colleague" method="post">
@@ -52,18 +61,18 @@ href: "javascript:history.back()"
           label: {
             text: "Their email address"
           },
-          id: "colleague-email",
+          id: "witness-email",
           classes: "govuk-!-width-one-third",
           name: "witness-email",
           autocomplete: "email",
             errorMessage: {
-              text: "Enter their email address"
+              text: "The colleague must have access to the system"
             }
           }) }}
         {% endset %}
         {{ govukRadios({
-          idPrefix: "contact",
-          name: "contact",
+          idPrefix: "witness",
+          name: "witness",
           fieldset: {
             legend: {
               text: "Who witnessed the incident?",

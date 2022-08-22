@@ -25,51 +25,49 @@ Error: Did anyone call the police? - Keep Customer Interactions Safe
 {% endblock %}
 
 {% block content %}
-
-
-<div class="govuk-form-group">
-  <form class="form" action="route_police" method="post">
-
-  <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
-    {% include "templates/v4/govuk-caption-l.njk" %}
-
-
-    {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
-    {{ govukRadios({
-      idPrefix: "policeQuestion",
-      name: "policeQuestion",
-      errorMessage: {
-        text: "Select yes if someone called the police"
-      },
-      fieldset: {
-        legend: {
-          text: "Did anyone call the police?",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--xl"
-        }
-      },
-      items: [
-        {
-          value: "yes",
-          text: "Yes"
-        },
-        {
-          value: "no",
-          text: "No"
-        }
-      ]
-    }) }}
-    <div class="govuk-button-group">
-
-    {% from "govuk/components/button/macro.njk" import govukButton %}
-
-    {{ govukButton({
-      text: "Continue"
-    }) }}
-
-    {% endblock %}
-    </div>
-  </fieldset>
-</form>
-</div>
+  {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Select yes if you want to remove this witness",
+        href: "#policeQuestion"
+      }
+    ]
+  }) }}
+  <div class="govuk-form-group">
+    <form class="form" action="route_police" method="post">
+      <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
+        {% include "templates/v4/govuk-caption-l.njk" %}
+        {{ govukRadios({
+          idPrefix: "policeQuestion",
+          name: "policeQuestion",
+          errorMessage: {
+            text: "Select yes if someone called the police"
+          },
+          fieldset: {
+            legend: {
+              text: "Did anyone call the police?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+        </div>
+      </fieldset>
+    </form>
+  </div>
+{% endblock %}
