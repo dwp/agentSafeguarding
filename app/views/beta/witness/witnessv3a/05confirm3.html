@@ -1,0 +1,61 @@
+{% extends "layout_witness_landing.html" %}
+{% block pageTitle %}
+  Report submitted - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+  tag: {
+  text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+  </section>
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      {% from "govuk/components/panel/macro.njk" import govukPanel %}
+      {% set refHTML %}
+      <div class="govuk-panel__body">Your reference number:
+        <br>
+        <strong>
+          <span aria-hidden="true">WIT-</span><span aria-hidden="false">123-456-789</span>
+        </strong>
+      </div>
+      {% endset %}
+      {{ govukPanel({
+        titleText: "No report submitted",
+        html: refHTML,
+        id: "panel",
+        name: "panel"
+      }) }}
+      <p class="govuk-body">We've received your report.</p>
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p class="govuk-body">
+        We aim to email you within 48 hours with a response.
+      </p>
+      <p class="govuk-body">
+        DWP staff can access free counselling and support through
+        <a class="govuk-link" href="https://intranet.dwp.gov.uk/section/working-dwp/human-resources/wellbeing/employee-assistance-programme">PAM Assist</a>.
+      </p>
+      <p class="govuk-body">
+        You can
+        <a href="mailto:HEALTHANDSAFETY.CENTRALISEDNMTEAM@DWP.GOV.UK" class="govuk-link">email us</a>
+        about the report you submitted. You must give us the reference number at the top of the page.
+      </p>
+      <p class="govuk-body">
+        Make a note of your reference number and our email address (HEALTHANDSAFETY.CENTRALISEDNMTEAM@DWP.GOV.UK) before you close this tab, or print or save this page.
+      </p>
+      <p class="govuk-body">
+        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=6fbxllcQF0GsKIDN_ob4w-oDsqWqlSlJvQe6JubotYpUNFoxRVFURzIyVU1QOVo3QTA5WFdWSjJIVS4u" class="govuk-link" rel="noreferrer noopener" target="_blank">What did you think of this service? (opens in new tab)</a>
+      </p>
+      {{ govukButton({
+        text: "Back to actions list",
+        classes: "govuk-button--secondary",
+        href: "00landingpage"
+      }) }}
+    </div>
+  </div>
+{% endblock %}

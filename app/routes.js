@@ -311,6 +311,20 @@ router.post('/beta/incident_manager_journey/v2/route_colleague', function (req, 
     }
 })
 
+// Route Incident Manager Journey - witness contact
+router.post('/beta/witness/witnessv3a/route_wit', function (req, res) {
+  // Make a variable and give it the value from 'prnQuestion'
+  var didyouwitness = req.session.data['didyouwitness']
+    // Check whether the variable matches a condition
+    if (didyouwitness == "yes") {
+      // Send user to 
+      res.redirect('03comments')
+    } else {
+      // Send user to 
+      res.redirect('04check3')
+    }
+})
+
 // Add your routes here - above the module.exports line
 
 // copy the const name and the file path to new version

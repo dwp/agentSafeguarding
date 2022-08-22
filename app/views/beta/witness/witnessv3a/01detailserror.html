@@ -1,0 +1,108 @@
+{% extends "layout_witness_landing.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Incident request - Keep Customer Intercations Safe
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% include "templates/v2/header_searchlight.njk" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+  {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Select yes to confirm you saw and / or heard this incident",
+        href: "#didyouwitness"
+      }
+    ]
+  }) }}
+  <h1 class="govuk-heading-l">Incident request</h1>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <form class="form" action="route_wit" method="post">
+          <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
+            <p>Here are some instructions</p>
+            {{ govukSummaryList({   
+              rows: [
+                {
+                  key: {
+                    text: "Customer",
+                    classes: "govuk-!-width-two-thirds"
+                  },
+                  value: {
+                    text: "Robert De Silva"
+                  }
+                },
+                {
+                  key: {
+                    text: "Incident reporter"
+                  },
+                  value: {
+                    text: "Whitney Earl"
+                  }
+                },
+                {
+                  key: {
+                    text: "Witness "
+                  },
+                  value: {
+                    text: "Mike Black"
+                  }
+                },
+                {
+                  key: {
+                    text: "Date and approximate time"
+                  },
+                  value: {
+                    text: "22 April 2022 at 10:30am"
+                  }
+                }
+              ]
+            }) }}
+            <h2 class="govuk-heading-m">Did you see and / or hear this incident?</h2>
+            {{ govukRadios({
+              idPrefix: "didyouwitness",
+              name: "didyouwitness",
+              items: [
+                {
+                  value: "yes",
+                  text: "Yes"
+                },
+                {
+                  value: "no",
+                  text: "No"
+                }
+              ],
+              errorMessage: {
+                text: "Select yes to confirm you saw and / or heard this incident"
+              }
+            }) }}
+            <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Continue"
+              }) }}
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
