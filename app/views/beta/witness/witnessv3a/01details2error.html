@@ -13,7 +13,7 @@ Incident (witness request) - Keep Customer Intercations Safe
   tag: {
     text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="01detailserror">feedback</a> will help us to improve it.'
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 {% include "templates/v2/header_searchlight.njk" %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
@@ -23,15 +23,23 @@ Incident (witness request) - Keep Customer Intercations Safe
   href: "javascript:history.back()"
 }) }}
 {% endblock %}
-
 {% block content %}
+  {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Tell us if they saw and / or heard this incident",
+        href: "#didyouwitness"
+      }
+    ]
+  }) }}
   <h1 class="govuk-heading-l">Incident</h1>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
         <form class="form" action="route_wit" method="post">
           <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
-            <p>We believe you recently saw and / or overheard this incident between one of your colleagues (the incident reporter below) and a customer. </p>
+            <p>We believe Mike Black recently saw and / or overheard this incident between one of their colleagues (the incident reporter below) and a customer. </p>
             <p>If any of these details are wrong, you can tell us on the next screen. </p>
             {{ govukSummaryList({
               rows: [
@@ -57,7 +65,7 @@ Incident (witness request) - Keep Customer Intercations Safe
                     text: "Witness "
                   },
                   value: {
-                    text: "Sarah Sancha"
+                    text: "Mike Black"
                   }
                 },
                 {
@@ -71,7 +79,7 @@ Incident (witness request) - Keep Customer Intercations Safe
               ]
             }) }}
             <br>
-            <h2 class="govuk-heading-m">Did you see and / or hear this incident?</h2>
+            <h2 class="govuk-heading-m">Did Mike Black see and / or hear this incident?</h2>
             {{ govukRadios({
               idPrefix: "didyouwitness",
               name: "didyouwitness",
@@ -84,12 +92,14 @@ Incident (witness request) - Keep Customer Intercations Safe
                   value: "no",
                   text: "No"
                 }
-              ]
+              ],
+              errorMessage: {
+                text: "Tell us if they saw and / or heard this incident"
+              }
             }) }}
             <div class="govuk-button-group">
               {{ govukButton({
-                text: "Continue",
-                href: "01details2"
+                text: "Continue"
               }) }}
             </div>
           </fieldset>

@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Incident request - Keep Customer Intercations Safe
+Incident (witness request) - Keep Customer Intercations Safe
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,19 +28,20 @@ Incident request - Keep Customer Intercations Safe
     titleText: "There is a problem",
     errorList: [
       {
-        text: "Select yes to confirm you saw and / or heard this incident",
+        text: "Tell us if you saw and / or heard this incident",
         href: "#didyouwitness"
       }
     ]
   }) }}
-  <h1 class="govuk-heading-l">Incident request</h1>
+  <h1 class="govuk-heading-l">Incident</h1>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
         <form class="form" action="route_wit" method="post">
           <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
-            <p>Here are some instructions</p>
-            {{ govukSummaryList({   
+            <p>We believe you recently saw and / or overheard this incident between one of your colleagues (the incident reporter below) and a customer. </p>
+            <p>If any of these details are wrong, you can tell us on the next screen. </p>
+            {{ govukSummaryList({
               rows: [
                 {
                   key: {
@@ -77,6 +78,7 @@ Incident request - Keep Customer Intercations Safe
                 }
               ]
             }) }}
+            <br>
             <h2 class="govuk-heading-m">Did you see and / or hear this incident?</h2>
             {{ govukRadios({
               idPrefix: "didyouwitness",
@@ -92,7 +94,7 @@ Incident request - Keep Customer Intercations Safe
                 }
               ],
               errorMessage: {
-                text: "Select yes to confirm you saw and / or heard this incident"
+                text: "Tell us if you saw and / or heard this incident"
               }
             }) }}
             <div class="govuk-button-group">
