@@ -4,7 +4,7 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Incident (witness request) - Keep Customer Intercations Safe
+Confirm incident (witness request) - Keep Customer Intercations Safe
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,18 +28,18 @@ Incident (witness request) - Keep Customer Intercations Safe
     titleText: "There is a problem",
     errorList: [
       {
-        text: "Tell us if they saw and / or heard this incident",
+        text: "Tell us if they witnessed this incident",
         href: "#didyouwitness"
       }
     ]
   }) }}
-  <h1 class="govuk-heading-l">Incident</h1>
+  <h1 class="govuk-heading-l">Confirm incident</h1>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
         <form class="form" action="route_wit" method="post">
           <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
-            <p>We believe Mike Black recently saw and / or overheard this incident between one of their colleagues (the incident reporter below) and a customer. </p>
+            <p>We believe Mike Black recently saw and / or overheard this incident between one of their colleagues and a customer. </p>
             <p>If any of these details are wrong, you can tell us on the next screen. </p>
             {{ govukSummaryList({
               rows: [
@@ -94,7 +94,7 @@ Incident (witness request) - Keep Customer Intercations Safe
                 }
               ],
               errorMessage: {
-                text: "Tell us if they saw and / or heard this incident"
+                text: "Tell us if they witnessed this incident"
               }
             }) }}
             <div class="govuk-button-group">

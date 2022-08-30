@@ -50,7 +50,7 @@
         rows: "12",
         maxlength: 3000
         }) }}
-          <h2 class="govuk-heading-s">Confirm you have considered and included, where possible:</h2>
+          <h2 class="govuk-heading-s">Confirm you have considered and added to the report (where relevant):</h2>
           {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
           {{ govukCheckboxes({
             idPrefix: "checklist",
@@ -58,7 +58,7 @@
             items: [
               {
                 value: "words",
-                text: "The exact words everyone used (even if they include offensive language)"
+                text: "The exact words everyone used (including offensive language)"
               },
               {
                 value: "start",

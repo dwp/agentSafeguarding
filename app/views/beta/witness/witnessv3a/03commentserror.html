@@ -13,7 +13,7 @@
         text: "beta"
       },
       html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-      }) 
+      })
     }}
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
@@ -29,11 +29,11 @@
     titleText: "There is a problem",
     errorList: [
       {
-        text: "Describe incident",
+        text: "Tell us about the incident",
         href: "#description"
       },
       {
-        text: "Confirm you have considered and included the following",
+        text: "Confirm you have reviewed all the required information",
         href: "#checklist"
       }
     ]
@@ -52,7 +52,7 @@
         <fieldset class="govuk-fieldset" aria-describedby="description">
           {% include "templates/v4/govuk-caption-l.njk" %}
           <h1 class="govuk-heading-l">Describe the incident</h1>
-          <p>Use "My colleague"...</p>
+          <p>If you are making this witness report for a colleague who doesn't have access to this service, write "my colleague saw" or "he / she / they saw", as applicable. Do not use your colleague's name.</p>
           {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
           {{ govukCharacterCount({
             id: "description",
@@ -60,7 +60,7 @@
             rows: "12",
             maxlength: 3000,
             errorMessage: {
-              text: "Describe the incident"
+              text: "Tell us about the incident"
             }
           }) }}
           <h2 class="govuk-heading-s">Confirm you have considered and included, where possible:</h2>
@@ -71,7 +71,7 @@
             items: [
               {
                 value: "words",
-                text: "The exact words everyone used (even if they include offensive language)"
+                text: "The exact words everyone used (including offensive language)"
               },
               {
                 value: "start",
@@ -91,7 +91,7 @@
               }
             ],
             errorMessage: {
-              text: "Confirm you have considered and included the following"
+              text: "Confirm you have reviewed all the required information"
             }
           }) }}
           {% from "govuk/components/button/macro.njk" import govukButton %}
