@@ -31,61 +31,62 @@ href: "javascript:history.back()"
     ]
   }) }}
   {% include "templates/v4/govuk-caption-l.njk" %}
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
         <form class="form" action="route" method="post">
           <fieldset class="govuk-fieldset" aria-describedby="page-title">
             {% set colleagueOnbehalfHTML %}
             {{ govukInput({
-          label: {
-          text: "Their email address"
-          },
-            id: "witness-email",
-            name: "witness-email",
-            autocomplete: "email",
-            errorMessage: {
-              text: "This colleague cannot access the service - enter another email address"
-            }
-          }) }}
+              label: {
+                text: "Their email address"
+              },
+              id: "witness-email",
+              name: "witness-email",
+              autocomplete: "email",
+              errorMessage: {
+                text: "This colleague cannot access the service - enter another email address"
+              },
+                classes: "govuk-!-width-one-half"
+            }) }}
             {% endset %}
             {{ govukRadios({
-        idPrefix: "contact",
-        name: "contact",
-        ispageheader: true,
-        fieldset: {
-          legend: {
-            text: "Who will complete the witness report for Sartaq Matcha?",
-            classes: "govuk-fieldset__legend--xl"
-          }
-        },
-        hint: {
-          text: "We will send them an email, asking them to complete a witness report on behalf of this colleague."
-        },
-        items: [
-          {
-            value: "you",
-            text: "I will"
-          },
-          {
-            value: "colleague",
-            text: "A colleague who can access this service",
-            checked: true,
-            conditional: {
-            html: colleagueOnbehalfHTML
-            }
-          }
-        ]
-      }) }}
+              idPrefix: "contact",
+              name: "contact",
+              ispageheader: true,
+              fieldset: {
+                legend: {
+                  text: "Who will complete the witness report for Sartaq Matcha?",
+                  classes: "govuk-fieldset__legend--xl"
+                }
+              },
+              hint: {
+                text: "We will send them an email, asking them to complete a witness report on behalf of this colleague."
+              },
+              items: [
+                {
+                  value: "you",
+                  text: "I will"
+                },
+                {
+                  value: "colleague",
+                  text: "A colleague who can access this service",
+                  checked: true,
+                  conditional: {
+                  html: colleagueOnbehalfHTML
+                  }
+                }
+              ]
+            }) }}
             <div class="govuk-button-group">
               {{ govukButton({
-            text: "Send email",
-            href: "06sent2"
-            }) }}
-            {% endblock %}
-          </div>
-        </fieldset>
-      </form>
+                text: "Send email",
+                href: "06sent2"
+              }) }}
+            </div>
+          </fieldset>
+        </form>
       </div>
     </div>
   </div>
+{% endblock %}
