@@ -39,63 +39,72 @@ href: "/"
 
     head: [
       {
-        text: "Reference"
+        html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'>Incident date <br><span class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px '>and report reference</span></p>",
+        classes: 'govuk-!-width-one-third'
       },
       {
-        text: "Customer"
+        html: "<p class='govuk-body govuk-!-font-weight-bold'>Customer</p>"
       },
       {
-        text: "Incident reporter"
+        html: "<p class='govuk-body govuk-!-font-weight-bold'>Reporter</p>"
       },
       {
-        text: "Witness"
+        html: "<p class='govuk-body govuk-!-font-weight-bold'>Witness</p>"
       },
       {
-        text: "Date of incident"
-      },
-      {
-        text: "Action"
+        html: "<p class='govuk-body govuk-!-font-weight-bold'>Action</p>"
       }
     ],
     rows: [
-          [
+      [
         {
-          text: "WIT-000-888-511"
+          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>1 June 2022 at 8:06am<br><span class='govuk-body-s' style='color:#505a5f; white-space: '><span class='govuk-visually-hidden'>Witness reference: </span><span aria-hidden='true'>WIT</span>-000-000-001</SPAN></p>"
         },
         {
-          text: "Philip Da Silva"
+          html: "Ann Other"
         },
         {
-          text: "Whitney Earl"
+          html: "Whitney Earl"
         },
         {
-          text: "You"
+          html: "You"
         },
         {
-          text: "8 June 2022 at 1:12pm "
-        },
-        {
-          html: "<a href='01details'>Make witness report</a>"
+          html: "<a href='01details'>Make a witness report</a>"
         }
       ],
       [
         {
-          text: "WIT-000-888-511"
+          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>8 June 2022 at 1:12pm<br><span class='govuk-body-s' style='color:#505a5f; white-space: '><span class='govuk-visually-hidden'>Witness reference: </span><span aria-hidden='true'>WIT</span>-000-888-511</SPAN></p>"
         },
         {
-          text: "Philip Da Silva"
+          html: "Philip Da Silva"
         },
         {
-          text: "Whitney Earl on behalf of Mike Black"
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Incident reporter: </span>Mike Black</p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px'>Submitted by </p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px''>Whitney Earl</p>"
         },
         {
-          text: "You on behalf of Ted Lady"
+          html: "You"
         },
         {
-          text: "8 June 2022 at 1:12pm "
+          html: "<a href='01details'>Make a witness report</a>"
+        }
+      ],
+      [
+        {
+          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>8 June 2022 at 1:12pm<br><span class='govuk-body-s' style='color:#505a5f; white-space: '><span class='govuk-visually-hidden'>Witness reference: </span><span aria-hidden='true'>WIT</span>-000-888-511</SPAN></p>"
         },
         {
-          html: "<a href='01details'>Make witness report</a>"
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Customer </span>Philip Da Silva</p>"
+        },
+        {
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Incident reporter: </span>Mike Black</p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px'>Submitted by </p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px''>Whitney Earl</p>"
+        },
+        {
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Witness: </span>Ted Lady</p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px'>Submitted by </p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px''>You</p>"
+        },
+        {
+          html: "<p class='govuk-body'><a href='01details'>Make a witness report</a></p>"
         }
       ]
     ]
@@ -108,7 +117,8 @@ href: "/"
   firstCellIsHeader: true,
   head: [
     {
-      text: "Reference"
+      html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'>Incident date <br><span class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px '>and report reference</span></p>",
+        classes: 'govuk-!-width-one-third'
     },
     {
       text: "Customer"
@@ -120,34 +130,44 @@ href: "/"
       text: "Witness"
     },
     {
-      text: "Date of incident"
-    },
-    {
       text: "Action"
     }
   ],
   rows: [
-
-            [
-      {
-        text: "WIT-000-000-002"
-      },
-      {
-        text: "Philip Da Silva"
-      },
-      {
-        text: "Whitney Earl"
-      },
-      {
-        text: "You for Isla Yellow"
-      },
-      {
-        text: "2 June 2022 at 3:09pm"
-      },
-      {
-        html: "<a href='02witnessreport'>View report</a>"
-      }
-    ]
+      [
+        {
+          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>2 June 2022 at 3:09pm<br><span class='govuk-body-s' style='color:#505a5f; white-space: '><span class='govuk-visually-hidden'>Witness reference: </span><span aria-hidden='true'>WIT</span>-000-000-002</SPAN></p>"
+        },
+        {
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Customer </span>Philip Da Silva</p>"
+        },
+        {
+          html: "Whitney Earl"
+        },
+        {
+          html: "You"
+        },
+        {
+          html: "<p class='govuk-body'><a href='01details'>View witness report</a></p>"
+        }
+      ],
+      [
+        {
+          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>2 June 2022 at 3:09pm<br><span class='govuk-body-s' style='color:#505a5f; white-space: '><span class='govuk-visually-hidden'>Witness reference: </span><span aria-hidden='true'>WIT</span>-000-000-002</SPAN></p>"
+        },
+        {
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Customer </span>Philip Da Silva</p>"
+        },
+        {
+          html: "Whitney Earl"
+        },
+        {
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Witness: </span>Isla Yellow</p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px'>Submitted by </p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px''>You</p>"
+        },
+        {
+          html: "<p class='govuk-body'><a href='01details'>View witness report</a></p>"
+        }
+      ]
   ]
 }) }}
 
