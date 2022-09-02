@@ -1,0 +1,64 @@
+{% extends "layout_incident_landing.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+What did the police do? - Keep Customer Interactions Safe
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="10actionerror">feedback</a> will help us to improve it.'
+}) }}
+{% include "templates/v2/header_searchlight.njk" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="police-action">
+          {% include "templates/v5UR/govuk-caption-l.njk" %}
+
+          {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+
+          {{ govukCharacterCount({
+            name: "police-action",
+            id: "police-action",
+            maxlength: 3000,
+
+            label: {
+              text: "What did the police do?",
+              isPageHeading: true,
+              classes: "govuk-label--xl"
+          },
+            hint: {
+            text: "For example, the police may have issued a crime reference number, interviewed witnesses or arrested someone."
+          }
+          }) }}
+
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
+          {{ govukButton({
+            text: "Continue",
+            href: "11comments"
+          }) }}
+
+          {% endblock %}
+        </fieldset>
+    </div>
+  </div>
+</div>

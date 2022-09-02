@@ -1,0 +1,223 @@
+{% extends "layout_incident_landing.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+{% block pageTitle %}
+  Incident report - Keep Customer Interactions Safe
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+      tag: {
+      text: "beta"
+    },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
+{% endblock %}
+{% block content %}
+  {% include "templates/v5UR/govuk-caption-l.njk" %}
+  <h1 class="govuk-heading-xl">Incident report</h1>
+  <section aria-label="Incident overview" role="region">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-!-padding-bottom-9">
+          <h2 class="govuk-heading-l" id="h2-overview"><span class="govuk-warning-text__assistive">Incident </span>Overview</h2>
+          {{ govukSummaryList({
+            rows: [
+              {
+                key: {
+                  html: "Incident reference",
+                  classes: "govuk-!-width-one-half"
+                },
+                value: {
+                  html: "<span aria-hidden='true'>INC-</span>123-456-789",
+                  classes: "govuk-!-width-one-half"
+                }
+              },
+              {
+                key: {
+                  html: "Incident occurred",
+                  classes: "govuk-!-width-one-half"
+                },
+                value: {
+                  text: "7 June 2022 at 11:09am",
+                  classes: "govuk-!-width-one-half"
+                }
+              },
+              {
+                key: {
+                  text: "Incident reported"
+                },
+                value: {
+                  text: "7 June 2022 at 2:31pm"
+                }
+              },
+              {
+                key: {
+                  text: "Interaction type"
+                },
+                value: {
+                  html: "In-person"
+                }
+              },
+              {
+                key: {
+                  text: "Incident location"
+                },
+                value: {
+                  html: "Car park"
+                }
+              }
+            ]
+          }) }}
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning
+              </span>
+              The reporter stated that the incident involved discrimination.
+            </strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Incident details" role="region">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-!-padding-bottom-9">
+          <h2 class="govuk-heading-l"><span class="govuk-warning-text__assistive">Incident</span> Details</h2>
+          <h3 class="govuk-heading-s">1. Why was the customer in contact with us?</h3>
+          <p class="govuk-body">The customer came in for his regular fortnightly meeeting to discuss the progress he had made in the last two weeks on finding a job. This is part of the agreement he started recceeiving Universal Credit November 30 2021. When reviewing his case before the meeting I noticed that he had been late to the previous five meetings and had skipped one oon 23 May 2022.
+          </p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <h3 class="govuk-heading-s">2. How did the incident start? Was there a specific trigger?</h3>
+          <p class="govuk-body">I was curteous at all times. I tried to engage in pleasentries. I welcomed the customer to the meeeting and started to lay out the expectations for the meeeting. Throughout this process, the customer was verbally unresponsive, however his body language was both defensive and aggressive. I asked him directly what he had done to find work. To this he rose to his feet and responded verbally aggressively using abusive terms.
+          </p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <h3 class="govuk-heading-s">3. What were the issues with the customer's behaviour?</h3>
+          <p class="govuk-body">He said "You're no help you stupid cow!". This term is relatively mild but is offensive and can be considered misogynistic. However, this was delivered at volume, in an intimidating manner encroaching in my presoonal space and using aggressive body language. I believe this constitutes a breach of my right to a safe workspace.
+          </p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <h3 class="govuk-heading-s">4. Tell us what happened next. How did you try to resolve the situation, and how did the customer react?</h3>
+          <p class="govuk-body">
+            There was a pause for a few seconds after the customer said that. I met his eye with a neutral expression. I slowly rose from my chair and stood. I said "please dont call me that. I am trying to help you". Maybe we can take a break. May I offer you a drink of water.
+          </p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <h3 class="govuk-heading-s">5. Were there any witnesses to this incident?</h3>
+          <p class="govuk-body">Yes</p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <h3 class="govuk-heading-s">6. How did your interaction with the customer end?</h3>
+          <p class="govuk-body">There was a further pause. The customer's deemeanour seemed to soften as he considered my words. He exhaled sharply, clicked his tongue, turned and walked quickly from my desk towards the door and left the building. Our security guard witnessed this but decided not to intervene (correctly in my opinion).
+          </p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <h3 class="govuk-heading-s">7. How did you feel during the incident?</h3>
+          <p class="govuk-body">The interaction was challenging but relatively mild. I felt a little intimidated but not scared. However, having met the customer on a number of occasions, I felt this seemed out of character and felt concerned about the customer. I wondered what event may have caused this uncharacteristic behaviour.
+          </p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <h3 class="govuk-heading-s">Do you feel the incident was motivated by any type of discrimination?</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Sex</li>
+          </ul>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section aria-label="Incident Reporter" role="region">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-!-padding-bottom-9">
+          <h2 class="govuk-heading-l"><span class="govuk-warning-text__assistive">Incident</span> Reporter<span class="govuk-warning-text__assistive"> Details</span></h2>
+          {{ govukSummaryList({
+            rows: [
+              {
+                key: {
+                  text: "Reporter's name",
+                  classes: "govuk-!-width-one-half"
+                },
+                value: {
+                  text: "Whitney Earl",
+                  classes: "govuk-!-width-one-half"                
+                }
+              },
+              {
+                key: {
+                  text: "Reporter's email address"
+                },
+                value: {
+                  text: "whitney.earl@dwp.gov.uk"
+                }
+              },
+              {
+                key: {
+                  text: "Reporter's line manager"
+                },
+                value: {
+                  html: "You"
+                }
+              },
+              {
+                key: {
+                  text: "Line manager's email address"
+                },
+                value: {
+                  html: "you@dwp.gov.uk"
+                }
+              }
+            ]
+          }) }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section aria-label="Files attached to incident report" role="region">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-!-padding-bottom-9">
+          <h2 class="govuk-heading-l" id="attached">Files attached to incident report</h2>
+          {{ govukTable({
+            captionClasses: "govuk-table__caption--l",
+            firstCellIsHeader: true,
+            head: [
+              {
+                text: "File name",
+        classes: 'govuk-!-width-one-half'
+              },
+              {
+                text: "Action"
+              }
+            ],
+            rows: [
+              [
+                {
+                  text: "screen_shot.png"
+                },
+                {
+                  html: "<a href='/public/images/screen_shot.png' role='button' draggable='false' class='govuk-button govuk-button--secondary ' data-module='govuk-button' download>Download file<span class='govuk-visually-hidden'>screen_shot.png</span></a>"                }
+              ]
+            ]
+          }) }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="govuk-button-group">
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    {{ govukButton({
+      text: "Continue",
+      href: "03witnessdisplay"
+    }) }}
+  </div>
+{% endblock %}

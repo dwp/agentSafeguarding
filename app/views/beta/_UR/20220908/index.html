@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Start of journey
+{% endblock %}
+{% block beforeContent %}
+{% endblock %}
+{% block content %}
+	<h1 class="govuk-heading-xl">Research</h1>
+	<p class="govuk-body">When instructed, press start to access the tasks</p>
+	<div class="govuk-button-group">	
+		{{ govukButton({
+			text: "Start task 1 - Whitney's incident2",
+			href: "20220908/landing/01landingpage",
+			isStartButton: true
+		}) }}
+	</div>
+{% endblock %}
