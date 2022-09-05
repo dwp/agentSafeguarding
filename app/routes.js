@@ -325,6 +325,54 @@ router.post('/beta/witness/witnessv3a/route_wit', function (req, res) {
     }
 })
 
+
+// UR rig Route Incident Manager Journey - Add witness 
+router.post('/beta/_UR/20220908/landing/route_police', function (req, res) {
+  // Make a variable and give it the value from 'prnQuestion'
+  var policeCalled = req.session.data['policeQuestion']
+    // Check whether the variable matches a condition
+    if (policeCalled == "no") {
+      // Send user to 
+      res.redirect('11comments')
+    } else {
+      // Send user to 
+      res.redirect('10action')
+    }
+})
+// UR rig Route Incident Manager Journey - witness contact
+router.post('/beta/_UR/20220908/landing/route_colleague', function (req, res) {
+  // Make a variable and give it the value from 'prnQuestion'
+  var onBehalf = req.session.data['contact']
+    // Check whether the variable matches a condition
+    if (onBehalf == "noaccess") {
+      // Send user to 
+      res.redirect('05confirm_witness2')
+    } else if (onBehalf == "access") {
+      // Send user to 
+      res.redirect('05confirm_witness1')
+    } else if (onBehalf == "me") {
+      // Send user to 
+      res.redirect('05confirm_witness')
+    }
+})
+
+// Route Incident Manager Journey - witness contact
+router.post('/beta/_UR/20220908/landing/route_colleague', function (req, res) {
+  // Make a variable and give it the value from 'prnQuestion'
+  var onBehalf = req.session.data['contact']
+    // Check whether the variable matches a condition
+    if (onBehalf == "noaccess") {
+      // Send user to 
+      res.redirect('05confirm_witness2')
+    } else if (onBehalf == "access") {
+      // Send user to 
+      res.redirect('05confirm_witness1')
+    } else if (onBehalf == "me") {
+      // Send user to 
+      res.redirect('05confirm_witness')
+    }
+})
+
 // Add your routes here - above the module.exports line
 
 // copy the const name and the file path to new version
