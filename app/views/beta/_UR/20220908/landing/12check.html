@@ -47,6 +47,15 @@ href: "javascript:history.back()"
           ]
         }) }}
     {% endset %}
+    {% set policeTxt %}
+      {{ data['policeQuestion'] }} 
+    {% endset %}
+    {% set policeactionTxt %}
+      {{ data['police-action'] }} 
+    {% endset %}
+    {% set commentsTxt %}
+      {{ data['comments-and-recommendations'] }} 
+    {% endset %}
     {{ govukSummaryList({
   rows: [
     {
@@ -62,7 +71,15 @@ href: "javascript:history.back()"
         text: "Did anyone call the police?"
       },
       value: {
-        text: "Make this agree with submitted info"
+        text: policeTxt
+      }
+    },
+    {
+      key: {
+        text: "What did the police do?"
+      },
+      value: {
+        text: policeactionTxt
       }
     },
     {
@@ -70,7 +87,7 @@ href: "javascript:history.back()"
         text: "Comments and recommendations"
       },
       value: {
-        html: "Make this agree with submitted info"
+        text: commentsTxt
       }
     }
   ]

@@ -56,59 +56,58 @@ href: "javascript:history.back()"
     <p class="govuk-body">These are examples only - a decision maker can make recommendations that are not in this list. </p>
     <p class="govuk-body govuk-!-font-weight-bold">A decision maker will review your comments and recommendations before they make a decision about this incident.</p>
     <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
-        {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
-        {{ govukCharacterCount({
-        id: "label-as-page-heading",
-        name: "label-as-page-heading",
-        rows: "12",
-        maxlength: 3000,
-        label: {
-          text: "Comments and recommendations",
-          classes: "govuk-body"
-            }
-        }) }}
-        <h2 class="govuk-heading-s">Confirm that you have:</h2>
-        {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-        {{ govukCheckboxes({
-        idPrefix: "checklist",
-        name: "checklist",
-        items: [
-
-        {
-        value: "sources",
-        text: "read, viewed or listened to all information / evidence in the report"
-        },
-        {
-        value: "witnesses",
-        text: "added all witnesses to the incident report"
-        },
-        {
-        value: "comments",
-        text: "added all relevant information that will help decision makers"
-        },
-        {
-        value: "recommendations",
-        text: "recommended all safety measures you think are appropriate"
-        },
-      {
-      value: "justified",
-      text: "added a reason for each recommendation"
-      }
-
-        ]
-        }) }}
-
-
-
-        {% from "govuk/components/button/macro.njk" import govukButton %}
-        <div class="govuk-button-group">
-          {{ govukButton({
-          text: "Continue",
-          href: "12check"
+      <form class="form" action="12check" method="post">
+        <fieldset class="govuk-fieldset" aria-describedby="comments-and-recommendations">
+          {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+          {{ govukCharacterCount({
+            id: "comments-and-recommendations",
+            name: "comments-and-recommendations",
+            rows: "12",
+            maxlength: 3000,
+            label: {
+              text: "Comments and recommendations",
+              classes: "govuk-body"
+            },
+            value: data['comments-and-recommendations'] 
           }) }}
-        </div>
-      </fieldset>
+          <h2 class="govuk-heading-s">Confirm that you have:</h2>
+          {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+          {{ govukCheckboxes({
+          idPrefix: "checklist",
+          name: "checklist",
+          items: [
+
+          {
+          value: "sources",
+          text: "read, viewed or listened to all information / evidence in the report"
+          },
+          {
+          value: "witnesses",
+          text: "added all witnesses to the incident report"
+          },
+          {
+          value: "comments",
+          text: "added all relevant information that will help decision makers"
+          },
+          {
+          value: "recommendations",
+          text: "recommended all safety measures you think are appropriate"
+          },
+          {
+          value: "justified",
+          text: "added a reason for each recommendation"
+          }
+
+          ]
+          }) }}
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+          <div class="govuk-button-group">
+            {{ govukButton({
+            text: "Continue"
+            }) }}
+          </div>
+        </fieldset>
+      </form>
     </div>
   </div>
 </div>
