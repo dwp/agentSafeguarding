@@ -38,13 +38,7 @@
 {% endblock %}
 
 {% block header %}
-{% from "internal-services-header/macro.njk" import dwpHeader %}
 
-{{ dwpHeader({
-name: "Keep Customer Interactions Safe",
-serviceHref: '/',
-container: "govuk-width-container"
-}) }} 
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
