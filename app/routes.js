@@ -264,7 +264,6 @@ router.post('/beta/report_incident/reportv9/route_incident', function (req, res)
   // Make a variable and give it the value from 'prnQuestion'
   var reportType = req.session.data['report-type']
 
-
     // Check whether the variable matches a condition
     if (reportType == "incident") {
       // Send user to next page
@@ -277,8 +276,6 @@ router.post('/beta/report_incident/reportv9/route_incident', function (req, res)
       res.redirect('01report_error')
     }
 
-
-  
 })
 
 // Route Incident Manager Journey - Add witness 
@@ -349,29 +346,13 @@ router.post('/beta/_UR/20220908/landing/route_colleague', function (req, res) {
       res.redirect('05confirm_witness2')
     } else if (onBehalf == "access") {
       // Send user to 
-      res.redirect('05confirm_witness1')
+      res.redirect('04add_witnesserror3')
     } else if (onBehalf == "me") {
       // Send user to 
       res.redirect('05confirm_witness')
     }
 })
 
-// Route Incident Manager Journey - witness contact
-router.post('/beta/_UR/20220908/landing/route_colleague', function (req, res) {
-  // Make a variable and give it the value from 'prnQuestion'
-  var onBehalf = req.session.data['contact']
-    // Check whether the variable matches a condition
-    if (onBehalf == "noaccess") {
-      // Send user to 
-      res.redirect('05confirm_witness2')
-    } else if (onBehalf == "access") {
-      // Send user to 
-      res.redirect('05confirm_witness1')
-    } else if (onBehalf == "me") {
-      // Send user to 
-      res.redirect('05confirm_witness')
-    }
-})
 
 // Add your routes here - above the module.exports line
 
