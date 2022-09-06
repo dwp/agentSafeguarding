@@ -45,12 +45,7 @@
 
 {% if useAutoStoreData %}
   {% block footer %}
-  {% from "internal-services-footer/macro.njk" import dwpFooter %}
-{{ dwpFooter({
-meta: {
-visuallyHiddenTitle: "Meta links"
-}
-}) }}
+
 
   {% endblock %}
 {% endif %}
