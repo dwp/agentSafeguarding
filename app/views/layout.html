@@ -38,14 +38,26 @@
 {% endblock %}
 
 {% block header %}
-
+{% from "internal-services-header/macro.njk" import dwpHeader %}
+{{ dwpHeader({
+  name: "Keep Customer Interactions Safe",
+  serviceHref: '/',
+  container: "govuk-width-container"
+}) }} 
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
-
 {% if useAutoStoreData %}
   {% block footer %}
+  {% from "internal-services-footer/macro.njk" import dwpFooter %}
+  {{ dwpFooter({
+    meta: {
+      visuallyHiddenTitle: "Meta links",
+      items: [
 
+      ]
+    }
+  }) }} 
 
   {% endblock %}
 {% endif %}
