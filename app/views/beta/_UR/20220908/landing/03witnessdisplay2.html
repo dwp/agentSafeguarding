@@ -22,6 +22,20 @@ Witnesses - Keep Customer Interactions Safe
 {% endblock %}
 {% block content %}
   {% include "templates/v5UR/govuk-caption-l.njk" %}
+  {% set statusHTML %}
+  <span class='govuk-visually-hidden'>Status: </span>Requested: <span class='govuk-visually-hidden'>Sent to email address: </span>
+  <script>
+    function formatFileSize(onBehalf) {
+      if (onBehalf == "you") {
+        return "You";
+      } else {
+        return "{{data['witness-email']}}";
+      }
+    }
+    var witnessContact = "{{data['contact']}}";
+    document.write(formatFileSize(witnessContact));
+  </script>
+  {% endset %}
   <section aria-label="Incident witnesses" role="region">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
@@ -44,10 +58,10 @@ Witnesses - Keep Customer Interactions Safe
           rows: [
             [
               {
-                text: "Mike Black"
+                text: data['witness-full-name'] 
               },
               {
-                html: "<span class='govuk-visually-hidden'>Status: </span>Requested: <span class='govuk-visually-hidden'>Sent to email address: </span>you@dwp.gov.uk"
+                html: statusHTML
               },
               {
                 html: "<a href='04add_witness2'>Change<span class='govuk-visually-hidden'> Sartaq Assam witness report</span></a> <span aria-hidden='true'>|</span> <a href='08deletewitness'>Remove <span class='govuk-visually-hidden'> Sartaq Assam witness report</span></a>"
@@ -61,14 +75,14 @@ Witnesses - Keep Customer Interactions Safe
       <fieldset class="govuk-fieldset" aria-describedby="witnessQuestion">
         <div class="govuk-button-group">
           {{ govukButton({
-  text: "Add another witness",
-  classes: "govuk-button--secondary",
-        href: "04add_witness"
-}) }}
+            text: "Add another witness",
+            classes: "govuk-button--secondary",
+            href: "04add_witness"
+          }) }}
           {{ govukButton({
-      text: "Continue",
-      href: "09police"
-    }) }}
+            text: "Continue",
+            href: "09police"
+          }) }}
         </div>
       </fieldset>
     </div>

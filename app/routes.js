@@ -361,6 +361,19 @@ router.post('/beta/_UR/20220908/landing/12check', function (req, res) {
 
 })
 
+// UR rig Route Incident Manager Journey - witness on behalf of 
+router.post('/beta/_UR/20220908/landing/route_witness2', function (req, res) {
+  // Make a variable and give it the value from 'prnQuestion'
+  var onBehalf = req.session.data['contact']
+    // Check whether the variable matches a condition
+    if (onBehalf == "you") {
+      // Send user to 
+      res.redirect('06sent1')
+    } else if (onBehalf == "colleague") {
+      // Send user to 
+      res.redirect('06sent2')
+    } 
+})
 
 // Add your routes here - above the module.exports line
 
