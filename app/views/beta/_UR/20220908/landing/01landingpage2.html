@@ -1,7 +1,4 @@
 {% extends "layout_incident_landing.html" %}
-<!-- Set active submenu item -->
-{% set menuItemOne = " aria-current=page" %}
-{% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
 Keep Customer Interactions Safe
@@ -9,34 +6,27 @@ Keep Customer Interactions Safe
 
 {% block beforeContent %}
 <section aria-label="Beta banner" role="region">
-
-{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-{{ govukPhaseBanner({
-tag: {
-text: "beta"
-},
-html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
+  {{ govukPhaseBanner({
+    tag: {
+    text: "beta"
+  },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
 </section>
 <section aria-label="Back" role="region">
-
-{{ govukBackLink({
-text: "Back to Searchlight",
-href: "/"
-}) }}
+  {{ govukBackLink({
+    text: "Back to Searchlight",
+    href: "/"
+  }) }}
 </section>
 {% endblock %}
 
 {% block content %}
-
-
 <h1 class="govuk-heading-xl" id="page-title">Your reports</h1>
 <h2 class="govuk-heading-l">Actions for you</h2>
-
 <div class="govuk-!-padding-bottom-7">
   {{ govukTable({
     firstCellIsHeader: true,
-
     head: [
       {
         html: "Incident date",
@@ -54,7 +44,7 @@ href: "/"
       }
     ],
     rows: [
-          [
+      [
         {
           html: "<span class='govuk-visually-hidden'>Date: </span>6 September 2022 at 8:01pm"
         },
@@ -67,8 +57,8 @@ href: "/"
         {
           html: "<a href='#'>Review and recommend</a>"
         }
-      ]  ,
-          [
+      ],
+      [
         {
           html: "<span class='govuk-visually-hidden'>Date: </span>5 September 2022 at 1:12pm"
         },
@@ -86,9 +76,7 @@ href: "/"
   }) }}
 </div>
 <h2 class="govuk-heading-l">Actions for other people</h2>
-
 {{ govukTable({
-
   firstCellIsHeader: true,
   head: [
     {
@@ -107,7 +95,7 @@ href: "/"
     }
   ],
   rows: [
-          [
+    [
         {
           html: "<span class='govuk-visually-hidden'>Date: </span>7 September 2022 at 11:09am"
         },
@@ -118,10 +106,10 @@ href: "/"
           text: "Whitney Earl"
         },
         {
-          html: "<a href='02incident'>Review and recommend</a>"
+          html: "<a href='#'>View</a>"
         }
-      ]  ,
-        [
+    ],
+    [
       {
         html: "<span class='govuk-visually-hidden'>Date: </span>4 September 2022 at 12:30am"
       },
@@ -129,7 +117,7 @@ href: "/"
         text: "Robert Da Silva"
       },
       {
-          html: "<span class='govuk-visually-hidden'>Incident reporter: </span>Whitney Earl"
+        html: "<span class='govuk-visually-hidden'>Incident reporter: </span>Whitney Earl"
       },
       {
         html: "<a href='#'>View</a>"
@@ -137,5 +125,4 @@ href: "/"
     ]
   ]
 }) }}
-
 {% endblock %}
