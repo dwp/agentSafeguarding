@@ -21,92 +21,38 @@ Witnesses - Keep Customer Interactions Safe
 }) }}
 {% endblock %}
 {% block content %}
-  {% include "templates/v5/govuk-caption-l.njk" %}
-  <section aria-label="Incident witnesses" role="region">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        {{ govukTable({
-          caption: "Witnesses",
-          captionClasses: "govuk-heading-xl",
-          isPageHeading: true,
-          firstCellIsHeader: true,
-          head: [
-            {
-              text: "Witness name"
-            },
-            {
-              text: "Status of witness report"
-            },
-            {
-              text: "Action"
-            }
-          ],
-          rows: [
-            [
-              {
-                text: "Sarah Sencha"
-              },
-              {
-                html: "<span class='govuk-visually-hidden'>Status: </span>Complete"
-              },
-              {
-                html: "<a href='07witness_report'>View witness report <span class='govuk-visually-hidden'>Sarah Sencha witness report</span></a>"
-              }
-            ],            [
-              {
-                text: "Isla Yellow"
-              },
-              {
-                html: "<span class='govuk-visually-hidden'>Status: </span>Complete"
-              },
-              {
-                html: "<a href='07witness_report'>View witness report <span class='govuk-visually-hidden'>Isla Yellow witness report</span></a>"
-              }
-            ],
-            [
-              {
-                text: "Ted Lady"
-              },
-              {
-                html: "<span class='govuk-visually-hidden'>Status: </span>Requested: <span class='govuk-visually-hidden'>Sent to email address: </span>ted@dwp.gov.uk"
-              },
-              {
-                html: "<a href='04add_witness2'>Change<span class='govuk-visually-hidden'> Ted Lady witness report</span></a> <span aria-hidden='true'>|</span> <a href='08deletewitness'>Remove <span class='govuk-visually-hidden'> Ted Lady witness report</span></a>"
-              }
-            ],
-            [
-              {
-                text: "Sartaq Assam"
-              },
-              {
-                html: "<span class='govuk-visually-hidden'>Status: </span>Requested: <span class='govuk-visually-hidden'>Sent to email address: </span>whitney@dwp.gov.uk"
-              },
-              {
-                html: "<a href='04add_witness2'>Change<span class='govuk-visually-hidden'> Sartaq Assam witness report</span></a> <span aria-hidden='true'>|</span> <a href='08deletewitness'>Remove <span class='govuk-visually-hidden'> Sartaq Assam witness report</span></a>"
-              }
-            ]
-          ]
+{% include "templates/v5/govuk-caption-l.njk" %}
+<section aria-label="Incident witnesses" role="region">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Witnesses</h1>
+      <p class="govuk-body ">The incident reporter has indicated that there are witnesses but no witness requests have been sent. Use the button below to Add a Witness. 
+      </p>
+    </div>
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="witnessQuestion">
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Add a witness",
+          classes: "govuk-button--secondary",
+          href: "04add_witness"
+        }) }}
+        {{ govukButton({
+          text: "Continue",
+          href: "09police"
         }) }}
       </div>
-    </div>
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="witnessQuestion">
-        <div class="govuk-button-group">
-          {{ govukButton({
-  text: "Add another witness",
-  classes: "govuk-button--secondary",
-        href: "04add_witness"
-}) }}
-          {{ govukButton({
-      text: "Continue",
-      href: "09police"
-    }) }}
-        </div>
-      </fieldset>
-    </div>
-  </section>
+    </fieldset>
+  </div>
+</section>
 <hr>
-NOT PART OF DESIGN: Demo only - <a href="03witnessdisplay">Switch to no witnesses view</a>
+NOT PART OF DESIGN: Demo only<br>
+There are 3 versions of this page<br>
+<a href="03witnessdisplay">1. No Witnesses indicated by reporter, no witness requests made</a><br>
+<a href="03witnessdisplay2">2. Witnesses indicated by reporter, no witness requests made</a><br>
+<a href="03witnessdisplay3">3. Witness requests made</a><br>
 <hr>
 
 {% endblock %}
