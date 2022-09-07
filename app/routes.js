@@ -352,6 +352,14 @@ router.post('/beta/_UR/20220908/landing/route_colleague', function (req, res) {
       res.redirect('05confirm_witness')
     }
 })
+// UR rig Route Incident Manager Journey - comments
+router.post('/beta/_UR/20220908/landing/12check', function (req, res) {
+  // Make a variable and give it the value from 'prnQuestion'
+  var onBehalf = req.session.data['contact']
+      // Send user to 
+      res.redirect('12check')
+
+})
 
 
 // Add your routes here - above the module.exports line
