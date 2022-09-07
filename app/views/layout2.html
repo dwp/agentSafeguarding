@@ -38,7 +38,7 @@
 {% endblock %}
 
 {% block header %}
-{% from "internal-services-header/macro.njk" import dwpHeader %}
+{% from "internal-service-header/macro.njk" import dwpHeader %}
 
 {{ dwpHeader({
 name: "Keep Customer Interactions Safe",
@@ -51,7 +51,7 @@ container: "govuk-width-container"
 
 {% if useAutoStoreData %}
   {% block footer %}
-  {% from "internal-services-footer/macro.njk" import dwpFooter %}
+  {% from "internal-service-footer/macro.njk" import dwpFooter %}
 {{ dwpFooter({
   meta: {
     visuallyHiddenTitle: "Meta links",
