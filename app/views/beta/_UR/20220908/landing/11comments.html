@@ -9,6 +9,8 @@ Add comments and recommendations - Keep Customer Interactions Safe
 
 {% block beforeContent %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 {{ govukPhaseBanner({
 tag: {
 text: "beta"
@@ -27,12 +29,12 @@ href: "javascript:history.back()"
 
 {% block content %}
 {% set html %}
+{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
 <p class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.</p>
 <p class="govuk-notification-banner__heading">Include reasons for each recommendation.</p>
 <p class="govuk-notification-banner__heading">Do not include the names of any DWP staff in your answers.</p>
 {% endset %}
-{% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
