@@ -30,33 +30,36 @@ href: "/"
 {% block content %}
 
 
-<h1 class="govuk-heading-xl" id="page-title">Your reports</h1>
-<h2 class="govuk-heading-l">Actions for you</h2>
-
+<h1 class="govuk-heading-xl" id="page-title">Your tasks</h1>
+<h2 class="govuk-heading-l">Reports for you to action</h2>
+<div class="govuk-hint">
+  You must complete a report for each row in the table below by clicking the action link
+</div>
 <div class="govuk-!-padding-bottom-7">
   {{ govukTable({
     firstCellIsHeader: true,
 
     head: [
       {
-        html: "Incident date",
-        classes: 'govuk-!-width-one-third'
+        html: "Incident date" 
       },
       {
         text: "Customer"
       },
       {
-        text: "Reporter"
+        text: "Incident reporter"
       },
       {
-        text: "Action",
-        classes: 'govuk-!-width-one-quarter'
+        text: "Witness(es)"
+      },
+      {
+        text: "Action"
       }
     ],
     rows: [
           [
         {
-          html: "<span class='govuk-visually-hidden'>Date: </span>7 June 2022 at 11:09am</p>"
+          html: "<span class='govuk-visually-hidden'>Incident date: </span>7 June 2022 at 11:09am</p>"
         },
         {
           text: "Robert Da Silva"
@@ -65,18 +68,7 @@ href: "/"
           text: "Whitney Earl"
         },
         {
-          html: "<a href='02incident'>Review and recommend</a>"
-        }
-      ]  ,
-          [
-        {
-          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>8 June 2022 at 8:01pm</p>"
-        },
-        {
-          text: "Robert Da Silva"
-        },
-        {
-          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Incident reporter: </span>Mike Black</p><p class='govuk-body-s' style='color:#505a5f; margin-bottom: 0px'>Submitted by </p><p class='govuk-body-s' style='color:#505a5f; margin-bottom: 0px''>Whitney Earl</p>"
+          text: "Yes"
         },
         {
           html: "<a href='02incident'>Review and recommend</a>"
@@ -84,13 +76,33 @@ href: "/"
       ]  ,
           [
         {
-          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>8 June 2022 at 1:12pm"
+          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Incident date: </span>8 June 2022 at 8:01pm</p>"
         },
         {
           text: "Robert Da Silva"
         },
         {
-          text: "You"
+          html: "<p style='margin-bottom: 0px'><span class='govuk-body-s' style='color:#505a5f'>Whitney Earl <br>on behalf of <br></span><span class='govuk-visually-hidden'>Incident reporter: </span>Mike Black</p>"
+        },
+        {
+          text: "No"
+        },
+        {
+          html: "<a href='02incident'>Review and recommend</a>"
+        }
+      ]  ,
+          [
+        {
+          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Incident date: </span>9 June 2022 at 1:12pm"
+        },
+        {
+          text: "Robert Da Silva"
+        },
+        {
+          text: "Whitney Earl"
+        },
+        {
+          html: "You<br>Mike Black<br>Ted Lady"
         },
         {
           html: "<a href='#'>Make a witness report</a>"
@@ -99,8 +111,10 @@ href: "/"
     ]
   }) }}
 </div>
-<h2 class="govuk-heading-l">Actions for other people</h2>
-
+<h2 class="govuk-heading-l">Reports you have completed</h2>
+<div class="govuk-hint">
+  Reports that you have completed but are being processed by a colleague are available for you to view until a decision has been made.
+</div>
 {{ govukTable({
 
   firstCellIsHeader: true,
@@ -116,31 +130,22 @@ href: "/"
       text: "Reporter"
     },
     {
-      text: "Action",
-      classes: 'govuk-!-width-one-quarter'
+      text: "Witness(es)"
+    },
+    {
+      text: "Action"
     }
   ],
   rows: [
         [
       {
-        html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>1 June 2022 at 11:09am</p>"
+        html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Incident date: </span>1 June 2022 at 11:09am</p>"
       },
       {
         text: "Robert Da Silva"
       },
       {
-          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Incident reporter: </span>Mike Black</p><p class='govuk-body-s' style='color:#505a5f; margin-bottom: 0px'>Submitted by </p><p class='govuk-body-s' style='color:#505a5f; margin-bottom: 0px''>You</p>"
-      },
-      {
-        html: "<a href='#'>View</a>"
-      }
-    ],
-            [
-      {
-        html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>2 June 2022 at 3:02am</p>"
-      },
-      {
-        text: "Robert Da Silva"
+          html: "<p style='margin-bottom: 0px'><span class='govuk-body-s' style='color:#505a5f'>You <br>on behalf of <br></span><span class='govuk-visually-hidden'>Incident reporter: </span>Mike Black</p>"
       },
       {
         text: "You"
@@ -149,20 +154,40 @@ href: "/"
         html: "<a href='#'>View</a>"
       }
     ],
+            [
+      {
+        html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Incident date: </span>2 June 2022 at 3:02am</p>"
+      },
+      {
+        text: "Robert Da Silva"
+      },
+      {
+        text: "You"
+      },
+      {
+        text: "Whitney Earl"
+      },
+      {
+        html: "<a href='#'>View</a>"
+      }
+    ],
     [
-        {
-          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>18 May 2022 at 2:29pm</p>"
-        },
-        {
-          text: "Ann Other"
-        },
-        {
-          text: "You"
-        },
-        {
-          html: "<a href='#'>View</a>"
-        }
-      ]
+      {
+        html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Incident date: </span>18 June 2022 at 2:29pm</p>"
+      },
+      {
+        text: "Ann Other"
+      },
+      {
+        text: "You"
+      },
+      {
+        text: "None"
+      },
+      {
+        html: "<a href='#'>View</a>"
+      }
+    ]
   ]
 }) }}
 
