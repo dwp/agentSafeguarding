@@ -30,30 +30,29 @@ href: "/"
 {% block content %}
 
 
-<h1 class="govuk-heading-xl" id="page-title">Your tasks</h1>
-<h2 class="govuk-heading-l">Reports for you to action</h2>
-<div class="govuk-hint">
-  You must complete a report for each row in the table below by clicking the action link
-</div>
+<h1 class="govuk-heading-xl" id="page-title">Your reports</h1>
+<h2 class="govuk-heading-l">Actions for you</h2>
+
 <div class="govuk-!-padding-bottom-7">
   {{ govukTable({
     firstCellIsHeader: true,
 
     head: [
       {
-        html: "Incident date" 
+        html: "Incident date",
+        classes: 'govuk-!-width-one-third'
       },
       {
-        text: "Customer"
+        html: "<p class='govuk-body govuk-!-font-weight-bold'>Customer</p>"
       },
       {
-        text: "Incident reporter"
+        html: "<p class='govuk-body govuk-!-font-weight-bold'>Reporter</p>"
       },
       {
-        text: "Witness(es)"
+        html: "<p class='govuk-body govuk-!-font-weight-bold'>Witness</p>"
       },
       {
-        text: "Action"
+        html: "<p class='govuk-body govuk-!-font-weight-bold'>Action</p>"
       }
     ],
     rows: [
@@ -82,7 +81,7 @@ href: "/"
           html: "Robert Da Silva"
         },
         {
-          html: "<p style='margin-bottom: 0px'><span class='govuk-body-s' style='color:#505a5f'>Whitney Earl <br>on behalf of <br></span><span class='govuk-visually-hidden'>Incident reporter: </span>Mike Black</p>"
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Incident reporter: </span>Mike Black</p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px'>Submitted by </p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px''>Whitney Earl</p>"
         },
         {
           html: "You"
@@ -99,10 +98,10 @@ href: "/"
           html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Customer </span>Robert Da Silva</p>"
         },
         {
-          html: "<p style='margin-bottom: 0px'><span class='govuk-body-s' style='color:#505a5f'>Whitney Earl <br>on behalf of <br></span><span class='govuk-visually-hidden'>Incident reporter: </span>Mike Black</p>"
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Incident reporter: </span>Mike Black</p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px'>Submitted by </p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px''>Whitney Earl</p>"
         },
         {
-          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Witness: </span>Ted Lady</p>"
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Witness: </span>Ted Lady</p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px'>Submitted by </p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px''>You</p>"
         },
         {
           html: "<p class='govuk-body'><a href='01details'>Make a witness report</a></p>"
@@ -111,10 +110,8 @@ href: "/"
     ]
   }) }}
 </div>
-<h2 class="govuk-heading-l">Reports you have completed</h2>
-<div class="govuk-hint">
-  Reports that you have completed but are being processed by a colleague are available for you to view until a decision has been made.
-</div>
+<h2 class="govuk-heading-l">Actions for other people</h2>
+
 {{ govukTable({
 
   firstCellIsHeader: true,
@@ -127,10 +124,10 @@ href: "/"
       text: "Customer"
     },
     {
-      text: "Reporter"
+      text: "Incident reporter"
     },
     {
-      text: "Witness(es)"
+      text: "Witness"
     },
     {
       text: "Action"
@@ -165,7 +162,7 @@ href: "/"
           html: "Whitney Earl"
         },
         {
-          html: "<p style='margin-bottom: 0px'><span class='govuk-body-s' style='color:#505a5f'>You <br>on behalf of <br></span><span class='govuk-visually-hidden'>Incident reporter: </span>Isla Yellow</p>"
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Witness: </span>Isla Yellow</p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px'>Submitted by </p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px''>You</p>"
         },
         {
           html: "<a href='01details'>View</a>"

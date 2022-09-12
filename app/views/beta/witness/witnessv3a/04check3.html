@@ -32,27 +32,27 @@ href: "javascript:history.back()"
       padding-right: 0;
     }
   </style>
-    {{ govukSummaryList({
-      rows: [
-        {
-          key: {
-            text: "Witness reporter"
-          },
-          value: {
-            text: "Sarah Sancha, for Mike Black"
-          }
+  {{ govukSummaryList({
+    rows: [
+      {
+        key: {
+          text: "Witness reporter"
         },
-
-        {
-          key: {
-            text: "Description"
-          },
-          value: {
-            text: "I did not witness this incident."
-          }
+        value: {
+          html: "<span class='govuk-body-s' style='color:#505a5f'>Sarah Sancha on behalf of </span>Mike Black"
         }
-      ]
-    }) }}
+      },
+
+      {
+        key: {
+          text: "Description"
+        },
+        value: {
+          text: "I did not witness this incident."
+        }
+      }
+    ]
+  }) }}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">

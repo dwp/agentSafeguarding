@@ -24,37 +24,37 @@ href: "javascript:history.back()"
     Check your answers
   </h1>
   <style>
-    .govuk-table__row:last-child th,   .govuk-table__row:last-child td {
-      margin-bottom: 0;
-      border-bottom: 0;
+  .govuk-table__row:last-child th,   .govuk-table__row:last-child td {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+  .govuk-summary-list__value {
+    padding-right: 0;
+  }
+</style>
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Witness reporter"
+      },
+      value: {
+        html: "<span class='govuk-body-s' style='color:#505a5f'>Sarah Sancha on behalf of </span>Mike Black"
+      }
+    },
+
+    {
+      key: {
+        text: "Description"
+      },
+      value: {
+        text: "I did not witness this incident."
+      }
     }
-    .govuk-summary-list__value {
-      padding-right: 0;
-    }
-  </style>
-    {{ govukSummaryList({
-      rows: [
-        {
-          key: {
-            text: "Witness reporter"
-          },
-          value: {
-            text: "Sarah Sancha, for Mike Black"
-          }
-        },
-    
-        {
-          key: {
-            text: "Description"
-          },
-          value: {
-            text: "I did not witness this incident."
-          }
-        }
-      ]
-    }) }}
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+  ]
+}) }}     
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">   
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
           <h2 class="govuk-heading-m">Are you ready to submit your review?</h2>
