@@ -1,0 +1,45 @@
+{% extends "layout_witness_landing.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Keep Customer Interactions Safe
+{% endblock %}
+
+{% block beforeContent %}
+<section aria-label="Beta banner" role="region">
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+</section>
+<section aria-label="Back" role="region">
+
+{{ govukBackLink({
+text: "Back to Searchlight search page",
+href: "/"
+}) }}
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-xl" id="page-title">Your tasks</h1>
+<h2 class="govuk-heading-l">Reports for you to action</h2>
+<p class="govuk-body">
+  Requests for you to complete reports will be listed in this section. 
+</p>
+
+<h2 class="govuk-heading-l">Reports you have completed</h2>
+<p class="govuk-body">
+  Reports that you have completed but are being processed by a colleague will be listed in this section until a decision has been made.
+</p>
+
+
+{% endblock %}
