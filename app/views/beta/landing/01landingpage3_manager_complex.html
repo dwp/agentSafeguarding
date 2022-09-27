@@ -1,0 +1,210 @@
+{% extends "layout_witness_landing.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Keep Customer Interactions Safe
+{% endblock %}
+
+{% block beforeContent %}
+<section aria-label="Beta banner" role="region">
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+</section>
+<section aria-label="Back" role="region">
+
+{{ govukBackLink({
+text: "Back to Searchlight search page",
+href: "/"
+}) }}
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-xl" id="page-title">Your reports</h1>
+<h2 class="govuk-heading-l">Actions</h2>
+<div class="govuk-hint">
+  You must complete a report for each row in the table below by clicking the action link
+</div>
+<div class="govuk-!-padding-bottom-7">
+  {{ govukTable({
+    firstCellIsHeader: true,
+
+    head: [
+      {
+        html: "Date" 
+      },
+      {
+        text: "Customer"
+      },
+      {
+        text: "Original reporter"
+      },
+      {
+        text: "Witnesses"
+      },
+      {
+        text: "Action"
+      }
+    ],
+    rows: [
+        [
+        {
+          html: "<span class='govuk-visually-hidden'>Date: </span>1 June 2022<br><span class='govuk-body-s' style='color:#505a5f'> at 9:50pm</span>"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Customer: </span>Robert Da Silva"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Original reporter: </span>Whitney Earl"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Witnesses. </span>Yes"
+        },
+        {
+          html: "<a href='01landingpage4_empty'>Review and comment</a><span class='govuk-visually-hidden'> on an incident on 1 June 2022 at 9:50pm</span>"
+        }
+      ],
+      [
+        {
+          html: "<span class='govuk-visually-hidden'>Date: </span>2 June 2022<br><span class='govuk-body-s' style='color:#505a5f'>  at 8:01pm</span>"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Customer: </span>Robert Da Silva"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Original reporter: </span><span class='govuk-body-s' style='color:#505a5f'>Whitney Earl <br>on behalf of <br></span>Mike Black"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Witnesses. </span>None indicated"
+        },
+        {
+          html: "<a href='01landingpage4_empty'>Review and comment</a><span class='govuk-visually-hidden'> on an incident on 2 June 2022 at 8:01pm</span>"
+        }
+      ],
+      [
+        {
+          html: "<span class='govuk-visually-hidden'>Date: </span>3 June 2022<br><span class='govuk-body-s' style='color:#505a5f'>  at 8:06am</span>"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Customer: </span>Ann Other"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Original reporter: </span>Whitney Earl"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Witnesses: </span>You"
+        },
+        {
+          html: "<a href='01landingpage4_empty'>Make your report</a><span class='govuk-visually-hidden'> for an incident on 3 June 2022 at 8:06am</span>"
+        }
+      ],
+      [
+        {
+          html: "<span class='govuk-visually-hidden'>Date: </span>4 June 2022<br><span class='govuk-body-s' style='color:#505a5f'>  at 1:12pm"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Customer: </span>Robert Da Silva"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Original reporter: </span><span class='govuk-body-s' style='color:#505a5f'>Whitney Earl <br>on behalf of <br></span>Mike Black"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Witnesses: </span><span class='govuk-body-s' style='color:#505a5f'>You <br>on behalf of <br></span> Ted Lady"
+        },
+        {
+          html: "<a href='01landingpage4_empty'>Make your report</a><span class='govuk-visually-hidden'> for an incident on 4 June 2022 at 1:12pm</span>"
+        }
+      ]
+    ]
+  }) }}
+</div>
+<h2 class="govuk-heading-l">Completed</h2>
+<div class="govuk-hint">
+  Reports that you have completed but are being processed by a colleague are available for you to view until a decision has been made.
+</div>
+{{ govukTable({
+
+  firstCellIsHeader: true,
+  head: [
+    {
+      html: "Date"
+    },
+    {
+      text: "Customer"
+    },
+    {
+      text: "Original reporter"
+    },
+    {
+      text: "Witnesses"
+    },
+    {
+      text: "Action"
+    }
+  ],
+  rows: [
+      [
+        {
+          html: "<span class='govuk-visually-hidden'>Date: </span>8 May 2022<br><span class='govuk-body-s' style='color:#505a5f'> at 8:01pm</span>"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Customer: </span>Robert Da Silva"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Original reporter: </span><span class='govuk-body-s' style='color:#505a5f'>Whitney Earl <br>on behalf of <br></span>Mike Black"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Witnesses: </span>You"
+        },
+        {
+          html: "<a href='01landingpage4_empty'>View</a><span class='govuk-visually-hidden'> the report you made about the incident on 8 May 2022 at 8:01pm</span>"
+        }
+      ],
+      [
+        {
+          html: "<span class='govuk-visually-hidden'>Date: </span>9 May 2022<br><span class='govuk-body-s' style='color:#505a5f'> at 3:09pm</span>"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Customer: </span>Ann Other"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Original reporter: </span>Whitney Earl"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Witnesses: </span><span class='govuk-body-s' style='color:#505a5f'>You <br>on behalf of <br></span><span class='govuk-visually-hidden'>Original reporter: </span>Isla Yellow"
+        },
+        {
+          html: "<a href='01landingpage4_empty'>View</a><span class='govuk-visually-hidden'> the report you made about the incident on 9 May 2022 at 3:09pm</span>"
+        }
+      ],
+      [
+        {
+          html: "<span class='govuk-visually-hidden'>Date: </span>10 May 2022<br><span class='govuk-body-s' style='color:#505a5f'> at 7:55pm</span>"
+        },
+        {
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Customer </span>Ann Other</p>"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Original reporter: </span>You"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Witnesses: </span>None"
+        },
+        {
+          html: "<a href='01landingpage4_empty'>View</a><span class='govuk-visually-hidden'> the report you made about the concern on 10 May 2022 at 7:55pm</span>"
+        }
+      ]
+  ]
+}) }}
+
+{% endblock %}
