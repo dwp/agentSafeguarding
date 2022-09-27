@@ -6,11 +6,11 @@
   <section aria-label="Beta banner" role="region">
     {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
-  tag: {
-  text: "beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-  }) }}
+      tag: {
+        text: "beta"
+      },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
   </section>
 {% endblock %}
 {% block content %}
@@ -31,7 +31,7 @@
         id: "panel",
         name: "panel"
       }) }}
-      <p class="govuk-body">We've received your confirmation that Mike Black did <b>not</b> witness this incident.</p>
+      <p class="govuk-body">We've received your confirmation that Ted Lady did <strong>not</strong> witness this incident.</p>
       <h2 class="govuk-heading-m">What happens next</h2>
     
       <p class="govuk-body">
