@@ -31,9 +31,9 @@ href: "/"
 
 
 <h1 class="govuk-heading-xl" id="page-title">Your reports</h1>
-<h2 class="govuk-heading-l">Actions</h2>
+<h2 class="govuk-heading-l">To do</h2>
 <div class="govuk-hint">
-  You must complete a report for each row in the table below by clicking the action link
+  Each row in this table represents a report that needs action from you
 </div>
 <div class="govuk-!-padding-bottom-7">
   {{ govukTable({
@@ -41,7 +41,7 @@ href: "/"
 
     head: [
       {
-        html: "Date" 
+        html: "Date"
       },
       {
         text: "Customer"
@@ -79,7 +79,7 @@ href: "/"
 </div>
 <h2 class="govuk-heading-l">Completed</h2>
 <p class="govuk-body">
-  Reports that you have completed will be listed in this section until a decision has been made. 
+  This section shows reports that you have completed, but that are still waiting for a decision.
 </p>
 
 {% endblock %}
