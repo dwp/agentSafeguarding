@@ -1,0 +1,58 @@
+{% extends "layout_incident_landing.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+{% block pageTitle %}
+  Review submitted - Keep Customer Interactions Safe
+{% endblock %}
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+  {% include "templates/v2/header_searchlight.njk" %}
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {% set refHTML %}
+      <div class="govuk-panel__body">Reference number:
+        <br>
+        <strong>
+          <span aria-hidden="true">INC-</span><span aria-hidden="false">123-456-789</span>
+        </strong>
+      </div>
+      {% endset %}
+      {{ govukPanel({
+        titleText: "You have submitted your review",
+        html: refHTML,
+        id: "panel",
+        name: "panel"
+      }) }}
+      <p class="govuk-body">We've received your recommendations and comments, and any witness details you gave us. We will email the witnesses and ask them to complete a witness report.</p>
+  <h2 class="govuk-heading-s">What happens next</h2>
+      <p class="govuk-body">A decision maker will review your recommendations and comments and the witness reports, together with the original incident report.</p>
+      <p class="govuk-body">
+        We aim to make a decision about this incident within 48 hours. We will email you to tell you what the decision is.
+      </p>
+      <br>
+        <h2 class="govuk-heading-s">What you can do</h2>
+      <p class="govuk-body">
+        You can email us about this incident at
+        <a href="mailto:HEALTHANDSAFETY.CENTRALISEDNMTEAM@DWP.GOV.UK" class="govuk-link">HealthandSafety.CentralisedNMTeam@dwp.gov.uk</a>. You must give us the reference number on this page.
+      </p>
+      <p class="govuk-body">
+        To help us improve this service, we’d like to know
+        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=6fbxllcQF0GsKIDN_ob4w-oDsqWqlSlJvQe6JubotYpUNFoxRVFURzIyVU1QOVo3QTA5WFdWSjJIVS4u" class="govuk-link" rel="noreferrer noopener" target="_blank">what you think of it.</a>
+        It will only take 2 minutes to give us feedback.
+      </p>
+    </div>
+  </div>
+  {{ govukButton({
+    text: "Back to list",
+    classes: "govuk-button--primary",
+    href: "01landingpage"
+  }) }}
+{% endblock %}

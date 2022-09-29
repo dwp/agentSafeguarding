@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Start of journey - email prompt
+{% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+<style>
+	.nowrapper {
+		white-space: nowrap;
+	}
+</style>
+<h1 class="govuk-heading-m"><i>Email 2: To the LINE MANAGER (when they are not the incident manager) </i></h1>
+<br><br>
+<h1 class="govuk-heading-m">(Subject line) URGENT: Review incident report <span class="nowrapper">INC-123-456-789</span></h1>
+<p class="govuk-body">Dear [Name Surname],
+	<p class="govuk-body">Someone in your team reported this incident at 14.03 on 7 June 2022. </p>
+	<p class="govuk-body">As their line manager, you have a duty of care to provide them with support, and to help them access any additional support they need.</p>
+	<p class="govuk-body">For security reasons, we cannot provide any information about the incident in this email. </p>
+
+</p>
+<br><br>
+<h2 class="govuk-heading-m">What happens next</h2>
+		<p class="govuk-body">We’ve sent a notification to the incident manager who is best placed to review the incident report. Once they’ve reviewed it, we will forward it to a case reviewer and then to a decision maker.</p>
+
+		<p class="govuk-body">Your team member will receive an email within 48 hours to tell them the decision about this customer. </p>
+<br><br>
+<p class="govuk-body">Thank you, <br>Agent Safeguarding. </p>
+
+
+<br><br><br><br>
+<hr>
+<p class="govuk-body">END OF EMAIL</p>
+<div class="govuk-button-group">
+
+	{% from "govuk/components/button/macro.njk" import govukButton %}
+
+	{{ govukButton({
+	  text: "Start",
+	  href: "00incident",
+	  isStartButton: true
+	}) }}
+</div>
+
+
+
+
+
+<p class="govuk-body"><a href="00_start">
+		< Return to beginning of journey.</a>
+</p>
+{% endblock %}

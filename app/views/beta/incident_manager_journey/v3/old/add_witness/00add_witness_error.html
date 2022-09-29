@@ -1,0 +1,133 @@
+{% extends "layout2.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Error: Who witnessed the incident? - Keep Customer Interactions Safe
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="00add_witness_error2">feedback</a> will help us to improve it.'
+}) }}
+{% include "templates/v2/header_searchlight.njk" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+{% include "templates/v4/govuk-caption-l.njk" %}
+
+
+<div class="govuk-form-group">
+  <form class="form" action="route" method="post">
+    <fieldset class="govuk-fieldset" aria-describedby="page-title">
+
+{% set youOnbehalfHTML %}
+
+      {{ govukInput({
+      label: {
+      text: "Witness's full name"
+      },
+      id: "witness-full-name",
+      classes: "govuk-!-width-one-third",
+
+      name: "witness-full-name",
+      autocomplete: "name"
+      }) }}
+{% endset %}
+{% set colleagueOnbehalfHTML %}
+      {{ govukInput({
+      label: {
+      text: "Their full name"
+      },
+      id: "witness-full-name",
+      classes: "govuk-!-width-one-third",
+
+      name: "witness-full-name",
+      autocomplete: "name"
+      }) }}
+
+            {{ govukInput({
+      label: {
+      text: "Their email address"
+      },
+      id: "witness-email",
+      classes: "govuk-!-width-one-third",
+
+      name: "witness-email",
+      autocomplete: "email"
+      }) }}
+{% endset %}
+{% set colleagueHTML %}
+            {{ govukInput({
+      label: {
+      text: "Their email address"
+      },
+      id: "colleague-email",
+      classes: "govuk-!-width-one-third",
+
+      name: "witness-email",
+      autocomplete: "email"
+      }) }}
+{% endset %}
+{{ govukRadios({
+  idPrefix: "contact",
+  name: "contact",
+  fieldset: {
+    legend: {
+      text: "Who witnessed the incident?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Select one option."
+  },
+  items: [
+    {
+      value: "you",
+      text: "Me"
+    },
+    {
+      value: "colleague",
+      text: "A DWP colleague who can access this service",
+      conditional: {
+        html: colleagueHTML
+      }
+    },
+    {
+      value: "colleagueOnbehalf",
+    text: "A colleague without access to this service",
+      conditional: {
+        html: colleagueOnbehalfHTML
+      }
+    }
+  ],
+  errorMessage: {
+    text: "Tell us who the witness is"
+  }
+}) }}
+      <div class="govuk-button-group">
+
+
+        {{ govukButton({
+        text: "Continue"
+        }) }}
+
+
+        {% endblock %}
+      </div>
+    </fieldset>
+  </form>
+</div>

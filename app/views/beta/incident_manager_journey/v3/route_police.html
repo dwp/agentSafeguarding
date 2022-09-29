@@ -1,0 +1,24 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+	  items: [
+	    {
+	      text: "GOV.UK Prototype Kit",
+	      href: "/docs"
+	    }
+	  ]
+	}) }}
+{% endblock %}
+
+{% block content %}
+<p>
+Dummy page for use with route to police question
+</p>
+
+{% endblock %}

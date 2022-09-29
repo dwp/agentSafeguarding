@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Have you added all witnesses? - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% include "templates/v2/header_searchlight.njk" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+{% block content %}
+{% include "templates/v3/govuk-caption-l.njk" %}
+
+<h1 class="govuk-heading-l" id="page-title">Have you added everyone who witnessed this incident?</h1>
+<p class="govuk-body">Check you have added all witnesses, and that their details are correct.
+</p>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="page-title">
+
+    {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Witness"
+          },
+          value: {
+            text: "Sartaq Matcha (sartaq.matcha@dwp.gov.uk)"
+          },
+          actions: {
+            items: [
+            {
+              href: "00add_witness_filled",
+              text: "Change",
+              visuallyHiddenText: "witness"
+            },
+            {
+              href: "01list_witness_delete",
+              text: "Delete",
+              visuallyHiddenText: "witness"
+            }
+          ]
+          }
+        },
+        {
+          key: {
+            text: "Witness"
+          },
+          value: {
+            text: "Ted Lady (ted.lady@dwp.gov.uk)"
+          },
+          actions: {
+            items: [
+            {
+              href: "00add_witness_filled",
+              text: "Change",
+              visuallyHiddenText: "witness"
+            },
+            {
+              href: "01list_witness_delete",
+              text: "Delete",
+              visuallyHiddenText: "witness"
+            }
+          ]
+          }
+        }
+      ]
+    }) }}
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+    <div class="govuk-button-group">
+
+    {{ govukButton({
+      text: "Add witness",
+      classes: "govuk-button--secondary",
+      href: "00add_witness"
+    }) }}
+
+    {{ govukButton({
+      text: "Continue",
+      href: "../02police"
+    }) }}
+
+    </div>
+    {% endblock %}
+  </fieldset>
+
+</div>

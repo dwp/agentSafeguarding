@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Start of journey - email prompt
+{% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+
+{% endblock %}
+
+
+
+{% block content %}
+<style>
+	.nowrapper {
+		white-space: nowrap;
+	}
+</style>
+<h1 class="govuk-heading-m"><i>Email 1: WHEN THE LINE MANAGER IS THE INCIDENT MANAGER</i></h1>
+<br><br>
+<h1 class="govuk-heading-m">(Subject line) URGENT: Review incident report <span class="nowrapper">INC-123-456-789</span></h1>
+<p class="govuk-body">Dear [Name Surname],
+	<p class="govuk-body">Someone in your team reported this incident at 14.03 on 7 June 2022. </p>
+	<p class="govuk-body">As their line manager, you have a duty of care to provide them with support, and to help them access any additional support they need.</p>
+	<p class="govuk-body">You must also review the incident report for INC-123-456-789. </p>
+		<p class="govuk-body"><b>You must complete your review before [14.03 on 9 June 2022].</b> </p><br>
+	<p class="govuk-body">For security reasons, we cannot provide any information about the incident in this email. </p>
+
+</p>
+<br><br>
+
+<h2 class="govuk-heading-m">What to do now</h2>
+
+<ol class="govuk-list  govuk-list--number">
+<li>Speak to your team member about the incident and make sure they have any support they need.</li><br>
+<li>Review the incident report in Agent Safeguarding. To do this, sign in to Searchlight and [explain how to get to the right place to start the review]. </li><br>
+<li>Add witnesses to the report where necessary, and add your own comments and recommendations.</li><br>
+<li>If required, you should also report this as a Fast Track Incident in the Safety Online – Accident Reporting System (SOARS).</li><br>
+</ol>
+
+		<p class="govuk-body">Once you have reviewed this report, we will send it to a case reviewer. </p>
+<br><br>
+<p class="govuk-body">Thank you, <br>Agent Safeguarding. </p>
+
+<br><br><br><br>
+<hr>
+<p class="govuk-body">END OF EMAIL</p>
+<div class="govuk-button-group">
+
+	{% from "govuk/components/button/macro.njk" import govukButton %}
+
+	{{ govukButton({
+		text: "Start",
+		href: "00incident",
+		isStartButton: true
+	  }) }}
+</div>
+<p class="govuk-body"><a href="00_start">
+		< Return to beginning of journey.</a>
+</p>
+{% endblock %}

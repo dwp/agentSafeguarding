@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Did anyone witness this incident? - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% include "templates/v2/header_searchlight.njk" %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+{% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+{{ govukErrorSummary({
+titleText: "There is a problem",
+errorList: [
+  {
+    text: "Select yes if there were witnesses to this incident.",
+    href: "#witnessQuestion"
+  }
+]
+}) }}
+
+<div class="govuk-form-group">
+  <form class="form" action="route_witness" method="post">
+
+  <fieldset class="govuk-fieldset" aria-describedby="witnessQuestion">
+    {% include "templates/v3/govuk-caption-l.njk" %}
+
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+    {{ govukRadios({
+      idPrefix: "witnessQuestion",
+      name: "witnessQuestion",
+      fieldset: {
+        legend: {
+          text: "Did anyone witness (see or hear) this incident?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      items: [
+        {
+          value: "yes",
+          text: "Yes"
+        },
+        {
+          value: "no",
+          text: "No"
+        }
+      ],
+      errorMessage: {
+        text: "Select yes if there were witnesses to this incident."
+      }
+    }) }}
+    <div class="govuk-button-group">
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+
+    {% endblock %}
+    </div>
+  </fieldset>
+</form>
+</div>
