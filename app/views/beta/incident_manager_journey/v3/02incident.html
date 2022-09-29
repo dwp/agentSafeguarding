@@ -25,8 +25,7 @@
   </section>
 {% endblock %}
 {% block content %}
-  
-  <h1 class="govuk-heading-xl">{% include "templates/v6/govuk-caption-l.njk" %}Incident report</h1>
+  <h1 class="govuk-heading-xl">{% include "templates/v6/govuk-caption-l.njk" %}Original incident report</h1>
   <section aria-label="Incident overview" role="region">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -36,7 +35,7 @@
             rows: [
               {
                 key: {
-                  html: "Incident reference",
+                  html: "Report reference",
                   classes: "govuk-!-width-one-half"
                 },
                 value: {
@@ -46,7 +45,7 @@
               },
               {
                 key: {
-                  html: "Incident occurred",
+                  html: "Occurred",
                   classes: "govuk-!-width-one-half"
                 },
                 value: {
@@ -56,10 +55,10 @@
               },
               {
                 key: {
-                  text: "Incident reported"
+                  text: "Reported"
                 },
                 value: {
-                  text: "7 June 2022 at 2:31pm"
+                  text: "8 June 2022 at 2:31pm"
                 }
               },
               {
@@ -85,7 +84,7 @@
             <strong class="govuk-warning-text__text">
               <span class="govuk-warning-text__assistive">Warning
               </span>
-              The reporter stated that the incident involved discrimination.
+              The reporter stated that the customer's behaviour involved involved discrimination.
             </strong>
           </div>
         </div>
@@ -98,6 +97,8 @@
       <div class="govuk-grid-column-two-thirds">
         <div class="govuk-!-padding-bottom-9">
           <h2 class="govuk-heading-l"><span class="govuk-warning-text__assistive">Incident</span> Details</h2>
+          <p class="govuk-hint">Note: Hint text</p>
+
           <h3 class="govuk-heading-s">1. Why was the customer in contact with us?</h3>
           <p class="govuk-body">The customer came in for his regular fortnightly meeeting to discuss the progress he had made in the last two weeks on finding a job. This is part of the agreement he started recceeiving Universal Credit November 30 2021. When reviewing his case before the meeting I noticed that he had been late to the previous five meetings and had skipped one oon 23 May 2022.
           </p>
@@ -117,6 +118,7 @@
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" aria-hidden="true">
           <h3 class="govuk-heading-s">5. Were there any witnesses to this incident?</h3>
           <p class="govuk-body">Yes</p>
+          <p class="govuk-hint govuk-body-s">Note: Hint text</p>
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" aria-hidden="true">
           <h3 class="govuk-heading-s">6. How did your interaction with the customer end?</h3>
           <p class="govuk-body">There was a further pause. The customer's deemeanour seemed to soften as he considered my words. He exhaled sharply, clicked his tongue, turned and walked quickly from my desk towards the door and left the building. Our security guard witnessed this but decided not to intervene (correctly in my opinion).
@@ -126,7 +128,7 @@
           <p class="govuk-body">The interaction was challenging but relatively mild. I felt a little intimidated but not scared. However, having met the customer on a number of occasions, I felt this seemed out of character and felt concerned about the customer. I wondered what event may have caused this uncharacteristic behaviour.
           </p>
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" aria-hidden="true">
-          <h3 class="govuk-heading-s">Do you feel the incident was motivated by any type of discrimination?</h3>
+          <h3 class="govuk-heading-s">Do you feel the customer's behaviour was motivated by any type of discrimination?</h3>
           <ul class="govuk-list govuk-list--bullet">
             <li>Race including colour, nationality, ethnic or national origin</li>
             <li>Sex</li>
@@ -140,22 +142,22 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <div class="govuk-!-padding-bottom-9">
-          <h2 class="govuk-heading-l">Original reporter</h2>
+          <h2 class="govuk-heading-l">Contact details</h2>
           {{ govukSummaryList({
             rows: [
               {
                 key: {
-                  text: "Name",
+                  text: "Original reporter",
                   classes: "govuk-!-width-one-half"
                 },
                 value: {
-                  html: "<span class='govuk-visually-hidden'>Original reporter: </span><span class='govuk-body-s' style='color:#505a5f'>Whitney Earl on behalf of </span>Mike Black",
+                  html: "<span class='govuk-visually-hidden'>Original reporter: </span><span class='govuk-body-s' style='color:#505a5f'>Whitney Earl on behalf of </span>Mike&nbsp;Black<br><br><p class='govuk-body-s' style='color:#505a5f'>This explains</p>",
                   classes: "govuk-!-width-one-half"                
                 }
               },
               {
                 key: {
-                  text: "Email address"
+                  text: "Reporter's email address"
                 },
                 value: {
                   text: "whitney.earl@dwp.gov.uk"
@@ -182,7 +184,7 @@
                   text: "Reviewing manager"
                 },
                 value: {
-                  html: "Peter White"
+                  html: "Peter White<br><br><p class='govuk-body-s' style='color:#505a5f'>This explains</p>"
                 }
               },
               {
