@@ -1,0 +1,18 @@
+{% from "key-details-bar/macro.njk" import dwpKeyDetailsBar %}
+
+{{ dwpKeyDetailsBar({
+primaryIdentifier: {
+text: 'Name:',
+value: 'Ann Other'
+},
+secondaryIdentifier: {
+text: 'National Insurance number:',
+value: 'SW 99 88 76 X'
+},
+additionalData: [
+{
+value: "1 April 1991",
+text: "Date of birth:"
+}
+]
+}) }} 

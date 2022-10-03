@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Start of journey
+{% endblock %}
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
+
+{% block content %}
+<h1 class="govuk-heading-xl">Research</h1>
+<p class="govuk-body">When instructed, press start to access the tasks</p>
+	{{ govukButton({
+		text: "Scenario 0",
+		href: "20221006/01details"
+	}) }}	
+	<div class="govuk-button-group">
+		{% from "govuk/components/button/macro.njk" import govukButton %}
+		{{ govukButton({
+			text: "Scenario 1",
+			href: "20221006/01details1",
+			isStartButton: true
+		  }) }}
+		{{ govukButton({
+			text: "Scenario 2",
+			href: "20221006/01details2",
+			isStartButton: true
+		  }) }}
+		{{ govukButton({
+			text: "Scenario 3",
+			href: "20221006/01details3",
+			isStartButton: true
+		  }) }}
+		{{ govukButton({
+			text: "Scenario 4",
+			href: "20221006/01details4",
+			isStartButton: true
+		  }) }}
+		{{ govukButton({
+			text: "Scenario 5",
+			href: "20221006/01details5",
+			isStartButton: true
+		  }) }}
+	</div>
+</p>
+{% endblock %}
