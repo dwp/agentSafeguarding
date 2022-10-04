@@ -1,0 +1,24 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Routing page
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+	  items: [
+	    {
+	      text: "index",
+	      href: "/"
+	    }
+	  ]
+	}) }}
+{% endblock %}
+
+{% block content %}
+<p>
+Dummy page for use with route to witness for UR rig
+</p>
+
+{% endblock %}

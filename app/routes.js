@@ -387,6 +387,27 @@ router.post('/beta/_UR/20220908/landing/route_witness2', function (req, res) {
     } 
 })
 
+// 20221006 UR rig Route witness Journey 
+router.post('/beta/_UR/20221006/route_witur', function (req, res) {
+  // Make a variable and give it the value from 'prnQuestion'
+  var didYouWitness = req.session.data['didyouwitness']
+  // Send user to 
+
+  if (didYouWitness == "yes") {
+    // Send user to 
+    res.redirect('03comments')
+  } else {
+    // Send user to 
+    res.redirect('04check2')
+  } 
+})
+router.post('/beta/_UR/20221006/route_witur2', function (req, res) {
+  // Make a variable and give it the value from 'prnQuestion'
+  // var onBehalf = req.session.data['04check']
+  // Send user to 
+  res.redirect('04check')
+})
+
 // Add your routes here - above the module.exports line
 
 // copy the const name and the file path to new version

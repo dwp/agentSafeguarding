@@ -29,8 +29,8 @@ Confirm incident (witness request) - Keep Customer Intercations Safe
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
-        <form class="form" action="route_wit" method="post">
-          <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
+        <form class="form" action="route_witur" method="post">
+          <fieldset class="govuk-fieldset">
             <p>We believe you recently saw and / or overheard this incident between one of your colleagues and a customer. </p>
             <p>If any of these details are wrong, you can tell us on the next screen. </p>
             {{ govukSummaryList({
@@ -93,10 +93,12 @@ Confirm incident (witness request) - Keep Customer Intercations Safe
                 }
               ]
             }) }}
+            <input type="hidden" name="Witness" value="Sarah Sancha">            
+            <input type="hidden" name="Reporter" value="Whitney Earl">
+            <input type="hidden" name="Date" value="22 September 2022">
             <div class="govuk-button-group">
               {{ govukButton({
-                text: "Continue",
-                href: "01details2"
+                text: "Continue"
               }) }}
             </div>
           </fieldset>
