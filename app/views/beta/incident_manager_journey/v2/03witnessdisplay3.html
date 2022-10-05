@@ -26,13 +26,12 @@ Witnesses - Keep Customer Interactions Safe
 {% endblock %}
 {% block content %}
 {% include "templates/v5/govuk-caption-l.njk" %}
+<h1 class="govuk-heading-xl" id="pageh1">Witnesses</h1>
 <section aria-label="Incident witnesses" role="region">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       {{ govukTable({
-        caption: "Witnesses",
-        captionClasses: "govuk-heading-xl",
-        isPageHeading: true,
+        caption: pageh1,
         firstCellIsHeader: true,
         head: [
           {
@@ -48,7 +47,7 @@ Witnesses - Keep Customer Interactions Safe
         rows: [
           [
             {
-              text: "Sarah Sencha"
+              html: "<span class='govuk-visually-hidden'>Witness name: </span>Sarah Sencha"
             },
             {
               html: "<span class='govuk-visually-hidden'>Witness report: </span>Complete"
@@ -59,7 +58,7 @@ Witnesses - Keep Customer Interactions Safe
           ],
           [
             {
-              text: "Isla Yellow"
+              html: "<span class='govuk-visually-hidden'>Witness name: </span>Isla Yellow"
             },
             {
               html: "<span class='govuk-visually-hidden'>Witness report: </span>Complete"
@@ -70,7 +69,7 @@ Witnesses - Keep Customer Interactions Safe
           ],
           [
             {
-              text: "Ted Lady"
+              html: "<span class='govuk-visually-hidden'>Witness name: </span>Ted Lady"
             },
             {
               html: "<span class='govuk-visually-hidden'>Status: </span>Requested from: Ted Lady"
@@ -81,7 +80,7 @@ Witnesses - Keep Customer Interactions Safe
           ],
           [
             {
-              text: "Sartaq Assam"
+              html: "<span class='govuk-visually-hidden'>Witness name: </span>Sartaq Assam"
             },
             {
               html: "<span class='govuk-visually-hidden'>Status: </span>Requested from: Whitney Earl"
