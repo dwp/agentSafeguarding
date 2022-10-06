@@ -25,19 +25,23 @@
   </section>
 {% endblock %}
 {% block content %}
-  {{ govukErrorSummary({
-    titleText: "There is a problem",
-    errorList: [
-      {
-        text: "Tell us about the incident",
-        href: "#description"
-      },
-      {
-        text: "Confirm you have reviewed all the required information",
-        href: "#checklist"
-      }
-    ]
-  }) }}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Tell us about the incident",
+            href: "#description"
+          },
+          {
+            text: "Confirm you have reviewed all the required information",
+            href: "#checklist"
+          }
+        ]
+      }) }}
+    </div>
+  </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
@@ -51,23 +55,34 @@
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="description">
           {% include "templates/v5/govuk-caption-l.njk" %}
-          <h1 class="govuk-heading-l">Describe the incident</h1>
-          <p>If you are making this witness report for a colleague who doesn't have access to this service, write "my colleague saw" or "he / she / they saw", as applicable. Do not use your colleague's name.</p>
           {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
           {{ govukCharacterCount({
             id: "description",
             name: "Description",
             rows: "12",
+            label: {
+              text: "Describe the incident",
+              classes: "govuk-label--l",
+              isPageHeading: true
+            },
+            hint: {
+              html: "If you are making this witness report for a colleague who doesn't have access to this service, write &ldquo;my colleague saw&rdquo; or &ldquo;he / she / they saw&rdquo;, as applicable. Do not use your colleague's name."
+            },
             maxlength: 3000,
             errorMessage: {
               text: "Tell us about the incident"
             }
           }) }}
-          <h2 class="govuk-heading-s">Confirm you have considered and included, where possible:</h2>
           {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
           {{ govukCheckboxes({
             idPrefix: "checklist",
             name: "checklist",
+            fieldset: {
+              legend: {
+                text: "Confirm you have considered and included, where possible:",
+                classes: "govuk-fieldset__legend--s"
+              }
+            },
             items: [
               {
                 value: "words",
