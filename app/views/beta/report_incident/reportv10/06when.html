@@ -1,0 +1,123 @@
+  {% extends "layout.html" %}
+
+{% block pageTitle %}
+When did the incident happen? - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+<section aria-label="Beta banner" role="region">
+
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+  {{ govukPhaseBanner({
+  tag: {
+  text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="06when_error">feedback</a> will help us to improve it.'
+  }) }}
+</section>
+{% include "templates/v2/header_searchlight.njk" %}
+<section aria-label="Back" role="region">
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+  }) }}
+</section>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="incident-date">
+    {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+
+    {{ govukDateInput({
+    id: "incident-date",
+    namePrefix: "incident-date",
+    fieldset: {
+    legend: {
+    text: "When did the incident happen?",
+    isPageHeading: true,
+    classes: "govuk-fieldset__legend--l"
+    }
+    },
+    hint: {
+    text: "For example, 30 11 2021"
+    },
+    items: [
+    {
+    classes: "govuk-input--width-2",
+    name: "day"
+    },
+    {
+    classes: "govuk-input--width-2",
+    name: "month"
+    },
+    {
+    classes: "govuk-input--width-4",
+    name: "year"
+    }
+    ]
+    }) }}
+
+
+    <div id="incident-time-hint" class="govuk-hint">
+      Use the 24-hour clock. For example, 15:30
+    </div>
+    <div class="govuk-date-input" id="incident-time">
+      <div class="govuk-date-input__item right_pad_5">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="incident-time-hours">
+            Hours
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="incident-time-hours" name="incident-time-hours" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <style>
+        .sg-time-colon {
+          display: inline-block;
+          font-size: 1.1875rem;
+          margin-right: 5px;
+        }
+
+        .right_pad_5 {
+          margin-right: 5px;
+        }
+      </style>
+      <div class="sg-time-colon"> : </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="incident-time-minutes">
+            Minutes
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="incident-time-minutes" name="incident-time-minutes" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+
+
+  </fieldset>
+</div>
+<div class="govuk-button-group">
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {{ govukButton({
+  text: "Continue",
+  href: "07where"
+  }) }}
+
+</div>
+</fieldset>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

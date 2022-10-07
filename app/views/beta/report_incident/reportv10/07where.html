@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Where were you during the incident? - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+<section aria-label="Beta banner" role="region">
+
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+  {{ govukPhaseBanner({
+  tag: {
+  text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="07where_error">feedback</a> will help us to improve it.'
+  }) }}
+</section>
+{% include "templates/v2/header_searchlight.njk" %}
+<section aria-label="Back" role="region">
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+  }) }}
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="location">
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+    {% set somewhereHtml %}
+    {{ govukInput({
+      id: "somewhereelse-text",
+      name: "somewhereelse-text",
+      classes: "govuk-!-width-one-third",
+      label: {
+        text: "Incident location"
+      }
+    }) }}
+    {% endset -%}
+    
+    {{ govukRadios({
+      idPrefix: "location",
+      name: "location",
+      fieldset: {
+        legend: {
+          text: "Where were you during the incident?",
+          isPageHeading: true,
+          classes: "govuk-fieldset__legend--l"
+        }
+      },
+      hint: {
+        text: "Select one option."
+      },
+      items: [
+        {
+          value: "office",
+          text: "The office you're based at"
+        },
+        {
+          value: "differentoffice",
+          text: "A different office"
+        },
+        {
+          value: "outreach",
+          text: "An outreach location"
+        },
+        {
+          value: "home",
+          text: "Your home"
+        },
+        {
+          value: "customershouse",
+          text: "The customer's home"
+        },
+        {
+          value: "somewhereelse",
+          text: "Somewhere else",
+          conditional: {
+            html: somewhereHtml
+          }
+        }
+      ]
+    }) }}
+
+    <div class="govuk-button-group">
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+      text: "Continue",
+      href: "08discrimination"
+      }) }}
+
+    </div>
+  </fieldset>
+</div>
+
+{% endblock %}

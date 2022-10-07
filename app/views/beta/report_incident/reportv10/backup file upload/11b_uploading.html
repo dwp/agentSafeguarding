@@ -65,54 +65,47 @@
   </style>
   {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
   {{ govukNotificationBanner({
-    html: '<p class="govuk-notification-banner__heading">Added 1 file</p>',
-    type: 'success'
+  html: '<p class="govuk-notification-banner__heading">Adding 1 file</p>',
+    type: 'important',
+    titleText: 'Working'
   }) }}
   <h1 class="govuk-heading-l">Add files</h1>
-      <p class="govuk-body">You cannot upload files larger than 1MB.</p>
-  <p class="govuk-body">You cannot upload more than 8MB in total.</p>
-  {{ govukTable({
-  caption: "Files added",
-  captionClasses: "govuk-table__caption--m",
-
-  rows: [
-    [
-      {
-        html:         "<svg class='moj-banner__icon filter-green' fill='currentColor' role='presentation' focusable='false' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' height='25' width='25'>
-          <path d='M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z'></path>
-        </svg>
-        <span class='govuk-success-colour'>evidence.jpg</span>"
-      },
-      {
-        text: "1MB"
-      },
-      {
-        html: "<span class='govuk-!-text-align-right'><a href='#'>Delete</a></span>"
-      }
-    ]
-  ]
-}) }}  
-
-  <label class="govuk-label govuk-label--m" for="documents">
-    Add files
-  </label>
-  <div class="myDiv">
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="file-upload-1">
-        <span class="govuk-button govuk-button--secondary mylabel">Drag and drop files here or
-        </span>
-        <span class="govuk-button govuk-button--secondary myfileupload">
-          Choose files
-        </span>
-      </label>
-      <input class="govuk-file-upload hidevalue" id="file-upload-1" name="file-upload-1" type="file" title="File upload"></div>
+  <div class="moj-multi-file-upload">
+    <div class="moj-multi-file__uploaded-files ">
+      <h2 class="govuk-heading-m">Files added</h2>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dd class="govuk-summary-list__value">
+            "evidence.jpg"
+            <-PROGRESS BAR->
+              35% uploaded
+            </dd>
+            <dd class="govuk-summary-list__actions"></dd>
+          </div>
+        </dl>
+      </div>
     </div>
-    <div class="govuk-button-group">
-      {% from "govuk/components/button/macro.njk" import govukButton %}
-      {{ govukButton({
-      text: "Continue",
-      href: "11e_uploaded3"
-      }) }}
+    <label class="govuk-label govuk-label--m" for="documents">
+      Add files
+    </label>
+    <div class="myDiv">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          <span class="govuk-button govuk-button--secondary mylabel">Drag and drop files here or
+          </span>
+          <span class="govuk-button govuk-button--secondary myfileupload">
+            Choose files
+          </span>
+        </label>
+        <input class="govuk-file-upload hidevalue" id="file-upload-1" name="file-upload-1" type="file" title=" asd"></div>
+      </div>
+      <div class="govuk-button-group">
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+        {{ govukButton({
+              text: "Continue",
+              href: "11c_upload_working"
+            }) }}
+      </div>
     </div>
   </div>
 {% endblock %}

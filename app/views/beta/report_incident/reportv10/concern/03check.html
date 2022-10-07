@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+{% block pageTitle %}
+  Check your answers - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+  {% include "templates/v2/header_searchlight.njk" %}
+  {{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+  <h1 class="govuk-heading-l" id="page-title">
+    Check your answers
+  </h1>
+
+        <h2 class="govuk-heading-m">
+    Overview
+  </h2>
+
+    {{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Who do you work for?"
+      },
+      value: {
+        text: "Centre for Health and Disability Assessments (CHDA) "
+      }
+    }
+  ]
+}) }}
+        <h2 class="govuk-heading-m">
+    Describe the concern
+  </h2>
+
+    {{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Description of concern"
+      },
+      value: {
+        text: "Evidence - letter from GP warning of violent tendencies"
+      }
+    }
+  ]
+}) }}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m">
+                Files added
+              </h2>
+                {% from "govuk/components/table/macro.njk" import govukTable %}
+                {{ govukTable({
+              firstCellIsHeader: true,
+              rows: [
+                [
+                  {
+            html: "<span class='govuk-visually-hidden'>File name:</span> letter_l.pdf"
+                  }
+                ]
+              ]
+            }) }}
+          </div>
+        </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group ">
+        <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
+          <h2 class="govuk-heading-m">Are you ready to submit your report?</h2>
+          <p class="govuk-body">If you need to change anything in your report, use the back link near the top of this page.</p>
+          <p class="govuk-body">When you click Submit, we will send your report to the appropriate manager to review.</p>
+          <p class="govuk-body govuk-!-font-weight-bold">You will not be able to change anything in your report after you click Submit.</p>
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+          <div class="govuk-button-group">
+            {{ govukButton(
+                {
+                  text: "Submit",
+                  href: "04confirm"
+                }
+              ) }}
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+{% endblock %}

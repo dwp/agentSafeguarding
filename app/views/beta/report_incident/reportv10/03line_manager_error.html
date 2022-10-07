@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Who is your line manager? - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+<section aria-label="Beta banner" role="region">
+
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+  {{ govukPhaseBanner({
+  tag: {
+  text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+</section>
+{% include "templates/v2/header_searchlight.njk" %}
+<section aria-label="Back" role="region">
+  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+  }) }}
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-form-group">
+  {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+  {{ govukErrorSummary({
+  titleText: "There is a problem",
+  errorList: [
+  {
+  text: "Enter their first name",
+  href: "#first-name"
+  },
+  {
+  text: "Enter their last name",
+  href: "#last-name"
+  },
+  {
+  text: "Enter their email address, in the format name@example.com",
+  href: "#email"
+  }
+
+
+  ]
+  }) }}
+  <fieldset class="govuk-fieldset" aria-describedby="line-manager">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading" id="page-title">
+        Who is your line manager?
+      </h1>
+    </legend>
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+    {{ govukInput({
+    id: "first-name",
+    name: "first-name",
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their first name"
+    },
+    errorMessage: {
+    text: "Enter their first name"
+    }
+    }) }}
+    {{ govukInput({
+    id: "last-name",
+    name: "last-name",
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their last name"
+    },
+    errorMessage: {
+    text: "Enter their last name"
+    }
+    }) }}
+    {{ govukInput({
+    id: "email",
+    name: "email",
+    type: "email",
+    autocomplete: "email",
+    spellcheck: false,
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their email address"
+    },
+    errorMessage: {
+    text: "Enter their email address, in the format name@example.com"
+    },    
+    hint: {
+      text: "Enter their email address as it appears on the Global Address List"
+    }
+    }) }}
+
+<div class="govuk-button-group">
+
+  {% from "govuk/components/button/macro.njk" import govukButton %}
+
+  {{ govukButton({
+  text: "Continue",
+  href: "04acting_manager"
+  }) }}
+
+</div>
+</fieldset>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+What do you want to report? - Agent Safeguarding
+{% endblock %}
+
+{% block beforeContent %}
+<section aria-label="Beta banner" role="region">
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="01report">feedback</a> will help us to improve it.'
+}) }}
+</section>
+{% include "templates/v2/header_searchlight.njk" %}
+<section aria-label="Back" role="region">
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+text: "Back to Searchlight",
+href: "javascript:history.back()"
+}) }}
+</section>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-form-group">
+    {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+    {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Select the report type",
+        href: "#report-type"
+      }
+    ]
+  }) }}
+    <form class="form" action="route_incident" method="post">
+
+    <fieldset class="govuk-fieldset" aria-describedby="report-type">
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+      idPrefix: "report-type",
+      name: "report-type",
+      fieldset: {
+      legend: {
+      text: "What do you want to report?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+      }
+      },
+      items: [
+      {
+      value: "incident",
+      text: "An incident that has already happened",
+      hint: {
+        text: "For example, a customer has been verbally abusive to their work coach, or made threats in their journal"
+      }
+      },
+      {
+      value: "concern",
+      text: "A concern that something might happen that will risk colleagues' safety",
+      hint: {
+        text: "For example, information on a UC50 form about this customer indicates there is a risk to staff"
+      }
+      }
+      ],
+        hint: {
+        text: "Select one option."
+      },
+      errorMessage: {
+        text: "Select the report type"
+      }
+      }) }}
+      <div class="govuk-button-group">
+
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+        text: "Continue"
+        }) }}
+
+      </div>
+    </fieldset>
+    </form>
+</div>
+
+
+
+
+{% endblock %}

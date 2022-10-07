@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Identify appropriate manager - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+  tag: {
+  text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="04acting_manager_error">feedback</a> will help us to improve it.'
+  }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+    {{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+  }) }}
+  </section>
+{% endblock %}
+{% block content %}
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="on-behalf">
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {% set managerDetailsHtml %}
+      {{ govukInput({
+    id: "first-name",
+    name: "first-name",
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their first name"
+    }
+    }) }}
+      {{ govukInput({
+    id: "last-name",
+    name: "last-name",
+    classes: "govuk-!-width-one-third",
+    label: {
+    text: "Their last name"
+    }
+    }) }}
+      {{ govukInput({
+      id: "email",
+      name: "email",
+      type: "email",
+      autocomplete: "email",
+      spellcheck: false,
+      classes: "govuk-!-width-one-third",
+      label: {
+      text: "Their email address"
+      },
+      hint: {
+        text: "Enter their email address as it appears on the Global Address List"
+      }
+      }) }}
+      {% endset -%}
+      {{ govukRadios({
+    idPrefix: "acting-manager",
+    name: "acting-manager",
+    fieldset: {
+    legend: {
+    text: "Who is the most appropriate manager to review this report?",
+    isPageHeading: true,
+    classes: "govuk-fieldset__legend--l"
+    }
+    },
+    items: [
+    {
+    value: "linemanager",
+    text: "My line manager"
+    },
+    {
+    value: "anothermanager",
+    text: "Another manager",
+      hint: {
+    text: "For example, a job centre manager or someone standing in for your line manager"
+  },
+    conditional: {
+    html: managerDetailsHtml
+    }
+    }
+    ],
+    hint: {
+    text: "Select one option."
+    }
+    }) }}
+      <div class="govuk-button-group">
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+        {{ govukButton({
+      text: "Continue",
+      href: "05interaction"
+      }) }}
+      </div>
+    </fieldset>
+  </div>
+{% endblock %}
