@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Confirm incident (witness request) - Keep Customer Intercations Safe
+{% endblock %}
+
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+      tag: {
+      text: "beta"
+    },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Tell us if they witnessed this incident",
+            href: "#didyouwitness"
+          }
+        ]
+      }) }}
+    </div>
+  </div>
+  <h1 class="govuk-heading-l">Confirm</h1>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <form class="form" action="route_wit" method="post">
+          <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
+            <p>We believe Mike Black recently saw and / or overheard this incident between one of their colleagues and a customer. </p>
+            <p>If any of these details are wrong, you can tell us on the next screen. </p>
+            {{ govukSummaryList({
+              rows: [
+                {
+                  key: {
+                    text: "Customer"
+                  },
+                  value: {
+                    text: "Robert De Silva"
+                  }
+                },
+                {
+                  key: {
+                    text: "Reporter"
+                  },
+                  value: {
+                    text: "Whitney Earl"
+                  }
+                },
+                {
+                  key: {
+                    text: "Witness "
+                  },
+                  value: {
+                    text: "Mike Black"
+                  }
+                },
+                {
+                  key: {
+                    text: "Date and approximate time"
+                  },
+                  value: {
+                    text: "22 April 2022 at 10:30am"
+                  }
+                },
+                {
+                  key: {
+                    text: "Reference number"
+                  },
+                  value: {
+                    html: "<span aria-hidden='true'>INC-</span><span aria-hidden='false'>123-456-789</span>"
+                  }
+                }
+              ]
+            }) }}
+            <br>
+            {{ govukRadios({
+              idPrefix: "didyouwitness",
+              name: "didyouwitness",
+              fieldset: {
+                legend: {
+                  text: "Did Mike Black see and / or hear this incident?",
+                  classes: "govuk-fieldset__legend--m"
+                }
+              },
+              items: [
+                {
+                  value: "yes",
+                  text: "Yes"
+                },
+                {
+                  value: "no",
+                  text: "No"
+                }
+              ],
+              errorMessage: {
+                text: "Tell us if Mike Black witnessed this incident"
+              }
+            }) }}
+            <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Continue"
+              }) }}
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

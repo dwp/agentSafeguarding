@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Confirm incident (witness request)) - Keep Customer Intercations Safe
+{% endblock %}
+
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+      tag: {
+      text: "beta"
+    },
+      html: 'This is a new service – your <a class="govuk-link" href="01details2error">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-l">Confirm</h1>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <form class="form" action="route_wit" method="post">
+          <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
+            <p>We believe Mike Black recently saw and / or overheard this incident between one of their colleagues and a customer. </p>
+            <p>If any of these details are wrong, you can tell us on the next screen. </p>
+            {{ govukSummaryList({
+              rows: [
+                {
+                  key: {
+                    text: "Customer"
+                  },
+                  value: {
+                    text: "Robert De Silva"
+                  }
+                },
+                {
+                  key: {
+                    text: "Reporter"
+                  },
+                  value: {
+                    html: "<span class='govuk-body-s' style='color:#505a5f'>Whitney Earl on behalf of</span> Mike Black"
+                  }
+                },
+                {
+                  key: {
+                    text: "Witness "
+                  },
+                  value: {
+                    html: "<span class='govuk-body-s' style='color:#505a5f'>Sarah Sancha on behalf of</span> Ted Lady"
+                  }
+                },
+                {
+                  key: {
+                    text: "Date and approximate time"
+                  },
+                  value: {
+                    text: "22 April 2022 at 10:30am"
+                  }
+                },
+                {
+                  key: {
+                    text: "Reference number"
+                  },
+                  value: {
+                    html: "<span aria-hidden='true'>INC-</span><span aria-hidden='false'>123-456-789</span>"
+                  }
+                }
+              ]
+            }) }}
+            <br>
+            <h2 class="govuk-heading-m">Did Ted Lady see and / or hear this incident?</h2>
+            {{ govukRadios({
+              idPrefix: "didyouwitness",
+              name: "didyouwitness",
+              items: [
+                {
+                  value: "yes",
+                  text: "Yes"
+                },
+                {
+                  value: "no",
+                  text: "yes but"
+                },
+                {
+                  value: "no",
+                  text: "Completely wrong "
+                }
+              ]
+            }) }}
+            <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Continue",
+                href: "02witnessreport"
+              }) }}
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+  <hr>
+NOT PART OF DESIGN: Demo only<br>
+There are x versions of this page<br>
+<a href="01details_simple">1. Simple</a><br>
+<a href="01details">2. Complex</a><br>
+<a href="01details2">3. On behalf of</a><br>
+<hr>
+{% endblock %}

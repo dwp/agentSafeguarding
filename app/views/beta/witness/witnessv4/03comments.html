@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+{% block pageTitle %}
+  Tell us what you witnessed
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+      tag: {
+        text: "beta"
+      },
+      html: 'This is a new service – your <a class="govuk-link" href="03commentserror">feedback</a> will help us to improve it.'
+      })
+    }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+      {% set html %}
+      <p class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.</p>
+      <p class="govuk-notification-banner__heading">Do not include the names of any DWP staff in your answers.</p>
+      {% endset %}
+      {{ govukNotificationBanner({
+    html: html
+    }) }}
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="description">
+            {% include "templates/v5/govuk-caption-l.njk" %}
+                      <h1 class="govuk-heading-l">Tell us what you saw and / or heard</h1>
+
+          <p>If you are making this witness report for a colleague who doesn't have access to this service, write "my colleague saw" or "he / she / they saw", as applicable. Do not use your colleague's name.</p>
+
+          {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+          {{ govukCharacterCount({
+        id: "description",
+        name: "Description",
+        rows: "12",
+        maxlength: 3000
+        }) }}
+          <h2 class="govuk-heading-s">Confirm you have considered and added to the report (where relevant):</h2>
+          {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+          {{ govukCheckboxes({
+            idPrefix: "checklist",
+            name: "checklist",
+            items: [
+              {
+                value: "words",
+                text: "The exact words everyone used (including offensive language)"
+              },
+              {
+                value: "start",
+                text: "How the incident started"
+              },
+              {
+                value: "issues",
+                text: "All issues with the customer's behaviour"
+              },
+              {
+                value: "end",
+                text: "How the interaction with the customer ended"
+              },
+              {
+                value: "feel",
+                text: "How you felt about what happened"
+              }
+            ]
+          }) }}
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+          <div class="govuk-button-group">
+            {{ govukButton({
+          text: "Continue",
+          href: "04check"
+          }) }}
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+{% endblock %}

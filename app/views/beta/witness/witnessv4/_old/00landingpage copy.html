@@ -1,0 +1,174 @@
+{% extends "layout_witness_landing.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Keep Customer Interactions Safe
+{% endblock %}
+
+{% block beforeContent %}
+<section aria-label="Beta banner" role="region">
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+</section>
+<section aria-label="Back" role="region">
+
+{{ govukBackLink({
+text: "Back to Searchlight",
+href: "/"
+}) }}
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-xl" id="page-title">Your reports</h1>
+<h2 class="govuk-heading-l">Actions for you</h2>
+
+<div class="govuk-!-padding-bottom-7">
+  {{ govukTable({
+    firstCellIsHeader: true,
+
+    head: [
+      {
+        html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'>Incident date <br><span class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px '>and report reference</span></p>",
+        classes: 'govuk-!-width-one-third'
+      },
+      {
+        html: "<p class='govuk-body govuk-!-font-weight-bold'>Customer</p>"
+      },
+      {
+        html: "<p class='govuk-body govuk-!-font-weight-bold'>Reporter</p>"
+      },
+      {
+        html: "<p class='govuk-body govuk-!-font-weight-bold'>Witness</p>"
+      },
+      {
+        html: "<p class='govuk-body govuk-!-font-weight-bold'>Action</p>"
+      }
+    ],
+    rows: [
+      [
+        {
+          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>1 June 2022 at 8:06am<br><span class='govuk-body-s' style='color:#505a5f; white-space: '><span class='govuk-visually-hidden'>Witness reference: </span><span aria-hidden='true'>WIT</span>-000-000-001</SPAN></p>"
+        },
+        {
+          html: "Ann Other"
+        },
+        {
+          html: "Whitney Earl"
+        },
+        {
+          html: "You"
+        },
+        {
+          html: "<a href='01details'>Make a witness report</a>"
+        }
+      ],
+      [
+        {
+          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>8 June 2022 at 1:12pm<br><span class='govuk-body-s' style='color:#505a5f; white-space: '><span class='govuk-visually-hidden'>Witness reference: </span><span aria-hidden='true'>WIT</span>-000-888-511</SPAN></p>"
+        },
+        {
+          html: "Robert Da Silva"
+        },
+        {
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Incident reporter: </span>Mike Black</p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px'>Submitted by </p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px''>Whitney Earl</p>"
+        },
+        {
+          html: "You"
+        },
+        {
+          html: "<a href='01details'>Make a witness report</a>"
+        }
+      ],
+      [
+        {
+          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>8 June 2022 at 1:12pm<br><span class='govuk-body-s' style='color:#505a5f; white-space: '><span class='govuk-visually-hidden'>Witness reference: </span><span aria-hidden='true'>WIT</span>-000-888-511</SPAN></p>"
+        },
+        {
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Customer </span>Robert Da Silva</p>"
+        },
+        {
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Incident reporter: </span>Mike Black</p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px'>Submitted by </p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px''>Whitney Earl</p>"
+        },
+        {
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Witness: </span>Ted Lady</p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px'>Submitted by </p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px''>You</p>"
+        },
+        {
+          html: "<p class='govuk-body'><a href='01details'>Make a witness report</a></p>"
+        }
+      ]
+    ]
+  }) }}
+</div>
+<h2 class="govuk-heading-l">Actions for other people</h2>
+
+{{ govukTable({
+
+  firstCellIsHeader: true,
+  head: [
+    {
+      html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'>Incident date <br><span class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px '>and report reference</span></p>",
+        classes: 'govuk-!-width-one-third'
+    },
+    {
+      text: "Customer"
+    },
+    {
+      text: "Incident reporter"
+    },
+    {
+      text: "Witness"
+    },
+    {
+      text: "Action"
+    }
+  ],
+  rows: [
+      [
+        {
+          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>2 June 2022 at 3:09pm<br><span class='govuk-body-s' style='color:#505a5f; white-space: '><span class='govuk-visually-hidden'>Witness reference: </span><span aria-hidden='true'>WIT</span>-000-000-002</SPAN></p>"
+        },
+        {
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Customer </span>Robert Da Silva</p>"
+        },
+        {
+          html: "Whitney Earl"
+        },
+        {
+          html: "You"
+        },
+        {
+          html: "<p class='govuk-body'><a href='01details'>View witness report</a></p>"
+        }
+      ],
+      [
+        {
+          html: "<p class='govuk-body govuk-!-font-weight-bold' style='margin-bottom: 0px'><span class='govuk-visually-hidden'>Date: </span>2 June 2022 at 3:09pm<br><span class='govuk-body-s' style='color:#505a5f; white-space: '><span class='govuk-visually-hidden'>Witness reference: </span><span aria-hidden='true'>WIT</span>-000-000-002</SPAN></p>"
+        },
+        {
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Customer </span>Robert Da Silva</p>"
+        },
+        {
+          html: "Whitney Earl"
+        },
+        {
+          html: "<p class='govuk-body'><span class='govuk-visually-hidden'>Witness: </span>Isla Yellow</p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px'>Submitted by </p><p class='govuk-body-s' style='color:#505a5f;  margin-bottom: 0px''>You</p>"
+        },
+        {
+          html: "<p class='govuk-body'><a href='01details'>View witness report</a></p>"
+        }
+      ]
+  ]
+}) }}
+
+{% endblock %}
