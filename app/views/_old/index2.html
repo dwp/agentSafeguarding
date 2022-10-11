@@ -1,0 +1,73 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Agent Safeguarding Beta
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+
+      <h2 class="govuk-heading-m">Versions</h2>
+
+
+
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+    <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Presentation 2 February 2022
+          </span>
+        </h2>
+      </div>
+
+      <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+<a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132571660538/Add+Manager+Details">Confluence page: manager details</a> <br></br>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <strong class="govuk-tag govuk-tag--purple">Scenario 1</strong>
+        </td>
+      </tr>
+      <a href="/beta/report_incident/reportv6/01report.html">Incident report</a>
+
+    </li>
+  </ul>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--blue">Scenario 2</strong>
+            </td>
+          </tr>
+          <a href="/beta/concern/concernv4/01report.html">Agent safety report</a>
+
+      </ul>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--orange">Scenario 3</strong>
+            </td>
+          </tr>
+          <a href="/beta/witness/witnessv2/01details.html">Witness report</a>
+
+        </li>
+      </ul>
+      </div>
+    </div>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
