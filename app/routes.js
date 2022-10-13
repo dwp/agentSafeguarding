@@ -325,6 +325,36 @@ router.post('/beta/incident_manager_journey/v2/route_colleague', function (req, 
     }
 })
 
+// Route Incident Manager Journey - Add witness 
+router.post('/beta/incident_manager_journey/v3/route_police', function (req, res) {
+  // Make a variable and give it the value from 'prnQuestion'
+  var policeCalled = req.session.data['policeQuestion']
+    // Check whether the variable matches a condition
+    if (policeCalled == "no") {
+      // Send user to 
+      res.redirect('11comments')
+    } else {
+      // Send user to 
+      res.redirect('10action')
+    }
+})
+// Route Incident Manager Journey - witness contact
+router.post('/beta/incident_manager_journey/v3/route_colleague', function (req, res) {
+  // Make a variable and give it the value from 'prnQuestion'
+  var onBehalf = req.session.data['contact']
+    // Check whether the variable matches a condition
+    if (onBehalf == "noaccess") {
+      // Send user to 
+      res.redirect('05confirm_witness_onbehalf')
+    } else if (onBehalf == "access") {
+      // Send user to 
+      res.redirect('06sent')
+    } else if (onBehalf == "me") {
+      // Send user to 
+      res.redirect('06sent4')
+    }
+})
+
 // Route Incident Manager Journey - witness contact
 router.post('/beta/witness/witnessv3a/route_wit', function (req, res) {
   // Make a variable and give it the value from 'prnQuestion'
@@ -340,6 +370,20 @@ router.post('/beta/witness/witnessv3a/route_wit', function (req, res) {
 })
 // Route Incident Manager Journey - witness on behalf of 
 router.post('/beta/incident_manager_journey/v2/route_witness2', function (req, res) {
+  // Make a variable and give it the value from 'prnQuestion'
+  var onBehalf = req.session.data['contact']
+    // Check whether the variable matches a condition
+    if (onBehalf == "you") {
+      // Send user to 
+      res.redirect('06sent3')
+    } else if (onBehalf == "colleague") {
+      // Send user to 
+      res.redirect('06sent2')
+    } 
+})
+
+// Route Incident Manager Journey - witness on behalf of 
+router.post('/beta/incident_manager_journey/v3/route_witness2', function (req, res) {
   // Make a variable and give it the value from 'prnQuestion'
   var onBehalf = req.session.data['contact']
     // Check whether the variable matches a condition

@@ -40,16 +40,16 @@
         <fieldset class="govuk-fieldset" aria-describedby="description">
           {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
           {{ govukCharacterCount({
-        id: "description",
-        name: "Description",
-        rows: "12",
-        maxlength: 2000,
-        label: {
-          text: "Tell us about the safety concern you want to report",
-    classes: "govuk-label--l",
-    isPageHeading: true
+            id: "description",
+            name: "Description",
+            rows: "12",
+            maxlength: 3000,
+            label: {
+              text: "Tell us about the safety concern you want to report",
+              classes: "govuk-label--l",
+              isPageHeading: true
             }
-        }) }}
+          }) }}
           <h2 class="govuk-heading-s">Please confirm you have considered and included, where relevant:</h2>
           {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
           {{ govukCheckboxes({

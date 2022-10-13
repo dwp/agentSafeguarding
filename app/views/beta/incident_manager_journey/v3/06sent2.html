@@ -21,7 +21,7 @@ href: "javascript:history.back()"
 }) }}
 {% endblock %}
 {% block content %}
-  {% include "templates/v5/govuk-caption-l.njk" %}
+{% include "templates/v6/govuk-caption-m-simple.njk" %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
@@ -45,4 +45,12 @@ href: "javascript:history.back()"
       </div>
     </div>
   </div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+There are 3 versions of this page<br>
+<a href="06sent">1. Email sent to someone with access to the KCIS service to complete their own witness report</a><br>
+<a href="06sent2">2. Email sent to someone with access to the KCIS service to complete witness report on behalf of somebody else</a><br>
+<a href="06sent3">3. Email sent to self to complete witness report on behalf of somebody elsee</a><br>
+<hr>  
+  
 {% endblock %}

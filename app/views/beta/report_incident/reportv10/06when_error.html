@@ -59,41 +59,34 @@ When did the incident happen? - Agent Safeguarding
   }
   ]
   }) }}
-  <fieldset class="govuk-fieldset" aria-describedby="incident-date">
-    {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
-
+  <fieldset class="govuk-fieldset" >
+  <h1 class="govuk-label--l">
+    <legend>When did the incident happen?</legend>
+  </h1>
     {{ govukDateInput({
-    id: "incident-date",
-    namePrefix: "incident-date",
-    fieldset: {
-    legend: {
-    text: "When did the incident happen?",
-    isPageHeading: true,
-    classes: "govuk-fieldset__legend--l"
-    }
-    },
-    hint: {
-    text: "For example, 30 11 2021"
-    },
-    errorMessage: {
-    text: "Enter a valid date"
-    },
-    items: [
-    {
-    classes: "govuk-input--width-2 govuk-input--error",
-    name: "day"
-    },
-    {
-    classes: "govuk-input--width-2 govuk-input--error",
-    name: "month"
-    },
-    {
-    classes: "govuk-input--width-4 govuk-input--error",
-    name: "year"
-    }
-    ]
+      id: "incident-date",
+      namePrefix: "incident-date",
+      hint: {
+        text: "For example, 30 11 2021"
+      },
+        errorMessage: {
+        text: "Enter a valid date"
+      },
+      items: [
+        {
+          classes: "govuk-input--width-2 govuk-input--error",
+          name: "day"
+        },
+        {
+          classes: "govuk-input--width-2 govuk-input--error",
+          name: "month"
+        },
+        {
+          classes: "govuk-input--width-4 govuk-input--error",
+          name: "year"
+        }
+      ]
     }) }}
-
 
     <div class="govuk-form-grou  govuk-form-group--error">
       <div id="incident-time-hint" class="govuk-hint">

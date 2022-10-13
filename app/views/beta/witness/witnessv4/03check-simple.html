@@ -25,7 +25,7 @@
   </section>
 {% endblock %}
 {% block content %}
-  {% include "templates/v5/govuk-caption-l.njk" %}
+  {% include "templates/v6/govuk-caption-m-simple.njk" %}
   <h1 class="govuk-heading-xl">
     Check your answers
   </h1>
@@ -38,27 +38,27 @@
       padding-right: 0;
     }
   </style>
-  {{ govukSummaryList({
-    rows: [
-      {
-        key: {
-          text: "Witness reporter"
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Witness reporter"
+          },
+          value: {
+            text: "Mike Black"
+          }
         },
-        value: {
-          html: "<span class='govuk-body-s' style='color:#505a5f'>Sarah Sancha on behalf of </span>Ted Lady"
-        }
-      },
 
-      {
-        key: {
-          text: "Description"
-        },
-        value: {
-          text: "I did not witness this incident."
+        {
+          key: {
+            text: "Description"
+          },
+          value: {
+            text: "I saw the customer stand up abruptly. He then lent over the desk and shouted at my colleague. I approached, asked the customer to calm down. He  turned toward me and called me a 'power-hungry dictator'. I told him that was inappropriate and asked him to leave. I escorted him out with no further problems."
+          }
         }
-      }
-    ]
-  }) }}
+      ]
+    }) }}
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
@@ -72,7 +72,7 @@
             {{ govukButton(
                 {
                   text: "Submit",
-                  href: "05confirm3"
+                  href: "04confirm-you"
                 }
               )
             }}
@@ -81,4 +81,10 @@
       </div>
     </div>
   </div>
+      <hr>
+NOT PART OF DESIGN: Demo only<br>
+There are x versions of this page<br>
+<a href="03check-simple">1. Simple</a><br>
+<a href="03check">2. Complex</a><br>
+<hr>
 {% endblock %}

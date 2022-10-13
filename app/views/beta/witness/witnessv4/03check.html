@@ -25,7 +25,7 @@
   </section>
 {% endblock %}
 {% block content %}
-  {% include "templates/v5/govuk-caption-l.njk" %}
+  {% include "templates/v6/govuk-caption-m.njk" %}
   <h1 class="govuk-heading-xl">
     Check your answers
   </h1>
@@ -45,7 +45,7 @@
         text: "Witness reporter"
       },
       value: {
-        html: "<span class='govuk-body-s' style='color:#505a5f'>Sarah Sancha on behalf of </span>Mike Black"
+        html: "<span class='govuk-body-s' style='color:#505a5f'>Sarah Sancha on behalf of </span>Ted Lady"
       }
     },
 
@@ -72,7 +72,7 @@
             {{ govukButton(
                 {
                   text: "Submit",
-                  href: "05confirm"
+                  href: "04confirm-you"
                 }
               )
             }}
@@ -81,4 +81,10 @@
       </div>
     </div>
   </div>
+    <hr>
+NOT PART OF DESIGN: Demo only<br>
+There are x versions of this page<br>
+<a href="03check-simple">1. Simple</a><br>
+<a href="03check">2. Complex</a><br>
+<hr>
 {% endblock %}

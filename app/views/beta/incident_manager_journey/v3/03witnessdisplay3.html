@@ -21,15 +21,19 @@ Witnesses - Keep Customer Interactions Safe
 }) }}
 {% endblock %}
 {% block content %}
-{% include "templates/v5/govuk-caption-l.njk" %}
+{% include "templates/v6/govuk-caption-m-simple.njk" %}
 <section aria-label="Incident witnesses" role="region">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
+      <p class="govuk-hint">Ensure each submits a witness report before you submit your report</p>
+
       {{ govukTable({
         caption: "Witnesses",
-        captionClasses: "govuk-heading-xl",
+        captionClasses: "",
         isPageHeading: true,
         firstCellIsHeader: true,
+        hint: "",
+
         head: [
           {
             text: "Witness name"
@@ -72,7 +76,7 @@ Witnesses - Keep Customer Interactions Safe
               html: "<span class='govuk-visually-hidden'>Status: </span>Requested from: Ted Lady"
             },
             {
-              html: "<a href='04add_witness2'>Change<span class='govuk-visually-hidden'> Ted Lady witness report</span></a> <span aria-hidden='true'>|</span> <a href='08deletewitness'>Remove <span class='govuk-visually-hidden'> Ted Lady witness report</span></a>"
+              html: "<a href='04add_witness_change'>Change<span class='govuk-visually-hidden'> Ted Lady witness report</span></a> <span aria-hidden='true'>|</span> <a href='08deletewitness'>Remove <span class='govuk-visually-hidden'> Ted Lady witness report</span></a>"
             }
           ],
           [
@@ -83,7 +87,7 @@ Witnesses - Keep Customer Interactions Safe
               html: "<span class='govuk-visually-hidden'>Status: </span>Requested from: Whitney Earl"
             },
             {
-              html: "<a href='04add_witness2'>Change<span class='govuk-visually-hidden'> Sartaq Assam witness report</span></a> <span aria-hidden='true'>|</span> <a href='08deletewitness'>Remove <span class='govuk-visually-hidden'> Sartaq Assam witness report</span></a>"
+              html: "<a href='04add_witness_change'>Change<span class='govuk-visually-hidden'> Sartaq Assam witness report</span></a> <span aria-hidden='true'>|</span> <a href='08deletewitness'>Remove <span class='govuk-visually-hidden'> Sartaq Assam witness report</span></a>"
             }
           ]
         ]

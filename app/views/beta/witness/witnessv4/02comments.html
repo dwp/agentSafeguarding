@@ -33,24 +33,25 @@
       <p class="govuk-notification-banner__heading">Do not include the names of any DWP staff in your answers.</p>
       {% endset %}
       {{ govukNotificationBanner({
-    html: html
-    }) }}
-
+        html: html
+      }) }}
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="description">
-            {% include "templates/v5/govuk-caption-l.njk" %}
-                      <h1 class="govuk-heading-l">Tell us what you saw and / or heard</h1>
-
-          <p>If you are making this witness report for a colleague who doesn't have access to this service, write "my colleague saw" or "he / she / they saw", as applicable. Do not use your colleague's name.</p>
-
+          {% include "templates/v6/govuk-caption-m.njk" %}
+          <h1 class="govuk-heading-l" id="pagetitle">Tell us what you saw and / or heard</h1>
+          <p>When making this witness report for a colleague, write "my colleague saw" or "he / she / they saw", as applicable. </p>
+          <p>Do not use your colleague's name.</p>
           {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
           {{ govukCharacterCount({
-        id: "description",
-        name: "Description",
-        rows: "12",
-        maxlength: 3000
-        }) }}
-          <h2 class="govuk-heading-s">Confirm you have considered and added to the report (where relevant):</h2>
+            id: "description",
+            name: "Description",
+            rows: "12",
+            maxlength: 3000,
+            label: {
+              text: "Description"
+            }
+          }) }}
+          <h2 class="govuk-heading-s">Confirm you have considered and added to the report <br>(where relevant):</h2>
           {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
           {{ govukCheckboxes({
             idPrefix: "checklist",
@@ -82,11 +83,17 @@
           <div class="govuk-button-group">
             {{ govukButton({
           text: "Continue",
-          href: "04check"
+          href: "03check"
           }) }}
           </div>
         </fieldset>
       </div>
     </div>
   </div>
+      <hr>
+NOT PART OF DESIGN: Demo only<br>
+There are x versions of this page<br>
+<a href="02comments-simple">1. Simple</a><br>
+<a href="02comments">2. Complex</a><br>
+<hr>
 {% endblock %}

@@ -3,7 +3,7 @@
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 {% block pageTitle %}
-  Describe the incident
+  Tell us what you witnessed
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
@@ -12,7 +12,7 @@
       tag: {
         text: "beta"
       },
-      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+      html: 'This is a new service – your <a class="govuk-link" href="02commentserror">feedback</a> will help us to improve it.'
       })
     }}
   </section>
@@ -27,62 +27,34 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      {{ govukErrorSummary({
-        titleText: "There is a problem",
-        errorList: [
-          {
-            text: "Tell us about the incident",
-            href: "#description"
-          },
-          {
-            text: "Confirm you have reviewed all the required information",
-            href: "#checklist"
-          }
-        ]
-      }) }}
-    </div>
-  </div>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
       {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
       {% set html %}
       <p class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.</p>
       <p class="govuk-notification-banner__heading">Do not include the names of any DWP staff in your answers.</p>
       {% endset %}
       {{ govukNotificationBanner({
-        html: html
-      }) }}
+    html: html
+    }) }}
+
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="description">
-          {% include "templates/v5/govuk-caption-l.njk" %}
+          {% include "templates/v6/govuk-caption-m-simple.njk" %}
+          <h1 class="govuk-heading-l" id="pagetitle">Tell us what you saw and / or heard</h1>
           {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
           {{ govukCharacterCount({
             id: "description",
             name: "Description",
             rows: "12",
-            label: {
-              text: "Describe the incident",
-              classes: "govuk-label--l",
-              isPageHeading: true
-            },
-            hint: {
-              html: "If you are making this witness report for a colleague who doesn't have access to this service, write &ldquo;my colleague saw&rdquo; or &ldquo;he / she / they saw&rdquo;, as applicable. Do not use your colleague's name."
-            },
             maxlength: 3000,
-            errorMessage: {
-              text: "Tell us about the incident"
+            label: {
+              text: "Description"
             }
           }) }}
+          <h2 class="govuk-heading-s">Confirm you have considered and added to the report <br>(where relevant):</h2>
           {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
           {{ govukCheckboxes({
             idPrefix: "checklist",
             name: "checklist",
-            fieldset: {
-              legend: {
-                text: "Confirm you have considered and included, where possible:",
-                classes: "govuk-fieldset__legend--s"
-              }
-            },
             items: [
               {
                 value: "words",
@@ -104,20 +76,23 @@
                 value: "feel",
                 text: "How you felt about what happened"
               }
-            ],
-            errorMessage: {
-              text: "Confirm you have reviewed all the required information"
-            }
+            ]
           }) }}
           {% from "govuk/components/button/macro.njk" import govukButton %}
           <div class="govuk-button-group">
             {{ govukButton({
           text: "Continue",
-          href: "04check"
+          href: "03check"
           }) }}
           </div>
         </fieldset>
       </div>
     </div>
   </div>
+    <hr>
+NOT PART OF DESIGN: Demo only<br>
+There are x versions of this page<br>
+<a href="02comments-simple">1. Simple</a><br>
+<a href="02comments">2. Complex</a><br>
+<hr>
 {% endblock %}

@@ -85,25 +85,27 @@ Confirm incident (witness request)) - Keep Customer Intercations Safe
             {{ govukRadios({
               idPrefix: "didyouwitness",
               name: "didyouwitness",
+              hint: {
+                text: "If you witnessed this incident, you must give us your account of it. "
+              },
               items: [
                 {
                   value: "yes",
-                  text: "Yes"
+                  text: "Yes",
+                  hint: {
+                    text: "Select this option, even if you think some details may be incorrect. "
+                  }
                 },
                 {
                   value: "no",
-                  text: "yes but"
-                },
-                {
-                  value: "no",
-                  text: "Completely wrong "
+                  text: "No, defintely not"
                 }
               ]
             }) }}
             <div class="govuk-button-group">
               {{ govukButton({
                 text: "Continue",
-                href: "02witnessreport"
+                href: "02comments-simple"
               }) }}
             </div>
           </fieldset>
@@ -116,6 +118,6 @@ NOT PART OF DESIGN: Demo only<br>
 There are x versions of this page<br>
 <a href="01details_simple">1. Simple</a><br>
 <a href="01details">2. Complex</a><br>
-<a href="01details2">3. On behalf of</a><br>
+<a href="01details_onbehalf">3. On behalf of</a><br>
 <hr>
 {% endblock %}

@@ -1,4 +1,4 @@
-layout.html" %}
+{% extends "layout.html" %}
 {% block pageTitle %}
   Report submitted - Agent Safeguarding
 {% endblock %}
@@ -6,11 +6,11 @@ layout.html" %}
   <section aria-label="Beta banner" role="region">
     {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
-      tag: {
-        text: "beta"
-      },
-      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-    }) }}
+  tag: {
+  text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
   </section>
 {% endblock %}
 {% block content %}
@@ -31,7 +31,7 @@ layout.html" %}
         id: "panel",
         name: "panel"
       }) }}
-      <p class="govuk-body">We've received your confirmation that Ted Lady did <strong>not</strong> witness this incident.</p>
+      <p class="govuk-body">We've received your confirmation that you did <strong>not</strong> witness this incident.</p>
       <h2 class="govuk-heading-m">What happens next</h2>
     
       <p class="govuk-body">
@@ -48,8 +48,17 @@ layout.html" %}
       {{ govukButton({
         text: "Back to list",
         classes: "govuk-button--primary",
-        href: "05confirm"
+        href: "/"
       }) }}
     </div>
   </div>
+    <hr>
+NOT PART OF DESIGN: Demo only<br>
+There are x versions of this page<br>
+<a href="04confirm-you">1. Confirm - you</a><br>
+<a href="04confirm-youdidnot">2. Confirm - you did not</a><br>
+<a href="04confirm-youonbehalf">3. Confirm - You on behalf of</a><br>
+<a href="04confirm-youonbehalfdidnot">4. Confirm - You on behalf of did not</a><br>
+<hr>
+
 {% endblock %}

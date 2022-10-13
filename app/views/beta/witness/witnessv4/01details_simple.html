@@ -95,29 +95,21 @@ Confirm incident (witness request) - Keep Customer Intercations Safe
               items: [
                 {
                   value: "yes",
-                  text: "Yes, definitely",
+                  text: "Yes",
                   hint: {
-                    text: "To the best of my knowledge, the details above are correct. "
+                    text: "Select this option, even if you think some details may be incorrect. "
                   }
                 },
                 {
-                  value: "yes",
-                  text: "Yes, I did, but some of the details do not seem quite right",
-                  hint: {
-                    text: "I saw and / or heard this incident, but the details are not correct"
-                  },
-                  checked: true
-                },
-                {
                   value: "no",
-                  text: "No, I did not see or hear this incident"
+                  text: "No, defintely not"
                 }
               ]
             }) }}
             <div class="govuk-button-group">
               {{ govukButton({
                 text: "Continue",
-                href: "02witnessreport"
+                href: "02comments-simple"
               }) }}
             </div>
           </fieldset>
@@ -130,6 +122,6 @@ NOT PART OF DESIGN: Demo only<br>
 There are x versions of this page<br>
 <a href="01details_simple">1. Simple</a><br>
 <a href="01details">2. Complex</a><br>
-<a href="01details2">3. On behalf of</a><br>
+<a href="01details_onbehalf">3. On behalf of</a><br>
 <hr>
 {% endblock %}
