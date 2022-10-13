@@ -6,12 +6,14 @@
   Review submitted - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
   {{ govukPhaseBanner({
     tag: {
       text: "beta"
     },
   html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
+  </section>
   {% include "templates/v2/header_searchlight.njk" %}
 {% endblock %}
 {% block content %}
@@ -53,6 +55,6 @@
   {{ govukButton({
     text: "Back to list",
     classes: "govuk-button--primary",
-    href: "01landingpage"
+    href: "/"
   }) }}
 {% endblock %}

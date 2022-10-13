@@ -348,10 +348,10 @@ router.post('/beta/incident_manager_journey/v3/route_colleague', function (req, 
       res.redirect('05confirm_witness_onbehalf')
     } else if (onBehalf == "access") {
       // Send user to 
-      res.redirect('06sent')
+      res.redirect('06sent-1colleague')
     } else if (onBehalf == "me") {
       // Send user to 
-      res.redirect('06sent4')
+      res.redirect('06sent-4you')
     }
 })
 
@@ -389,10 +389,10 @@ router.post('/beta/incident_manager_journey/v3/route_witness2', function (req, r
     // Check whether the variable matches a condition
     if (onBehalf == "you") {
       // Send user to 
-      res.redirect('06sent3')
+      res.redirect('06sent-3youonbehalf')
     } else if (onBehalf == "colleague") {
       // Send user to 
-      res.redirect('06sent2')
+      res.redirect('06sent-2colleagueonbehalf')
     } 
 })
 

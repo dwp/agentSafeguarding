@@ -6,19 +6,23 @@
 Witnesses - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
-  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-  {{ govukPhaseBanner({
-  tag: {
-    text: "beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-}) }}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+      tag: {
+      text: "beta"
+    },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
   {% include "templates/v2/header_searchlight.njk" %}
-  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:history.back()"
-}) }}
+  <section aria-label="Back" role="region">
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
 {% endblock %}
 {% block content %}
 {% include "templates/v6/govuk-caption-m-simple.njk" %}
@@ -26,22 +30,17 @@ Witnesses - Keep Customer Interactions Safe
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">Witnesses</h1>
-      {{ govukWarningText({
-        text: "The reporter has indicated that there are witnesses.",
-        iconFallbackText: "Warning"
-      }) }}
-      <p class="govuk-body ">The reporter has indicated that there are witnesses but no-one has added a witness yet.
-      </p>
+      <p class="govuk-body ">There are currently no colleagues that have been asked to make a witness report for this incident.</p>
       <ol class="govuk-list govuk-list--number">
         <li>Talk to the original reporter and make a list of witnesses</li>
         <li>For each colleague Add a witness using this system</li>
         <li>Ensure each submits a witness report before you submit your report</li>
-      </ol>      
+      </ol>
     </div>
   </div>
 
   <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="witnessQuestion">
+    <fieldset class="govuk-fieldset">
       <div class="govuk-button-group">
         {{ govukButton({
           text: "Add a witness",
@@ -59,9 +58,9 @@ Witnesses - Keep Customer Interactions Safe
 <hr>
 NOT PART OF DESIGN: Demo only<br>
 There are 3 versions of this page<br>
-<a href="03witnessdisplay">1. No Witnesses indicated by reporter, no witness requests made</a><br>
-<a href="03witnessdisplay2">2. Witnesses indicated by reporter, no witness requests made</a><br>
-<a href="03witnessdisplay3">3. Witness requests made</a><br>
+<a href="03witnessdisplay-1nowitnesses">1. No Witnesses indicated by reporter, no witness requests made</a><br>
+<a href="03witnessdisplay-2yeswitnesses">2. Witnesses indicated by reporter, no witness requests made</a><br>
+<a href="03witnessdisplay-3list">3. Witness requests made</a><br>
 <hr>
 
 {% endblock %}
