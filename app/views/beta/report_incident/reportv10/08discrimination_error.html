@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Do you feel the incident was motivated by any of the following types of discrimination? - Agent Safeguarding
+Do you feel the customer's behaviour was motivated by any of the following types of discrimination? - Agent Safeguarding
 {% endblock %}
 
 {% block beforeContent %}
@@ -33,7 +33,7 @@ Do you feel the incident was motivated by any of the following types of discrimi
   titleText: "There is a problem",
   errorList: [
   {
-  text: "Tell us if the incident was motivated by discrimination",
+  text: "Tell us if the customer's behaviour was motivated by discrimination",
   href: "#discrimination"
   }
   ]
@@ -46,13 +46,13 @@ Do you feel the incident was motivated by any of the following types of discrimi
   name: "discrimination",
   fieldset: {
     legend: {
-      text: "Do you feel the incident was motivated by any of the following types of discrimination?",
+      text: "Do you feel the customer's behaviour was motivated by any of the following types of discrimination?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   errorMessage: {
-    text: "Tell us if the incident was motivated by discrimination"
+    text: "Tell us if the customer's behaviour was motivated by discrimination"
   },
   hint: {
     text: "Select all that apply."

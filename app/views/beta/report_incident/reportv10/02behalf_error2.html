@@ -46,8 +46,8 @@ Were you involved in the incident? - Agent Safeguarding
       text: "Enter their email address, in the format name@example.com",
       href: "#email"
       }
-  
-  
+
+
       ]
       }) }}
       <fieldset class="govuk-fieldset" aria-describedby="on-behalf">
@@ -89,11 +89,11 @@ Were you involved in the incident? - Agent Safeguarding
         text: "Enter their email address, in the format name@example.com"
         }
         }) }}
-  
+
         {% endset -%}
-  
-  
-  
+
+
+
         {{ govukRadios({
         idPrefix: "on-behalf",
         name: "on-behalf",
@@ -111,7 +111,7 @@ Were you involved in the incident? - Agent Safeguarding
         },
         {
         value: "no",
-        text: "No, I am reporting this on behalf of someone else",
+        text: "No, I am reporting this on behalf of someone who does not have access to this service",
         checked: true,
         conditional: {
         html: emailHtml
@@ -123,14 +123,14 @@ Were you involved in the incident? - Agent Safeguarding
         }
         }) }}
         <div class="govuk-button-group">
-  
+
           {% from "govuk/components/button/macro.njk" import govukButton %}
-  
+
           {{ govukButton({
           text: "Continue",
           href: "03line_manager"
           }) }}
-  
+
         </div>
       </fieldset>
     </div>
