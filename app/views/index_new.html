@@ -1,0 +1,148 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Prototype index - Keep Customer Interactions Safe
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">	
+
+		<h1 class="govuk-heading-xl">Prototype index</h1>
+
+		<div class="govuk-!-padding-bottom-7 govuk-!-padding-top-7">
+			<h2 class="govuk-heading-m">Report incident or concern</h3>
+			<hr>
+			<h3 class="govuk-heading-s">Jira dashboards</h3>
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24321">Common reporting (Establish report type, Upload Digital Files)</a></li>
+				<li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24258">Report incident</a></li>
+				<li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24259">Report agent safety concern</a></li>
+			</ul>
+			<hr>
+			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD Development</strong></h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="/beta/report_incident/reportv10/01report">Report incident or concern v10</a></li>
+			</ul>
+			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="/beta/report_incident/reportv9/01report">Report incident or concern v9</a></li>
+			</ul>
+			<hr>
+			
+			<h3 class="govuk-heading-s">Archive</h3>
+			{% set oldjourneysHTML %}
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="#">Title</a></li>
+			</ul>
+			{% endset %}
+			{{ govukDetails({
+			summaryText: "Old journeys",
+			html: oldjourneysHTML
+			}) }}
+			{% set oldpagesHTML %}
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="#">Title</a></li>
+			</ul>
+			{% endset %}
+			{{ govukDetails({
+			summaryText: "Old pages",
+			html: oldpagesHTML
+			}) }}
+			<hr>		
+		</div>
+
+
+		<div class="govuk-!-padding-bottom-7 govuk-!-padding-top-7">
+			<h2 class="govuk-heading-m">Incident manager report</h3>
+			<hr>
+			<h3 class="govuk-heading-s">Jira dashboards</h3>
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24321">Common reporting (View and select)</a></li>
+				<li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24358">Submit incident manager report</a></li>
+				<li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24368">Manage witnesses</a></li>
+			</ul>
+			<hr>
+			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD Development</strong></h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="/beta/incident_manager_journey/v3/02incident_simple">Incident manager report v3</a></li>
+			</ul>
+			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="/beta/incident_manager_journey/v2/02incident">Incident manager report v2</a></li>
+			</ul>
+			<hr>
+			
+			<h3 class="govuk-heading-s">Archive</h3>
+			{% set oldjourneysHTML %}
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="#">Title</a></li>
+			</ul>
+			{% endset %}
+			{{ govukDetails({
+			summaryText: "Old journeys",
+			html: oldjourneysHTML
+			}) }}
+			{% set oldpagesHTML %}
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="#">Title</a></li>
+			</ul>
+			{% endset %}
+			{{ govukDetails({
+			summaryText: "Old pages",
+			html: oldpagesHTML
+			}) }}
+			<hr>		
+		</div>
+
+
+
+
+		<div class="govuk-!-padding-bottom-7 govuk-!-padding-top-7">
+			<h2 class="govuk-heading-m">Witness report</h3>
+			<hr>
+			<h3 class="govuk-heading-s">Jira dashboards</h3>
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24321">Common reporting (View and select)</a></li>
+				<li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24358">Witness report</a></li>
+			</ul>
+			<hr>
+			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD Development</strong></h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="/beta/witness/witnessv4/01details_simple">Witness report v4</a></li>
+			</ul>
+			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="/beta/witness/witnessv3a/01details">Witness report v3</a></li>
+			</ul>
+			<hr>
+			
+			<h3 class="govuk-heading-s">Archive</h3>
+			{% set oldjourneysHTML %}
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="#">Title</a></li>
+			</ul>
+			{% endset %}
+			{{ govukDetails({
+			summaryText: "Old journeys",
+			html: oldjourneysHTML
+			}) }}
+			{% set oldpagesHTML %}
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="#">Title</a></li>
+			</ul>
+			{% endset %}
+			{{ govukDetails({
+			summaryText: "Old pages",
+			html: oldpagesHTML
+			}) }}
+			<hr>		
+		</div>
+
+
+	</div>
+</div>
+{% endblock %}
