@@ -43,11 +43,18 @@
         <h2 class="govuk-heading-s">What you can do</h2>
       <p class="govuk-body">
         You can email us about this incident at
-        <a href="mailto:HEALTHANDSAFETY.CENTRALISEDNMTEAM@DWP.GOV.UK" class="govuk-link">HealthandSafety.CentralisedNMTeam@dwp.gov.uk</a>. You must give us the reference number on this page.
+        <a href="mailto:HEALTHANDSAFETY.CENTRALISEDNMTEAM@DWP.GOV.UK" class="govuk-link">HealthandSafety.CentralisedNMTeam@dwp.gov.uk</a>. </p><p>You must include the reference number at the top of this page.
       </p>
+      {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+{{ govukWarningText({
+  text: "Make a note of your reference number and our email address before you close this tab, or print or save this page.",
+  iconFallbackText: "Warning"
+}) }}
+
       <p class="govuk-body">
         To help us improve this service, we’d like to know
-        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=6fbxllcQF0GsKIDN_ob4w-oDsqWqlSlJvQe6JubotYpUNFoxRVFURzIyVU1QOVo3QTA5WFdWSjJIVS4u" class="govuk-link" rel="noreferrer noopener" target="_blank">what you think of it.</a>
+        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=6fbxllcQF0GsKIDN_ob4w-oDsqWqlSlJvQe6JubotYpUNFoxRVFURzIyVU1QOVo3QTA5WFdWSjJIVS4u" class="govuk-link" rel="noreferrer noopener" target="_blank">what you think of it.</a><br>
         It will only take 2 minutes to give us feedback.
       </p>
     </div>

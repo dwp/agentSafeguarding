@@ -29,7 +29,7 @@ Error: Who will complete the witness report? - Keep Customer Interactions Safe
     titleText: "There is a problem",
     errorList: [
       {
-        text: "This colleague cannot access the service - enter another email address",
+        text: "This person cannot access the service - enter another email address",
         href: "#witness-email"
       }
     ]
@@ -49,7 +49,7 @@ Error: Who will complete the witness report? - Keep Customer Interactions Safe
               name: "witness-email",
               autocomplete: "email",
               errorMessage: {
-                text: "This colleague cannot access the service - enter another email address"
+                text: "This person cannot access the service - enter another email address"
               },
                 classes: "govuk-!-width-one-half"
             }) }}
@@ -65,7 +65,7 @@ Error: Who will complete the witness report? - Keep Customer Interactions Safe
                 }
               },
               hint: {
-                text: "We will send them an email, asking them to complete a witness report on behalf of this colleague."
+                text: "We will send them an email, asking them to complete a witness report on behalf of Sartaq Matcha."
               },
               items: [
                 {
@@ -74,7 +74,7 @@ Error: Who will complete the witness report? - Keep Customer Interactions Safe
                 },
                 {
                   value: "colleague",
-                  text: "A colleague who can access this service",
+                  text: "Someone else who can access this service",
                   checked: true,
                   conditional: {
                   html: colleagueOnbehalfHTML
