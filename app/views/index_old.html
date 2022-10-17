@@ -1,0 +1,1668 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Agent Safeguarding Index
+{% endblock %}
+{% block beforeContent %}
+  <br>
+    <h2 class="govuk-heading-m">User Research and Presentations</h2>
+    <a href="/beta/_UR/20221006">UR Thursday 6 October 2022</a> 
+    <br></br>
+    <a href="/beta/_UR/20220908">UR Thursday 8 September 2022</a> | <a href="/beta/_UR/20220908/journal/journal-abuse">Journal</a>
+    <br></br>
+    <a href="/beta/_UR/20220714">UR Thursday 14 July 2022</a>
+    <br></br>
+    <a href="index2.html">Presentation 02 Feb 2022</a>
+    <br></br>
+    <a href="index3.html">UR Tue 15 Feb 2022 / Wed 16 Feb 2022</a>
+    <br></br>
+    <a href="index4.html">Content Design presentation 21 march 2022</a>
+    <br></br>
+    <hr>
+      <h2 class="govuk-heading-m">Confluence references</h2>
+      <ul>
+        <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132447764502">All Agent Safeguarding User
+                                    Needs</a></li>
+        <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132524310540">Report an incident journey</a></li>
+        <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132630545028">Report an Agent Safety Concern
+                                    journey</a></li>
+        <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132662624314">Submit a witness report journey</a></li>
+        <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132539547936">Decision maker journey</a></li>
+        <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132482172143/Research+Analysis+Private+Beta">Common
+                                    Reporting</a></li>
+        <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132482172143/Research+Analysis+Private+Beta">Look
+                                    Ahead Business Analysis Plan</a></li>
+        <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132537614421">Pathfinder work with Searchlight
+                                    (user permissions)</a></li>
+        <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132485579026">Private Beta Green Zone
+                                    milestones</a></li>
+        <li><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132550656014">Agent Safeguarding and DWP
+                                    Notifications integration</a></li>
+      </ul>
+    {% endblock %}
+    {% block content %}
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-xl">
+            Agent Safeguarding Beta
+            <span class="govuk-caption-xl">{{ releaseVersion }}</span>
+          </h1>
+          {{ releaseVersion | log }}
+          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">Ready</strong>
+                    </td>
+                  </tr>
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Common landing page
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--blue">In progress</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/landing/00searchlight">Landing page</a>
+                    <p class='govuk-body'>Common design for all active and completed witness and incident manager requests.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">Ready</strong>
+                    </td>
+                  </tr>
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Add reporting user
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--green">Ready</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/private_admin/add_user2/00adduser">Add reporting user 2</a>
+                    |
+                    <a href="/beta/private_admin/add_user2/00adduser_error">Add reporting user - error</a>
+                    <p class='govuk-body'>Multi page - Private Beta Admin uses this to add a user to the database.
+                      <ul>
+                        <li><a href="https://dwpdigital.atlassian.net/browse/CITI-xxxxx">CITI-xxxxx TBC</a></li>
+                      </ul>
+                    </p>
+                  </li>
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--red">closed</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/private_admin/add_user/00adduser">Add reporting user</a>
+                    |
+                    <a href="/beta/private_admin/add_user/00adduser_error">Add reporting user - error</a>
+                    |
+                    <a href="/beta/private_admin/add_user/01addusersuccess">Add reporting user - success</a>
+                    <p class='govuk-body'>Single page - Private Beta Admin uses this to add a user to the database.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--blue">In progress</strong>
+                    </td>
+                  </tr>
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Incident manager report, witness, comment: Linear Journey
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--blue">In Progress</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/incident_manager_journey/v3/02incident_simple">Incident manager report, witness, comment: Journey</a>
+                    <p class='govuk-body'>Content review
+
+                    </p>
+                  </li>                  
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/incident_manager_journey/v2/02incident">Incident manager report, witness, comment: Journey</a>
+                    <p class='govuk-body'>Add witness count/view
+
+                    </p>
+                  </li>
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--green">Ready</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/incident_manager_journey/v1/00journey_start">Incident manager report, witness, comment: Journey</a>
+                    <p class='govuk-body'>Put previous small journeys into linear journey for incident manager (first time through). This starts with the email that prompts the incident manager to log on and ends with the confimation email at the end of the journey.
+                      <ul>
+                        <li><a href="https://dwpdigital.atlassian.net/browse/CITI-14457">CITI-14457 UCD Incident Manager - Linear Journey</a></li>
+                        <li><a href="/beta/incident_manager_journey/v1/00_start">Flow overview and emails</a></li>
+                      </ul>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--red">closed</strong>
+                    </td>
+                  </tr>
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Add comments and recommendations: Journey
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/incident_manager/add_comments/00measures">Add comments and recommendations to incident v1</a>
+                    <p class='govuk-body'>Thoughts around save and continue, and upload files not included for MVP
+                      <ul>
+                        <li><a href="https://dwpdigital.atlassian.net/browse/CITI-12964">CITI-12964 Add Comments and Recommendations UCD</a></li>
+                      </ul>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--red">Close</strong>
+                    </td>
+                  </tr>
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Capture Witness Details: Journey
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/incident_manager/add_witness/00add_witness">Capture witness info v1</a>
+                    <p class='govuk-body'>
+                      <ul>
+                        <li><a href="https://dwpdigital.atlassian.net/browse/CITI-14067">CITI-14067 Capture Witness Details - UCD</a></li>
+                      </ul>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                    </td>
+                  </tr>
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Add Basic Incident Information: Journey
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/incident_manager/01police">Incident manager Add Basic Incident Information v1</a>
+                    <p class='govuk-body'>
+                      <ul>
+                        <li><a href="https://dwpdigital.atlassian.net/browse/CITI-12963">CITI-12963 Add Basic Incident Information UCD</a></li>
+                      </ul>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                    </td>
+                  </tr>
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Incident manager confirmation: Page
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/incident_manager/confirmation.html">Incident manager confirmation v1</a>
+                    <p class='govuk-body'>Incident manager confirmation
+                      <ul>
+                        <li><a href="https://dwpdigital.atlassian.net/browse/CITI-12684">CITI-12966 View Manager Confirmation UCD</a></li>
+                      </ul>
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">
+                      <strong class="govuk-tag govuk-tag--green">Ready</strong>
+                    </td>
+                  </tr>
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Case Reviewer - Examine case (tabbed pages)
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--green">Ready</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/examine/v7/00incident.html">Case reviewer - Examine incident v7</a>
+                    <p class='govuk-body'>Moved discrimination details to details tab
+                      <ul>
+                        <li><a href="https://dwpdigital.atlassian.net/browse/CITI-12966">CITI-12966 Examine Case - View Incident Report UCD</a></li>
+                      </ul>
+                    </p>
+                  </li>
+                </ul>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--green">Ready</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/examine/v6/00concern.html">Case reviewer - Examine concern v6</a>
+                    <p class='govuk-body'>Examine concern - format matched to incident v6 but simplified.
+                    </p>
+                    <ul>
+                      <li><a href="https://dwpdigital.atlassian.net/browse/CITI-12967">CITI-12967 Examine Case - View Safety Concern UCD</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--red">closed</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/examine/v6/00incident.html">Case reviewer - Examine incident v6</a>
+                    <p class='govuk-body'>Witnesses reset to side nav. Improved accessibility on overview: times, discrimination.
+                    </p>
+                  </li>
+                </ul>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/examine/v5/00incident.html">Case reviewer - Examine incident v5</a>
+                    <p class='govuk-body'>Witnesses navigation using on-page links. Time stamps added to witness statements. Link to history moved below overview table.
+                    </p>
+                  </li>
+                </ul>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/examine/v4/00incident.html">Case reviewer - Examine incident v4</a>
+                    <p class='govuk-body'>Incident bar removed. Examine incident including linked reports. One page CASA compliant
+                    </p>
+                  </li>
+                </ul>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/examine/v3/00incident.html">Case reviewer - Examine incident v3</a>
+                    <p class='govuk-body'>Examine incident including linked reports. One page CASA compliant
+                    </p>
+                  </li>
+                </ul>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                      </td>
+                    </tr>
+                    <a href="/beta/examine/v3/00concern.html">Case reviewer - Examine concern v3</a>
+                    <p class='govuk-body'>Examine concern - format matched to incident but simplified. One page CASA compliant<br>
+                        <strong>Note: Needs update to same style as examine incident.</strong>
+                      </p>
+                      <ul>
+                        <li><a href="https://dwpdigital.atlassian.net/browse/CITI-12967">CITI-12967 Examine Case - View Safety Concern UCD</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/examine/v2/00overview.html">Case reviewer - Examine incident v2</a>
+                      <p class='govuk-body'>Examine incident including linked reports.</p>
+                    </li>
+                  </ul>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/examine/v2concern/00overview.html">Case reviewer - Examine concern v2</a>
+                      <p class='govuk-body'>Examine concern - format matched to incident but simplified.</p>
+                    </li>
+                  </ul>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/examine/00overview.html">Case reviewer - Examine incident v1</a>
+                      <p class='govuk-body'>Examine incident including linked reports. This version shows a view of what this history may look like in the future. However, it has too many dependencies on unknowns, so to deliver simply on the story, we will first develop a cut down version.</p>
+                    </li>
+                  </ul>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/nominatedmanager/done/00overview.html">Nominated manager</a>
+                      <p class='govuk-body'>Incident page</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--green">Ready</strong>
+                      </td>
+                    </tr>
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                      Private Beta Admin
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--green">Ready</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/private_admin/v4/01list.html">Private Beta Admin journey - v4</a>
+                      <p class='govuk-body'>Concern and incident with updates from stakeholders
+                      </p>
+                    </li>
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/private_admin/v3/01list.html">Private Beta Admin journey - v3</a>
+                      <p class='govuk-body'>Concern journeys are taken from UCDB journey. Amends from stakeholders to both
+                                                                                        incident and concern views.
+                      </p>
+                      <ul>
+                        <li>Safety concern -
+                          <a href="https://dwpdigital.atlassian.net/jira/software/c/projects/CITI/boards/5866?modal=detail&selectedIssue=CITI-12402">CITI-12402</a>
+                          -
+                          <a href="https://lit-depths-71521.herokuapp.com/beta/private_admin/v3/01concern">01concern</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/private_admin/v2/01list.html">Private Beta Admin journey - v2</a>
+                      <p class='govuk-body'>Concern journeys were taken from offline documents for CHDA and DWP</p>
+                    </li>
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/private_admin/01details.html">Private Beta Admin journey</a>
+                      <p class='govuk-body'>Incident instructions page</p>
+                    </li>
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/private_admin/01list.html">Private Beta Admin journey - v1</a>
+                      <p class='govuk-body'>Incident and concern journey</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--turquoise">Ready</strong>
+                      </td>
+                    </tr>
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                      Line Manager: look ahead
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--turquoise">Ready</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/linemanager/tri-reporting/00overview.html">Line manager</a>
+                      <p class='govuk-body'>Vision journey: this is the tri-reporting version aggred with Richard & David</p>
+                    </li>
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/linemanager/view/00overview.html">Agent</a>
+                      <p class='govuk-body'>Incident report: view only</p>
+                    </li>
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/linemanager/not/00overview.html">Line manager</a>
+                      <p class='govuk-body'>Incident report: Line manager NOT IDENTIFIED</p>
+                    </li>
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/linemanager/done/00overview.html">Line manager</a>
+                      <p class='govuk-body'>Incident report: Lina manager DONE</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--blue">In progress</strong>
+                      </td>
+                    </tr>
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                      Witness report: journey
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                  <p class='govuk-body'><a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132662624314/Submit+A+Witness+Report+Journey">Confluence page: submit a witness journey</a></p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--blue">In Progress</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/witness/witnessv4/01details_simple">Witness report v4</a>
+                      <p class='govuk-body'>Content review</p>
+                    </li>
+                  </ul>                  
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/witness/witnessv3a/01details">Witness report v3</a>
+                      <p class='govuk-body'>Revisit after going live. Common landing page moved to its own prototype.</p>
+                    </li>
+                  </ul>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/witness/witnessv2/00email.html">Witness report v2A</a>
+                      <p class='govuk-body'>Email entry point: EMAIL MUST BE UPDATED WITH CORRECT DIRECTIONS WHEND DEFINED</p>
+                    </li>
+                  </ul>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/witness/witnessv3/00report.html">Witness report v2B</a>
+                      <p class='govuk-body'>Searchlight entry point</p>
+                    </li>
+                  </ul>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/witness/witnessv2/01details.html">Witness report v2C</a>
+                      <p class='govuk-body'>Landing page from Dashboard</p>
+                    </li>
+                  </ul>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/witness/witnessv1/00report.html">Witness report v1</a>
+                      <p class='govuk-body'>Same as incident report</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--turquoise">Ready</strong>
+                      </td>
+                    </tr>
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                      Add acting manager details manually: page
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                  <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132608524947/Add+Acting+Manager+Details">Confluence page: manager details</a>
+                  <br></br>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--turquoise">Ready</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/acting_manager/acting_managerv1.html">Acting manager details v.1</a>
+                      <p class='govuk-body'>Manually retrieve the acting manager details: REQUIRES MORE CONTENTS WORK AND
+                                                                                        TESTING!</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">
+                        <strong class="govuk-tag govuk-tag--blue">In progress</strong>
+                      </td>
+                    </tr>
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                      Incident or concern report: journey
+                    </span>
+                  </h2>
+                </div>
+                <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--blue">in progress</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/report_incident/reportv10/01report">Report incident or concern v10
+                      </a>
+                      <p>Refactored content
+
+                      </p>
+                    </li>
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/report_incident/reportv9/01report">Report incident or concern v.9
+                      </a>
+                      <p>Final journey order. Includes reporter confirm details and multifile upload.
+                        <ul>
+                          <li>Dev reporter details -
+                            <a href="https://dwpdigital.atlassian.net/browse/CITI-14477">CITI-14477</a>
+                          </li>
+                        </ul>
+                      </p>
+                    </li>
+                    <li>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <a href="/beta/report_incident/reportv8/01report.html">Report incident v.8
+                      </a>
+                      <p>Add in multi-file upload, incident manager and witnesses.
+                        <br>Journey unconfirmed, but pages designed:
+                          <ul>
+                            <li>Add Line Manager -
+                              <a href="https://dwpdigital.atlassian.net/browse/CITI-12950">CITI-12950</a>
+                              -
+                              <a href="/beta/report_incident/reportv8/03report">03report</a>
+                            </li>
+                            <li>Add Incident Manager -
+                              <a href="https://dwpdigital.atlassian.net/browse/CITI-12951">CITI-12951</a>
+                              -
+                              <a href="/beta/report_incident/reportv8/acting_managerv1">acting_managerv1</a>
+                            </li>
+                            <li>Add DWP Colleague -
+                              <a href="https://dwpdigital.atlassian.net/browse/CITI-12952">CITI-12952</a>
+                              -
+                              <a href="/beta/report_incident/reportv8/02report">02report</a>
+                            </li>
+                          </ul>
+                        </p>
+                      </li>
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/report_incident/reportv7a/01report.html">Report incident v.7
+                        </a>
+                        <p>Add in social media option to interaction type. Includes Add Line Manager Automatically screens (x2)
+                        </p>
+                      </li>
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/report_incident/reportv7/01report.html">Report incident v.6
+                        </a>
+                        <p>Discrimination / Behalf / Concern</p>
+                      </li>
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/report_incident/reportv5/00report.html">Report incident v.5
+                        </a>
+                        <p>Establish Report Type: Incident report or Report a concern</p>
+                      </li>
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/report_incident/reportv4/00report.html">Report incident v.4 - No Incident type</a>
+                        <p>Incident types removed from journey. Interaction types added to journey.</p>
+                      </li>
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/report_incident/reportv3/00report.html">Report incident v.3 (aka: Richard's version)</a>
+                        <p>Focus for this sprint: going to be updated with READY pages by the end of the sprint</p>
+                      </li>
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/report_incident/reportv2/00report.html">Report incident v.2</a>
+                        <p>Dummy ID check page, Date and time with guidances and describe the incident version B checklist</p>
+                      </li>
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/report_incident/reportv1/00report.html">Report incident v.1</a>
+                        <p>Version after alpha</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--turquoise">Ready</strong>
+                        </td>
+                      </tr>
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                        Concern: journey
+                      </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132630545028/Report+an+Agent+Safety+Concern+Journey">Confluence
+                                                                              page: manager details</a>
+                    <br></br>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/concern/concernv5/01concern.html">Concern v.5</a>
+                        <p class='govuk-body'>Questions instead of text area + checklist (for David)</p>
+                      </li>
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--turquoise">Ready</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/concern/concernv4/01concern.html">Concern v.4</a>
+                        <p class='govuk-body'>Checklist version. REQUIRES CONFIRMATION THAT WE DO NOT NEED THE DATE OF REFERRAL
+                                                                                              (stakeholders)</p>
+                      </li>
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/concern/concernv3/01concern.html">Concern v.3</a>
+                        <p class='govuk-body'>All info in the document page</p>
+                      </li>
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/concern/concernv2/01concern.html">Concern v.2</a>
+                        <p class='govuk-body'>Draft journey</p>
+                      </li>
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/concern/third1.html">Concern v.1</a>
+                        <p class='govuk-body'>Draft journey</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                        </td>
+                      </tr>
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                        Attach digital files: journey
+                      </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132580737482/Attach+Digital+Files">Confluence
+                                                                              page: manager details</a>
+                    <br></br>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/attach/attach4/attachv0.html">Attach digital files v.4</a>
+                        <p class='govuk-body'>MOJ component: multi files upload with revised content.</p>
+                      </li>
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/attach/attach3/attachv0.html">Attach digital files v.3</a>
+                        <p class='govuk-body'>MOJ component: multi files upload.</p>
+                      </li>
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/attach2/attachv0.html">Attach digital files v.2</a>
+                        <p class='govuk-body'>Add another element component</p>
+                      </li>
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/attach/attachv0.html">Attach digital files v.1</a>
+                        <p class='govuk-body'>Attach one or more images to the report</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                  <div class="govuk-accordion__section-header">
+                    <h2 class="govuk-accordion__section-heading">
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">
+                          <strong class="govuk-tag govuk-tag--blue">In progress</strong>
+                        </td>
+                      </tr>
+                      <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                        Examine case history (Customer history): page
+                      </span>
+                    </h2>
+                  </div>
+                  <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                    <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132763124419/Examine+Case+-+Access+Incident+Report+and+Agent+Safety+Concern+Histories">Confluence
+                                                                              page</a>
+                    <br></br>
+                    <ul class="govuk-list govuk-list--bullet">
+                      <li>
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--green">Ready</strong>
+                          </td>
+                        </tr>
+                        <a href="/beta/history/04history">Customer history v4</a>
+                        <p class='govuk-body'>During Dev sprint, remove back button and proposal to simplify the witnesses navigation.</p>
+                        <ul>
+                          <li>Examine case -
+                            <a href="https://dwpdigital.atlassian.net/jira/software/c/projects/CITI/boards/5866?modal=detail&selectedIssue=CITI-12968">CITI-12968</a>
+                          </li>
+                        </ul>
+                        <br></li>
+                        <li>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--red">closed</strong>
+                            </td>
+                          </tr>
+                          <a href="/beta/history/03history">Customer history v3</a>
+                          <p class='govuk-body'>During Dev sprint, decided that the context of the incident is not required.</p>
+                        </li>
+                        <li>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                            </td>
+                          </tr>
+                          <a href="/beta/history/02history">Customer history v2</a>
+                          <p class='govuk-body'>This version delivers simply on the story, and contains only Incidents and Concerns</p>
+                        </li>
+                        <li>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                            </td>
+                          </tr>
+                          <a href="/beta/history/01history">Customer history v1</a>
+                          <p class='govuk-body'>This version shows a view of what this history may look like in the future. However, it has too many dependencies on unknowns, so to deliver simply on the story, we will first develop a cut down version containing only Incidents and Concerns</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--turquoise">Ready</strong>
+                          </td>
+                        </tr>
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                          Add manager details manually: page
+                        </span>
+                      </h2>
+                    </div>
+                    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                      <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132571660538/Add+Manager+Details">Confluence
+                                                                                    page: manager details</a>
+                      <br></br>
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--turquoise">Ready</strong>
+                            </td>
+                          </tr>
+                          <a href="/beta/manager/managerv1.html">Manager details v.1</a>
+                          <p class='govuk-body'>Manually retrieve the manager details</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--turquoise">Ready</strong>
+                          </td>
+                        </tr>
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                          Establish report type: page
+                        </span>
+                      </h2>
+                    </div>
+                    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                      <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132542464039">Confluence page: Establish
+                                                                                    report type</a>
+                      <br></br>
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--turquoise">Ready</strong>
+                            </td>
+                          </tr>
+                          <a href="/beta/establish/establishv1.html">Establish report type v.1</a>
+                          <p class='govuk-body'>Question in the report an incident flow</p>
+                        </li>
+                        <li>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--yellow">A/B test</strong>
+                            </td>
+                          </tr>
+                          <a href="/beta/establish/establishv1b.html">Establish report type v.1b</a>
+                          <p class='govuk-body'>Question in the report an incident flow - with help component</p>
+                        </li>
+                        <li>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--yellow">A/B test</strong>
+                            </td>
+                          </tr>
+                          <a href="/beta/establish/establishv2.html">Establish report type v.2</a>
+                          <p class='govuk-body'>As a start page</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--turquoise">Ready</strong>
+                          </td>
+                        </tr>
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                          Incident location: page
+                        </span>
+                      </h2>
+                    </div>
+                    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                      <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132542464039">Confluence page: incident
+                                                                                    Location</a>
+                      <br></br>
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--turquoise">Ready</strong>
+                            </td>
+                          </tr>
+                          <a href="/beta/location/locationv1.html">Location page v.1</a>
+                          <p class='govuk-body'>Simple version | no postcode required</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                      <h2 class="govuk-accordion__section-heading">
+                        <tr class="govuk-table__row">
+                          <td class="govuk-table__cell">
+                            <strong class="govuk-tag govuk-tag--turquoise">Ready</strong>
+                          </td>
+                        </tr>
+                        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                          Describe an incident: page
+                        </span>
+                      </h2>
+                    </div>
+                    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                      <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132496228936">Confluence page: Describe an
+                                                                                    incident</a>
+                      <br></br>
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                            </td>
+                          </tr>
+                          <a href="/beta/breakdown/breakdownv7.html">Breakdown v.4 - characters count</a>
+                          <p class='govuk-body'>WE SHOULD TEST THE WARNING INSTEAD OF BLUE BANNER AS IT DIDN'T TEST WELL</p>
+                        </li>
+                        <li>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                            </td>
+                          </tr>
+                          <a href="/beta/breakdown/breakdownv6.html">Breakdown v.3.1-A - blue version</a>
+                          <p class='govuk-body'>Warning component instead of Important turquoise message</p>
+                        </li>
+                        <li>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--turquoise">READY</strong>
+                            </td>
+                          </tr>
+                          <a href="/beta/breakdown/breakdownv4.html">Breakdown v.3-A - blue version</a>
+                          <p class='govuk-body'>THIS IS THE VERSION WHICH HAS BEEN DEVELOPED. New content from Emma. 7 Questions.
+                                                                                                    Includes validations (Click Feedback survey)</p>
+                        </li>
+                        <li>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                            </td>
+                          </tr>
+                          <a href="/beta/breakdown/breakdownv5.html">Breakdown v.2-B - Red version</a>
+                          <p class='govuk-body'>New contents from Emma.</p>
+                        </li>
+                        <li>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                            </td>
+                          </tr>
+                          <a href="/beta/breakdown/breakdownv3.html">Breakdown v.2-A - blue version</a>
+                          <p class='govuk-body'>UX draft. Can we reduce the number of questions? Eliminate questions that where
+                                                                                                    causing duplications. Down to 5 questions.</p>
+                        </li>
+                        <li>
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                              <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                            </td>
+                          </tr>
+                          <a href="/beta/breakdown/breakdownv2.html">Breakdown v.1-B - Red version</a>
+                          <p class='govuk-body'>1 text area and a checklist.
+                            <br>
+                              Average time to complete: 8 minutes</p>
+                          </li>
+                          <li>
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                              </td>
+                            </tr>
+                            <a href="/beta/breakdown/breakdown.html">Breakdown v.1-A - blue version</a>
+                            <p class='govuk-body'>9 Questions. This is the version after Alpha.
+                              <br>
+                                Average time to complete: 12
+                                                                                                                minutes</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--turquoise">READY</strong>
+                              </td>
+                            </tr>
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                              Date and time: page
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                          <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132480761860/Incident+Date+Time">Confluence
+                                                                                                page: Incident date & time</a>
+                          <br></br>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                </td>
+                              </tr>
+                              <a href="/beta/datetime/datetimev2.html">Date and time v.1-B - Contents</a>
+                              <p class='govuk-body'>This is the version with guidances around estimating the time of the incident.</p>
+                            </li>
+                            <li>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <strong class="govuk-tag govuk-tag--turquoise">READY</strong>
+                                </td>
+                              </tr>
+                              <a href="/beta/datetime/datetimev1.html">Date and time v.1-A - Simple</a>
+                              <p class='govuk-body'>This is the simple version with no guidance. Assumption: Agents will intuitively try
+                                                                                                                to guess the best time for the report.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--turquoise">READY</strong>
+                              </td>
+                            </tr>
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                              Report incident on behalf of someone else: page
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                          <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132552622611">Confluence page: Reporting on
+                                                                                                behalf of somebody else</a>
+                          <br></br>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                </td>
+                              </tr>
+                              <a href="/beta/behalf/03report.html">Behalf v3</a>
+                              <p>THIS WAS GOING TO BE NEXT STEP: DIfferent categories of people you can report for</p>
+                            </li>
+                            <li>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <strong class="govuk-tag govuk-tag--turquoise">READY</strong>
+                                </td>
+                              </tr>
+                              <a href="/beta/behalf/02report.html">Behalf v2</a>
+                              <p>Content changes after sign off meeting with David. Improvements to validation messages and descriptions
+                                                                                                                of fields. (Errors may work differently in the developer version)</p>
+                            </li>
+                            <li>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                </td>
+                              </tr>
+                              <a href="/beta/behalf/behalfv1.html">Behalf v1</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--turquoise">READY</strong>
+                              </td>
+                            </tr>
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                              Searchlight UI fragment error: page
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <strong class="govuk-tag govuk-tag--turquoise">READY</strong>
+                                </td>
+                              </tr>
+                              <a href="/beta/error-searchlight/errorv1.html">Generic error v1 - Safeguarding UI error
+                              </a>
+                              <ul>
+                                <li><a href="https://dwpdigital.atlassian.net/browse/CITI-13650">CITI-13650 Safeguarding error message in Searchlight UCD</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--turquoise">READY</strong>
+                              </td>
+                            </tr>
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                              Generic error: page
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                          <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132552032927">Confluence page: Generic error
+                                                                                                page</a>
+                          <br></br>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <strong class="govuk-tag govuk-tag--turquoise">READY</strong>
+                                </td>
+                              </tr>
+                              <a href="/beta/error/errorv2.html">Generic error v2 - simple version (no action for user)</a>
+                            </li>
+                          </ul>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                </td>
+                              </tr>
+                              <a href="/beta/error/errorv1.html">Generic error v1 - something went wrong with the service</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--turquoise">READY</strong>
+                              </td>
+                            </tr>
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                              Discrimination: page
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                          <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132543086842">Confluence page: Incident
+                                                                                                discrimination</a>
+                          <br></br>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <strong class="govuk-tag govuk-tag--turquoise">READY</strong>
+                                </td>
+                              </tr>
+                              <a href="/beta/discrimination/discriminationv1.html">Discrimination v1 - multiple choices</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--turquoise">READY</strong>
+                              </td>
+                            </tr>
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                              Temporary Check ID: page
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                          <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132524441619">Confluence page - Temporary
+                                                                                                customer ID page (v1)</a>
+                          <br></br>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <strong class="govuk-tag govuk-tag--turquoise">READY</strong>
+                                </td>
+                              </tr>
+                              <a href="/beta/checkID/checkIDv1.html">Check ID v1 - Simple</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="govuk-accordion__section ">
+                        <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">
+                                <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                              </td>
+                            </tr>
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                              Check customer ID (REPLACED BY KEY ID BLUE BANNER)
+                            </span>
+                          </h2>
+                        </div>
+                        <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                          <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132517660187">Confluence page - Confirm
+                                                                                                customer page (v2)
+                          </a>
+                          <br></br>
+                          <ul class="govuk-list govuk-list--bullet">
+                            <li>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">
+                                  <strong class="govuk-tag govuk-tag--red">CLOSED</strong>
+                                </td>
+                              </tr>
+                              <a href="/beta/checkID/checkIDv3.html">REPLACED BY BLUE KEY ID BANNER: Check ID v3 - Content update
+                                <br>(Dependent on Searchlight work)</a>
+                              </li>
+                              <li>
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                  </td>
+                                </tr>
+                                <a href="/beta/checkID/checkIDv2.html">REPLACED BY BLUE KEY ID BANNER: Check ID v2 - Check from
+                                                                                                                      Searchlight
+                                  <br>(Dependent on Searchlight work)</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="govuk-accordion__section ">
+                            <div class="govuk-accordion__section-header">
+                              <h2 class="govuk-accordion__section-heading">
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--red">Removed from incident report</strong>
+                                  </td>
+                                </tr>
+                                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                                  Incident types: page
+                                </span>
+                              </h2>
+                            </div>
+                            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                              <ul class="govuk-list govuk-list--bullet">
+                                <li>
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                    </td>
+                                  </tr>
+                                  <a href="/beta/types/typev3-4.html">Incident types v3.4 - Written</a>
+                                  <p class='govuk-body'>4 versions, based on the interaction type.</p>
+                                </li>
+                                <li>
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                    </td>
+                                  </tr>
+                                  <a href="/beta/types/typev3-3.html">Incident types v3.3 - Telephone</a>
+                                  <p class='govuk-body'>4 versions, based on the interaction type.</p>
+                                </li>
+                                <li>
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                    </td>
+                                  </tr>
+                                  <a href="/beta/types/typev3-2.html">Incident types v3.2 - Video call</a>
+                                  <p class='govuk-body'>4 versions, based on the interaction type.</p>
+                                </li>
+                                <li>
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                    </td>
+                                  </tr>
+                                  <a href="/beta/types/typev3-1.html">Incident types v3.1 - In person</a>
+                                  <p class='govuk-body'>4 versions, based on the interaction type.</p>
+                                </li>
+                                <li>
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                    </td>
+                                  </tr>
+                                  <a href="/beta/types/typev2.html">Incident types v2 - No interaction type dependencies</a>
+                                  <p class='govuk-body'>1 list with all the interaction types</p>
+                                </li>
+                                <li>
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                    </td>
+                                  </tr>
+                                  <a href="/beta/types/typev1.html">Incident types v1 - Alpha</a>
+                                  <p class='govuk-body'>Version at the end of Alpha</p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="govuk-accordion__section ">
+                            <div class="govuk-accordion__section-header">
+                              <h2 class="govuk-accordion__section-heading">
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                  </td>
+                                </tr>
+                                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                                  Confirmation page: page (PLEASE REFER TO INCIDENT REPORT AND RICHARD FOR LATEST VERSION)
+                                </span>
+                              </h2>
+                            </div>
+                            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                              <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132524277824">Confluence page: confirmation
+                                                                                                            page (report submitted)</a>
+                              <br></br>
+                              <ul class="govuk-list govuk-list--bullet">
+                                <li>
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                    </td>
+                                  </tr>
+                                  <a href="/beta/success/successv4.html">Confirmation page v4 - Quick tweak</a>
+                                  <p class='govuk-body'>Warn the user and allow him to send himself an email</p>
+                                </li>
+                                <li>
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                    </td>
+                                  </tr>
+                                  <a href="/beta/success/successv3.html">Confirmation page v3 - Next steps</a>
+                                  <p class='govuk-body'>Change in contents after feedback from Dorothy</p>
+                                </li>
+                                <li>
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                    </td>
+                                  </tr>
+                                  <a href="/beta/success/successv2.html">Confirmation page v2 - Next steps</a>
+                                  <p class='govuk-body'>Change in contents after analysis</p>
+                                </li>
+                                <li>
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                    </td>
+                                  </tr>
+                                  <a href="/beta/success/successv1.html">Confirmation page v1 - Lorem ipsum</a>
+                                  <p class='govuk-body'>Ready version waiting for analysis of next steps</p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="govuk-accordion__section ">
+                            <div class="govuk-accordion__section-header">
+                              <h2 class="govuk-accordion__section-heading">
+                                <tr class="govuk-table__row">
+                                  <td class="govuk-table__cell">
+                                    <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                  </td>
+                                </tr>
+                                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                                  Interaction type: page (PLEASE UPDATE WITH SOCIAL MEDIA WHEN COMPLETED)
+                                </span>
+                              </h2>
+                            </div>
+                            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                              <a href="https://dwpdigital.atlassian.net/wiki/spaces/CITI/pages/132529094661">Confluence page: interaction
+                                                                                                            type</a>
+                              <br></br>
+                              <ul class="govuk-list govuk-list--bullet">
+                                <li>
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                    </td>
+                                  </tr>
+                                  <a href="/beta/interaction/interactionv2.html">Interaction type v2</a>
+                                  <p class='govuk-body'>We added "other" option on this version</p>
+                                </li>
+                                <li>
+                                  <tr class="govuk-table__row">
+                                    <td class="govuk-table__cell">
+                                      <strong class="govuk-tag govuk-tag--red">Closed</strong>
+                                    </td>
+                                  </tr>
+                                  <a href="/beta/interaction/interactionv1.html">Interaction type v1</a>
+                                  <p class='govuk-body'>Simple version with 4 interaction</p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="govuk-accordion__section ">
+                            <div class="govuk-accordion__section-header">
+                              <h2 class="govuk-accordion__section-heading">
+                                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                                  Letter generator
+                                </span>
+                              </h2>
+                            </div>
+                            <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                              <ul class="govuk-list govuk-list--bullet">
+                                <li>
+                                  <a href="/beta/lettergeneratorV1/start.html">Letter generator v.1</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  {% endblock %}
