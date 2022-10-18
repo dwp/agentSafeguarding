@@ -34,17 +34,17 @@ Confirm incident (witness request)) - Keep Customer Interactions Safe
       <div class="govuk-form-group">
         <form class="form" action="route_wit" method="post">
           <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
-            <p>We believe Mike Black recently saw or overheard this incident between one of their colleagues and a customer. </p>
+            <p>We believe Ted Lady recently saw or overheard this incident between one of their colleagues and a customer. </p>
             <p>If any of these details are wrong, you can tell us on the next screen. </p>
             {{ govukSummaryList({
               rows: [
                 {
                   key: {
-                    text: "Customer", 
+                    text: "Customer",
                     classes: "govuk-!-width-one-half"
                   },
                   value: {
-                    text: "Robert De Silva", 
+                    text: "Robert De Silva",
                     classes: "govuk-!-width-one-half"
                   }
                 },
@@ -83,24 +83,24 @@ Confirm incident (witness request)) - Keep Customer Interactions Safe
               ]
             }) }}
             <br>
-            <h2 class="govuk-heading-m">Did Ted Lady see and / or hear this incident?</h2>
+            <h2 class="govuk-heading-m">Did Ted Lady see or overhear this incident?</h2>
             {{ govukRadios({
               idPrefix: "didyouwitness",
               name: "didyouwitness",
               hint: {
-                text: "If you witnessed this incident, you must give us your account of it. "
+                text: "If they saw or heard what happened, they must tell us about it. "
               },
               items: [
                 {
                   value: "yes",
                   text: "Yes",
                   hint: {
-                    text: "Select this option, even if you think some details may be incorrect. "
+                    text: "Select this option even if some of the details are wrong "
                   }
                 },
                 {
                   value: "no",
-                  text: "No, defintely not"
+                  text: "No"
                 }
               ]
             }) }}
