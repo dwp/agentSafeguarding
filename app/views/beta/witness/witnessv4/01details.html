@@ -34,7 +34,7 @@ Confirm incident (witness request) - Keep Customer Interactions Safe
       <div class="govuk-form-group">
         <form class="form" action="route_wit" method="post">
           <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
-            <p>We believe you recently saw and / or overheard this incident between one of your colleagues and a customer. </p>
+            <p>We believe you recently saw or overheard this incident between one of your colleagues and a customer. </p>
             <p>We have the following information about the incident. <br>(Reference number: <span aria-hidden='true'>INC-</span><span aria-hidden='false'>123-456-789</span>)</p>
             {{ govukSummaryList({
               rows: [
@@ -105,7 +105,7 @@ Confirm incident (witness request) - Keep Customer Interactions Safe
                   value: "yes",
                   text: "Yes, I did, but some of the details do not seem quite right",
                   hint: {
-                    text: "I saw and / or heard this incident, but the details are not correct"
+                    text: "I saw or heard this incident, but the details are not correct"
                   },
                   checked: true,
                   conditional: {
