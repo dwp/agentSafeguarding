@@ -32,21 +32,23 @@
         name: "panel"
       }) }}
       <p class="govuk-body">We've received your confirmation that you did <strong>not</strong> witness this incident.</p>
-      <h2 class="govuk-heading-m">What happens next</h2>
-    
+      <h2 class="govuk-heading-m">What you can do</h2>
       <p class="govuk-body">
-        You can
-        <a href="mailto:HEALTHANDSAFETY.CENTRALISEDNMTEAM@DWP.GOV.UK" class="govuk-link">email us</a>
-        about this. You must give us the reference number at the top of the page.
+        If you need to contact us about this, email <a href="mailto:HEALTHANDSAFETY.CENTRALISEDNMTEAM@DWP.GOV.UK" class="govuk-link">HealthandSafety.CentralisedNMTeam@dwp.gov.uk</a>. </p><p>You must include the reference number at the top of this page.
       </p>
+      {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+{{ govukWarningText({
+  text: "Make a note of your reference number and our email address before you close this tab, or print or save this page.",
+  iconFallbackText: "Warning"
+}) }}
+
       <p class="govuk-body">
-        Make a note of your reference number and our email address (HEALTHANDSAFETY.CENTRALISEDNMTEAM@DWP.GOV.UK) before you close this tab, or print or save this page.
-      </p>
-      <p class="govuk-body">
-        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=6fbxllcQF0GsKIDN_ob4w-oDsqWqlSlJvQe6JubotYpUNFoxRVFURzIyVU1QOVo3QTA5WFdWSjJIVS4u" class="govuk-link" rel="noreferrer noopener" target="_blank">What did you think of this service? (opens in new tab)</a>
-      </p>
+        To help us improve this service, we’d like to know
+        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=6fbxllcQF0GsKIDN_ob4w-oDsqWqlSlJvQe6JubotYpUNFoxRVFURzIyVU1QOVo3QTA5WFdWSjJIVS4u" class="govuk-link" rel="noreferrer noopener" target="_blank">what you think of it.</a><br>
+        It will only take 2 minutes to give us feedback.</p>
       {{ govukButton({
-        text: "Back to list",
+        text: "Return to list",
         classes: "govuk-button--primary",
         href: "/"
       }) }}
