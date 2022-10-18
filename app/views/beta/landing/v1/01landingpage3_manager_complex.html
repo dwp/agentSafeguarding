@@ -1,10 +1,10 @@
-{% extends "layout_witness_landing.html" %}
+{% extends "layout.html" %}
 <!-- Set active submenu item -->
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Keep Customer Interactions Safe
+Your reports - Keep Customer Interactions Safe
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,7 +22,7 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
 
 {{ govukBackLink({
 text: "Back to Searchlight search page",
-href: "/"
+href: "00searchlight"
 }) }}
 </section>
 {% endblock %}
@@ -72,7 +72,7 @@ href: "/"
           html: "<span class='govuk-visually-hidden'>Witnesses. </span>Yes"
         },
         {
-          html: "<a href='01landingpage4_empty' aria-label='Review and comment on an incident on 1 June 2022 at 9:50pm'>Review and comment</a>"
+          html: "<a href='#' aria-label='Review and comment on an incident on 1 June 2022 at 9:50pm'>Review and comment</a>"
         }
       ],
       [
@@ -89,7 +89,7 @@ href: "/"
           html: "<span class='govuk-visually-hidden'>Witnesses. </span>None indicated"
         },
         {
-          html: "<a href='01landingpage4_empty' aria-label='Review and comment on an incident on 2 June 2022 at 8:01pm'>Review and comment</a>"
+          html: "<a href='#' aria-label='Review and comment on an incident on 2 June 2022 at 8:01pm'>Review and comment</a>"
         }
       ],
       [
@@ -106,7 +106,24 @@ href: "/"
           html: "<span class='govuk-visually-hidden'>Witnesses: </span>You"
         },
         {
-          html: "<a href='01landingpage4_empty' aria-label='Make your report for an incident on 3 June 2022 at 8:06am'>Make your report</a>"
+          html: "<a href='#' aria-label='Make your report for an incident on 3 June 2022 at 8:06am'>Make your report</a>"
+        }
+      ],
+      [
+        {
+          html: "<span class='govuk-visually-hidden'>Date: </span>3 June 2022<br><span class='govuk-body-s' style='color:#505a5f'>  at 8:06am</span>"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Customer: </span>Ann Other"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Original reporter: </span>Whitney Earl"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Witnesses: </span>You"
+        },
+        {
+          html: "<a href='#' aria-label='Make your report for an incident on 3 June 2022 at 8:06am'>Make your report</a>"
         }
       ],
       [
@@ -123,7 +140,24 @@ href: "/"
           html: "<span class='govuk-visually-hidden'>Witnesses: </span><span class='govuk-body-s' style='color:#505a5f'>You <br>on behalf of <br></span> Ted Lady"
         },
         {
-          html: "<a href='01landingpage4_empty' aria-label='Make your report for an incident on 4 June 2022 at 1:12pm'>Make your report</a>"
+          html: "<a href='#' aria-label='Make your report for an incident on 4 June 2022 at 1:12pm'>Make your report</a>"
+        }
+      ],
+      [
+        {
+          html: "<span class='govuk-visually-hidden'>Date: </span>4 June 2022<br><span class='govuk-body-s' style='color:#505a5f'>  at 1:12pm"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Customer: </span>Robert Da Silva"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Original reporter: </span><span class='govuk-body-s' style='color:#505a5f'>Whitney Earl <br>on behalf of <br></span>Mike Black"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Witnesses: </span><span class='govuk-body-s' style='color:#505a5f'>You <br>on behalf of <br></span> Ted Lady"
+        },
+        {
+          html: "<a href='#' aria-label='Make your report for an incident on 4 June 2022 at 1:12pm'>Make your report</a>"
         }
       ]
     ]
@@ -168,7 +202,7 @@ This section shows reports that you have completed, but that are still waiting f
           html: "<span class='govuk-visually-hidden'>Witnesses: </span>You"
         },
         {
-          html: "<a href='01landingpage4_empty' aria-label='View the report you made about the incident on 8 May 2022 at 8:01pm'>View</a><span class='govuk-visually-hidden'> </span>"
+          html: "<a href='#' aria-label='View the report you made about the incident on 8 May 2022 at 8:01pm'>View</a><span class='govuk-visually-hidden'> </span>"
         }
       ],
       [
@@ -185,7 +219,7 @@ This section shows reports that you have completed, but that are still waiting f
           html: "<span class='govuk-visually-hidden'>Witnesses: </span><span class='govuk-body-s' style='color:#505a5f'>You <br>on behalf of <br></span><span class='govuk-visually-hidden'>Original reporter: </span>Isla Yellow"
         },
         {
-          html: "<a href='01landingpage4_empty' aria-label='View the report you made about the incident on 9 May 2022 at 3:09pm'>View</a>"
+          html: "<a href='#' aria-label='View the report you made about the incident on 9 May 2022 at 3:09pm'>View</a>"
         }
       ],
       [
@@ -202,7 +236,7 @@ This section shows reports that you have completed, but that are still waiting f
           html: "<span class='govuk-visually-hidden'>Witnesses: </span>None"
         },
         {
-          html: "<a href='01landingpage4_empty' aria-label='View the report you made about the concern on 10 May 2022 at 7:55pm'>View</a>"
+          html: "<a href='#' aria-label='View the report you made about the concern on 10 May 2022 at 7:55pm'>View</a>"
         }
       ]
   ]

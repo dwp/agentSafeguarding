@@ -1,10 +1,10 @@
-{% extends "layout_witness_landing.html" %}
+{% extends "layout.html" %}
 <!-- Set active submenu item -->
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Keep Customer Interactions Safe
+Your reports - Keep Customer Interactions Safe
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,7 +22,7 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
 
 {{ govukBackLink({
 text: "Back to Searchlight search page",
-href: "/"
+href: "00searchlight"
 }) }}
 </section>
 {% endblock %}
