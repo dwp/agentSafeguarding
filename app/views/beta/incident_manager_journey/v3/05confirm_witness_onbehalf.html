@@ -30,7 +30,7 @@ Who will complete the witness report? - Keep Customer Interactions Safe
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
         <form class="form" action="route_witness2" method="post">
-          <fieldset class="govuk-fieldset" aria-describedby="page-title">
+          <fieldset class="govuk-fieldset">
             {% set colleagueOnbehalfHTML %}
             {{ govukInput({
               label: {
@@ -38,18 +38,17 @@ Who will complete the witness report? - Keep Customer Interactions Safe
             },
               id: "witness-email",
               name: "witness-email",
-              autocomplete: "email",
-              classes: "govuk-!-width-one-half"
+              autocomplete: "email"
             }) }}
             {% endset %}
             {{ govukRadios({
               idPrefix: "contact",
               name: "contact",
-              ispageheader: true,
               fieldset: {
                 legend: {
-                  text: "Who will complete the witness report for Sartaq Matcha?",
-                  classes: "govuk-fieldset__legend--xl"
+                  html: "Who will complete the witness report for Sartaq&nbsp;Matcha?",
+                  classes: "govuk-fieldset__legend--xl",
+                  isPageHeading: true
                 }
               },
               hint: {

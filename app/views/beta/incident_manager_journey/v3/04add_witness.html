@@ -26,83 +26,84 @@
 {% endblock %}
 {% block content %}
 {% include "templates/v6/govuk-caption-m-simple.njk" %}
-  <div class="govuk-form-group">
-    <form class="form" action="route_colleague" method="post">
-      <fieldset class="govuk-fieldset">
-        {% set meHTML %}
-          {{ govukInput({
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <form class="form" action="route_colleague" method="post">
+        <fieldset class="govuk-fieldset">
+          {% set meHTML %}
+            {{ govukInput({
+              label: {
+                text: "Their full name"
+              },
+              id: "witness-full-name",
+              name: "witness-full-name",
+              autocomplete: "name"
+            }) }}
+          {% endset %}
+          {% set noaccessHTML %}
+            {{ govukInput({
+              label: {
+                text: "Their full name"
+              },
+              id: "witness-full-name",
+              name: "witness-full-name",
+              autocomplete: "name"
+            }) }}
+          {% endset %}
+          {% set accessHTML %}
+            {{ govukInput({
             label: {
-              text: "Their full name"
+              text: "Their email address"
             },
-            id: "witness-full-name",
-            classes: "govuk-!-width-one-third",
-            name: "witness-full-name",
-            autocomplete: "name"
-          }) }}
-        {% endset %}
-        {% set noaccessHTML %}
-          {{ govukInput({
-            label: {
-              text: "Their full name"
-            },
-            id: "witness-full-name",
-            classes: "govuk-!-width-one-third",
-            name: "witness-full-name",
-            autocomplete: "name"
-          }) }}
-        {% endset %}
-        {% set accessHTML %}
-          {{ govukInput({
-          label: {
-            text: "Their email address"
-          },
-          id: "colleague-email",
-          classes: "govuk-!-width-one-third",
-          name: "witness-email",
-          autocomplete: "email"
-          }) }}
-        {% endset %}
-        {{ govukRadios({
-          idPrefix: "contact",
-          name: "contact",
-          fieldset: {
-            legend: {
-              text: "Who witnessed the incident?",
-              isPageHeading: true,
-              classes: "govuk-fieldset__legend--xl"
-            }
-          },
-          hint: {
-            text: "Select one option."
-          },
-          items: [
-          
-            {
-              value: "access",
-              text: "Someone who can access this service",
-              conditional: {
-              html: accessHTML
+            id: "colleague-email",
+            name: "witness-email",
+            autocomplete: "email"
+            }) }}
+          {% endset %}
+          {{ govukRadios({
+            idPrefix: "contact",
+            name: "contact",
+            fieldset: {
+              legend: {
+                text: "Who witnessed the incident?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--xl"
               }
             },
-            {
-              value: "noaccess",
-              text: "Someone who does not have access to this service",
-              conditional: {
-              html: noaccessHTML
-              }
+            hint: {
+              text: "Select one option."
             },
-            {
-              value: "me",
-              text: "I did"
-            }
-          ]
-        }) }}
-        <div class="govuk-button-group">
-          {{ govukButton({
-            text: "Continue"
+            items: [
+  
+              {
+                value: "access",
+                text: "Someone who can access this service",
+                conditional: {
+                html: accessHTML
+                }
+              },
+              {
+                value: "noaccess",
+                text: "Someone who does not have access to this service",
+                conditional: {
+                html: noaccessHTML
+                }
+              },
+              {
+                value: "me",
+                text: "I did"
+              }
+            ]
           }) }}
-        </div>
-      </fieldset>
-    </form>
+          <div class="govuk-button-group">
+            {{ govukButton({
+              text: "Continue"
+            }) }}
+          </div>
+        </fieldset>
+      </form>
+    </div>
   </div>
+</div>
 {% endblock %}
