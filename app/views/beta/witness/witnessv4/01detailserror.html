@@ -98,20 +98,25 @@ Confirm incident (witness request) - Keep Customer Interactions Safe
               name: "didyouwitness",
               fieldset: {
                 legend: {
-                  text: "Did you see and / or hear this incident?",
+                  text: "Did you see or overhear this incident?",
                   classes: "govuk-fieldset__legend--m"
                 }
               },
               items: [
                 {
                   value: "yes",
-                  text: "Yes"
+                  text: "Yes",
+                  hint: {
+                    text: "Select this option even if some of the details are wrong "
+                  }
                 },
                 {
                   value: "no",
                   text: "No"
                 }
               ],
+
+
               errorMessage: {
                 text: "Tell us if you witnessed this incident"
               }

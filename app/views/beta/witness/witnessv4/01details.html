@@ -34,8 +34,7 @@ Confirm incident (witness request) - Keep Customer Interactions Safe
       <div class="govuk-form-group">
         <form class="form" action="route_wit" method="post">
           <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
-            <p>We believe you recently saw or overheard this incident between one of your colleagues and a customer. </p>
-            <p>We have the following information about the incident. <br>(Reference number: <span aria-hidden='true'>INC-</span><span aria-hidden='false'>123-456-789</span>)</p>
+            <p>We believe you recently saw or overheard this incident between one of your colleagues and a customer (reference number <span aria-hidden='true'>INC-</span><span aria-hidden='false'>123-456-789</span>):</p>
             {{ govukSummaryList({
               rows: [
                 {
@@ -75,14 +74,14 @@ Confirm incident (witness request) - Keep Customer Interactions Safe
               ]
             }) }}
             <br>
-            <h2 class="govuk-heading-m">Did you see and / or hear this incident?</h2>
+            <h2 class="govuk-heading-m">Did you see or overhear this incident?</h2>
             {% set correctionsHtml %}
             {{ govukCharacterCount({
               name: "with-hint",
               id: "with-hint",
               maxlength: 3000,
               label: {
-                text: "Please supply corrections",
+                text: "Enter the correct information",
                 classes: "govuk-label--s"
               }
             }) }}
@@ -91,22 +90,20 @@ Confirm incident (witness request) - Keep Customer Interactions Safe
               idPrefix: "didyouwitness",
               name: "didyouwitness",
               hint: {
-                text: "If you witnessed this incident, you must give us your account of it. "
+                text: "If you saw or heard what happened, you must tell us about it."
               },
               items: [
                 {
                   value: "yes",
-                  text: "Yes, definitely",
+                  text: "Yes",
                   hint: {
-                    text: "To the best of my knowledge, the details above are correct. "
+                    text: "To the best of my knowledge, all the details above are correct"
                   }
                 },
                 {
                   value: "yes",
-                  text: "Yes, I did, but some of the details do not seem quite right",
-                  hint: {
-                    text: "I saw or heard this incident, but the details are not correct"
-                  },
+                  text: "Yes, but some of the details are not correct",
+
                   checked: true,
                   conditional: {
                     html: correctionsHtml
@@ -114,7 +111,7 @@ Confirm incident (witness request) - Keep Customer Interactions Safe
                 },
                 {
                   value: "no",
-                  text: "No, I did not see or hear this incident"
+                  text: "No, I did not see or hear what happened"
                 }
               ]
             }) }}
