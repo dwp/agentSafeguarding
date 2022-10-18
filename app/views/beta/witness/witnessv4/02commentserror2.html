@@ -12,7 +12,7 @@
       tag: {
         text: "beta"
       },
-      html: 'This is a new service – your <a class="govuk-link" href="02commentserror2">feedback</a> will help us to improve it.'
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
       })
     }}
   </section>
@@ -31,12 +31,8 @@
         titleText: "There is a problem",
         errorList: [
           {
-            text: "Tell us about the incident",
+            text: "You have entered too many characters",
             href: "#description"
-          },
-          {
-            text: "Confirm you have reviewed all the required information",
-            href: "#checklist"
           }
         ]
       }) }}
@@ -70,7 +66,7 @@
             },
             maxlength: 3000,
             errorMessage: {
-              text: "Tell us about the incident"
+              text: "You have entered too many characters"
             }
           }) }}
           {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
@@ -104,10 +100,7 @@
                 value: "feel",
                 text: "How you felt about what happened"
               }
-            ],
-            errorMessage: {
-              text: "Confirm you have reviewed all the required information"
-            }
+            ]
           }) }}
           {% from "govuk/components/button/macro.njk" import govukButton %}
           <div class="govuk-button-group">
