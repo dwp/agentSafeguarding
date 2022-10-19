@@ -1,0 +1,55 @@
+{% extends "layout_incident_landing.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+{% block pageTitle %}
+  Email sent - Keep Customer Interactions Safe
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+      tag: {
+      text: "beta"
+    },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
+{% endblock %}
+{% block content %}
+{% include "templates/v6/govuk-caption-m-simple.njk" %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <form class="form" action="route" method="post">
+          <fieldset class="govuk-fieldset">
+            <h1 class="govuk-heading-xl" style="margin-bottom: 20px !important;">Email sent</h1>
+            <p class="govuk-body">We've sent an email to Ted Lady, explaining how to complete a witness report.</p>
+            <div class="govuk-button-group">
+              {{ govukButton({
+                text: "Back to list",
+                href: "03witnessdisplay-3list"
+              }) }}
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+There are 3 versions of this page<br>
+<a href="06sent-1colleague">1. Email sent to someone with access to the KCIS service to complete their own witness report</a><br>
+<a href="06sent-2colleagueonbehalf">2. Email sent to someone with access to the KCIS service to complete witness report on behalf of somebody else</a><br>
+<a href="06sent-3youonbehalf">3. Email sent to you to complete witness report on behalf of somebody elsee</a><br>
+<a href="06sent-4you">3. Email sent to self to you</a><br>
+<hr>  
+{% endblock %}
