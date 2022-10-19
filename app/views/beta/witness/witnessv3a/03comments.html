@@ -39,17 +39,21 @@
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="description">
             {% include "templates/v5/govuk-caption-l.njk" %}
-                      <h1 class="govuk-heading-l">Tell us what you saw and / or heard</h1>
-
-          <p>If you are making this witness report for a colleague who doesn't have access to this service, write "my colleague saw" or "he / she / they saw", as applicable. Do not use your colleague's name.</p>
-
           {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
           {{ govukCharacterCount({
-        id: "description",
-        name: "Description",
-        rows: "12",
-        maxlength: 3000
-        }) }}
+            id: "description",
+            name: "Description",
+            rows: "12",
+            maxlength: 3000,
+            label: {
+              text: "Tell us what you saw or heard",
+              classes: "govuk-label--l",
+              isPageHeading: true
+            },
+            hint: {
+              html: "<p class='govuk-hint'>If you are making this witness report for a colleague who doesn't have access to this service, write &quot;my colleague saw&quot; or &quot;he / she / they saw&quot;, as applicable. Do not use your colleague's name.</p>"
+            }
+          }) }}
           <h2 class="govuk-heading-s">Confirm you have considered and added to the report (where relevant):</h2>
           {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
           {{ govukCheckboxes({
