@@ -1,4 +1,4 @@
-{% extends "layout_witness_landing.html" %}
+{% extends "layout.html" %}
 <!-- Set active submenu item -->
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
@@ -72,7 +72,7 @@
             {{ govukButton(
                 {
                   text: "Submit",
-                  href: "05confirm"
+                  href: "05confirm-you"
                 }
               )
             }}

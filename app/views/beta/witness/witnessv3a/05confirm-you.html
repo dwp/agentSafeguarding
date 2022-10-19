@@ -1,4 +1,4 @@
-{% extends "layout_witness_landing.html" %}
+{% extends "layout.html" %}
 {% block pageTitle %}
   Report submitted - Agent Safeguarding
 {% endblock %}
@@ -6,11 +6,11 @@
   <section aria-label="Beta banner" role="region">
     {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
-      tag: {
-        text: "beta"
-      },
-      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-    }) }}
+  tag: {
+  text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
   </section>
 {% endblock %}
 {% block content %}
@@ -26,21 +26,27 @@
       </div>
       {% endset %}
       {{ govukPanel({
-        titleText: "You have not made a witness report ",
+        titleText: "Report submitted",
         html: refHTML,
         id: "panel",
         name: "panel"
       }) }}
-      <p class="govuk-body">We've received your confirmation that Ted Lady did <strong>not</strong> witness this incident.</p>
+      <p class="govuk-body">We've received your report.</p>
       <h2 class="govuk-heading-m">What happens next</h2>
-    
       <p class="govuk-body">
-        You can
-        <a href="mailto:HEALTHANDSAFETY.CENTRALISEDNMTEAM@DWP.GOV.UK" class="govuk-link">email us</a>
-        about this. You must give us the reference number at the top of the page.
+        We aim to email you within 48 hours with a response.
       </p>
       <p class="govuk-body">
-        Make a note of your reference number and our email address (HEALTHANDSAFETY.CENTRALISEDNMTEAM@DWP.GOV.UK) before you close this tab, or print or save this page.
+        DWP staff can access free counselling and support through
+        <a class="govuk-link" href="https://intranet.dwp.gov.uk/section/working-dwp/human-resources/wellbeing/employee-assistance-programme">PAM Assist</a>.
+      </p>
+      <p class="govuk-body">
+        You can
+        <a href="mailto:healthandsafety.centralisednmteam@dwp.gov.uk" class="govuk-link">email us</a>
+        about the report you submitted. You must give us the reference number at the top of the page.
+      </p>
+      <p class="govuk-body">
+        Make a note of your reference number and our email address (healthandsafety.centralisednmteam@dwp.gov.uk) before you close this tab, or print or save this page.
       </p>
       <p class="govuk-body">
         <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=6fbxllcQF0GsKIDN_ob4w-oDsqWqlSlJvQe6JubotYpUNFoxRVFURzIyVU1QOVo3QTA5WFdWSjJIVS4u" class="govuk-link" rel="noreferrer noopener" target="_blank">What did you think of this service? (opens in new tab)</a>
@@ -48,8 +54,17 @@
       {{ govukButton({
         text: "Back to list",
         classes: "govuk-button--primary",
-        href: "05confirm"
+        href: "05confirm2"
       }) }}
     </div>
   </div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+There are x versions of this page<br>
+<a href="05confirm-you">1. Confirm - you</a><br>
+<a href="05confirm2-onbehalf">2. Confirm - on behalf of</a><br>
+<a href="05confirm3-younotwitness">3. Confirm - you did not witness</a><br>
+<a href="05confirm4-onbehalfnotwitness">4. Confirm - on behalf of did not witness</a><br>
+<hr>
+
 {% endblock %}
