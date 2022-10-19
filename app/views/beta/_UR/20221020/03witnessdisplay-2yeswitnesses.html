@@ -29,19 +29,22 @@ Witnesses - Keep Customer Interactions Safe
 <section aria-label="Incident witnesses" role="region">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
       <h1 class="govuk-heading-xl">Witnesses</h1>
+
       {{ govukWarningText({
-        text: "The reporter has indicated that there are witnesses.",
+        text: "There were witnesses to the incident",
         iconFallbackText: "Warning"
       }) }}
-      <p class="govuk-body ">The reporter has indicated that there are witnesses but no-one has added a witness yet.
+      <p class="govuk-body ">The original reporter has indicated that one or more of their colleagues witnessed this incident. However, there are currently no witnesses listed in this report.
       </p>
-      <ol class="govuk-list govuk-list--number">
-        <li>Talk to the original reporter and make a list of witnesses</li>
-        <li>For each colleague Add a witness using this system</li>
-        <li>Ensure each submits a witness report before you submit your report</li>
-      </ol>      
-    </div>
+      <p>Talk to the reporter to find out who witnessed this incident, then select 'Add a witness' to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>add their details</li>
+        <li>send each of them an email, explaining how to complete a witness report</li>
+      </ul><br>
+      <p class="govuk-body govuk-!-font-weight-bold">Every witness must complete a witness report before you can submit your review of this incident.</p>
+  </div>
   </div>
 
   <div class="govuk-form-group">
@@ -60,6 +63,5 @@ Witnesses - Keep Customer Interactions Safe
     </fieldset>
   </div>
 </section>
-
 
 {% endblock %}
