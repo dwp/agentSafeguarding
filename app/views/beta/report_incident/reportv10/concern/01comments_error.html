@@ -1,17 +1,17 @@
 {% extends "layout.html" %}
-<!-- Set active submenu item -->
-{% set menuItemOne = " aria-current=page" %}
-{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+  Error: Tell us about the safety concern you want to report - Keep Customer Interactions Safe
+{% endblock %}
+
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
         text: "beta"
       },
       html: 'This is a new service – your <a class="govuk-link" href="01comments">feedback</a> will help us to improve it.'
-      })
-    }}
+    }) }}
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
@@ -21,85 +21,86 @@
     }) }}
   </section>
 {% endblock %}
+
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
-      {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+    <div class="govuk-grid-column-two-thirds">
       {{ govukErrorSummary({
-    titleText: "There is a problem",
-    errorList: [
-    {
-      text: "Enter a description of the safety concern",
-      href: "#description"
-    },{
-      text: "Confirm you have reviewed all the required information",
-      href: "#checklist"
-    }
-    ]
-    }) }}
-      {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Enter a description of the safety concern",
+            href: "#description"
+          },{
+            text: "Confirm you have reviewed all the required information",
+            href: "#checklist"
+          }
+        ]
+      }) }}
       {% set html %}
-      <p class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.</p>
-      <p class="govuk-notification-banner__heading">Do not include the names of any DWP staff in your answers.</p>
+        <p class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.</p>
+        <p class="govuk-notification-banner__heading">Do not include the names of any DWP staff in your answers.</p>
       {% endset %}
       {{ govukNotificationBanner({
-    html: html
-    }) }}
-      <h1 class="govuk-heading-l" id="page-title">Tell us about the safety concern you want to report</h1>
-
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="page-title">
-          {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
-          {{ govukCharacterCount({
+        html: html
+      }) }}
+      {{ govukCharacterCount({
         id: "description",
         name: "Description",
         rows: "12",
         maxlength: 2000,
         label: {
-          text: "Description",
-          classes: "govuk-body"
-            },
+          text: "Tell us about the safety concern you want to report",
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
         errorMessage: {
           text: "Enter a description of the safety concern"
         }
-        }) }}
-          <h2 class="govuk-heading-s">Please confirm you have considered and included, where relevant:</h2>
-          {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-          {{ govukCheckboxes({
+      }) }}
+      {{ govukCheckboxes({
         idPrefix: "checklist",
         name: "checklist",
+        fieldset: {
+          legend: {
+            text: "Please confirm you have considered and included, where relevant:",
+            classes: "govuk-fieldset__legend--s"
+          }
+        },
         items: [
-
-        {
-        value: "references",
-        text: "Names and page numbers of all forms that identify this safety concern - for example: ESA50 form, p3-5"
-        },
-        {
-        value: "date",
-        text: "The date the safety concern was identified (this is likely to be the date on the forms)"
-        },
-        {
-        value: "originals",
-        text: "Where the original forms are stored, if you have this information"
-        },
-        {
-        value: "words",
-        text: "The exact words used on the forms that point to a safety risk. Please only include information that is relevant to this concern  "
-        }
+          {
+            value: "references",
+            text: "Names and page numbers of all forms that identify this safety concern - for example: ESA50 form, p3-5."
+          },
+          {
+            value: "date",
+            text: "The date the safety concern was identified (this is likely to be the date on the forms)."
+          },
+          {
+            value: "originals",
+            text: "Where the original forms are stored, if you have this information."
+          },
+          {
+            value: "words",
+            text: "The exact words used on the forms that point to a safety risk. Only include information that is relevant to this concern."
+          }
         ],
         errorMessage: {
           text: "Confirm you have reviewed all the required information"
         }
-        }) }}
-          {% from "govuk/components/button/macro.njk" import govukButton %}
-          <div class="govuk-button-group">
-            {{ govukButton({
+      }) }}
+      <div class="govuk-button-group">
+        {{ govukButton({
           text: "Continue",
           href: "02fileuploadcheck"
-          }) }}
-          </div>
-        </fieldset>
+        }) }}
       </div>
     </div>
   </div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+There are x versions of this page<br>
+<a href="01comments">1. Comments</a><br>
+<a href="01comments_error">2. Error: x2 </a><br>
+<hr>  
 {% endblock %}
