@@ -25,26 +25,25 @@
   </section>
 {% endblock %}
 {% block content %}
-  {{ govukErrorSummary({
-    titleText: "There is a problem",
-    errorList: [
-      {
-        text: "Enter their email address",
-        href: "#witness"
-      }
-    ]
-  }) }}
-{% include "templates/v6/govuk-caption-m-simple.njk" %}
-  <div class="govuk-form-group">
-    <form class="form" action="route_colleague" method="post">
-      <fieldset class="govuk-fieldset" aria-describedby="page-title">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Enter their email address",
+            href: "#witness"
+          }
+        ]
+      }) }}
+      {% include "templates/v6/govuk-caption-m-simple.njk" %}
+      <form class="form" action="route_colleague" method="post">
         {% set meHTML %}
           {{ govukInput({
             label: {
               text: "Their full name"
             },
             id: "witness-full-name",
-            classes: "govuk-!-width-one-third",
             name: "witness-full-name",
             autocomplete: "name"
           }) }}
@@ -55,7 +54,6 @@
               text: "Their full name"
             },
             id: "witness-full-name",
-            classes: "govuk-!-width-one-third",
             name: "witness-full-name",
             autocomplete: "name"
           }) }}
@@ -66,7 +64,6 @@
             text: "Their email address"
           },
           id: "colleague-email",
-          classes: "govuk-!-width-one-third",
           name: "witness-email",
           autocomplete: "email",
             errorMessage: {
@@ -114,7 +111,16 @@
             text: "Continue"
           }) }}
         </div>
-      </fieldset>
-    </form>
+      </form>
+    </div>
   </div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+There are x versions of this page<br>
+<a href="04add_witnesserror">1. Error: Tell us who</a><br>
+<a href="04add_witnesserror2">2. Error: Tell us email</a><br>
+<a href="04add_witnesserror3">3. Error: Cannot access</a><br>
+<a href="04add_witnesserror4">4. Error: Not valid email address</a><br>
+<a href="04add_witnesserror5">5. Error: Tell us name</a><br>
+<hr> 
 {% endblock %}

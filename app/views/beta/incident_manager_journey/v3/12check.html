@@ -30,21 +30,21 @@
     Check your answers
   </h1>
   <style>
-    .govuk-table__row:last-child th,   .govuk-table__row:last-child td {
-      margin-bottom: 0;
-      border-bottom: 0;
+    .govuk-summary-list__row:first-child dt {
+      line-height: 1.6;
     }
-    .govuk-summary-list__value {
-      padding-right: 0;
+    .shim {
+      font-size:4px; 
+      margin-bottom:0px !important
     }
   </style>
   {% set witnessesHTML %}
+      <p class='shim'>&nbsp;</p>
         {{ govukTable({
-
           rows: [
             [
               {
-                text: "Sarah Sencha"
+                html: "Sarah Sencha"
               },
               {
                 html: "<span class='govuk-visually-hidden'>Status: </span>Complete"
@@ -76,53 +76,58 @@
             ]
           ]
         }) }}
-    {% endset %}
+        {{ govukWarningText({
+          text: "You should review all witness reports before submitting your report. If this is not possible for timely completion, explain in your comments",
+          iconFallbackText: "Warning"
+        }) }}
+      
+  {% endset %}
+  <div class="govuk-!-margin-bottom-9">
     {{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Witnesses"
-      },
-      value: {
-        html: witnessesHTML
-      }
-    },
-    {
-      key: {
-        text: "Did anyone call the police?"
-      },
-      value: {
-        text: "Yes"
-      }
-    },
-    {
-      key: {
-        text: "What did the police do?"
-      },
-      value: {
-        text: "The police were called and arrested the customer. The crime ref number is 12345678"
-      }
-    },
-    {
-      key: {
-        text: "Comments and recommendations"
-      },
-      value: {
-        html: "There were other witnesses to the incident but we do not have contact details."
-      }
-    }
-  ]
-}) }}
-
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+      rows: [
+        {
+          key: {
+            html: "<div>&nbsp;</div><div>Witnesses</div>"
+          },
+          value: {
+            html: witnessesHTML
+          }
+        },
+        {
+          key: {
+            text: "Did anyone call the police?"
+          },
+          value: {
+            text: "Yes"
+          }
+        },
+        {
+          key: {
+            text: "What did the police do?"
+          },
+          value: {
+            text: "The police were called and arrested the customer. The crime ref number is 12345678"
+          }
+        },
+        {
+          key: {
+            text: "Comments and recommendations"
+          },
+          value: {
+            html: "There were other witnesses to the incident but we do not have contact details."
+          }
+        }
+      ]
+    }) }}
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <h2 class="govuk-heading-m">Are you ready to submit your review?</h2>
           <p class="govuk-body">If you need to change anything in your review of this incident report, use the back link near the top of this page.</p>
           <p class="govuk-body">When you click Submit, we will send your review to a case reviewer and then to a decision maker.</p>
           <p class="govuk-body govuk-!-font-weight-bold">You will not be able to change anything in your review after you click Submit.</p>
-          {% from "govuk/components/button/macro.njk" import govukButton %}
           <div class="govuk-button-group">
             {{ govukButton(
                 {

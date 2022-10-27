@@ -1,139 +1,110 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Were you involved in the incident? - Keep Customer Interactions Safe
+  Error: Were you involved in the incident? - Keep Customer Interactions Safe
 {% endblock %}
 
 {% block beforeContent %}
 <section aria-label="Beta banner" role="region">
-
-  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
   {{ govukPhaseBanner({
-  tag: {
-  text: "beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="02behalf_error2">feedback</a> will help us to improve it.'
   }) }}
 </section>
 {% include "templates/v2/header_searchlight.njk" %}
 <section aria-label="Back" role="region">
-  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-
   {{ govukBackLink({
-  text: "Back",
-  href: "javascript:history.back()"
+    text: "Back",
+    href: "javascript:history.back()"
   }) }}
 </section>
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-form-group">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
       {{ govukErrorSummary({
-      titleText: "There is a problem",
-      errorList: [
-      {
-      text: "Enter their first name",
-      href: "#first-name"
-      },
-      {
-      text: "Enter their last name",
-      href: "#last-name"
-      },
-      {
-      text: "Enter their email address, in the format name@example.com",
-      href: "#email"
-      }
-
-
-      ]
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Select yes if you were involved in this incident",
+            href: "#on-behalf"
+          }
+        ]
       }) }}
-      <fieldset class="govuk-fieldset" aria-describedby="on-behalf">
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
-        {% set emailHtml %}
+      {% set emailHtml %}
         {{ govukInput({
-        id: "first-name",
-        name: "first-name",
-        classes: "govuk-!-width-one-third",
-        label: {
-        text: "Their first name"
-        },
-        errorMessage: {
-        text: "Enter their first name"
-        }
+          id: "first-name",
+          name: "first-name",
+          label: {
+            text: "Their first name"
+          }
         }) }}
         {{ govukInput({
-        id: "last-name",
-        name: "last-name",
-        classes: "govuk-!-width-one-third",
-        label: {
-        text: "Their last name"
-        },
-        errorMessage: {
-        text: "Enter their last name"
-        }
+          id: "last-name",
+          name: "last-name",
+          label: {
+            text: "Their last name"
+          }
         }) }}
         {{ govukInput({
-        id: "email",
-        name: "email",
-        type: "email",
-        autocomplete: "email",
-        spellcheck: false,
-        classes: "govuk-!-width-one-third",
-        label: {
-        text: "Their email address"
-        },
-        errorMessage: {
-        text: "Enter their email address, in the format name@example.com"
-        }
+          id: "email",
+          name: "email",
+          type: "email",
+          autocomplete: "email",
+          spellcheck: false,
+          label: {
+            text: "Their email address"
+          }
         }) }}
-
-        {% endset -%}
-
-
-
-        {{ govukRadios({
+      {% endset -%}
+      {{ govukRadios({
         idPrefix: "on-behalf",
         name: "on-behalf",
         fieldset: {
-        legend: {
-        text: "Were you involved in this incident?",
-        isPageHeading: true,
-        classes: "govuk-fieldset__legend--l"
-        }
+          legend: {
+            text: "Were you involved in this incident?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
         },
         items: [
-        {
-        value: "yes",
-        text: "Yes"
-        },
-        {
-        value: "no",
-        text: "No, I am reporting this on behalf of someone who does not have access to this service",
-        checked: true,
-        conditional: {
-        html: emailHtml
-        }
-        }
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No, I am reporting this on behalf of someone who does not have access to this service",
+            conditional: {
+              html: emailHtml
+            }
+          }
         ],
         hint: {
-        text: "Select one option."
+          text: "Select one option."
+        },
+        errorMessage: {
+          text: "Select yes if you were involved in this incident"
         }
+      }) }}
+      <div>
+        {{ govukButton({
+        text: "Continue",
+        href: "03line_manager"
         }) }}
-        <div class="govuk-button-group">
-
-          {% from "govuk/components/button/macro.njk" import govukButton %}
-
-          {{ govukButton({
-          text: "Continue",
-          href: "03line_manager"
-          }) }}
-
-        </div>
-      </fieldset>
+      </div>
     </div>
   </div>
-</div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+There are x versions of this page<br>
+<a href="02behalf">1. Were you?</a><br>
+<a href="02behalf_error2">2. Error: Select yes</a><br>
+<a href="02behalf_error3">3. Error: First name / last name / email</a><br>
+<a href="02behalf_error4">4. Error: email format</a><br>
+<hr>
 {% endblock %}

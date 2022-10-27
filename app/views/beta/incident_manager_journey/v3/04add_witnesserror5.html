@@ -12,7 +12,7 @@
       tag: {
       text: "beta"
     },
-      html: 'This is a new service – your <a class="govuk-link" href="04add_witnesserror2">feedback</a> will help us to improve it.'
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
     }) }}
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
@@ -31,8 +31,8 @@
         titleText: "There is a problem",
         errorList: [
           {
-            text: "Tell us who witnessed this incident",
-            href: "#witness"
+            text: "Enter their name",
+            href: "#witness-email"
           }
         ]
       }) }}
@@ -55,7 +55,10 @@
             },
             id: "witness-full-name",
             name: "witness-full-name",
-            autocomplete: "name"
+            autocomplete: "name",
+            errorMessage: {
+              text: "Enter their name"
+            }
           }) }}
         {% endset %}
         {% set accessHTML %}
@@ -69,8 +72,8 @@
           }) }}
         {% endset %}
         {{ govukRadios({
-          idPrefix: "witness",
-          name: "witness",
+          idPrefix: "contact",
+          name: "contact",
           fieldset: {
             legend: {
               text: "Who witnessed the incident?",
@@ -94,16 +97,14 @@
               text: "Someone without access to this service",
               conditional: {
               html: noaccessHTML
-              }
+              },
+              checked: true
             },
             {
               value: "me",
               text: "I did"
             }
-          ],
-          errorMessage: {
-            text: "Tell us who witnessed this incident"
-          }
+          ]
         }) }}
         <div class="govuk-button-group">
           {{ govukButton({
@@ -121,5 +122,5 @@ There are x versions of this page<br>
 <a href="04add_witnesserror3">3. Error: Cannot access</a><br>
 <a href="04add_witnesserror4">4. Error: Not valid email address</a><br>
 <a href="04add_witnesserror5">5. Error: Tell us name</a><br>
-<hr> 
+<hr>   
 {% endblock %}

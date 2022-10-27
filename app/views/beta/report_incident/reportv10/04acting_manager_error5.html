@@ -1,16 +1,14 @@
 {% extends "layout.html" %}
-
 {% block pageTitle %}
-  Were you involved in the incident? - Keep Customer Interactions Safe
+  Error: Who is the most appropriate manager to review this report? - Keep Customer Interactions Safe
 {% endblock %}
-
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
     {{ govukPhaseBanner({
       tag: {
         text: "beta"
       },
-      html: 'This is a new service – your <a class="govuk-link" href="02behalf_error">feedback</a> will help us to improve it.'
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
     }) }}
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
@@ -21,11 +19,19 @@
     }) }}
   </section>
 {% endblock %}
-
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      {% set emailHtml %}
+    {{ govukErrorSummary({
+      titleText: "There is a problem",
+      errorList: [
+        {
+          text: "This colleague cannot access the service - enter another email address",
+          href: "#acting-manager"
+        }
+      ]
+    }) }}
+    {% set managerDetailsHtml %}
       {{ govukInput({
         id: "first-name",
         name: "first-name",
@@ -50,40 +56,50 @@
         spellcheck: false,
         label: {
           text: "Their email address"
+        },
+        errorMessage: {
+          text: "This colleague cannot access the service - enter another email address"
+        },
+        hint: {
+          text: "Enter their email address as it appears on the Global Address List"
         }
       }) }}
       {% endset -%}
       {{ govukRadios({
-        idPrefix: "on-behalf",
-        name: "on-behalf",
+        idPrefix: "acting-manager",
+        name: "acting-manager",
         fieldset: {
-          legend: {
-            text: "Were you involved in this incident?",
+            legend: {
+            text: "Who is the most appropriate manager to review this report?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
           }
         },
         items: [
           {
-            value: "yes",
-            text: "Yes"
+            value: "linemanager",
+            text: "My line manager"
           },
           {
-            value: "no",
-            text: "No, I am reporting this on behalf of someone who does not have access to this service",
+            value: "anothermanager",
+            text: "Another manager",
+            checked: true,
+            hint: {
+              text: "For example, a job centre manager or someone standing in for your line manager"
+            },
             conditional: {
-              html: emailHtml
+              html: managerDetailsHtml
             }
           }
         ],
         hint: {
-          text: "Select one option."
+        text: "Select one option."
         }
       }) }}
       <div>
         {{ govukButton({
           text: "Continue",
-          href: "03line_manager"
+          href: "05interaction"
         }) }}
       </div>
     </div>
@@ -91,9 +107,10 @@
 <hr>
 NOT PART OF DESIGN: Demo only<br>
 There are x versions of this page<br>
-<a href="02behalf">1. Were you?</a><br>
-<a href="02behalf_error2">2. Error: Select yes</a><br>
-<a href="02behalf_error3">3. Error: First name / last name / email</a><br>
-<a href="02behalf_error4">4. Error: email format</a><br>
+<a href="04acting_manager">1. Reviewing manager?</a><br>
+<a href="04acting_manager_error2">2. Error: Tell us</a><br>
+<a href="04acting_manager_error3">3. Error: First name / last name / email</a><br>
+<a href="04acting_manager_error4">4. Error: email format</a><br>
+<a href="04acting_manager_error5">5. Error: Colleague cannot access service</a><br>
 <hr>
 {% endblock %}

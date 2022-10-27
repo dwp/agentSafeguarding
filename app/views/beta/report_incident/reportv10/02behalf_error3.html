@@ -1,45 +1,66 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Were you involved in the incident? - Keep Customer Interactions Safe
+  Error: Were you involved in the incident? - Keep Customer Interactions Safe
 {% endblock %}
 
 {% block beforeContent %}
-  <section aria-label="Beta banner" role="region">
-    {{ govukPhaseBanner({
-      tag: {
-        text: "beta"
-      },
-      html: 'This is a new service – your <a class="govuk-link" href="02behalf_error">feedback</a> will help us to improve it.'
-    }) }}
-  </section>
-  {% include "templates/v2/header_searchlight.njk" %}
-  <section aria-label="Back" role="region">
-    {{ govukBackLink({
-      text: "Back",
-      href: "javascript:history.back()"
-    }) }}
-  </section>
+<section aria-label="Beta banner" role="region">
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+</section>
+{% include "templates/v2/header_searchlight.njk" %}
+<section aria-label="Back" role="region">
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+</section>
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      {{ govukErrorSummary({
+      titleText: "There is a problem",
+      errorList: [
+        {
+          text: "Enter first name",
+          href: "#first-name"
+        },
+        {
+          text: "Enter their last name",
+          href: "#last-name"
+        },
+        {
+          text: "Enter their email address",
+          href: "#email"
+        }
+      ]
+      }) }}
       {% set emailHtml %}
       {{ govukInput({
         id: "first-name",
         name: "first-name",
-        classes: "govuk-!-width-two-thirds",
         label: {
           text: "Their first name"
+        },
+        errorMessage: {
+          text: "Enter their first name"
         }
       }) }}
       {{ govukInput({
         id: "last-name",
         name: "last-name",
-        classes: "govuk-!-width-two-thirds",
         label: {
           text: "Their last name"
+        },
+        errorMessage: {
+          text: "Enter their last name"
         }
       }) }}
       {{ govukInput({
@@ -50,6 +71,9 @@
         spellcheck: false,
         label: {
           text: "Their email address"
+        },
+        errorMessage: {
+          text: "Enter their email address"
         }
       }) }}
       {% endset -%}
@@ -71,6 +95,7 @@
           {
             value: "no",
             text: "No, I am reporting this on behalf of someone who does not have access to this service",
+            checked: true,
             conditional: {
               html: emailHtml
             }

@@ -6,77 +6,70 @@ What do you want to report? - Keep Customer Interactions Safe
 
 {% block beforeContent %}
 <section aria-label="Beta banner" role="region">
-
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
 {{ govukPhaseBanner({
-tag: {
-text: "beta"
-},
-html: 'This is a new service – your <a class="govuk-link" href="01report_error">feedback</a> will help us to improve it.'
+  tag: {
+    text: "beta"
+  },
+    html: 'This is a new service – your <a class="govuk-link" href="01report_error">feedback</a> will help us to improve it.'
 }) }}
 </section>
 {% include "templates/v2/header_searchlight.njk" %}
 <section aria-label="Back" role="region">
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-
 {{ govukBackLink({
-text: "Back to Searchlight",
-href: "javascript:history.back()"
+  text: "Back to Searchlight",
+  href: "javascript:history.back()"
 }) }}
 </section>
 {% endblock %}
 
 {% block content %}
-
-<div class="govuk-form-group">
-  <form class="form" action="route_incident" method="post">
-    <fieldset class="govuk-fieldset" aria-describedby="report-type">
-      {% from "govuk/components/radios/macro.njk" import govukRadios %}
-
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="route_incident" method="post">
       {{ govukRadios({
-      idPrefix: "report-type",
-      name: "report-type",
-      fieldset: {
-      legend: {
-      text: "What do you want to report?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-      }
-      },
-      items: [
-      {
-      value: "incident",
-      text: "An incident that has already happened",
-      hint: {
-        text: "For example, a customer has been verbally abusive to their work coach, or made threats in their journal"
-      }
-      },
-      {
-      value: "concern",
-      text: "A concern that something might happen that will risk colleagues' safety",
-      hint: {
-        text: "For example, information on a UC50 form about this customer indicates there is a risk to staff"
-      }
-      }
-      ],
+        idPrefix: "report-type",
+        name: "report-type",
+        fieldset: {
+          legend: {
+            text: "What do you want to report?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "incident",
+            text: "An incident that has already happened",
+            hint: {
+              text: "For example, a customer has been verbally abusive to their work coach, or made threats in their journal"
+            }
+          },
+          {
+            value: "concern",
+            text: "A concern that something might happen that will risk colleagues' safety",
+            hint: {
+              text: "For example, information on a UC50 form about this customer indicates there is a risk to staff"
+            }
+          }
+        ],
         hint: {
-        text: "Select one option."
-      }
+          text: "Select one option."
+        }
       }) }}
-      <div class="govuk-button-group">
-
-        {% from "govuk/components/button/macro.njk" import govukButton %}
-
+      <div>
         {{ govukButton({
-        text: "Continue"
+          text: "Continue"
         }) }}
-
       </div>
-    </fieldset>
     </form>
+  </div>
 </div>
-
-
-
-
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+There are x versions of this page<br>
+<a href="01report">1. Report type?</a><br>
+<a href="01report_error">2. Error: Select report type</a><br>
+<hr>
 {% endblock %}

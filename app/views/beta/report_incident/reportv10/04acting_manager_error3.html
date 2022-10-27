@@ -1,14 +1,14 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Who is the most appropriate manager to review this report? - Keep Customer Interactions Safe
+  Error: Who is the most appropriate manager to review this report? - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
     {{ govukPhaseBanner({
-    tag: {
-      text: "beta"
-    },
-      html: 'This is a new service – your <a class="govuk-link" href="04acting_manager_error">feedback</a> will help us to improve it.'
+      tag: {
+        text: "beta"
+      },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
     }) }}
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
@@ -22,42 +22,68 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      {% set managerDetailsHtml %}
-        {{ govukInput({
-          id: "first-name",
-          name: "first-name",
-          classes: "govuk-!-width-two-thirds",
-          label: {
-            text: "Their first name"
-          }
-        }) }}
-        {{ govukInput({
-          id: "last-name",
-          name: "last-name",
-          classes: "govuk-!-width-two-thirds",
-          label: {
-            text: "Their last name"
-          }
-        }) }}
-        {{ govukInput({
-          id: "email",
-          name: "email",
-          type: "email",
-          autocomplete: "email",
-          spellcheck: false,
-          label: {
-            text: "Their email address"
-          },
-          hint: {
-            text: "Enter their email address as it appears on the Global Address List"
-          }
-        }) }}
+    {{ govukErrorSummary({
+      titleText: "There is a problem",
+      errorList: [
+        {
+          text: "Enter their first name",
+          href: "#acting-manager"
+        },
+        {
+          text: "Enter their last name",
+          href: "#acting-manager"
+        },  
+        {
+          text: "Enter their email address",
+          href: "#acting-manager"
+        }
+      ]
+    }) }}
+    {% set managerDetailsHtml %}
+      {{ govukInput({
+        id: "first-name",
+        name: "first-name",
+        classes: "govuk-!-width-two-thirds",
+        label: {
+          text: "Their first name"
+        },
+        errorMessage: {
+          text: "Enter their first name"
+        }
+      }) }}
+      {{ govukInput({
+        id: "last-name",
+        name: "last-name",
+        classes: "govuk-!-width-two-thirds",
+        label: {
+          text: "Their last name"
+        },
+        errorMessage: {
+          text: "Enter their last name"
+        }
+      }) }}
+      {{ govukInput({
+        id: "email",
+        name: "email",
+        type: "email",
+        autocomplete: "email",
+        spellcheck: false,
+        label: {
+          text: "Their email address"
+        },
+        errorMessage: {
+          text: "Enter their email address"
+        },
+        hint: {
+          text: "Enter their email address as it appears on the Global Address List"
+        }
+      }) }}
       {% endset -%}
       {{ govukRadios({
         idPrefix: "acting-manager",
         name: "acting-manager",
         fieldset: {
-          legend: {
+            legend: {
             text: "Who is the most appropriate manager to review this report?",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--l"
@@ -71,6 +97,7 @@
           {
             value: "anothermanager",
             text: "Another manager",
+            checked: true,
             hint: {
               text: "For example, a job centre manager or someone standing in for your line manager"
             },
@@ -80,7 +107,7 @@
           }
         ],
         hint: {
-          text: "Select one option."
+        text: "Select one option."
         }
       }) }}
       <div>

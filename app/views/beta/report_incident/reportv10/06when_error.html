@@ -1,154 +1,138 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-When did the incident happen? - Keep Customer Interactions Safe
+  Error: When did the incident happen? - Keep Customer Interactions Safe
 {% endblock %}
 
 {% block beforeContent %}
 <section aria-label="Beta banner" role="region">
-
-  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
   {{ govukPhaseBanner({
-  tag: {
-  text: "beta"
+    tag: {
+    text: "beta"
   },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    html: 'This is a new service – your <a class="govuk-link" href="06when_error">feedback</a> will help us to improve it.'
   }) }}
 </section>
 {% include "templates/v2/header_searchlight.njk" %}
-<section aria-label="Back" role="region">
-  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:history.back()"
-  }) }}
-</section>
+  <section aria-label="Back" role="region">
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
 {% endblock %}
 
 {% block content %}
-
-<div class="govuk-form-group">
-  {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
-  {{ govukErrorSummary({
-  titleText: "There is a problem",
-  errorList: [
-  {
-  text: "Enter a valid date",
-  href: "#incident-date-day"
-  },
-  {
-  text: "Enter a valid time",
-  href: "#incident-time-hours"
-  },
-  {
-  text: "Date of incident must be today or in the past",
-  href: "#incident-date-day"
-  },
-  {
-  text: "Time of incident must be in the past",
-  href: "#incident-time-hours"
-  },
-  {
-  text: "Date of incident must be one year ago or less",
-  href: "#incident-date-day"
-  },
-  {
-  text: "Date and time of incident must be one year ago or less",
-  href: "#incident-date-day"
-  }
-  ]
-  }) }}
-  <fieldset class="govuk-fieldset" >
-  <h1 class="govuk-label--l">
-    <legend>When did the incident happen?</legend>
-  </h1>
-    {{ govukDateInput({
-      id: "incident-date",
-      namePrefix: "incident-date",
-      hint: {
-        text: "For example, 30 11 2021"
-      },
-        errorMessage: {
-        text: "Enter a valid date"
-      },
-      items: [
-        {
-          classes: "govuk-input--width-2 govuk-input--error",
-          name: "day"
-        },
-        {
-          classes: "govuk-input--width-2 govuk-input--error",
-          name: "month"
-        },
-        {
-          classes: "govuk-input--width-4 govuk-input--error",
-          name: "year"
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Enter a valid date",
+            href: "#incident-date-day"
+          },
+          {
+            text: "Enter a valid time",
+            href: "#incident-time-hours"
+          },
+          {
+            text: "Date of incident must be today or in the past",
+            href: "#incident-date-day"
+          },
+          {
+            text: "Time of incident must be in the past",
+            href: "#incident-time-hours"
+          },
+          {
+            text: "Date of incident must be one year ago or less",
+            href: "#incident-date-day"
+          },
+          {
+            text: "Date and time of incident must be one year ago or less",
+            href: "#incident-date-day"
+          }
+        ]
+      }) }}
+      {% call govukFieldset({
+        legend: {
+          text: "When did the incident happen?",
+          classes: "govuk-fieldset__legend--l",
+          isPageHeading: true
         }
-      ]
-    }) }}
-
-    <div class="govuk-form-grou  govuk-form-group--error">
-      <div id="incident-time-hint" class="govuk-hint">
-        Use the 24-hour clock. For example, 15:30
-      </div>
-      <p id="incident-time-error" class="govuk-error-message">
-        <span class="govuk-visually-hidden">Error:</span> Enter a valid time
-      </p>
-      <div class="govuk-date-input" id="incident-time">
-        <div class="govuk-date-input__item right_pad_5">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="incident-time-hours">
-              Hours
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error" id="incident-time-hours" name="incident-time-hours" type="text" inputmode="numeric">
-          </div>
-        </div>
+      }) %}
+        {{ govukDateInput({
+          id: "incident-date",
+          namePrefix: "incident-date",
+          hint: {
+            text: "For example, 30 11 2021"
+          },
+          errorMessage: {
+            text: "Enter a valid date"
+          },
+          items: [
+            {
+              classes: "govuk-input--width-2 govuk-input--error",
+              name: "day"
+            },
+            {
+              classes: "govuk-input--width-2 govuk-input--error",
+              name: "month"
+            },
+            {
+              classes: "govuk-input--width-4 govuk-input--error",
+              name: "year"
+            }
+          ]
+        }) }}
         <style>
           .sg-time-colon {
             display: inline-block;
             font-size: 1.1875rem;
             margin-right: 5px;
           }
-
           .right_pad_5 {
             margin-right: 5px;
           }
-        </style>
-        <div class="sg-time-colon"> : </div>
-        <div class="govuk-date-input__item">
-          <div class="govuk-form-group">
-            <label class="govuk-label govuk-date-input__label" for="incident-time-minutes">
-              Minutes
-            </label>
-            <input class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error" id="incident-time-minutes" name="incident-time-minutes" type="text" inputmode="numeric">
+        </style>       
+        <div class="govuk-date-input govuk-form-group govuk-form-group--error" id="incident-time">
+          <div id="incident-time-hint" class="govuk-hint">
+            Use the 24-hour clock. For example, 15:30
+          </div>
+          <span id="incident-time-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Enter a valid time
+          </span>
+          <div class="govuk-date-input__item right_pad_5">
+            <div class="govuk-form-group govuk-form-group--error">
+              <label class="govuk-label govuk-date-input__label " for="incident-time-hours">
+                Hours
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error" id="incident-time-hours" name="incident-time-hours" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="sg-time-colon "> : </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label " for="incident-time-minutes">
+                Minutes
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error" id="incident-time-minutes" name="incident-time-minutes" type="text" inputmode="numeric">
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-
-
-  </fieldset>
-</div>
-<div class="govuk-button-group">
-
-  {% from "govuk/components/button/macro.njk" import govukButton %}
-
-  {{ govukButton({
-  text: "Continue",
-  href: "07where"
-  }) }}
-
-</div>
-</fieldset>
-</div>
-
-
-
-
-
-
-
-
-
+        <div>
+          {{ govukButton({
+            text: "Continue",
+            href: "07where"
+          }) }}
+        </div>
+      {% endcall %}
+    </div>  
+  </div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+There are x versions of this page<br>
+<a href="06when">1. When?</a><br>
+<a href="06when_error">2. Error: x6 </a><br>
+<hr>  
 {% endblock %}

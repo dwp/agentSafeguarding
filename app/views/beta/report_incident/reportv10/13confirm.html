@@ -4,26 +4,24 @@
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
-  tag: {
-  text: "beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-  }) }}
+      tag: {
+        text: "beta"
+      },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
   </section>
 {% endblock %}
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
-      {% from "govuk/components/panel/macro.njk" import govukPanel %}
+    <div class="govuk-grid-column-two-thirds">
       {% set refHTML %}
-      <div class="govuk-panel__body">Your reference number:
-        <br>
-        <strong>
-          <span aria-hidden="true">INC-</span><span aria-hidden="false">123-456-789</span>
-        </strong>
-      </div>
+        <div class="govuk-panel__body">Your reference number:
+          <br>
+          <strong>
+            <span aria-hidden="true">INC-</span><span aria-hidden="false">123-456-789</span>
+          </strong>
+        </div>
       {% endset %}
       {{ govukPanel({
         titleText: "Report submitted",
@@ -42,15 +40,12 @@
       </p>
       <h2 class="govuk-heading-m">What you can do</h2>
       <p class="govuk-body">
-        If you need to give us more information or add a file to your report that's bigger than 1MB, email <a href="mailto:HEALTHANDSAFETY.CENTRALISEDNMTEAM@DWP.GOV.UK" class="govuk-link">HealthandSafety.CentralisedNMTeam@dwp.gov.uk</a>. </p><p>You must include the reference number at the top of this page.
+        If you need to give us more information or add a file to your report that's bigger than 1MB, email <a href="mailto:HealthandSafety.CentralisedNMTeam@dwp.gov.uk" class="govuk-link">HealthandSafety.CentralisedNMTeam@dwp.gov.uk</a>. </p><p class="govuk-body">You must include the reference number at the top of this page.
       </p>
-      {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
-
-{{ govukWarningText({
-  text: "Make a note of your reference number and our email address before you close this tab, or print or save this page.",
-  iconFallbackText: "Warning"
-}) }}
-
+      {{ govukWarningText({
+        text: "Make a note of your reference number and our email address before you close this tab, or print or save this page.",
+        iconFallbackText: "Warning"
+      }) }}
       <p class="govuk-body">
         To help us improve this service, we’d like to know
         <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=6fbxllcQF0GsKIDN_ob4w-oDsqWqlSlJvQe6JubotYpUNFoxRVFURzIyVU1QOVo3QTA5WFdWSjJIVS4u" class="govuk-link" rel="noreferrer noopener" target="_blank">what you think of it.</a><br>

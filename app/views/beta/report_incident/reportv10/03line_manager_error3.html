@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-  Who is your line manager? - Keep Customer Interactions Safe
+{% block pageTitle %} 
+  Error - Who is your line manager? - Keep Customer Interactions Safe
 {% endblock %}
 
 {% block beforeContent %}
@@ -10,7 +10,7 @@
     tag: {
       text: "beta"
     },
-    html: 'This is a new service – your <a class="govuk-link" href="03line_manager_error">feedback</a> will help us to improve it.'
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
 </section>
 {% include "templates/v2/header_searchlight.njk" %}
@@ -23,8 +23,18 @@
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+
+          {
+            text: "Enter their email address, in the format name@example.com",
+            href: "#email"
+          }
+        ]
+      }) }}
     {% call govukFieldset({
       legend: {
         text: "Who is your line manager?",
@@ -57,6 +67,9 @@
         label: {
           text: "Their email address"
         },
+        errorMessage: {
+          text: "Enter their email address, in the format name@example.com"
+        },
         hint: {
           text: "Enter their email address as it appears on the Global Address List"
         }
@@ -67,9 +80,9 @@
           href: "04acting_manager"
         }) }}
       </div>
-    {% endcall %}
+    {% endcall %}      
+    </div>
   </div>
-</div>
 <hr>
 NOT PART OF DESIGN: Demo only<br>
 There are x versions of this page<br>

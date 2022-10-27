@@ -1,121 +1,110 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Discrimination - Keep Customer Interactions Safe
+  Error: Do you feel the customer's behaviour was motivated by any of the following types of discrimination? - Keep Customer Interactions Safe
 {% endblock %}
 
 {% block beforeContent %}
-<section aria-label="Beta banner" role="region">
-
-  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-  {{ govukPhaseBanner({
-  tag: {
-  text: "beta"
-  },
-  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-  }) }}
-</section>
-{% include "templates/v2/header_searchlight.njk" %}
-<section aria-label="Back" role="region">
-  {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:history.back()"
-  }) }}
-</section>
+  <section aria-label="Beta banner" role="region">
+    {{ govukPhaseBanner({
+      tag: {
+        text: "beta"
+      },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
 {% endblock %}
 
 {% block content %}
-<div class="govuk-form-group">
-  {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
-  {{ govukErrorSummary({
-  titleText: "There is a problem",
-  errorList: [
-  {
-  text: "Tell us if the customer's behaviour was motivated by discrimination",
-  href: "#discrimination"
-  }
-  ]
-  }) }}
-  <fieldset class="govuk-fieldset" aria-describedby="discrimination">
-    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-
-{{ govukCheckboxes({
-  idPrefix: "discrimination",
-  name: "discrimination",
-  fieldset: {
-    legend: {
-      text: "Do you feel the customer's behaviour was motivated by any of the following types of discrimination?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  errorMessage: {
-    text: "Tell us if the customer's behaviour was motivated by discrimination"
-  },
-  hint: {
-    text: "Select all that apply."
-  },
-  items: [
-    {
-      value: "age",
-      text: "Age"
-    },
-    {
-      value: "relationship",
-      text: "Being married or in a civil partnership"
-    },
-    {
-      value: "pregnancy",
-      text: "Pregnancy or maternity"
-    },
-    {
-      value: "disability",
-      text: "Disability"
-    },
-    {
-      value: "reassignment",
-      text: "Gender reassignment"
-    },
-    {
-      value: "race",
-      text: "Race including colour, nationality, ethnic or national origin"
-    },
-    {
-      value: "belief",
-      text: "Religion or belief"
-    },
-    {
-      value: "sex",
-      text: "Sex"
-    },
-    {
-      value: "orientation",
-      text: "Sexual orientation"
-    },
-    {
-      divider: "or"
-    },
-    {
-      value: "none",
-      text: "None of the above",
-      behaviour: "exclusive"
-    }
-  ]
-}) }}
-
-    <div class="govuk-button-group">
-
-      {% from "govuk/components/button/macro.njk" import govukButton %}
-
-      {{ govukButton({
-      text: "Continue",
-      href: "09describe"
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Tell us if the customer's behaviour was motivated by discrimination",
+            href: "#discrimination"
+          }
+        ]
       }) }}
-
+      {{ govukCheckboxes({
+        idPrefix: "discrimination",
+        name: "discrimination",
+        fieldset: {
+          legend: {
+            text: "Do you feel the customer's behaviour was motivated by any of the following types of discrimination?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        errorMessage: {
+          text: "Tell us if the customer's behaviour was motivated by discrimination"
+        },
+        hint: {
+          text: "Select all that apply."
+        },
+        items: [
+          {
+            value: "age",
+            text: "Age"
+          },
+          {
+            value: "relationship",
+            text: "Being married or in a civil partnership"
+          },
+          {
+            value: "pregnancy",
+            text: "Pregnancy or maternity"
+          },
+          {
+            value: "disability",
+            text: "Disability"
+          },
+          {
+            value: "reassignment",
+            text: "Gender reassignment"
+          },
+          {
+            value: "race",
+            text: "Race including colour, nationality, ethnic or national origin"
+          },
+          {
+            value: "belief",
+            text: "Religion or belief"
+          },
+          {
+            value: "sex",
+            text: "Sex"
+          },
+          {
+            value: "orientation",
+            text: "Sexual orientation"
+          },
+          {
+            divider: "or"
+          },
+          {
+            value: "none",
+            text: "None of the above",
+            behaviour: "exclusive"
+          }
+        ]
+      }) }}
+      <div>
+        {{ govukButton({
+          text: "Continue",
+          href: "09describe"
+        }) }}
+      </div>
     </div>
-  </fieldset>
-</div>
+  </div>
+
 
 {% endblock %}

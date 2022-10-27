@@ -29,80 +29,88 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">Isla Yellow witness report
-      </h1> <h2 class="govuk-heading-m" id="h2-overview">Original report details</h2>
-          {{ govukSummaryList({
-            rows: [
-              {
-                key: {
-                  html: "Incident occurred",
-                  classes: "govuk-!-width-one-half"
+      </h1> 
+      <div class="govuk-!-padding-bottom-9">
+        <h2 class="govuk-heading-m" id="h2-overview">Original report details</h2>
+            {{ govukSummaryList({
+              rows: [
+                {
+                  key: {
+                    html: "Incident occurred",
+                    classes: "govuk-!-width-one-half"
+                  },
+                  value: {
+                    text: "7 June 2022 at 11:09am",
+                    classes: "govuk-!-width-one-half"
+                  }
                 },
-                value: {
-                  text: "7 June 2022 at 11:09am",
-                  classes: "govuk-!-width-one-half"
+                {
+                  key: {
+                    text: "Interaction type"
+                  },
+                  value: {
+                    html: "In-person"
+                  }
+                },
+                {
+                  key: {
+                    text: "Incident location"
+                  },
+                  value: {
+                    html: "Car park"
+                  }
+                },
+                {
+                  key: {
+                    html: "Incident reporter"
+                  },
+                  value: {
+                    html: "<span class='govuk-visually-hidden'>Original reporter: </span><span class='govuk-body-s' style='color:#505a5f'>Whitney Earl on behalf of </span>Mike&nbsp;Black"                }
                 }
-              },
-              {
-                key: {
-                  text: "Interaction type"
-                },
-                value: {
-                  html: "In-person"
-                }
-              },
-              {
-                key: {
-                  text: "Incident location"
-                },
-                value: {
-                  html: "Car park"
-                }
-              },
-              {
-                key: {
-                  html: "Incident reporter"
-                },
-                value: {
-                  html: "<span class='govuk-visually-hidden'>Original reporter: </span><span class='govuk-body-s' style='color:#505a5f'>Whitney Earl on behalf of </span>Mike&nbsp;Black"                }
-              }
-            ]
-          }) }}
-      <h2 class="govuk-heading-m">Witness report</h2>
-      <p class="govuk-body">I saw the customer stand up abruptly. He then lent over the desk and shouted at my colleague. I approached, asked the customer to calm down. He  turned toward me and called me a "power-hungry dictator". I told him that was inappropriate and asked him to leave. I escorted him out with no further problems.
-      </p>
-      <h2 class="govuk-heading-m">Witness contact details</h2>
-      {{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Name",
-        classes: "govuk-!-width-one-half"
-      },
-      value: {
-                  html: "<span class='govuk-visually-hidden'>Original reporter: </span><span class='govuk-body-s' style='color:#505a5f'>Sarah Sencha on behalf of </span>Isla&nbsp;Yellow",
-        classes: "govuk-!-width-one-half"
-      }
-    },
-    {
-      key: {
-        text: "Email address"
-      },
-      value: {
-        text: "sarah@dwp.gov.uk"
-      }
-    },
-    {
-      key: {
-        html: "Witness report reference",
-        classes: "govuk-!-width-one-half"
-      },
-      value: {
-        html: "<span aria-hidden='true'>WIT-</span>123-456-789",
-        classes: "govuk-!-width-one-half"
-      }
-    }
-  ]
-}) }}
+              ]
+            }) }}
+      </div>
+      <div class="govuk-!-padding-bottom-9">
+        <h2 class="govuk-heading-m">Witness report</h2>
+        <p class="govuk-body">I saw the customer stand up abruptly. He then lent over the desk and shouted at my colleague. I approached, asked the customer to calm down. He  turned toward me and called me a "power-hungry dictator". I told him that was inappropriate and asked him to leave. I escorted him out with no further problems.
+        </p>
+      </div>
+      <div class="govuk-!-padding-bottom-9">
+        
+        <h2 class="govuk-heading-m">Witness contact details</h2>
+        {{ govukSummaryList({
+          rows: [
+            {
+        key: {
+          text: "Name",
+          classes: "govuk-!-width-one-half"
+        },
+        value: {
+                    html: "<span class='govuk-visually-hidden'>Original reporter: </span><span class='govuk-body-s' style='color:#505a5f'>Sarah Sencha on behalf of </span>Isla&nbsp;Yellow",
+          classes: "govuk-!-width-one-half"
+        }
+            },
+            {
+        key: {
+          text: "Email address"
+        },
+        value: {
+          text: "sarah@dwp.gov.uk"
+        }
+            },
+            {
+        key: {
+          html: "Witness report reference",
+          classes: "govuk-!-width-one-half"
+        },
+        value: {
+          html: "<span aria-hidden='true'>WIT-</span>123-456-789",
+          classes: "govuk-!-width-one-half"
+        }
+            }
+          ]
+        }) }}
+      </div>
     </div>
   </div>
   <div class="govuk-form-group">
@@ -110,13 +118,9 @@
       <div class="govuk-button-group">
         {{ govukButton({
   text: "Return to witnesses",
-  classes: "govuk-button--secondary",
         href: "03witnessdisplay-3list"
 }) }}
-        {{ govukButton({
-      text: "Continue",
-      href: "09police"
-    }) }}
+
       </div>
     </fieldset>
   </div>
