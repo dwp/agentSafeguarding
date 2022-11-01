@@ -13,32 +13,45 @@ href: "javascript:history.back()"
 	<h1 class="govuk-heading-m">
 		<i>Email 1: Initial request </i>
 	</h1>
-	    <p class="govuk-body">Original email sent when Incident Manager confirms witness details.</p>
+	    <p class="govuk-body">Original email sent when reporter confirms incident manager details and submits report.</p>
 
 </div>
 <div class="govuk-!-padding-bottom-9">
 	<h2 class="govuk-heading-m">(Subject line) URGENT: Review incident report
-		<span class="nowrapper">INC-123-456-789</span>
+		<span class="nowrapper">(INC-123-456-789)</span>
 	</h2>
 </div>
-<p class="govuk-body">Dear [Name Surname],
-    <p class="govuk-body">We believe you recently saw or heard the following incident between one of your colleagues and a customer:</p>
+<p class="govuk-body">Dear ((First name)) ((Surname)),
+    <p class="govuk-body">We believe you are the most appropriate manager to review this report.</p>
 </p>
-
+<p class="govuk-body">The report relates to the following incident:</p>
 <ul class="govuk-list govuk-list--bullet">
-  <li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24321">Date of incident: 31 October 2022</a></li>
-  <li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24358">Time of incident: 15:25</a></li>
-  <li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24368">Incident reference number: INC-123-456-789</a></li>
+  <li>Date of incident: 31 October 2022</li>
+  <li>Time of incident: 15:25</li>
+  <li>Incident reference number: INC-123-456-789</li>
 </ul>
 
 
-<h2 class="govuk-heading-m">Sub title</h2>
+<p>For security reasons, we cannot provide any more information about the incident in this email.</p>
+
+<br>
+<h3 class="govuk-heading-s">You must complete your review as soon as possible.</h3>
+
+<br><br>
+
+<h2 class="govuk-heading-m">What to do now</h2>
+<p class="govuk-body">Review the incident report in the ‘Keep customer interactions safe’ service. To do this:</p>
 <ol class="govuk-list  govuk-list--number">
-    <li>Numbered list</li>
+    <li>Log in to Searchlight.</li>
+    <li>Select 'Menu' in the top right corner.</li>
+    <li>Select 'Keep customer interactions safe'.</li>
+    <li>Read through the original report.</li>
+    <li>Add witnesses if relevant.</li>
+    <li>Add your own comments and recommendations.</li>
 </ol>
-<p class="govuk-body">Some text
-</p>
-<p class="govuk-body">Thank you,<br>
-    Agent Safeguarding.
+<br><p class="govuk-body">If required, you should also report this as a Fast Track Incident in the Safety Online – Accident Reporting System (SOARS).</p>
+<br>
+<p class="govuk-body">Thank you,</p>
+<p class="govuk-body">On behalf of Keep customer interactions safe.
 </p>
 {% endblock %}
