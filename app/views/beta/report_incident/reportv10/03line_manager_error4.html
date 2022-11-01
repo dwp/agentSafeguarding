@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block pageTitle %} 
+{% block pageTitle %}
   Error - Who is your line manager? - Keep Customer Interactions Safe
 {% endblock %}
 
@@ -29,7 +29,7 @@
         titleText: "There is a problem",
         errorList: [
           {
-            text: "This colleague cannot access the service - enter another email address",
+            text: "This person cannot access the service",
             href: "#email"
           }
         ]
@@ -67,7 +67,7 @@
           text: "Their email address"
         },
         errorMessage: {
-          text: "This colleague cannot access the service - enter another email address"
+          text: "This person cannot access the service"
         },
         hint: {
           text: "Enter their email address as it appears on the Global Address List"
@@ -79,7 +79,7 @@
           href: "04acting_manager"
         }) }}
       </div>
-    {% endcall %}      
+    {% endcall %}
     </div>
   </div>
 <hr>
