@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Email
+{% endblock %}
+{% block beforeContent %}
+    {{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-!-padding-bottom-9">
+	<h1 class="govuk-heading-m">
+		<i>Email 4: Confirmation email </i>
+	</h1>
+	    <p class="govuk-body">Email sent to witnesses as soon as they've submitted a witness report.	<br><i><b>Can sentence about PAM only be included if email is a dwp.gov.uk one??<!-- XXX:  --></b></i></p>
+
+</div>
+<div class="govuk-!-padding-bottom-9">
+	<h2 class="govuk-heading-m">[Subject line] We've received your witness report
+			<span class="nowrapper">(INC-123-456-789)</span>
+	</h2>
+</div>
+
+
+<p class="govuk-body">Dear ((First name)) ((Surname)),
+    <p class="govuk-body">Thank you for completing your witness report about this incident.</p>
+</p>
+
+<h3 class="govuk-heading-m">Your reference number is: WIT-123-456-789.</h3>
+<br>
+
+
+
+<br>
+<h3 class="govuk-heading-s">What happens next</h3>
+<p class="govuk-body">DWP staff can access free counselling and support through <a href="https://intranet.dwp.gov.uk/section/working-dwp/human-resources/wellbeing/employee-assistance-programme">PAM Assist</a>.</p>
+<p class="govuk-body">A decision maker will review all witness reports together with the original incident report. We aim to make a decision about this incident within 48 hours.</p>
+
+
+<br><br>
+
+<h3 class="govuk-heading-s">What you can do</h3>
+<p class="govuk-body">If you need to give us more information or change anything in your report, email <a href="<a href="mailto:HealthandSafety.CentralisedNMTeam@dwp.gov.uk?subject=INC-123-456-789">HealthandSafety.CentralisedNMTeam@dwp.gov.uk</a>.</p>
+  <p class="govuk-body">You must include the reference number in the subject line of this email.</p>
+    <br><br>
+
+<br><br>
+<p class="govuk-body">Thank you,</p>
+<p class="govuk-body">On behalf of Keep customer interactions safe.
+</p>
+{% endblock %}

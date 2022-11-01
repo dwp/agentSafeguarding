@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Email
+{% endblock %}
+{% block beforeContent %}
+    {{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-!-padding-bottom-9">
+	<h1 class="govuk-heading-m">
+		<i>Email 2: Witness removed </i>
+	</h1>
+
+  <p class="govuk-body">Email sent when Incident Manager removes witness from report.</p>
+</div>
+<div class="govuk-!-padding-bottom-9">
+	<h2 class="govuk-heading-m">[Subject line] URGENT: Witness report not required
+		<span class="nowrapper">(INC-123-456-789)</span>
+	</h2>
+</div>
+
+
+    <p class="govuk-body">Dear ((First name)) ((Surname)),
+        <p class="govuk-body">We recently emailed you, asking you to complete a witness report about the following incident:</p>
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Date of incident: 31 October 2022</li>
+      <li>Time of incident: 15:25</li>
+      <li>Incident reference number: INC-123-456-789</li>
+    </ul>
+
+    <p>For security reasons, we cannot provide any more information about the incident in this email.</p>
+
+    <br>
+    <h3 class="govuk-heading-s">We have removed you as a witness for this incident. You no longer need to complete this report.</h3>
+
+    <br><br>
+
+<p class="govuk-body">If you need to contact us about this, email <a href="<a href="mailto:HealthandSafety.CentralisedNMTeam@dwp.gov.uk?subject=INC-123-456-789">HealthandSafety.CentralisedNMTeam@dwp.gov.uk</a>.</p>
+  <p class="govuk-body">You must include the reference number in the subject line of this email.</p>
+    <br><br>
+    <p class="govuk-body">Thank you,</p>
+    <p class="govuk-body">On behalf of Keep customer interactions safe.
+    </p>
+    {% endblock %}

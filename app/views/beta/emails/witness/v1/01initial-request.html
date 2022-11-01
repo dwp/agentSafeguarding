@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Email
+{% endblock %}
+{% block beforeContent %}
+    {{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-!-padding-bottom-9">
+	<h1 class="govuk-heading-m">
+		<i>Email 1: Initial email sent to witness </i>
+	</h1>
+  <p class="govuk-body">Original email sent when Incident Manager confirms witness details.</p>
+
+</div>
+<div class="govuk-!-padding-bottom-9">
+	<h2 class="govuk-heading-m">[Subject line] URGENT: Complete witness report
+		<span class="nowrapper">(INC-123-456-789)</span>
+	</h2>
+</div>
+
+<p class="govuk-body">Dear ((First name)) ((Surname)),
+    <p class="govuk-body">We believe you recently saw or heard the following incident between one of your colleagues and a customer:</p>
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>Date of incident: 31 October 2022</li>
+  <li>Time of incident: 15:25</li>
+  <li>Incident reference number: INC-123-456-789</li>
+</ul>
+
+<p>For security reasons, we cannot provide any more information about the incident in this email.</p>
+
+<br>
+<h3 class="govuk-heading-s">You must complete a report as soon as possible. Even if you did not witness this incident, you must still complete a report to let us know.</h3>
+
+<br><br>
+
+<h2 class="govuk-heading-m">What to do now</h2>
+<ol class="govuk-list  govuk-list--number">
+    <li>Log in to Searchlight.</li>
+    <li>Select 'Menu' in the top right corner.</li>
+    <li>Select 'Keep customer interactions safe'.</li>
+    <li>Complete the report according to the instructions on the screen.</li>
+</ol>
+<br><br>
+<p class="govuk-body">Thank you,</p>
+<p class="govuk-body">On behalf of Keep customer interactions safe.
+</p>
+{% endblock %}

@@ -9,12 +9,12 @@ Prototype index - Keep Customer Interactions Safe
 
 {% block content %}
 <div class="govuk-grid-row">
-	<div class="govuk-grid-column-two-thirds">	
+	<div class="govuk-grid-column-two-thirds">
 
 		<h1 class="govuk-heading-xl">Prototype index</h1>
 
 		<div class="govuk-!-padding-bottom-7 govuk-!-padding-top-7">
-			<h2 class="govuk-heading-l">Report incident or concern</h3>
+			<h2 class="govuk-heading-l">Report incident or concern</h2>
 			<hr>
 			<h3 class="govuk-heading-s">Jira dashboards</h3>
 			<ul class="govuk-list govuk-list--bullet">
@@ -23,18 +23,17 @@ Prototype index - Keep Customer Interactions Safe
 				<li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24259">Report agent safety concern</a></li>
 			</ul>
 			<hr>
-			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD - In progress</strong></h4>
+			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD - In progress</strong></h3>
 			<ul class="govuk-list govuk-list--bullet">
 				<li><a href="/beta/report_incident/reportv10/01report">Report incident or concern v10</a></li>
-				<li><a href="/beta/emails/report-incidentmanager-instruction/v1/">Report incident - Incident manager instruction email v1</a></li>	
-				<li><a href="/beta/emails/report-linemanager-instruction/v1/">Report incident - Line manager instruction email v1</a></li>			
+
 			</ul>
-			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h4>
+			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h3>
 			<ul class="govuk-list govuk-list--bullet">
 				<li><a href="/beta/report_incident/reportv9/01report">Report incident or concern v9</a></li>
 			</ul>
 			<hr>
-			
+
 			<h3 class="govuk-heading-s">Archive</h3>
 			{% set oldjourneysHTML %}
 			<ul class="govuk-list govuk-list--bullet">
@@ -54,12 +53,12 @@ Prototype index - Keep Customer Interactions Safe
 			summaryText: "Old pages",
 			html: oldpagesHTML
 			}) }}
-			<hr>		
+			<hr>
 		</div>
 
 
 		<div class="govuk-!-padding-bottom-7 govuk-!-padding-top-7">
-			<h2 class="govuk-heading-l">Incident manager report</h3>
+			<h2 class="govuk-heading-l">Incident manager report</h2>
 			<hr>
 			<h3 class="govuk-heading-s">Jira dashboards</h3>
 			<ul class="govuk-list govuk-list--bullet">
@@ -68,18 +67,20 @@ Prototype index - Keep Customer Interactions Safe
 				<li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24368">Manage witnesses</a></li>
 			</ul>
 			<hr>
-			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD - In progress</strong></h4>
+			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD - In progress</strong></<h3></h3>
 			<ul class="govuk-list govuk-list--bullet">
 				<li><a href="/beta/incident_manager_journey/v3/02incident_simple">Incident manager report v3</a></li>
-				<li><a href="/beta/emails/incidentmanagerreport-confirmation/v1/">Incident manager - submit confirmation email v1</a></li>
-				<li><a href="/beta/emails/incidentmanagerreport-witnessinstruction/v1/">Incident manager - Witness instruction email v1</a></li>
-			</ul>
-			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h4>
+				<li><a href="/beta/emails/incidentmanager/v1/01request.html">Incident manager email: initial request v1</a></li>
+				<li><a href="/beta/emails/incidentmanager/v1/02confirmation.html">Incident manager email: confirmation v1</a></li>
+
+				<li><a href="/beta/emails/linemanager/v1/01instruction.html">Line manager email: instructions v1</a></li>
+				</ul>
+			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h3>
 			<ul class="govuk-list govuk-list--bullet">
 				<li><a href="/beta/incident_manager_journey/v2/02incident">Incident manager report v2</a></li>
 			</ul>
 			<hr>
-			
+
 			<h3 class="govuk-heading-s">Archive</h3>
 			{% set oldjourneysHTML %}
 			<ul class="govuk-list govuk-list--bullet">
@@ -99,14 +100,14 @@ Prototype index - Keep Customer Interactions Safe
 			summaryText: "Old pages",
 			html: oldpagesHTML
 			}) }}
-			<hr>		
+			<hr>
 		</div>
 
 
 
 
 		<div class="govuk-!-padding-bottom-7 govuk-!-padding-top-7">
-			<h2 class="govuk-heading-l">Witness report</h3>
+			<h2 class="govuk-heading-l">Witness report</h2>
 			<hr>
 			<h3 class="govuk-heading-s">Jira dashboards</h3>
 			<ul class="govuk-list govuk-list--bullet">
@@ -114,17 +115,20 @@ Prototype index - Keep Customer Interactions Safe
 				<li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24358">Witness report</a></li>
 			</ul>
 			<hr>
-			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD - In progress</strong></h4>
+			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD - In progress</strong></h3>
 			<ul class="govuk-list govuk-list--bullet">
 				<li><a href="/beta/witness/witnessv4/01details_simple">Witness report v4</a></li>
-				<li><a href="/beta/emails/witnessreport-confirmation/v1/">Witness report - confirmation email v1</a></li>
+				<li><a href="/beta/emails/witness/v1/01initial-request.html">Witness email: initial request v1</a></li>
+						<li><a href="/beta/emails/witness/v1/02delete-witness.html">Witness email: witness deleted v1</a></li>
+								<li><a href="/beta/emails/witness/v1/03reminder.html">Witness email: reminder v1</a></li>
+										<li><a href="/beta/emails/witness/v1/04confirmation.html">Witness email: confirmation email v1</a></li>
 			</ul>
-			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h4>
+			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h3>
 			<ul class="govuk-list govuk-list--bullet">
 				<li><a href="/beta/witness/witnessv3a/01details">Witness report v3</a></li>
 			</ul>
 			<hr>
-			
+
 			<h3 class="govuk-heading-s">Archive</h3>
 			{% set oldjourneysHTML %}
 			<ul class="govuk-list govuk-list--bullet">
@@ -144,7 +148,7 @@ Prototype index - Keep Customer Interactions Safe
 			summaryText: "Old pages",
 			html: oldpagesHTML
 			}) }}
-			<hr>		
+			<hr>
 		</div>
 
 
@@ -168,7 +172,7 @@ Prototype index - Keep Customer Interactions Safe
 				<li><a href="/beta/landing/v1/00searchlight">Landing v1</a></li>
 			</ul>
 			<hr>
-			
+
 			<h3 class="govuk-heading-s">Archive</h3>
 			{% set oldjourneysHTML %}
 			<ul class="govuk-list govuk-list--bullet">
@@ -188,7 +192,7 @@ Prototype index - Keep Customer Interactions Safe
 			summaryText: "Old pages",
 			html: oldpagesHTML
 			}) }}
-			<hr>		
+			<hr>
 		</div>
 
 
@@ -204,11 +208,11 @@ Prototype index - Keep Customer Interactions Safe
 				<li>
 					<a href="/beta/emails/report-incidentmanager-instruction/v1/">Report incident - Incident manager instruction email v1</a>
 					<p class="govuk-body-s"><a href="https://dwpdigital.atlassian.net/browse/CITI-15391">(Discover story 15391)</a></p>
-				</li>	
+				</li>
 				<li>
 					<a href="/beta/emails/report-linemanager-instruction/v1/">Report incident - Line manager instruction email v1</a>
 					<p class="govuk-body-s"><a href="https://dwpdigital.atlassian.net/browse/CITI-15390">(Discover story 15390)</a></p>
-				</li>	
+				</li>
 				<li>
 					<a href="/beta/emails/incidentmanagerreport-confirmation/v1/">Incident manager - submit confirmation email v1</a>
 					<p class="govuk-body-s"><a href="https://dwpdigital.atlassian.net/browse/CITI-15413">(Discover story 15413)</a></p>
@@ -239,7 +243,7 @@ Prototype index - Keep Customer Interactions Safe
 				<li><a href="index4.html">Content Design presentation 21 march 2022</a></li>
 			</ul>
 			<hr>
-	
+
 		</div>
 
 
