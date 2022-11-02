@@ -1,7 +1,4 @@
-{% extends "layout_incident_landing.html" %}
-<!-- Set active submenu item -->
-{% set menuItemOne = " aria-current=page" %}
-{% set subMenuItemOne = " app-subnav__section-item--current" %}
+{% extends "layout.html" %}
 {% block pageTitle %}
   Incident report - Keep Customer Interactions Safe
 {% endblock %}
@@ -116,15 +113,11 @@
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" aria-hidden="true">
           <h3 class="govuk-heading-s">5. Did any of your colleagues see or hear what happened?</h3>
           <p class="govuk-body">No</p>
-          <div class="govuk-warning-text">
-            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-            <strong class="govuk-warning-text__text">
-              <span class="govuk-warning-text__assistive">Warning
-              </span>
-              <p class="govuk-hint">Talk to the original reporter to find out if anyone witnessed this incident.
-You can add the names of any witnesses on the next screen, and ask each of them to complete a witness report.</p>
-            </strong>
-          </div>
+          {{ govukWarningText({
+            html: '<p class="govuk-hint">Talk to the original reporter to find out if anyone witnessed this incident.
+You can add the names of any witnesses on the next screen, and ask each of them to complete a witness report.</p>',
+            iconFallbackText: "Warning"
+          }) }}
           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" aria-hidden="true">
           <h3 class="govuk-heading-s">6. How did your interaction with the customer end?</h3>
           <p class="govuk-body">There was a further pause. The customer's deemeanour seemed to soften as he considered my words. He exhaled sharply, clicked his tongue, turned and walked quickly from my desk towards the door and left the building. Our security guard witnessed this but decided not to intervene (correctly in my opinion).
@@ -214,7 +207,6 @@ You can add the names of any witnesses on the next screen, and ask each of them 
           <h2 class="govuk-heading-l" id="attached">Files attached to incident report</h2>
           {{ govukTable({
             captionClasses: "govuk-table__caption--l",
-            firstCellIsHeader: true,
             head: [
               {
                 text: "File name",
@@ -256,7 +248,6 @@ You can add the names of any witnesses on the next screen, and ask each of them 
     </div>
   </section>
   <div class="govuk-button-group">
-    {% from "govuk/components/button/macro.njk" import govukButton %}
     {{ govukButton({
       text: "Continue",
       href: "03witnessdisplay-1nowitnesses"
@@ -264,7 +255,6 @@ You can add the names of any witnesses on the next screen, and ask each of them 
   </div>
   <hr>
 NOT PART OF DESIGN: Demo only<br>
-There are x versions of this page<br>
 <a href="02incident_simple">1. Simple</a><br>
 <a href="02incident">2. Complex</a><br>
 
