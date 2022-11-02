@@ -38,7 +38,7 @@
             classes: "govuk-!-width-one-third"
           },
           value: {
-            html: "<span class='govuk-visually-hidden'>Original reporter: </span><span class='govuk-body-s' style='color:#505a5f'>Whitney Earl on behalf of </span>Mike&nbsp;Black"
+            html: "<span class='govuk-visually-hidden'>Original reporter: </span>Whitney Earl"
           }
         },
         {
@@ -46,7 +46,7 @@
             text: "Who is your line manager?"
           },
           value: {
-            html: "Sarah Linemanager <span class='govuk-body-s' style='color:#505a5f'>(sarah.linemanager@dwp.gov.uk)</span>"
+            html: "Sarah Sencha <span class='govuk-body-s' style='color:#505a5f'>(sarah@dwp.gov.uk)</span>"
           }
         },
         {
@@ -54,7 +54,7 @@
             text: "Who is the most appropriate manager to review this report?"
           },
           value: {
-            html: "Sartaq Matcha <span class='govuk-body-s' style='color:#505a5f'>(sartaq.matcha@dwp.gov.uk)</span>"
+            html: "My line manager"
           }
         },
         {
@@ -70,7 +70,7 @@
             text: "When did the incident happen?"
           },
           value: {
-            html: "13 June 2022 at 3:30pm"
+            html: "3 June 2022 at 3:30pm"
           }
         },
         {
@@ -78,7 +78,7 @@
             text: "Where were you during the incident?"
           },
           value: {
-            html: "Car Park"
+            html: "The office you're based at"
           }
         },
         {
@@ -86,7 +86,7 @@
             text: "Do you feel the customer's behaviour was motivated by any type of discrimination?"
           },
           value: {
-            html: "<p class='govuk-body'>I feel the customer's behaviour was motivated by the following types of discrimination:</p><ul class='govuk-list govuk-list--bullet'><li>Age</li><li>Being married or in a civil partnership</li></ul>"
+            html: "<p class='govuk-body'>I feel the customer's behaviour was motivated by the following types of discrimination:</p><ul class='govuk-list govuk-list--bullet'><li>None</li></ul>"
           }
         }
       ]
@@ -132,7 +132,7 @@
             text: "5. Did any of your colleagues see or hear what happened?"
           },
           value: {
-            text: "Yes"
+            text: "No"
           }
         },    {
           key: {
@@ -156,27 +156,9 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-9">
       <h2 class="govuk-heading-m">
-        Files added
+        There are no files attached to this incident report
       </h2>
-      {{ govukTable({
-        rows: [
-          [
-            {
-              html: "<span class='govuk-visually-hidden'>File name:</span> emailtome.txt"
-            }
-          ],
-          [
-            {
-              html: "<span class='govuk-visually-hidden'>File name:</span> screen_shot.png"
-            }
-          ],
-          [
-            {
-              html: "<span class='govuk-visually-hidden'>File name:</span> letter_l.pdf"
-            }
-          ]
-        ]
-      }) }}
+
     </div>
   </div>
   <div class="govuk-grid-row">
