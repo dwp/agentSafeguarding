@@ -1,10 +1,9 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-Witnesses - Keep Customer Interactions Safe
+  Witnesses - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
@@ -14,7 +13,6 @@ Witnesses - Keep Customer Interactions Safe
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
@@ -22,26 +20,24 @@ Witnesses - Keep Customer Interactions Safe
   </section>
 {% endblock %}
 {% block content %}
-{% include "templates/v6/govuk-caption-m-simple.njk" %}
 <section aria-label="Incident witnesses" role="region">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-xl">Witnesses</h1>
-
+      {% include "templates/v6/govuk-caption-m-simple.njk" %}
+      <h1 class="govuk-heading-xl">Witnesses</h1> 
       {{ govukWarningText({
         text: "There were witnesses to the incident",
         iconFallbackText: "Warning"
       }) }}
-      <p class="govuk-body ">The original reporter has indicated that one or more of their colleagues witnessed this incident. However, there are currently no witnesses listed in this report.
+      <p class="govuk-body">The original reporter has indicated that one or more of their colleagues witnessed this incident. However, there are currently no witnesses listed in this report.
       </p>
-      <p>Talk to the reporter to find out who witnessed this incident, then select 'Add a witness' to:</p>
+      <p class="govuk-body">Talk to the reporter to find out who witnessed this incident, then select 'Add a witness' to:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>add their details</li>
         <li>send each of them an email, explaining how to complete a witness report</li>
-      </ul><br>
+      </ul>
       <p class="govuk-body govuk-!-font-weight-bold">Every witness must complete a witness report before you can submit your review of this incident.</p>
-  </div>
+    </div>
   </div>
 
   <div class="govuk-form-group">
@@ -49,11 +45,11 @@ Witnesses - Keep Customer Interactions Safe
       <div class="govuk-button-group">
         {{ govukButton({
           text: "Add a witness",
-          classes: "govuk-button--secondary",
           href: "04add_witness"
         }) }}
         {{ govukButton({
           text: "Continue",
+          classes: "govuk-button--secondary",
           href: "09police"
         }) }}
       </div>

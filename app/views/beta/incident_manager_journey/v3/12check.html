@@ -36,48 +36,47 @@
     }
   </style>
   {% set witnessesHTML %}
-      <p class='shim'>&nbsp;</p>
-        {{ govukTable({
-          rows: [
-            [
-              {
-                html: "<span class='govuk-visually-hidden'>Witness name: </span>Sarah Sencha"
-              },
-              {
-                html: "Report complete"
-              }
-            ],
-            [
-              {
-                html: "<span class='govuk-visually-hidden'>Witness name: </span>Isla Yellow"
-              },
-              {
-                html: "Report complete"
-              }
-            ],
-            [
-              {
-                html: "<span class='govuk-visually-hidden'>Witness name: </span>Ted Lady"
-              },
-              {
-                html: "Request sent to ted@dwp.gov.uk"
-              }
-            ],
-            [
-              {
-                html: "<span class='govuk-visually-hidden'>Witness name: </span>Sartaq Assam"
-              },
-              {
-                html: "Request sent to whitney@dwp.gov.uk"
-              }
-            ]
-          ]
-        }) }}
-        {{ govukWarningText({
-          text: "You should review all witness reports before submitting your report. If this is not possible for timely completion, explain in your comments",
-          iconFallbackText: "Warning"
-        }) }}
-      
+    <p class='shim'>&nbsp;</p>
+    {{ govukTable({
+      rows: [
+        [
+          {
+            html: "<span class='govuk-visually-hidden'>Witness name: </span>Sarah Sencha"
+          },
+          {
+            html: "Report complete"
+          }
+        ],
+        [
+          {
+            html: "<span class='govuk-visually-hidden'>Witness name: </span>Isla Yellow"
+          },
+          {
+            html: "Report complete"
+          }
+        ],
+        [
+          {
+            html: "<span class='govuk-visually-hidden'>Witness name: </span>Ted Lady"
+          },
+          {
+            html: "Request sent to ted@dwp.gov.uk"
+          }
+        ],
+        [
+          {
+            html: "<span class='govuk-visually-hidden'>Witness name: </span>Sartaq Assam"
+          },
+          {
+            html: "Request sent to whitney@dwp.gov.uk"
+          }
+        ]
+      ]
+    }) }}
+    {{ govukWarningText({
+      html: "<p class='govuk-hint'>You should review all witness reports before submitting your report. If this is not possible for timely completion, explain in your comments</p>",
+      iconFallbackText: "Warning"
+    }) }}
   {% endset %}
   <div class="govuk-!-margin-bottom-9">
     {{ govukSummaryList({
