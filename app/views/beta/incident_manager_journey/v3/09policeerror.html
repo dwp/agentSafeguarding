@@ -1,10 +1,9 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-Error: Did anyone call the police? - Keep Customer Interactions Safe
+  Error: Did anyone call the police? - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
@@ -14,7 +13,6 @@ Error: Did anyone call the police? - Keep Customer Interactions Safe
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
@@ -23,18 +21,18 @@ Error: Did anyone call the police? - Keep Customer Interactions Safe
 {% endblock %}
 
 {% block content %}
-  {{ govukErrorSummary({
-    titleText: "There is a problem",
-    errorList: [
-      {
-        text: "Select yes if someone called the police",
-        href: "#policeQuestion"
-      }
-    ]
-  }) }}
-  <div class="govuk-form-group">
-    <form class="form" action="route_police" method="post">
-      <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Select yes if someone called the police",
+            href: "#policeQuestion"
+          }
+        ]
+      }) }}
+      <form class="form" action="route_police" method="post">
         {% include "templates/v6/govuk-caption-m-simple.njk" %}
         {{ govukRadios({
           idPrefix: "policeQuestion",
@@ -65,7 +63,12 @@ Error: Did anyone call the police? - Keep Customer Interactions Safe
             text: "Continue"
           }) }}
         </div>
-      </fieldset>
-    </form>
+      </form> 
+    </div>   
   </div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+<a href="09police">1. Call police?</a><br>
+<a href="09policeerror">2. Error: Select yes</a><br>
+<hr>  
 {% endblock %}

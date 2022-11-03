@@ -5,7 +5,6 @@ Did anyone call the police? - Keep Customer Interactions Safe
 
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
@@ -15,7 +14,6 @@ Did anyone call the police? - Keep Customer Interactions Safe
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
@@ -24,45 +22,41 @@ Did anyone call the police? - Keep Customer Interactions Safe
 {% endblock %}
 
 {% block content %}
-<div class="govuk-form-group">
-  <form class="form" action="route_police" method="post">
-
-  <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
-  {% include "templates/v6/govuk-caption-m-simple.njk" %}
-
-
-
-    {{ govukRadios({
-      idPrefix: "policeQuestion",
-      name: "policeQuestion",
-      fieldset: {
-        legend: {
-          text: "Did anyone call the police?",
-          isPageHeading: true,
-          classes: "govuk-fieldset__legend--xl"
-        }
-      },
-      items: [
-        {
-          value: "yes",
-          text: "Yes"
-        },
-        {
-          value: "no",
-          text: "No"
-        }
-      ]
-    }) }}
-    <div class="govuk-button-group">
-
-    {% from "govuk/components/button/macro.njk" import govukButton %}
-
-    {{ govukButton({
-      text: "Continue"
-    }) }}
-
-    {% endblock %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="route_police" method="post">
+        {% include "templates/v6/govuk-caption-m-simple.njk" %}
+        {{ govukRadios({
+          idPrefix: "policeQuestion",
+          name: "policeQuestion",
+          fieldset: {
+            legend: {
+              text: "Did anyone call the police?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+        </div>
     </div>
-  </fieldset>
-</form>
-</div>
+  </div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+<a href="09police">1. Call police?</a><br>
+<a href="09policeerror">2. Error: Select yes</a><br>
+<hr>
+{% endblock %}

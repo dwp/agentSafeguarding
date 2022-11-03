@@ -4,7 +4,6 @@
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
@@ -14,7 +13,6 @@
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
@@ -22,28 +20,23 @@
   </section>
 {% endblock %}
 {% block content %}
-{% include "templates/v6/govuk-caption-m-simple.njk" %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-form-group">
-        <form class="form" action="route" method="post">
-          <fieldset class="govuk-fieldset">
-            <h1 class="govuk-heading-xl" style="margin-bottom: 20px !important;">Email sent</h1>
-            <p class="govuk-body">We've sent an email to you, explaining how to complete a witness report.</p>
-            <div class="govuk-button-group">
-              {{ govukButton({
-                text: "Return to list",
-                href: "03witnessdisplay-3list"
-              }) }}
-            </div>
-          </fieldset>
-        </form>
-      </div>
+      <form class="form" action="route" method="post">
+        {% include "templates/v6/govuk-caption-m-simple.njk" %}
+        <h1 class="govuk-heading-xl" style="margin-bottom: 20px !important;">Email sent</h1>
+        <p class="govuk-body">We've sent an email to you, explaining how to complete a witness report.</p>
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Return to list",
+            href: "03witnessdisplay-3list"
+          }) }}
+        </div>
+      </form>
     </div>
   </div>
 <hr>
 NOT PART OF DESIGN: Demo only<br>
-There are 3 versions of this page<br>
 <a href="06sent-1colleague">1. Email sent to someone with access to the KCIS service to complete their own witness report</a><br>
 <a href="06sent-2colleagueonbehalf">2. Email sent to someone with access to the KCIS service to complete witness report on behalf of somebody else</a><br>
 <a href="06sent-3youonbehalf">3. Email sent to you to complete witness report on behalf of somebody elsee</a><br>

@@ -1,18 +1,20 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-Who will complete the witness report? - Keep Customer Interactions Safe
+Error: Who will complete the witness report? - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
     },
-      html: 'This is a new service – your <a class="govuk-link" href="05confirm_witness2error">feedback</a> will help us to improve it.'
+      html: 'This is a new service – your <a class="govuk-link" href="05confirm_witness2error3">feedback</a> will help us to improve it.'
     }) }}
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
@@ -20,6 +22,15 @@ Who will complete the witness report? - Keep Customer Interactions Safe
   </section>
 {% endblock %}
 {% block content %}
+  {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Enter their email address",
+        href: "#witness-email"
+      }
+    ]
+  }) }}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form class="form" action="route_witness2" method="post">
@@ -27,21 +38,24 @@ Who will complete the witness report? - Keep Customer Interactions Safe
         {% set colleagueOnbehalfHTML %}
         {{ govukInput({
           label: {
-          text: "Their email address"
-        },
+            text: "Their email address"
+          },
           id: "witness-email",
           name: "witness-email",
-          autocomplete: "email"
+          autocomplete: "email",
+          errorMessage: {
+            text: "Enter their email address"
+          }
         }) }}
         {% endset %}
         {{ govukRadios({
           idPrefix: "contact",
           name: "contact",
+          ispageheader: true,
           fieldset: {
             legend: {
               html: "Who will complete the witness report for Sartaq&nbsp;Matcha?",
-              classes: "govuk-fieldset__legend--xl",
-              isPageHeading: true
+              classes: "govuk-fieldset__legend--xl"
             }
           },
           hint: {
@@ -55,8 +69,9 @@ Who will complete the witness report? - Keep Customer Interactions Safe
             {
               value: "colleague",
               text: "Someone else who can access this service",
+              checked: true,
               conditional: {
-                html: colleagueOnbehalfHTML
+              html: colleagueOnbehalfHTML
               }
             }
           ]

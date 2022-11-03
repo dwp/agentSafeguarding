@@ -1,10 +1,9 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-Error: Are you sure you want to remove this witness? - Keep Customer Interactions Safe
+  Error: Are you sure you want to remove this witness? - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
@@ -14,7 +13,6 @@ Error: Are you sure you want to remove this witness? - Keep Customer Interaction
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
@@ -23,55 +21,56 @@ Error: Are you sure you want to remove this witness? - Keep Customer Interaction
 {% endblock %}
 
 {% block content %}
-  {{ govukErrorSummary({
-    titleText: "There is a problem",
-    errorList: [
-      {
-        text: "Select yes if you want to remove this witness",
-        href: "#removewitness"
-      }
-    ]
-  }) }}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-    {% include "templates/v6/govuk-caption-m-simple.njk" %}
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="removeWitness">
-          {{ govukRadios({
-            idPrefix: "removewitness",
-            name: "removewitness",
-            fieldset: {
-              legend: {
-                text: "Are you sure you want to remove Ted Lady as a witness?",
-                isPageHeading: true,
-                classes: "govuk-fieldset__legend--xl"
-              }
-            },
-            hint: {
-              text: "We'll send them an email to tell them that they don't need to complete a witness report."
-            },
-            items: [
-              {
-                value: "yes",
-                text: "Yes"
-              },
-              {
-                value: "no",
-                text: "No"
-              }
-            ],
-            errorMessage: {
-              text: "Select yes if you want to remove this witness"
+        {{ govukErrorSummary({
+          titleText: "There is a problem",
+          errorList: [
+            {
+              text: "Select yes if you want to remove this witness",
+              href: "#removewitness"
             }
-          }) }}
-          <div class="govuk-button-group">
-          {{ govukButton({
-            text: "Continue",
-            href: "03witnessdisplay-3list"
-          }) }}
-          </div>
-        </fieldset>
+          ]
+        }) }}
+      {% include "templates/v6/govuk-caption-m-simple.njk" %}
+      {{ govukRadios({
+        idPrefix: "removewitness",
+        name: "removewitness",
+        fieldset: {
+          legend: {
+            text: "Are you sure you want to remove Ted Lady as a witness?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl"
+          }
+        },
+        hint: {
+          text: "We'll send them an email to tell them that they don't need to complete a witness report."
+        },
+        items: [
+          {
+            value: "yes",
+            text: "Yes"
+          },
+          {
+            value: "no",
+            text: "No"
+          }
+        ],
+        errorMessage: {
+          text: "Select yes if you want to remove this witness"
+        }
+      }) }}
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue",
+          href: "03witnessdisplay-3list"
+        }) }}
       </div>
     </div>
   </div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+<a href="08deletewitness">1. Delete</a><br>
+<a href="08deletewitnesserror">2. Error: Select yes</a><br>
+<hr>
 {% endblock %}

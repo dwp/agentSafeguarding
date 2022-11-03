@@ -1,10 +1,9 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-Error: What did the police do? - Keep Customer Interactions Safe
+  Error: What did the police do? - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
@@ -14,7 +13,6 @@ Error: What did the police do? - Keep Customer Interactions Safe
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
@@ -23,50 +21,45 @@ Error: What did the police do? - Keep Customer Interactions Safe
 {% endblock %}
 
 {% block content %}
-  {{ govukErrorSummary({
-    titleText: "There is a problem",
-    errorList: [
-      {
-        text: "Tell us what the police did",
-        href: "#police-action"
-      }
-    ]
-  }) }}
-
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="police-action">
-          {% include "templates/v6/govuk-caption-m-simple.njk" %}
-
-          {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
-
-          {{ govukCharacterCount({
-            name: "police-action",
-            id: "police-action",
-            maxlength: 3000,
-          errorMessage: {
-            text: "Tell us what the police did"
-          },
-            label: {
-              text: "What did the police do?",
-              isPageHeading: true,
-              classes: "govuk-label--xl"
-          },
-            hint: {
-            text: "For example, the police may have issued a crime reference number, interviewed witnesses or arrested someone."
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Tell us what the police did",
+            href: "#police-action"
           }
-          }) }}
-
-          {% from "govuk/components/button/macro.njk" import govukButton %}
-
-          {{ govukButton({
-            text: "Continue",
-            href: "11comments"
-          }) }}
-
-          {% endblock %}
-        </fieldset>
+        ]
+      }) }}
+      {% include "templates/v6/govuk-caption-m-simple.njk" %}
+      {{ govukCharacterCount({
+        name: "police-action",
+        id: "police-action",
+        maxlength: 3000,
+        errorMessage: {
+          text: "Tell us what the police did"
+        },
+        label: {
+            text: "What did the police do?",
+            isPageHeading: true,
+            classes: "govuk-label--xl"
+        },
+        hint: {
+          text: "For example, the police may have issued a crime reference number, interviewed witnesses or arrested someone."
+        }
+      }) }}
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue",
+          href: "11comments"
+        }) }}
+      </div>
     </div>
   </div>
-</div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+<a href="10action">1. Police action</a><br>
+<a href="09policeerror">2. Error: Tell us</a><br>
+<hr>  
+{% endblock %}
