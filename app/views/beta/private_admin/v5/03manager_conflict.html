@@ -3,36 +3,38 @@
   Someone is already working on this report - Keep Customer Interactions Safe
 {% endblock %}
 {% block content %}
-              <style>
-                .bottomruleoff {
-                  border: 10px;
-                  border-color: red !important;
-                }
-                .nobottommargin {
-                  margin-bottom: 0 !important;
-                }
-              </style>
-  <div class="govuk-width-container">
-    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-l">Someone is already working on this report</h1>
-          <p class="govuk-body">
-            Do you want to go back and select another report from the list?
-          </div>
-        </div>
-        <div class="govuk-button-group">
-          {{ govukButton({
-            text: "Go back to the list",
-            href: "00list"
-          }) }}
-          {{ govukButton({
-            text: "Continue to this report",
-            href: "03manager",
-            classes: "govuk-button--warning"
-          }) }}
-        </div>
+  <style>
+    .bottomruleoff {
+      border: 10px;
+      border-color: red !important;
+    }
+    .nobottommargin {
+      margin-bottom: 0 !important;
+    }
+  </style>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Someone is already working on this report</h1>
+      <p class="govuk-body">Do you want to go back and select another report from the list?</p>
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Go back to the list",
+          href: "00list"
+        }) }}
+        {{ govukButton({
+          text: "Continue to this report",
+          href: "03manager",
+          classes: "govuk-button--warning"
+        }) }}
       </div>
-    </main>
+    </div>
   </div>
+<hr>
+Demo only<br>
+<a href="03manager">1. Reviewing manager - Simple</a><br>
+<a href="03manager_complex">2. Reviewing manager - Other options</a><br>
+<a href="03manager_additional">3. Additional witness</a><br>
+<a href="03manager_conflict">4. Conflict</a><br>
+<a href="04witnessesreport">5. Witness download</a><br>
+<hr>
 {% endblock %}
