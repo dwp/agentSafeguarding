@@ -2,22 +2,20 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+  Private Beta Admin - Keep Customer Interactions Safe
 {% endblock %}
 
 
 
 {% block content %}
-
-<div class="govuk-form-group">
-  <a href="00list" class="govuk-back-link">Back</a>
-  <br></br>
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-    <h1 class="govuk-fieldset__heading">
+  <section aria-label="Back" role="region">
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+    <h1 class="govuk-heading-l">
       Incidents and concerns reported in Agent Safeguarding
     </h1>
-  </legend>
-<br>
   <div class="govuk-warning-text">
     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
     <strong class="govuk-warning-text__text">
@@ -58,7 +56,7 @@
     </tr>
   
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">000-000-001</th>
+      <th scope="row" class="govuk-table__header">000-000-003</th>
         <td class="govuk-table__cell">Safety concern</td>
       <td class="govuk-table__cell">18/03/22 <br> 10:30</td>
         <td class="govuk-table__cell">Available</td>

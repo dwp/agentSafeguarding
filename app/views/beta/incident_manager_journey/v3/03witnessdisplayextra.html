@@ -4,7 +4,6 @@ Witnesses - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
@@ -14,7 +13,6 @@ Witnesses - Keep Customer Interactions Safe
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
@@ -36,16 +34,15 @@ Witnesses - Keep Customer Interactions Safe
       <div class="govuk-button-group">
         {{ govukButton({
           text: "Request a witness report",
+          href: "04add_witness"
+        }) }}
+        {{ govukButton({
+          text: "Upload a witness report file",
           classes: "govuk-button--secondary",
           href: "04add_witness"
         }) }}
         {{ govukButton({
-          text: "Upload a witness report",
-          classes: "govuk-button--secondary",
-          href: "04add_witness"
-        }) }}
-        {{ govukButton({
-          text: "Witness report for colleague",
+          text: "Make a witness report for colleague",
           classes: "govuk-button--secondary",
           href: "04add_witness"
         }) }}
@@ -56,6 +53,7 @@ Witnesses - Keep Customer Interactions Safe
     <div class="govuk-button-group">
       {{ govukButton({
         text: "Continue",
+        classes: "govuk-button--secondary",
         href: "09police"
       }) }}
     </div>
@@ -64,12 +62,10 @@ Witnesses - Keep Customer Interactions Safe
 </section>
 <hr>
 NOT PART OF DESIGN: Demo only<br>
-There are 3 versions of this page<br>
 <a href="03witnessdisplay-1nowitnesses">1. No Witnesses indicated by reporter, no witness requests made</a><br>
 <a href="03witnessdisplay-2yeswitnesses">2. Witnesses indicated by reporter, no witness requests made</a><br>
 <a href="03witnessdisplay-3list">3. Witness requests made</a><br>
 <hr>
-<a href="03witnessdisplayextra">4. Experimental: do actual witness reports from here</a><br>
-<hr>
-<!-- This page is experimental placeholder  --> 
+<a href="03witnessdisplayextra">4. Experimental: Buttons</a><br>
+<a href="03witnessdisplayextraradio">5. Experimental: Radio</a><br>
 {% endblock %}

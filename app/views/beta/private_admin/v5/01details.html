@@ -1,14 +1,25 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-Copy an incident report from Agent Safeguarding
+Copy an incident report from KCIS - Keep Customer Interactions Safe
 {% endblock %}
 {% block content %}
+              <style>
+                .bottomruleoff {
+                  border: 10px;
+                  border-color: red !important;
+                }
+                .nobottommargin {
+                  margin-bottom: 0 !important;
+                }
+              </style>
   <div class="govuk-form-group">
-    <a href="01list" class="govuk-back-link">Back</a>
-    <br></br>
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Copy an incident report from Agent Safeguarding
+        Copy an incident report from KCIS
       </h1>
     </legend>
     <p>Follow the instructions below to enter this report in the current service.</p>
@@ -554,7 +565,7 @@ Use another DWP system
                     Attach referral evidence
                   </dt>
                   <dd class="govuk-summary-list__value">
-                    Click the 'Download evidence' button to download the relevant files from Agent Safeguarding.
+                    Click the 'Download evidence' button to download the relevant files from KCIS.
                     <br>
                       <br>Then upload the files to the current service.
                       </dd>
@@ -602,7 +613,7 @@ Use another DWP system
   <hr>
 NOT PART OF DESIGN: Demo only<br>
 <a href="01details">1. Details</a><br>
-<a href="01details_error">2. Details error</a><br>
+<a href="01details_error_UCB">2. Details error</a><br>
 
 <hr>
                   {% endblock %}

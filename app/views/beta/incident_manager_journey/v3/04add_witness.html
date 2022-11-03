@@ -4,7 +4,6 @@
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
@@ -14,7 +13,6 @@
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
@@ -99,4 +97,14 @@
       </form>
     </div>
   </div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+<a href="04add_witness">1. Add witnesses </a><br>
+<a href="04add_witness_change">2. Change witnesses </a><br>
+<a href="04add_witnesserror_tellus">1. Error: Tell us who</a><br>
+<a href="04add_witnesserror2_email">2. Error: Tell us email</a><br>
+<a href="04add_witnesserror3_access">3. Error: Cannot access</a><br>
+<a href="04add_witnesserror4_emailformat">4. Error: Not valid email address</a><br>
+<a href="04add_witnesserror5_fullname">5. Error: Tell us name</a><br>
+<hr>
 {% endblock %}

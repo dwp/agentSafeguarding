@@ -4,17 +4,15 @@
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
     },
-      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+      html: 'This is a new service – your <a class="govuk-link" href="04add_witnesserror">feedback</a> will help us to improve it.'
     }) }}
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
@@ -22,86 +20,93 @@
   </section>
 {% endblock %}
 {% block content %}
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    {% include "templates/v6/govuk-caption-m-simple.njk" %}
-    <div class="govuk-form-group">
+  {% include "templates/v6/govuk-caption-m-simple.njk" %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <form class="form" action="route_colleague" method="post">
-        <fieldset class="govuk-fieldset" aria-describedby="page-title">
-          {% set meHTML %}
-            {{ govukInput({
-              label: {
-                text: "Their full name"
-              },
-              id: "witness-full-name",
-              name: "witness-full-name",
-              autocomplete: "name"
-            }) }}
-          {% endset %}
-          {% set noaccessHTML %}
-            {{ govukInput({
-              label: {
-                text: "Their full name"
-              },
-              id: "witness-full-name",
-              name: "witness-full-name",
-              autocomplete: "name",
-              value: "Sartaq Matcha"
-            }) }}
-          {% endset %}
-          {% set accessHTML %}
-            {{ govukInput({
+        {% set meHTML %}
+          {{ govukInput({
             label: {
-              text: "Their email address"
+              text: "Their full name"
             },
-            id: "colleague-email",
-            name: "witness-email",
-            autocomplete: "email"
-            }) }}
-          {% endset %}
-          {{ govukRadios({
-            idPrefix: "contact",
-            name: "contact",
-            fieldset: {
-              legend: {
-                text: "Who witnessed the incident?",
-                isPageHeading: true,
-                classes: "govuk-fieldset__legend--xl"
-              }
-            },
-            hint: {
-              text: "Select one option."
-            },
-            items: [
-              {
-                value: "access",
-                text: "Someone else who can access this service",
-                conditional: {
-                html: accessHTML
-                }
-              },
-              {
-                value: "noaccess",
-                text: "Someone without access to this service",
-                checked: true,
-                conditional: {
-                html: noaccessHTML
-                }
-              },
-              {
-                value: "me",
-                text: "I did"
-              }
-            ]
+            id: "witness-full-name",
+            name: "witness-full-name",
+            autocomplete: "name"
           }) }}
-          <div class="govuk-button-group">
-            {{ govukButton({
-              text: "Continue"
-            }) }}
-          </div>
-        </fieldset>
+        {% endset %}
+        {% set noaccessHTML %}
+          {{ govukInput({
+            label: {
+              text: "Their full name"
+            },
+            id: "witness-full-name",
+            name: "witness-full-name",
+            value: "Sartaq Matcha",
+            autocomplete: "name"
+          }) }}
+        {% endset %}
+        {% set accessHTML %}
+          {{ govukInput({
+          label: {
+            text: "Their email address"
+          },
+          id: "colleague-email",
+          name: "witness-email",
+          autocomplete: "email"
+          }) }}
+        {% endset %}
+        {{ govukRadios({
+          idPrefix: "contact",
+          name: "contact",
+          fieldset: {
+            legend: {
+              text: "Who witnessed the incident?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          hint: {
+            text: "Select one option."
+          },
+          items: [
+
+            {
+              value: "access",
+              text: "Someone who can access this service",
+              conditional: {
+              html: accessHTML
+              }
+            },
+            {
+              value: "noaccess",
+              text: "Someone who does not have access to this service",
+              checked: true,
+              conditional: {
+              html: noaccessHTML
+              }
+            },
+            {
+              value: "me",
+              text: "I did"
+            }
+          ]
+        }) }}
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+        </div>
       </form>
     </div>
   </div>
-</div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+<a href="04add_witness">1. Add witnesses </a><br>
+<a href="04add_witness_change">2. Change witnesses </a><br>
+<a href="04add_witnesserror_tellus">1. Error: Tell us who</a><br>
+<a href="04add_witnesserror2_email">2. Error: Tell us email</a><br>
+<a href="04add_witnesserror3_access">3. Error: Cannot access</a><br>
+<a href="04add_witnesserror4_emailformat">4. Error: Not valid email address</a><br>
+<a href="04add_witnesserror5_fullname">5. Error: Tell us name</a><br>
+<hr>
 {% endblock %}

@@ -1,0 +1,101 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Private Beta Admin - Keep Customer Interactions Safe
+{% endblock %}
+
+
+
+{% block content %}
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+    <h1 class="govuk-heading-l">
+      Incidents and concerns reported in KCIS
+    </h1>
+  <div class="govuk-warning-text">
+    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+    <strong class="govuk-warning-text__text">
+      <span class="govuk-warning-text__assistive">Warning</span>
+    You must refresh this page before you select a report
+    </strong>
+  </div>
+
+<br>
+<table class="govuk-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">KCIS Reference</th>
+        <th scope="col" class="govuk-table__header">Type of report</th>
+      <th scope="col" class="govuk-table__header">Date </th>
+      <th scope="col" class="govuk-table__header">Status</th>
+      <th scope="col" class="govuk-table__header">Action</th>
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">INC 000-000-002</th>
+      <td class="govuk-table__cell">Incident</td>
+      <td class="govuk-table__cell">16/03/22 <br> 16:30</td>
+      <td class="govuk-table__cell">Available</td>
+      <td class="govuk-table__cell"><a href="01details">Select this report<span class="govuk-visually-hidden">Incident 000-000-002</span></a></td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">INC 000-000-001</th>
+      <td class="govuk-table__cell">Incident</td>
+      <td class="govuk-table__cell">16/03/22 <br> 14:30</td>
+        <td class="govuk-table__cell">In progress</td>
+      <td class="govuk-table__cell"><a href="01details_conflict">Select this report<span class="govuk-visually-hidden">Incident 000-000-001</span></a></td>
+
+    </tr>
+  
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">CON 000-000-003</th>
+        <td class="govuk-table__cell">Safety concern</td>
+      <td class="govuk-table__cell">18/03/22 <br> 8:30</td>
+        <td class="govuk-table__cell">Available</td>
+        <td class="govuk-table__cell"><a href="02concern">Select this report<span class="govuk-visually-hidden">Safety concern 000-000-003</span></a></td>
+
+    </tr>
+
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">INC 000-000-004</th>
+        <td class="govuk-table__cell">Reviewing manager report</td>
+      <td class="govuk-table__cell">02/11/22 <br> 10:30</td>
+        <td class="govuk-table__cell">Available</td>
+        <td class="govuk-table__cell"><a href="03manager">Select this report<span class="govuk-visually-hidden">Reviewing manager report 000-000-004</span></a></td>
+
+    </tr>
+
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">INC 000-000-005</th>
+        <td class="govuk-table__cell">Reviewing manager report</td>
+      <td class="govuk-table__cell">03/11/22 <br> 9:50</td>
+        <td class="govuk-table__cell">In progress</td>
+        <td class="govuk-table__cell"><a href="03manager_conflict">Select this report<span class="govuk-visually-hidden">Reviewing manager report 000-000-005</span></a></td>
+
+    </tr>
+
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">INC 000-000-006</th>
+        <td class="govuk-table__cell">Reviewing manager report</td>
+      <td class="govuk-table__cell">04/11/22 <br> 13:50</td>
+        <td class="govuk-table__cell">Available</td>
+        <td class="govuk-table__cell"><a href="03manager_additional">Select this report<span class="govuk-visually-hidden">Reviewing manager report 000-000-005</span></a></td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+
+
+{% endblock %}

@@ -1,8 +1,17 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+  Someone is already working on this report - Keep Customer Interactions Safe
 {% endblock %}
 {% block content %}
+              <style>
+                .bottomruleoff {
+                  border: 10px;
+                  border-color: red !important;
+                }
+                .nobottommargin {
+                  margin-bottom: 0 !important;
+                }
+              </style>
   <div class="govuk-width-container">
     <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
       <div class="govuk-grid-row">
@@ -15,11 +24,11 @@
         <div class="govuk-button-group">
           {{ govukButton({
             text: "Go back to the list",
-            href: "01list"
+            href: "00list"
           }) }}
           {{ govukButton({
             text: "Continue to this report",
-            href: "01details",
+            href: "03manager",
             classes: "govuk-button--warning"
           }) }}
         </div>

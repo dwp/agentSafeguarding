@@ -4,7 +4,6 @@
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
@@ -14,7 +13,6 @@
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
@@ -74,14 +72,10 @@
               }
             ]
           }) }}
-          <div class="govuk-warning-text">
-            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-            <strong class="govuk-warning-text__text">
-              <span class="govuk-warning-text__assistive">Warning
-              </span>
-              The reporter stated that the customer's behaviour involved discrimination.
-            </strong>
-          </div>
+          {{ govukWarningText({
+            text: "The reporter stated that the customer's behaviour involved discrimination.",
+            iconFallbackText: "Warning"
+          }) }}
         </div>
       </div>
     </div>

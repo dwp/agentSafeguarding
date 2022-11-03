@@ -4,17 +4,15 @@
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
     },
-      html: 'This is a new service – your <a class="govuk-link" href="04add_witnesserror5">feedback</a> will help us to improve it.'
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
     }) }}
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
@@ -28,7 +26,7 @@
         titleText: "There is a problem",
         errorList: [
           {
-            text: "Enter their email address in the format name@example.com",
+            text: "Enter their name",
             href: "#witness-email"
           }
         ]
@@ -52,7 +50,10 @@
             },
             id: "witness-full-name",
             name: "witness-full-name",
-            autocomplete: "name"
+            autocomplete: "name",
+            errorMessage: {
+              text: "Enter their name"
+            }
           }) }}
         {% endset %}
         {% set accessHTML %}
@@ -60,17 +61,14 @@
           label: {
             text: "Their email address"
           },
-          id: "witness-email",
+          id: "colleague-email",
           name: "witness-email",
-          autocomplete: "email",
-            errorMessage: {
-              text: "Enter their email address in the format name@example.com"
-            }
+          autocomplete: "email"
           }) }}
         {% endset %}
         {{ govukRadios({
-          idPrefix: "witness",
-          name: "witness",
+          idPrefix: "contact",
+          name: "contact",
           fieldset: {
             legend: {
               text: "Who witnessed the incident?",
@@ -87,15 +85,15 @@
               text: "Someone else who can access this service",
               conditional: {
               html: accessHTML
-              },
-              checked: true
+              }
             },
             {
               value: "noaccess",
               text: "Someone without access to this service",
               conditional: {
               html: noaccessHTML
-              }
+              },
+              checked: true
             },
             {
               value: "me",
@@ -108,16 +106,17 @@
             text: "Continue"
           }) }}
         </div>
-      </form> 
+      </form>
     </div>
   </div>
 <hr>
 NOT PART OF DESIGN: Demo only<br>
-There are x versions of this page<br>
-<a href="04add_witnesserror">1. Error: Tell us who</a><br>
-<a href="04add_witnesserror2">2. Error: Tell us email</a><br>
-<a href="04add_witnesserror3">3. Error: Cannot access</a><br>
-<a href="04add_witnesserror4">4. Error: Not valid email address</a><br>
-<a href="04add_witnesserror5">5. Error: Tell us name</a><br>
-<hr>   
+<a href="04add_witness">1. Add witnesses </a><br>
+<a href="04add_witness_change">2. Change witnesses </a><br>
+<a href="04add_witnesserror_tellus">1. Error: Tell us who</a><br>
+<a href="04add_witnesserror2_email">2. Error: Tell us email</a><br>
+<a href="04add_witnesserror3_access">3. Error: Cannot access</a><br>
+<a href="04add_witnesserror4_emailformat">4. Error: Not valid email address</a><br>
+<a href="04add_witnesserror5_fullname">5. Error: Tell us name</a><br>
+<hr>  
 {% endblock %}

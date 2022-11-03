@@ -25,7 +25,7 @@ Witnesses - Keep Customer Interactions Safe
 
 <section aria-label="Incident witnesses" role="region">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-full govuk-!-padding-bottom-7">
       <p class="govuk-hint">This list shows everyone who has been named as a witness to this incident. We have emailed each of them, asking them to complete a witness report.</p>
 
       <p class="govuk-hint">They must all submit a witness report before you can complete your review.</p>
@@ -93,17 +93,54 @@ Witnesses - Keep Customer Interactions Safe
       }) }}
     </div>
   </div>
+  {{ govukRadios({
+  name: "sign-in",
+  fieldset: {
+    legend: {
+      text: "Do you need to add any witnesses?",
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: ""
+  },
+  items: [
+    {
+      value: "yes-request",
+      text: "Yes, I want to send a witness request",
+      hint: {
+        text: ""
+      }
+    },
+    {
+      value: "yes-upload",
+      text: "Yes, I want to upload a file",
+      hint: {
+        text: ""
+      }
+    },
+    {
+      value: "yes-onbehalf",
+      text: "Yes, I want to report on behalf of a colleague",
+      hint: {
+        text: ""
+      }
+    },
+    {
+      value: "no",
+      text: "No I want to continue without adding any witnesses",
+      hint: {
+        text: ""
+      }
+    }
+  ]
+}) }}
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset">
       <div class="govuk-button-group">
         {{ govukButton({
-          text: "Add another witness",
-          href: "04add_witness"
-        }) }}
-        {{ govukButton({
           text: "Continue",
-          classes: "govuk-button--secondary",
-          href: "09police"
+          href: "#"
         }) }}
       </div>
     </fieldset>
@@ -111,10 +148,11 @@ Witnesses - Keep Customer Interactions Safe
 </section>
 <hr>
 NOT PART OF DESIGN: Demo only<br>
-There are 3 versions of this page<br>
 <a href="03witnessdisplay-1nowitnesses">1. No Witnesses indicated by reporter, no witness requests made</a><br>
 <a href="03witnessdisplay-2yeswitnesses">2. Witnesses indicated by reporter, no witness requests made</a><br>
 <a href="03witnessdisplay-3list">3. Witness requests made</a><br>
 <hr>
+<a href="03witnessdisplayextra">4. Experimental: Buttons</a><br>
+<a href="03witnessdisplayextraradio">5. Experimental: Radio</a><br>
 
 {% endblock %}
