@@ -17,6 +17,15 @@
     text: "Back",
     href: "javascript:history.back()"
   }) }}
+  {{ govukErrorSummary({
+    titleText: "There is a problem",
+    errorList: [
+      {
+        text: "Select yes, when all the required information been transferred to the existing system",
+        href: "#complete"
+      }
+    ]
+  }) }}
   <h1 class="govuk-heading-xl">Copy a reviewing manager report from KCIS into exisiting UCB report</h1>
   <div class="govuk-!-margin-bottom-9">
     <p>Follow the instructions below to enter add this report to an exisitng recorded in the current service.</p>
@@ -202,7 +211,7 @@
     name: "complete",
     fieldset: {
       legend: {
-        text: "Is this report ready to close and send to the nominated managers?",
+        text: "Has all the required information been transferred to the existing system?",
         classes: "govuk-fieldset__legend--m"
       }
     },
@@ -215,7 +224,10 @@
         value: "no",
         text: "No"
       }
-    ]
+    ],
+    errorMessage: {
+      text: "Select yes, when all the required information been transferred to the existing system"
+    }
   }) }}
   <div class="govuk-form-group">
     {{ govukButton({

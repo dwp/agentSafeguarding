@@ -19,7 +19,7 @@
   }) }}
   <h1 class="govuk-heading-xl">Copy a reviewing manager report from KCIS into exisiting UCB report</h1>
   <div class="govuk-!-margin-bottom-9">
-    <p>Follow the instructions below to enter add this report to an exisitng recoded in the current service.</p>
+    <p>Follow the instructions below to enter add this report to an exisitng recorded in the current service.</p>
     <p>Open the following UCB record and amend only with the details for the fields listed below</p>
     {{ govukSummaryList({
       rows: [
@@ -122,7 +122,6 @@
   </div>
   <div class="govuk-!-margin-bottom-9"></div>
 
-
   <h3 class="govuk-heading-m "><span class="govuk-hint">(Navigate to)</span>Customer/Claimant Address</h3>
   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
     <div class="govuk-summary-list__row">
@@ -151,16 +150,34 @@
       iconFallbackText: "Warning"
     }) }}
   </div>
-  <div class="govuk-form-group">
+  {{ govukRadios({
+    name: "complete",
+    fieldset: {
+      legend: {
+        text: "Is this report ready to close and send to the nominated managers?",
+        classes: "govuk-fieldset__legend--m"
+      }
+    },
+    items: [
+      {
+        value: "yes",
+        text: "Yes"
+      },
+      {
+        value: "no",
+        text: "No"
+      }
+    ]
+  }) }}  <div class="govuk-form-group">
     {{ govukButton({
       text: "Close"
     }) }}
   </div>
 <hr>
 Demo only<br>
-<a href="03manager">1. Reviewing manager - Simple</a><br>
-<a href="03manager_complex">2. Reviewing manager - Other options</a><br>
-<a href="03manager_additional">3. Additional witness</a><br>
+<a href="03manager">1. Reviewing manager - worst case</a><br>
+<a href="03manager_other">2. Reviewing manager - Other options</a><br>
+<a href="03manager_error">3. Error: Reviewing manager - select yes</a><br>
 <a href="03manager_conflict">4. Conflict</a><br>
 <a href="04witnessesreport">5. Witness download</a><br>
 <hr>
