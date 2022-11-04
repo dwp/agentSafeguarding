@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Email
+{% endblock %}
+{% block beforeContent %}
+    {{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-!-padding-bottom-9">
+	<h1 class="govuk-heading-m">
+		<i>Email 2: CONCERN confirmation email </i>
+	</h1>
+	    <p class="govuk-body">Email sent to reporter as soon as they've submitted their concern report.</p>
+
+</div>
+<div class="govuk-!-padding-bottom-9">
+	<h2 class="govuk-heading-m">(Subject line)We've received your report
+		<span class="nowrapper">((reporterCONReferenceNumber))</span>
+	</h2>
+</div>
+<p class="govuk-body">Dear ((First name)) ((Surname)),
+
+<p class="govuk-body">Thank you for reporting this safety concern.</p>
+</p>
+
+<h3 class="govuk-heading-m">Your reference number is: ((reporterCONReferenceNumber)).</h3>
+
+
+<br>
+<h3 class="govuk-heading-m">What happens next</h3>
+<p class="govuk-body">We aim to make a decision about this within 48 hours.</p>
+
+
+<br><br>
+
+<h3 class="govuk-heading-m">What you can do</h3>
+<p class="govuk-body">If you need to give us more information or change anything in your report, email <a href="<a href="mailto:HealthandSafety.CentralisedNMTeam@dwp.gov.uk?subject=INC-123-456-789">HealthandSafety.CentralisedNMTeam@dwp.gov.uk</a>.</p>
+  <p class="govuk-body">You must include the reference number at the top of this email.</p>
+    <br><br>
+
+<br><br>
+<p class="govuk-body">Thank you,</p>
+<p class="govuk-body">On behalf of Keep Customer Interactions Safe.
+</p>
+{% endblock %}
