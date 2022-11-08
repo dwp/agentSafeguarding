@@ -29,9 +29,8 @@
 
   {% set witness1HTML %}
   <p class="govuk-body">There are currently no witnesses to this incident</p>
-  <p class="govuk-body">There are currently no requests for witness reports</p>  
   {{ govukWarningText({
-    html: "<p class='govuk-hint'>Talk to the original reporter to find out if anyone witnessed this incident. Each of them should complete a  report for you to review before submitting this report.</p>",
+    html: "<p class='govuk-hint'>Talk to the original reporter to find out if anyone witnessed this incident. All witnessess should submit a witness report before you complete your review.</p>",
     iconFallbackText: "Warning"
   }) }}
   {% endset %}
@@ -91,5 +90,5 @@ NOT PART OF DESIGN: Demo only<br>
 There are 2 versions of this page<br>
 <a href="12check-simple">1. Simple</a><br>
 <a href="12check">2. Complex</a><br>
-<hr>  
+<hr>
 {% endblock %}

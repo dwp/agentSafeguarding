@@ -31,7 +31,7 @@
       line-height: 1.6;
     }
     .shim {
-      font-size:4px; 
+      font-size:4px;
       margin-bottom:0px !important
     }
   </style>
@@ -74,7 +74,9 @@
       ]
     }) }}
     {{ govukWarningText({
-      html: "<p class='govuk-hint'>You should review all witness reports before submitting your report. If this is not possible for timely completion, explain in your comments</p>",
+      html: "<p class='govuk-hint'>
+      All witnessess should submit a report, and you should review all witness reports, before you submit your review. If you cannot do this before the review is due, you should explain this in the comments section.</p>",
+
       iconFallbackText: "Warning"
     }) }}
   {% endset %}
@@ -142,6 +144,6 @@ NOT PART OF DESIGN: Demo only<br>
 There are 2 versions of this page<br>
 <a href="12check-simple">1. Simple</a><br>
 <a href="12check">2. Complex</a><br>
-<hr>  
+<hr>
 
 {% endblock %}
