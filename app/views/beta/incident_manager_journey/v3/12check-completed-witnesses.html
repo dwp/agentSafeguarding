@@ -23,49 +23,87 @@
 {% endblock %}
 {% block content %}
 {% include "templates/v6/govuk-caption-m-simple.njk" %}
-  <h1 class="govuk-heading-xl" id="page-title">
+  <h1 class="govuk-heading-xl">
     Check your answers
   </h1>
-
-  {% set witness1HTML %}
-  <p class="govuk-body">There are currently no witnesses to this incident</p>
-  {{ govukWarningText({
-    html: "<p class='govuk-hint'>All witnessess should submit a witness report before you complete your review.</p>",
-    iconFallbackText: "Warning"
-  }) }}
-  {% endset %}
-
-
-    {{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Witnesses"
-      },
-      value: {
-        html: witness1HTML
-      }
-    },
-    {
-      key: {
-        text: "Did anyone call the police?"
-      },
-      value: {
-        text: "No"
-      }
-    },
-    {
-      key: {
-        text: "Comments and recommendations"
-      },
-      value: {
-        html: "I have reviewed this incident and recommend no action be taken."
-      }
+  <style>
+    .govuk-summary-list__row:first-child dt {
+      line-height: 1.6;
     }
-  ]
-}) }}
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
+    .shim {
+      font-size:4px;
+      margin-bottom:0px !important
+    }
+  </style>
+  {% set witnessesHTML %}
+    <p class='shim'>&nbsp;</p>
+    {{ govukTable({
+      rows: [
+        [
+          {
+            html: "<span class='govuk-visually-hidden'>Witness name: </span>Sarah Sencha"
+          },
+          {
+            html: "Report complete"
+          }
+        ],
+        [
+          {
+            html: "<span class='govuk-visually-hidden'>Witness name: </span>Isla Yellow"
+          },
+          {
+            html: "Report complete"
+          }
+        ]
+      ]
+    }) }}
+    {{ govukWarningText({
+      html: "<p class='govuk-hint'>
+      All witnessess should submit a report, and you should review all witness reports, before you submit your review. If you cannot do this before the review is due, explain this in the comments section.</p>",
+
+      iconFallbackText: "Warning"
+    }) }}
+  {% endset %}
+  <div class="govuk-!-margin-bottom-9">
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            html: "<div>&nbsp;</div><div>Witnesses</div>"
+          },
+          value: {
+            html: witnessesHTML
+          }
+        },
+        {
+          key: {
+            text: "Did anyone call the police?"
+          },
+          value: {
+            text: "Yes"
+          }
+        },
+        {
+          key: {
+            text: "What did the police do?"
+          },
+          value: {
+            text: "The police were called and arrested the customer. The crime ref number is 12345678"
+          }
+        },
+        {
+          key: {
+            text: "Comments and recommendations"
+          },
+          value: {
+            html: "There were other witnesses to the incident but we do not have contact details."
+          }
+        }
+      ]
+    }) }}
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <h2 class="govuk-heading-m">Are you ready to submit your review?</h2>
@@ -91,4 +129,5 @@ There are 2 versions of this page<br>
 <a href="12check-simple">1. Simple</a><br>
 <a href="12check">2. Complex</a><br>
 <hr>
+
 {% endblock %}
