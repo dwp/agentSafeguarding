@@ -26,10 +26,6 @@ Prototype index - Keep Customer Interactions Safe
 			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD - In progress</strong></h3>
 			<ul class="govuk-list govuk-list--bullet">
 				<li><a href="/beta/report_incident/reportv10/01report">Report incident or concern v10</a></li>
-				<li>
-					<a href="/beta/emails/reporter/v1/01incident-confirmation">Reporter - incident confirmation email v1</a></li>
-				<li>
-					<a href="/beta/emails/reporter/v1/02concern-confirmation">Reporter - concern confirmation email v1</a></li>
 			</ul>
 			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h3>
 			<ul class="govuk-list govuk-list--bullet">
@@ -49,7 +45,8 @@ Prototype index - Keep Customer Interactions Safe
 			}) }}
 			{% set oldpagesHTML %}
 			<ul class="govuk-list govuk-list--bullet">
-				<li><a href="#">Title</a></li>
+				<li><a href="/beta/emails/reporter/v1/01incident-confirmation">Reporter - incident confirmation email v1</a></li>
+				<li><a href="/beta/emails/reporter/v1/02concern-confirmation">Reporter - concern confirmation email v1</a></li>
 			</ul>
 			{% endset %}
 			{{ govukDetails({
@@ -73,11 +70,7 @@ Prototype index - Keep Customer Interactions Safe
 			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD - In progress</strong></<h3></h3>
 			<ul class="govuk-list govuk-list--bullet">
 				<li><a href="/beta/incident_manager_journey/v3/02incident_simple">Incident manager report v3</a></li>
-				<li><a href="/beta/emails/incidentmanager/v1/01request.html">Incident manager email: initial request v1</a></li>
-				<li><a href="/beta/emails/incidentmanager/v1/02confirmation.html">Incident manager email: confirmation v1</a></li>
-
-				<li><a href="/beta/emails/linemanager/v1/01instruction.html">Line manager email: instructions v1</a></li>
-				</ul>
+			</ul>
 			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h3>
 			<ul class="govuk-list govuk-list--bullet">
 				<li><a href="/beta/incident_manager_journey/v2/02incident">Incident manager report v2</a></li>
@@ -96,7 +89,9 @@ Prototype index - Keep Customer Interactions Safe
 			}) }}
 			{% set oldpagesHTML %}
 			<ul class="govuk-list govuk-list--bullet">
-				<li><a href="#">Title</a></li>
+				<li><a href="/beta/emails/incidentmanager/v1/01request.html">Incident manager email: initial request v1</a></li>
+				<li><a href="/beta/emails/incidentmanager/v1/02confirmation.html">Incident manager email: confirmation v1</a></li>
+				<li><a href="/beta/emails/linemanager/v1/01instruction.html">Line manager email: instructions v1</a></li>
 			</ul>
 			{% endset %}
 			{{ govukDetails({
@@ -121,10 +116,6 @@ Prototype index - Keep Customer Interactions Safe
 			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD - In progress</strong></h3>
 			<ul class="govuk-list govuk-list--bullet">
 				<li><a href="/beta/witness/witnessv4/01details_simple">Witness report v4</a></li>
-				<li><a href="/beta/emails/witness/v1/01initial-request.html">Witness email: initial request v1</a></li>
-						<li><a href="/beta/emails/witness/v1/02delete-witness.html">Witness email: witness deleted v1</a></li>
-								<li><a href="/beta/emails/witness/v1/03reminder.html">Witness email: reminder v1</a></li>
-										<li><a href="/beta/emails/witness/v1/04confirmation.html">Witness email: confirmation email v1</a></li>
 			</ul>
 			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h3>
 			<ul class="govuk-list govuk-list--bullet">
@@ -144,7 +135,10 @@ Prototype index - Keep Customer Interactions Safe
 			}) }}
 			{% set oldpagesHTML %}
 			<ul class="govuk-list govuk-list--bullet">
-				<li><a href="#">Title</a></li>
+				<li><a href="/beta/emails/witness/v1/01initial-request.html">Witness email: initial request v1</a></li>
+				<li><a href="/beta/emails/witness/v1/02delete-witness.html">Witness email: witness deleted v1</a></li>
+				<li><a href="/beta/emails/witness/v1/03reminder.html">Witness email: reminder v1</a></li>
+				<li><a href="/beta/emails/witness/v1/04confirmation.html">Witness email: confirmation email v1</a></li>
 			</ul>
 			{% endset %}
 			{{ govukDetails({
@@ -190,6 +184,59 @@ Prototype index - Keep Customer Interactions Safe
 			<ul class="govuk-list govuk-list--bullet">
 				<li><a href="#">Title</a></li>
 			</ul>
+			{% endset %}
+			{{ govukDetails({
+			summaryText: "Old pages",
+			html: oldpagesHTML
+			}) }}
+			<hr>
+		</div>
+
+
+
+
+
+
+
+		<div class="govuk-!-padding-bottom-7 govuk-!-padding-top-7">
+			<h2 class="govuk-heading-l">MakeDecision</h3>
+			<hr>
+			<h3 class="govuk-heading-s">Jira dashboards</h3>
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="https://dwpdigital.atlassian.net/jira/dashboards/24450">View history</a></li>
+			</ul>
+			<hr>
+			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD - In progress</strong></h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="/beta/history/05history">Customer history v5</a></li><br>
+				<p>Add actions?</p>
+			</ul>
+			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="/beta/history/04history">Customer history v4</a></li><br>
+				<p>During Dev sprint, remove back button and proposal to simplify the witnesses navigation.</p>
+			</ul>
+			<hr>
+
+			<h3 class="govuk-heading-s">Archive</h3>
+			{% set oldjourneysHTML %}
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="#">Title</a></li>
+			</ul>
+			{% endset %}
+			{{ govukDetails({
+			summaryText: "Old journeys",
+			html: oldjourneysHTML
+			}) }}
+			{% set oldpagesHTML %}
+			<ul class="govuk-list govuk-list--bullet">
+				<li><a href="/beta/history/03history">Customer history v3</a></li><br>
+				<p>During Dev sprint, decided that the context of the incident is not required.</p>
+				<li><a href="/beta/history/02history">Customer history v2</a></li><br>
+				<p>This version delivers simply on the story, and contains only Incidents and Concerns</p>
+				<li><a href="/beta/history/01history">Customer history v1</a><br>
+				<p>This version shows a view of what this history may look like in the future. However, it has too many dependencies on unknowns, so to deliver simply on the story, we will first develop a cut down version containing only Incidents and Concerns</p>
+				</li>			</ul>
 			{% endset %}
 			{{ govukDetails({
 			summaryText: "Old pages",

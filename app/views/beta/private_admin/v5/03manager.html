@@ -168,17 +168,17 @@
       iconFallbackText: "Warning"
     }) }}
   </div>
-  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+  <dl class="govuk-summary-list">
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key"></dt>
       <dt class="govuk-summary-list__key"></dt>
       <dt class="govuk-summary-list__key"></dt>
     </div>
     <div class="govuk-summary-list__row">
-      <dt class="govuk-summary-list__key">
+      <dt class="govuk-summary-list__key bottomruleoff">
         Attach evidence
       </dt>
-      <dd class="govuk-summary-list__value">
+      <dd class="govuk-summary-list__value bottomruleoff">
         <strong class="govuk-tag govuk-tag--grey">
           Browse...
         </strong>
@@ -186,12 +186,54 @@
           Upload file
         </strong>
       </dd>
-      <dd class="govuk-summary-list__value">
-        <a href='04witnessesreport' role='button' draggable='false' class='govuk-button' data-module='govuk-button' download>Download file</a>
-        <p>Click to download witness statement(s). Then upload to UCB by selecting Browse... then Upload file </p>
+      <dd class="govuk-summary-list__value bottomruleoff">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+        <p>Create a text file on your computer. Click Copy to copy to your clipboard then paste into the text file. Save the file locally to your computer, then click Browse... to locate the file and Upload file to upload to UCB.</p>
       </dd>
     </div>
   </dl>
+  <div class="width100">
+    <p class="govuk-body ">Mark Black</p>
+    <p class="govuk-body">I have reviewed all the witness reports and talked to the colleagues involved. I recommend no further action. (This is the content of the Comments and description in the Reviewing Manager's report) </p>
+    <p class="govuk-body nobottommargin">The Police did this (This is the content of the police action freetext box, concatenated if it exists)</p>
+  </div>
+
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key"></dt>
+      <dt class="govuk-summary-list__key"></dt>
+      <dt class="govuk-summary-list__key"></dt>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key bottomruleoff">
+        Attach evidence
+      </dt>
+      <dd class="govuk-summary-list__value bottomruleoff">
+        <strong class="govuk-tag govuk-tag--grey">
+          Browse...
+        </strong>
+        <strong class="govuk-tag govuk-tag--grey">
+          Upload file
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__value bottomruleoff">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+        <p>Create a text file on your computer. Click Copy to copy to your clipboard then paste into the text file. Save the file locally to your computer, then click Browse... to locate the file and Upload file to upload to UCB.</p>
+      </dd>
+    </div>
+  </dl>
+  <div class="width100">
+    <p class="govuk-body ">Isla Yellow</p>
+    <p class="govuk-body nobottommargin">I did not see this witness.</p>
+  </div>
+  <hr class="govuk-!-margin-bottom-9">
+
+
+
   <div class="govuk-!-margin-bottom-9">
     {{ govukWarningText({
       text: "Click the Save button. Do not click Publish.",
