@@ -4,7 +4,6 @@
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
@@ -14,7 +13,6 @@
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
@@ -22,73 +20,66 @@
   </section>
 {% endblock %}
 {% block content %}
-{% include "templates/v6/govuk-caption-m-simple.njk" %}
-  <h1 class="govuk-heading-xl" id="page-title">
-    Check your answers
-  </h1>
-
-  {% set witness1HTML %}
-  <p class="govuk-body">There are currently no witnesses to this incident</p>
-  {{ govukWarningText({
-    html: "<p class='govuk-hint'>Before you complete your review, all witnessess should submit a witness report, and you should review them all.</p>",
-    iconFallbackText: "Warning"
-  }) }}
-  {% endset %}
-
-
+  {% include "templates/v6/govuk-caption-m-simple.njk" %}
+  <h1 class="govuk-heading-xl">Check your answers</h1>
+  <div class="govuk-!-margin-bottom-9">
+    {% set witness1HTML %}
+      <p class="govuk-body">There are currently no witnesses to this incident</p>
+      {{ govukWarningText({
+        html: "<p class='govuk-hint'>Before you complete your review, all witnessess should submit a witness report, and you should review them all.</p>",
+        iconFallbackText: "Warning"
+      }) }}
+    {% endset %}
     {{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Witnesses"
-      },
-      value: {
-        html: witness1HTML
-      }
-    },
-    {
-      key: {
-        text: "Did anyone call the police?"
-      },
-      value: {
-        text: "No"
-      }
-    },
-    {
-      key: {
-        text: "Comments and recommendations"
-      },
-      value: {
-        html: "I have reviewed this incident and recommend no action be taken."
-      }
-    }
-  ]
-}) }}
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <h2 class="govuk-heading-m">Are you ready to submit your review?</h2>
-          <p class="govuk-body">If you need to change anything in your review of this incident report, use the back link near the top of this page.</p>
-          <p class="govuk-body">When you click Submit, we will send your review to a case reviewer and then to a decision maker.</p>
-          <p class="govuk-body govuk-!-font-weight-bold">You will not be able to change anything in your review after you click Submit.</p>
-          <div class="govuk-button-group">
-            {{ govukButton(
-                {
-                  text: "Submit",
-                  href: "13confirmation"
-                }
-              )
-            }}
-          </div>
-        </fieldset>
+      rows: [
+        {
+          key: {
+            text: "Witnesses"
+          },
+          value: {
+            html: witness1HTML
+          }
+        },
+        {
+          key: {
+            text: "Did anyone call the police?"
+          },
+          value: {
+            text: "No"
+          }
+        },
+        {
+          key: {
+            text: "Comments and recommendations"
+          },
+          value: {
+            html: "I have reviewed this incident and recommend no action be taken."
+          }
+        }
+      ]
+    }) }}
+  </div>  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">Are you ready to submit your review?</h2>
+      <p class="govuk-body">If you need to change anything in your review of this incident report, use the back link near the top of this page.</p>
+      <p class="govuk-body">When you click Submit, we will send your review to a case reviewer and then to a decision maker.</p>
+      <p class="govuk-body govuk-!-font-weight-bold">You will not be able to change anything in your review after you click Submit.</p>
+      <div class="govuk-button-group">
+        {{ govukButton(
+            {
+              text: "Submit",
+              href: "13confirmation"
+            }
+          )
+        }}
       </div>
     </div>
   </div>
 <hr>
 NOT PART OF DESIGN: Demo only<br>
-There are 2 versions of this page<br>
 <a href="12check-simple">1. Simple</a><br>
 <a href="12check">2. Complex</a><br>
+<a href="12check-completed-witnesses">3. Completed witnesses</a><br>
 <hr>
 {% endblock %}

@@ -22,17 +22,17 @@ Error: Who will complete the witness report? - Keep Customer Interactions Safe
   </section>
 {% endblock %}
 {% block content %}
-  {{ govukErrorSummary({
-    titleText: "There is a problem",
-    errorList: [
-      {
-        text: "Tell us who will complete the witness report",
-        href: "#contact"
-      }
-    ]
-  }) }}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Tell us who will complete the witness report",
+            href: "#contact"
+          }
+        ]
+      }) }}
       <form class="form" action="route_witness2" method="post">
         {% include "templates/v6/govuk-caption-m-simple.njk" %}
         {% set colleagueOnbehalfHTML %}

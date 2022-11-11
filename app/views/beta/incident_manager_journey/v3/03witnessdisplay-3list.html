@@ -21,14 +21,15 @@ Witnesses - Keep Customer Interactions Safe
 {% endblock %}
 {% block content %}
 {% include "templates/v6/govuk-caption-m-simple.njk" %}
-      <h1 class="govuk-heading-xl" id="pagetitle">Witnesses</h1>
-
 <section aria-label="Incident witnesses" role="region">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+  <div class="govuk-grid-row govuk-!-padding-bottom-3">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl" id="pagetitle">Witnesses</h1>
       <p class="govuk-hint">This list shows everyone who has been named as a witness to this incident. We have emailed each of them, asking them to complete a witness report.</p>
-
-
+    </div>
+  </div>
+  <div class="govuk-grid-row govuk-!-padding-bottom-3">
+    <div class="govuk-grid-column-full">
       {{ govukTable({
         caption: pagetitle,
         firstCellIsHeader: true,
@@ -71,7 +72,7 @@ Witnesses - Keep Customer Interactions Safe
               html: "<span class='govuk-visually-hidden'>Witness name: </span>Ted Lady"
             },
             {
-              html: "Request sent to ted@dwp.gov.uk"
+              html: "<span class='govuk-visually-hidden'>Witness report</span>Request sent to ted@dwp.gov.uk"
             },
             {
               html: "<a class='govuk-link govuk-link--no-visited-state' href='04add_witness_change'>Change<span class='govuk-visually-hidden'> Ted Lady witness report request</span></a> <span aria-hidden='true'>|</span> <a href='08deletewitness' class='govuk-link govuk-link--no-visited-state'>Remove <span class='govuk-visually-hidden'> Ted Lady witness report request</span></a>"
@@ -82,7 +83,7 @@ Witnesses - Keep Customer Interactions Safe
               html: "<span class='govuk-visually-hidden'>Witness name: </span>Sartaq Assam"
             },
             {
-              html: "Request sent to whitney@dwp.gov.uk"
+              html: "<span class='govuk-visually-hidden'>Witness report</span>Request sent to whitney@dwp.gov.uk"
             },
             {
               html: "<a class='govuk-link govuk-link--no-visited-state' href='04add_witness_change'>Change<span class='govuk-visually-hidden'> Sartaq Assam witness report request</span></a> <span aria-hidden='true'>|</span> <a href='08deletewitness' class='govuk-link govuk-link--no-visited-state'>Remove <span class='govuk-visually-hidden'> Sartaq Assam witness report request</span></a>"

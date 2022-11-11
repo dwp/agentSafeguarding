@@ -4,7 +4,6 @@
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
@@ -14,18 +13,16 @@
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
     }) }}
   </section>
 {% endblock %}
+
 {% block content %}
-{% include "templates/v6/govuk-caption-m-simple.njk" %}
-  <h1 class="govuk-heading-xl">
-    Check your answers
-  </h1>
+  {% include "templates/v6/govuk-caption-m-simple.njk" %}
+  <h1 class="govuk-heading-xl">Check your answers</h1>
   <style>
     .govuk-summary-list__row:first-child dt {
       line-height: 1.6;
@@ -74,9 +71,7 @@
       ]
     }) }}
     {{ govukWarningText({
-      html: "<p class='govuk-hint'>
-      Before you complete your review, all witnessess should submit a witness report, and you should review them all. If you cannot do this before the review is due, explain this in your comments.</p>",
-
+      html: "<p class='govuk-hint'>Before you complete your review, all witnessess should submit a witness report, and you should review them all. If you cannot do this before the review is due, explain this in your comments.</p>",
       iconFallbackText: "Warning"
     }) }}
   {% endset %}
@@ -141,9 +136,9 @@
   </div>
 <hr>
 NOT PART OF DESIGN: Demo only<br>
-There are 2 versions of this page<br>
 <a href="12check-simple">1. Simple</a><br>
 <a href="12check">2. Complex</a><br>
+<a href="12check-completed-witnesses">3. Completed witnesses</a><br>
 <hr>
 
 {% endblock %}

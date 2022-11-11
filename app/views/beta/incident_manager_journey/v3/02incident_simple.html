@@ -32,7 +32,7 @@
             rows: [
               {
                 key: {
-                  html: "Occurred",
+                  html: "<span class='govuk-visually-hidden'>Incident </span>Occurred",
                   classes: "govuk-!-width-one-half"
                 },
                 value: {
@@ -42,7 +42,7 @@
               },
               {
                 key: {
-                  text: "Reported"
+                  html: "<span class='govuk-visually-hidden'>Incident </span>Reported"
                 },
                 value: {
                   text: "8 June 2022 at 2:31pm"
@@ -50,7 +50,7 @@
               },
               {
                 key: {
-                  text: "Interaction type"
+                  html: "<span class='govuk-visually-hidden'>Incident </span>Interaction type"
                 },
                 value: {
                   html: "In-person"
@@ -61,12 +61,12 @@
                   text: "Incident location"
                 },
                 value: {
-                  html: "Office"
+                  html: "The office you're based at"
                 }
               },
               {
                 key: {
-                  html: "Report reference",
+                  html: "<span class='govuk-visually-hidden'>Incident </span>Report reference",
                   classes: "govuk-!-width-one-half"
                 },
                 value: {
@@ -192,6 +192,5 @@
 NOT PART OF DESIGN: Demo only<br>
 <a href="02incident_simple">1. Simple</a><br>
 <a href="02incident">2. Complex</a><br>
-
 <hr>
 {% endblock %}
