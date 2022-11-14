@@ -1,3 +1,4 @@
+@@ -0,0 +1,91 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -37,7 +38,7 @@
             text: "Who do you work for?"
           },
           value: {
-            text: "Centre for Health and Disability Assessments (CHDA) "
+            text: "Department for Work and Pensions (DWP)"
           }
         }
       ]
@@ -54,7 +55,7 @@
             text: "Tell us about the safety concern your want to report"
           },
           value: {
-            text: "Evidence - letter from GP warning of violent tendencies"
+            text: "Customer is often verbally threatening to health service colleagues"
           }
         }
       ]
@@ -63,17 +64,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-9">
       <h2 class="govuk-heading-m">
-        Files added
+        There are no files attached to this incident report
       </h2>
-      {{ govukTable({
-        rows: [
-          [
-            {
-              html: "<span class='govuk-visually-hidden'>File name:</span> letter_l.pdf"
-            }
-          ]
-        ]
-      }) }}
     </div>
   </div>
   <div class="govuk-grid-row">
@@ -88,7 +80,7 @@
               text: "Submit",
               href: "04confirm"
             }
-        ) }}
+          ) }}
       </div>
     </div>
   </div>
@@ -96,5 +88,5 @@
 NOT PART OF DESIGN: Demo only<br>
 <a href="03check">1. Check your answers</a><br>
 <a href="03check_other">2. Check your answers - other</a><br>
-<hr>  
+<hr>   
 {% endblock %}
