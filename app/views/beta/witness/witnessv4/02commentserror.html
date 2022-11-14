@@ -3,11 +3,10 @@
 {% set menuItemOne = " aria-current=page" %}
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 {% block pageTitle %}
-  Tell us what you saw or heard - Keep Customer Interactions Safe
+  Error: Tell us what you saw or heard - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
         text: "beta"
@@ -44,79 +43,68 @@
   </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
       {% set html %}
-      <p class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.</p>
-      <p class="govuk-notification-banner__heading">Do not include the names of any DWP staff in your answers.</p>
+        <p class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.</p>
+        <p class="govuk-notification-banner__heading">Do not include the names of any DWP staff in your answers.</p>
       {% endset %}
       {{ govukNotificationBanner({
         html: html
       }) }}
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="description">
-          {% include "templates/v6/govuk-caption-m-simple.njk" %}
-          {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
-          {{ govukCharacterCount({
-            id: "description",
-            name: "Description",
-            rows: "12",
-            label: {
-              text: "Describe the incident",
-              classes: "govuk-label--xl",
-              isPageHeading: true
-            },
-            hint: {
-              html: "If you are making a witness report for someone without access to this service, write &ldquo;my colleague saw&rdquo; or &ldquo;he / she / they saw&rdquo;, as applicable. Do not use your colleague's name."
-            },
-            maxlength: 3000,
-            errorMessage: {
-              text: "Tell us about the incident"
-            }
-          }) }}
-          {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
-          {{ govukCheckboxes({
-            idPrefix: "checklist",
-            name: "checklist",
-            fieldset: {
-              legend: {
-                text: "Confirm you have considered and included, where possible:",
-                classes: "govuk-fieldset__legend--s"
-              }
-            },
-            items: [
-              {
-                value: "words",
-                text: "The exact words everyone used (including offensive language)"
-              },
-              {
-                value: "start",
-                text: "How the incident started"
-              },
-              {
-                value: "issues",
-                text: "All issues with the customer's behaviour"
-              },
-              {
-                value: "end",
-                text: "How the interaction with the customer ended"
-              },
-              {
-                value: "feel",
-                text: "How you felt about what happened"
-              }
-            ],
-            errorMessage: {
-              text: "Confirm you have reviewed all the required information"
-            }
-          }) }}
-          {% from "govuk/components/button/macro.njk" import govukButton %}
-          <div class="govuk-button-group">
-            {{ govukButton({
+      {% include "templates/v6/govuk-caption-m-simple.njk" %}
+      {{ govukCharacterCount({
+        id: "description",
+        name: "Description",
+        rows: "12",
+        label: {
+          text: "Tell us what you saw or heard",
+          classes: "govuk-label--xl",
+          isPageHeading: true
+        },
+        maxlength: 3000,
+        errorMessage: {
+          text: "Tell us about the incident"
+        }
+      }) }}
+      {{ govukCheckboxes({
+        idPrefix: "checklist",
+        name: "checklist",
+        fieldset: {
+          legend: {
+            text: "Confirm you have considered and included, where possible:",
+            classes: "govuk-fieldset__legend--s"
+          }
+        },
+        items: [
+          {
+            value: "words",
+            text: "The exact words everyone used (including offensive language)"
+          },
+          {
+            value: "start",
+            text: "How the incident started"
+          },
+          {
+            value: "issues",
+            text: "All issues with the customer's behaviour"
+          },
+          {
+            value: "end",
+            text: "How the interaction with the customer ended"
+          },
+          {
+            value: "feel",
+            text: "How you felt about what happened"
+          }
+        ],
+        errorMessage: {
+          text: "Confirm you have reviewed all the required information"
+        }
+      }) }}
+      <div class="govuk-button-group">
+        {{ govukButton({
           text: "Continue",
           href: "03check"
-          }) }}
-          </div>
-        </fieldset>
+        }) }}
       </div>
     </div>
   </div>

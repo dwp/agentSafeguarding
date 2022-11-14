@@ -4,21 +4,19 @@
 {% set subMenuItemOne = " app-subnav__section-item--current" %}
 
 {% block pageTitle %}
-Confirm incident (witness request) - Keep Customer Interactions Safe
+  Confirm - Keep Customer Interactions Safe
 {% endblock %}
 {% block beforeContent %}
   <section aria-label="Beta banner" role="region">
-    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
     {{ govukPhaseBanner({
       tag: {
       text: "beta"
     },
-      html: 'This is a new service – your <a class="govuk-link" href="01detailserror">feedback</a> will help us to improve it.'
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
     }) }}
   </section>
   {% include "templates/v2/header_searchlight.njk" %}
   <section aria-label="Back" role="region">
-    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     {{ govukBackLink({
       text: "Back",
       href: "javascript:history.back()"
@@ -27,95 +25,89 @@ Confirm incident (witness request) - Keep Customer Interactions Safe
 {% endblock %}
 
 {% block content %}
-  <h1 class="govuk-heading-xl">Confirm </h1>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-form-group">
-        <form class="form" action="route_wit" method="post">
-          <fieldset class="govuk-fieldset" aria-describedby="policeQuestion">
-            <p>We believe you recently saw or overheard this incident between one of your colleagues and a customer (reference number <span aria-hidden='true'>INC-</span><span aria-hidden='false'>123-456-789</span>):</p>
-            {{ govukSummaryList({
-              rows: [
-                {
-                  key: {
-                    text: "Customer",
-                    classes: "govuk-!-width-one-half"
-                  },
-                  value: {
-                    text: "Robert De Silva",
-                    classes: "govuk-!-width-one-half"
-                  }
-                },
-                {
-                  key: {
-                    text: "Reporter"
-                  },
-                  value: {
-                    text: "Whitney Earl"
-                  }
-                },
-
-                {
-                  key: {
-                    text: "Date and approximate time"
-                  },
-                  value: {
-                    text: "22 April 2022 at 10:30am"
-                  }
-                },
-
-                {
-                  key: {
-                    text: "Location"
-                  },
-                  value: {
-                    text: "On the phone"
-                  }
-                }
-              ]
-            }) }}
-            <br>
-            <h2 class="govuk-heading-m">Did you see or overhear this incident?</h2>
-            {% set correctionsHtml %}
-            {{ govukCharacterCount({
-              name: "with-hint",
-              id: "with-hint",
-              maxlength: 3000,
-              label: {
-                text: "Enter the correct information",
-                classes: "govuk-label--s"
-              }
-            }) }}
-            {% endset -%}
-            {{ govukRadios({
-              idPrefix: "didyouwitness",
-              name: "didyouwitness",
-              hint: {
+      <h1 class="govuk-heading-xl">Confirm </h1>
+      <p>We believe you recently saw or overheard this incident between one of your colleagues and a customer.</p>
+      {{ govukSummaryList({
+        classes: "govuk-!-padding-bottom-7",
+        rows: [
+          {
+            key: {
+              text: "Customer",
+              classes: "govuk-!-width-one-half"
+            },
+            value: {
+              text: "Robert De Silva",
+              classes: "govuk-!-width-one-half"
+            }
+          },
+          {
+            key: {
+              text: "Reporter"
+            },
+            value: {
+              text: "Whitney Earl"
+            }
+          },
+          {
+            key: {
+              text: "Date and approximate time"
+            },
+            value: {
+              text: "22 April 2022 at 10:30am"
+            }
+          },
+          {
+            key: {
+              text: "Location"
+            },
+            value: {
+              text: "The office you're based at"
+            }
+          }
+        ]
+      }) }}
+      <form class="form" action="route_wit" method="post">
+        <h2 class="govuk-heading-m">Did you see or overhear this incident?</h2>
+        {% set correctionsHtml %}
+        {{ govukCharacterCount({
+          name: "with-hint",
+          id: "with-hint",
+          maxlength: 3000,
+          label: {
+            text: "Enter the correct information",
+            classes: "govuk-label--s"
+          }
+        }) }}
+        {% endset -%}
+        {{ govukRadios({
+          idPrefix: "didyouwitness",
+          name: "didyouwitness",
+          hint: {
             text: "If you saw or heard what happened, you must tell us about it."
-              },
-              items: [
-                {
-                  value: "yes",
-                  text: "Yes",
-                  hint: {
-                    text: "Select this option even if some of the details are wrong"
-                  }
-                },
-                {
-                  value: "no",
-                  text: "No, I did not see or hear what happened"
-                }
-              ]
-            }) }}
-            <div class="govuk-button-group">
-              {{ govukButton({
-                text: "Continue",
-                href: "02comments-simple"
-              }) }}
-            </div>
-          </fieldset>
-        </form>
-      </div>
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes",
+              hint: {
+                text: "Select this option even if some of the details are wrong"
+              }
+            },
+            {
+              value: "no",
+              text: "No, I did not see or hear what happened"
+            }
+          ]
+        }) }}
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Continue",
+            href: "02comments-simple"
+          }) }}
+        </div>
+      </form>
     </div>
   </div>
 <hr>
@@ -123,5 +115,7 @@ NOT PART OF DESIGN: Demo only<br>
 There are 2 versions of this page<br>
 <a href="01details_simple">1. Simple</a><br>
 <a href="01details_onbehalf">2. On behalf of</a><br>
+<a href="01detailserror">3. Error: Tell us if you witnessed</a><br>
+<a href="01details2error">4. Error: Tell us if they witnessed</a><br>
 <hr>
 {% endblock %}
