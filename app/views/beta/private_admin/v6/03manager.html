@@ -1,0 +1,322 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Copy a reviewing manager report from KCIS - Keep Customer Interactions Safe
+{% endblock %}
+{% block content %}
+  <style>
+    .bottomruleoff {
+      border: 10px;
+      border-color: red !important;
+    }
+    .nobottommargin {
+      margin-bottom: 0 !important;
+    }
+  </style>
+  <div class="govuk-form-group">
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+  <h1 class="govuk-heading-xl">Copy a reviewing manager report from KCIS into exisiting UCB report</h1>
+  <div class="govuk-!-margin-bottom-9">
+    <p>Follow the instructions below to add this report to an exisitng record in the current service.</p>
+    <p>Open the following UCB record and amend only with the details for the fields listed below</p>
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "UCB reference"
+          },
+          value: {
+            text: "987234"
+          }
+        },
+        {
+          key: {
+            text: "KCIS reference"
+          },
+          value: {
+            text: "INC-000-000-004"
+          }
+        }
+      ]
+    }) }}
+  </div>
+  <div class="govuk-!-margin-bottom-9">
+    <h3 class="govuk-heading-m"><span class="govuk-hint">(Navigate to)</span>Line Manager Section</h3>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key"></dt>
+        <dt class="govuk-summary-list__key"></dt>
+        <dt class="govuk-summary-list__key"></dt>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Is this a Fast Track incident?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--grey">
+            No
+          </strong>
+        </dd>
+        <dd class="govuk-summary-list__value">
+          Always choose this option
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Is RIDDOR appropriate?
+        </dt>
+          <dd class="govuk-summary-list__value">
+            <strong class="govuk-tag govuk-tag--grey">
+              No
+            </strong>
+        </dd>
+        <dd class="govuk-summary-list__value">
+          Always choose this option
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Were Police called to the incident?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--grey">
+            Yes
+          </strong>
+        </dd>
+        <dd class="govuk-summary-list__value">
+          Choose this option
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Please confirm that you have read this report
+        </dt>
+        <dd class="govuk-summary-list__value">
+            <strong class="govuk-tag govuk-tag--grey">
+            Yes
+          </strong>
+        </dd>
+        <dd class="govuk-summary-list__value"">
+          Always choose this option
+        </dd>
+      </div>       
+      <div class="govuk-summary-list__row ">
+        <dt class="govuk-summary-list__key bottomruleoff"  style="border-bottom:0px">
+          Your comments and any other information for the Nominated Manager
+        </dt>
+        <dd class="govuk-summary-list__value bottomruleoff" style="border-bottom:0px">&nbsp;</dd>
+        <dd class="govuk-summary-list__value bottomruleoff" style="border-bottom:0px">
+          <button class="govuk-button" data-module="govuk-button">
+            Copy
+          </button>
+          <p>Select Copy to copy to clipboard then paste into the freetext field</p>
+        </dd>
+      </div>
+    </dl>
+    <div class="width100">
+      <p class="govuk-body">I have reviewed all the witness reports and talked to the colleagues involved. I recommend no further action. (This is the content of the Comments and description in the Reviewing Manager's report) </p>
+      <p class="govuk-body nobottommargin">The Police did this (This is the content of the police action freetext box, concatenated if it exists)</p>
+    </div>
+    <hr>
+  </div>
+  <div class="govuk-!-margin-bottom-9"></div>
+
+
+  <h3 class="govuk-heading-m "><span class="govuk-hint">(Navigate to)</span>Customer/Claimant Address</h3>
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key"></dt>
+      <dt class="govuk-summary-list__key"></dt>
+      <dt class="govuk-summary-list__key"></dt>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Were others present?
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--grey">
+          Yes
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__value">
+          Choose this option
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Other People Who Were Present
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Mark Black, Isla Yellow, Sarah Sencha
+      </dd>
+      <dd class="govuk-summary-list__value">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+        <p>Select Copy to copy to clipboard then paste into the freetext field</p>
+      </dd>
+    </div>
+  </dl>
+  
+
+  <h3 class="govuk-heading-m "><span class="govuk-hint">(Navigate to)</span>Review Action</h3>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key"></dt>
+      <dt class="govuk-summary-list__key"></dt>
+      <dt class="govuk-summary-list__key"></dt>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key bottomruleoff">
+        Attach evidence
+      </dt>
+      <dd class="govuk-summary-list__value bottomruleoff">
+        <strong class="govuk-tag govuk-tag--grey">
+          Browse...
+        </strong>
+        <strong class="govuk-tag govuk-tag--grey">
+          Upload file
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__value bottomruleoff">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+        <p>Create a text file on your computer. Click Copy to copy to your clipboard then paste into the text file. Save the file locally to your computer, then click Browse... to locate the file and Upload file to upload to UCB.</p>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key bottomruleoff">
+      </dt>
+      <dd class="govuk-summary-list__value bottomruleoff">
+        <p class="govuk-body">	I saw the customer stand up abruptly. He then lent over the desk and shouted at my colleague. I approached, asked the customer to calm down. He turned toward me and called me a 'power-hungry dictator'. </p>
+        <p class="govuk-body nobottommargin">I told him that was inappropriate and asked him to leave. I escorted him out with no further problems.</p>
+      </dd>
+      <dd class="govuk-summary-list__value bottomruleoff">
+      </dd>
+    </div>
+  </dl>
+
+
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key"></dt>
+      <dt class="govuk-summary-list__key"></dt>
+      <dt class="govuk-summary-list__key"></dt>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key bottomruleoff">
+        Attach evidence
+      </dt>
+      <dd class="govuk-summary-list__value bottomruleoff">
+        <strong class="govuk-tag govuk-tag--grey">
+          Browse...
+        </strong>
+        <strong class="govuk-tag govuk-tag--grey">
+          Upload file
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__value bottomruleoff">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+        <p>Create a text file on your computer. Click Copy to copy to your clipboard then paste into the text file. Save the file locally to your computer, then click Browse... to locate the file and Upload file to upload to UCB.</p>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key bottomruleoff">
+      </dt>
+      <dd class="govuk-summary-list__value bottomruleoff">
+        <p class="govuk-body ">Isla Yellow</p>
+        <p class="govuk-body nobottommargin">I did not see this witness.</p>
+      </dd>
+      <dd class="govuk-summary-list__value bottomruleoff">
+      </dd>
+    </div>
+  </dl>
+
+
+
+
+
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key"></dt>
+      <dt class="govuk-summary-list__key"></dt>
+      <dt class="govuk-summary-list__key"></dt>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key bottomruleoff">
+        Attach evidence
+      </dt>
+      <dd class="govuk-summary-list__value bottomruleoff">
+        <strong class="govuk-tag govuk-tag--grey">
+          Browse...
+        </strong>
+        <strong class="govuk-tag govuk-tag--grey">
+          Upload file
+        </strong>
+      </dd>
+      <dd class="govuk-summary-list__value bottomruleoff">
+        <button class="govuk-button" data-module="govuk-button">
+          Copy
+        </button>
+        <p>Create a text file on your computer. Click Copy to copy to your clipboard then paste into the text file. Save the file locally to your computer, then click Browse... to locate the file and Upload file to upload to UCB.</p>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key ">
+      </dt>
+      <dd class="govuk-summary-list__value ">
+        <p class="govuk-body ">Sarah Sencha</p>
+        <p class="govuk-body nobottommargin">This witness has not made a report yet.</p>
+      </dd>
+      <dd class="govuk-summary-list__value ">
+      </dd>
+    </div>
+  </dl>
+
+
+
+
+  <div class="govuk-!-margin-bottom-9">
+    {{ govukWarningText({
+      text: "Click the Save button. Do not click Publish.",
+      iconFallbackText: "Warning"
+    }) }}
+  </div>
+  {{ govukRadios({
+    name: "complete",
+    fieldset: {
+      legend: {
+        text: "Has all the required information been transferred to the existing system?",
+        classes: "govuk-fieldset__legend--m"
+      }
+    },
+    items: [
+      {
+        value: "yes",
+        text: "Yes"
+      },
+      {
+        value: "no",
+        text: "No"
+      }
+    ]
+  }) }}
+  <div class="govuk-form-group">
+    {{ govukButton({
+      text: "Close"
+    }) }}
+  </div>
+<hr>
+Demo only<br>
+<a href="03manager">1. Reviewing manager - worst case</a><br>
+<a href="03manager_other">2. Reviewing manager - Other options</a><br>
+<a href="03manager_error">3. Error: Reviewing manager - select yes</a><br>
+<a href="03manager_conflict">4. Conflict</a><br>
+<a href="04witnessesreport">5. Witness download</a><br>
+<hr>
+{% endblock %}

@@ -1,0 +1,619 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Copy an incident report from KCIS - Keep Customer Interactions Safe
+{% endblock %}
+{% block content %}
+              <style>
+                .bottomruleoff {
+                  border: 10px;
+                  border-color: red !important;
+                }
+                .nobottommargin {
+                  margin-bottom: 0 !important;
+                }
+              </style>
+  <div class="govuk-form-group">
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:history.back()"
+  }) }}
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Copy an incident report from KCIS
+      </h1>
+    </legend>
+    <p>Follow the instructions below to enter this report in the current service.</p>
+    <br>
+      <h2 class="govuk-heading-m nobottommargin">Examples</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key"></dt>
+          <dt class="govuk-summary-list__key"></dt>
+          <dt class="govuk-summary-list__key"></dt>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Last name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Smith
+          </dd>
+          <dd class="govuk-summary-list__value">
+            <button class="govuk-button" data-module="govuk-button">
+              Copy
+            </button>
+            <br>
+              If you see a Copy button, click on it to copy the text to your clipboard. Then go to the current service and paste the text into the relevant field.
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Title
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--grey">Prefer not to say
+              </strong>
+            </dd>
+            <dd class="govuk-summary-list__value">
+              If you see an instruction that looks like this, select the option shown. In this example, you would select 'Prefer not to say'.
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Other names
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <i>Leave this blank</i>
+            </dd>
+            <dd class="govuk-summary-list__value">
+              If you see this instruction, leave this field blank in the current service.
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Job role
+            </dt>
+            <dd class="govuk-summary-list__value">
+Use another DWP system	
+            </dd>
+            <dd class="govuk-summary-list__value">
+              Find this information in another DWP system (for example, the Global Address List).
+            </dd>
+          </div>
+        </dl>
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h2 class="govuk-fieldset__heading">
+            Incident: INC-000-000-001
+          </h2>
+        </legend>
+        <br>
+          <p>Create a new incident report in the current service and navigate to the
+            <b>Reporter Section</b>.</p>
+          <br>
+            <div class="govuk-warning-text">
+              <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+              <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                You must refresh this page before you enter any information from this report into the current service.
+              </strong>
+            </div>
+            <br>
+              <h3 class="govuk-heading-m nobottommargin">Your details</h3>
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key"></dt>
+                  <dt class="govuk-summary-list__key"></dt>
+                  <dt class="govuk-summary-list__key"></dt>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Title
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <strong class="govuk-tag govuk-tag--grey">
+                      Prefer not to say
+                    </strong>
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    Select this option
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    First name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Whitney
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Copy
+                    </button>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Last name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Earl
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Copy
+                    </button>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Your job role
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Use another DWP system	
+                  </dd>
+                  <dd class="govuk-summary-list__value">Find this information in another DWP system (for example, the intranet.</dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Business
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Use another DWP system	
+                  </dd>
+                  <dd class="govuk-summary-list__value">Find this information in another DWP system (for example, the intranet.</dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Business area
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Use another DWP system	
+                  </dd>
+                  <dd class="govuk-summary-list__value">Find this information in another DWP system (for example, the intranet.</dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Home Office / Usual place of work
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Use another DWP system	
+                  </dd>
+                  <dd class="govuk-summary-list__value">Find this information in another DWP system (for example, the intranet.</dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Have you had the appropriate levels of keeping safe training?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <strong class="govuk-tag govuk-tag--grey">
+                      I don't know
+                    </strong>
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    Select this option
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Years in post
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <i>
+                      Leave this blank</i>
+                  </dd>
+                  <dd class="govuk-summary-list__value"></dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Months in post
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <i>
+                      Leave this blank
+                    </i>
+                  </dd>
+                  <dd class="govuk-summary-list__value"></dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Your DWP line manager's first name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Sarah
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Copy
+                    </button>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Your DWP line manager's last name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Darjeeling
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Copy
+                    </button>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Your DWP line manager's telephone number
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <i>
+                      Leave this blank</i>
+                  </dd>
+                  <dd class="govuk-summary-list__value"></dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Incident date
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    08/03/2022
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Copy
+                    </button>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Incident time
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    10:30
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Copy
+                    </button>
+                  </dd>
+                </dl>
+              </div>
+              <h3 class="govuk-heading-m nobottommargin">Details of customer / claimant</h3>
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key"></dt>
+                  <dt class="govuk-summary-list__key"></dt>
+                  <dt class="govuk-summary-list__key"></dt>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Title
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <i>
+                      Leave this blank
+                    </i>
+                  </dd>
+                  <dd class="govuk-summary-list__value"></dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    First name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Robert
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Copy
+                    </button>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Other names
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <i>
+                      Leave this blank
+                    </i>
+                  </dd>
+                  <dd class="govuk-summary-list__value"></dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Last name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    De Silva
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Copy
+                    </button>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    NINo
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    AE 456 789 K
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Copy
+                    </button>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Are you reporting the customer?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <strong class="govuk-tag govuk-tag--grey">Customer
+                    </strong>
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    Select this option
+                  </dd>
+                </div>
+              </dl>
+              <h3 class="govuk-heading-m nobottommargin">Customer / claimant address</h3>
+              <style>
+                .bottomruleoff {
+                  border: 10px;
+                  border-color: red !important;
+                }
+                .nobottommargin {
+                  margin-bottom: 0 !important;
+                }
+              </style>
+              <dl class="govuk-summary-list nobottommargin ">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key"></dt>
+                  <dt class="govuk-summary-list__key"></dt>
+                  <dt class="govuk-summary-list__key"></dt>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    House number or name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Use another DWP system	
+                  </dd>
+                  <dd class="govuk-summary-list__value">Find this information in another DWP system (for example, the intranet.</dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Street
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Use another DWP system	
+                  </dd>
+                  <dd class="govuk-summary-list__value">Find this information in another DWP system (for example, the intranet.</dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Town
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Use another DWP system	
+                  </dd>
+                  <dd class="govuk-summary-list__value">Find this information in another DWP system (for example, the intranet.</dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    County
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Use another DWP system	
+                  </dd>
+                  <dd class="govuk-summary-list__value">Find this information in another DWP system (for example, the intranet.</dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Postcode
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Use another DWP system	
+                  </dd>
+                  <dd class="govuk-summary-list__value">Find this information in another DWP system (for example, the intranet.</dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Were others present?
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <strong class="govuk-tag govuk-tag--grey">Yes</strong>
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    Select this option
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Event leading to incident
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <strong class="govuk-tag govuk-tag--grey">Other (by exception only)
+                    </strong>
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    Select this option
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Incident location
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <strong class="govuk-tag govuk-tag--grey">Other (by exception only)
+                    </strong>
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    Select this option
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Incident category
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <strong class="govuk-tag govuk-tag--grey">Other
+                    </strong>
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    Select this option
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Incident type
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <strong class="govuk-tag govuk-tag--grey">Inappropriate behaviour
+                    </strong>
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    Select this option
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row ">
+                  <dt class="govuk-summary-list__key bottomruleoff">
+                    Incident narrative (brief and factual description)
+                  </dt>
+                  <dd class="govuk-summary-list__value bottomruleoff"></dd>
+                  <dd class="govuk-summary-list__value bottomruleoff">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Copy
+                    </button>
+                  </dd>
+                </div>
+              </dl>
+              <div class="width100">
+                <p class="govuk-body nobottommargin">The customer was agitated at the start of the meeting. As they left they turned and called me a "silly cow". My colleague Mike overheard this and offered suport. </p>
+              </div>
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key"></dt>
+                  <dd class="govuk-summary-list__value"></dd>
+                  <dd class="govuk-summary-list__value"></dd>
+                </div>
+              </dl>
+              <h3 class="govuk-heading-m nobottommargin">Email action required</h3>
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key"></dt>
+                  <dt class="govuk-summary-list__key"></dt>
+                  <dt class="govuk-summary-list__key"></dt>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Your DWP line manager's first name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Sadiq
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Copy
+                    </button>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Your DWP line manager's last name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Assam
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Copy
+                    </button>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Your DWP line manager's email address
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    sadiq.assam@dwp.gov.uk
+                  </dd>
+                  <dd class="govuk-summary-list__value">
+                    <button class="govuk-button" data-module="govuk-button">
+                      Copy
+                    </button>
+                  </dd>
+                </div>
+              </dl>
+              <div class="govuk-warning-text">
+                <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                <strong class="govuk-warning-text__text">
+                  <span class="govuk-warning-text__assistive">Warning</span>
+                  Save the entry in the current service before you attach files to the record.
+                </strong>
+              </div>
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key"></dt>
+                  <dt class="govuk-summary-list__key"></dt>
+                  <dt class="govuk-summary-list__key"></dt>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Attach referral evidence
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Click the 'Download evidence' button to download the relevant files from KCIS.
+                    <br>
+                      <br>Then upload the files to the current service.
+                      </dd>
+                      <dd class="govuk-summary-list__value">
+                        <button class="govuk-button" data-module="govuk-button">
+                          Download evidence
+                        </button>
+                      </dd>
+                    </div>
+                  </dl>
+                  <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                      <span class="govuk-warning-text__assistive">Warning</span>
+                      Click the Save button. Do not click Publish.
+                    </strong>
+                  </div>
+
+
+                        <div class="govuk-form-group">
+
+
+    {{ govukInput({
+  label: {
+    text: "Enter the Incident ID number for this report",
+    classes: "govuk-label--m",
+    inputmode: "numeric",
+    pattern: "[0-9]*"
+
+  },
+  classes: "govuk-input--width-5",
+  hint: {
+    text: "You can find this in the top left corner of the 'Email Action Required' screen in the current service."
+  },
+  id: "referralid",
+  name: "referralid"
+}) }}
+</div>    <div class="govuk-form-group">
+{{ govukButton({
+  text: "Close"
+}) }}
+
+
+</div>
+  <hr>
+NOT PART OF DESIGN: Demo only<br>
+<a href="01details">1. Details</a><br>
+<a href="01details_error_UCB">2. Details error</a><br>
+
+<hr>
+                  {% endblock %}

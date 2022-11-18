@@ -208,12 +208,12 @@ Prototype index - Keep Customer Interactions Safe
 			<hr>
 			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD - In progress</strong></h4>
 			<ul class="govuk-list govuk-list--bullet">
-				<li><a href="/beta/history/05history">Customer history v5</a></li><br>
+				<li><a href="/beta/history/v5/01history">Customer history v5</a></li><br>
 				<p>Add actions?</p>
 			</ul>
 			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h4>
 			<ul class="govuk-list govuk-list--bullet">
-				<li><a href="/beta/history/04history">Customer history v4</a></li><br>
+				<li><a href="/beta/history/v4/04history">Customer history v4</a></li><br>
 				<p>During Dev sprint, remove back button and proposal to simplify the witnesses navigation.</p>
 			</ul>
 			<hr>
@@ -230,13 +230,25 @@ Prototype index - Keep Customer Interactions Safe
 			}) }}
 			{% set oldpagesHTML %}
 			<ul class="govuk-list govuk-list--bullet">
-				<li><a href="/beta/history/03history">Customer history v3</a></li><br>
+				<li><a href="/beta/history/v3/03history">Customer history v3</a></li><br>
 				<p>During Dev sprint, decided that the context of the incident is not required.</p>
-				<li><a href="/beta/history/02history">Customer history v2</a></li><br>
+				<li><a href="/beta/history/v2/02history">Customer history v2</a></li><br>
 				<p>This version delivers simply on the story, and contains only Incidents and Concerns</p>
-				<li><a href="/beta/history/01history">Customer history v1</a><br>
+				<li><b>Customer history v1</b><br>
+				<ul>
+					<li><a href="/beta/history/old/01histore">01histore</a></li>
+					<li><a href="/beta/history/old/01history">01history</a></li>
+					<li><a href="/beta/history/old/01historyb">01historyb</a></li>
+					<li><a href="/beta/history/old/01historyc-old">01historyc-old</a></li>
+					<li><a href="/beta/history/old/01historyc">01historyc</a></li>
+					<li><a href="/beta/history/old/01historyd">01historyd</a></li>
+					<li><a href="/beta/history/old/01historyf">01historyf</a></li>
+					<li><a href="/beta/history/old/02history-copy">02history-copy</a></li>
+				</ul>
 				<p>This version shows a view of what this history may look like in the future. However, it has too many dependencies on unknowns, so to deliver simply on the story, we will first develop a cut down version containing only Incidents and Concerns</p>
-				</li>			</ul>
+				</li>
+				
+			</ul>
 			{% endset %}
 			{{ govukDetails({
 			summaryText: "Old pages",
@@ -258,19 +270,19 @@ Prototype index - Keep Customer Interactions Safe
 			<hr>
 			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--blue">UCD - In progress</strong></h4>
 			<ul class="govuk-list govuk-list--bullet">
-				<li><a href="/beta/private_admin/v5/00list.html">Private Beta Admin journey - v5</a></li>
+				<li><a href="/beta/private_admin/v6/00list.html">Private Beta Admin journey - v6</a></li>
 			</ul>
-			<p class='govuk-body'>Add in the incident manager report</p>
+			<p class='govuk-body'>Add in uploaded files page (awaiting story)</p>
 			<h3 class="govuk-heading-s"><strong class="govuk-tag govuk-tag--green">Development</strong></h4>
 			<ul class="govuk-list govuk-list--bullet">
-				<li><a href="/beta/private_admin/v4/01list.html">Private Beta Admin journey - v4</a></li>
+				<li><a href="/beta/private_admin/v5/00list.html">Private Beta Admin journey - v5</a></li>
 			</ul>
 			<hr>
 
 			<h3 class="govuk-heading-s">Archive</h3>
 			{% set oldjourneysHTML %}
 			<ul class="govuk-list govuk-list--bullet">
-				<li><a href="#">Title</a></li>
+				<li><a href="/beta/private_admin/v4/01list.html">Private Beta Admin journey - v4</a></li>
 			</ul>
 			{% endset %}
 			{{ govukDetails({

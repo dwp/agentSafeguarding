@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Someone is already working on this report - Keep Customer Interactions Safe
+{% endblock %}
+{% block content %}
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-l">Someone is already working on this report</h1>
+          <p class="govuk-body">
+            Do you want to go back and select another report from the list?
+          </div>
+        </div>
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Go back to the list",
+            href: "00list"
+          }) }}
+          {{ govukButton({
+            text: "Continue to this report",
+            href: "01details",
+            classes: "govuk-button--warning"
+          }) }}
+        </div>
+      </div>
+    </main>
+  </div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Attached files - Keep Customer Interactions Safe
+{% endblock %}
+{% block content %}
+  <div class="report-display ">
+        <div class="sg-pba-top-padding-70">
+          <h3>
+            UCBDB Reference number: qwe</h3>
+        </div>
+        <div class="sg-pba-top-padding-70">
+          <h3>Files</h3>
+          <p>
+            The following files were uploaded to the Agent Safeguarding database against the above Reference number</p>
+          <p>
+            follow the instructions below for each file</p>
+          <ul>
+            <li><a href="https://dwp-dev-safeguarding-evidence-storage.s3.eu-west-2.amazonaws.com/198935599/748a4f4b-4166-4d7d-9cc9-69f829eff41d?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIA2IKOKPWJFB2MJCPL%2F20221118%2Feu-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20221118T113420Z&amp;X-Amz-Expires=300&amp;X-Amz-Security-Token=FwoGZXIvYXdzEE0aDEvIUMxAjdAjG%2FOWpSLOAcbcmhs7yiyQYVAPKYuwDdGjDYtzgvXU033AtadxLJZLK0HHcvUNRV1bUP2BWZKlIM3HxRJirSF9Db1hlIKD4CL0yynGlRZpVw8NfTANC2pvBk2uRw9rJ5NojL%2F%2FGohm9ix0DGBHPFJ6mwET2vn%2BmCeEmhtPMgqW6Y084d91ZyG%2F5tac162xOIKgg01u71ymWExxb0guhRv5HKI1TvISk4R2R4QXPN1%2FHfxiDPa%2BAibdVpCLuW5zSV3uwiUMdEwf%2F6300P52b3YfvwbW7B%2F3KJjb3ZsGMi2CC6%2BxLwt7Wadu6PFbDvBW%2BrZ7dc3CV6y6hzruagwOts7fPS4%2BikkyteAMzG4%3D&amp;X-Amz-Signature=6524a381068e60c928c2441c9f0a1359e03883518d3f0abaaf27b82f8596b6cb&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=attachment%3Bfilename%3D_880k.png" target="_blank">_880k.png</a></li>
+          </ul>
+        </div>
+        <div class="sg-pba-top-padding-70">
+          <h2>Instructions</h2>
+          <ul>
+            <li>
+              Download each file in the above list to your local machine.</li>
+            <li>
+              Upload each file against the UCBDB record created in the previous step.</li>
+            <li>
+              Delete all these files from your local machine</li>
+            <li>enter the UCBDB reference
+              <b>
+                <i>qwe</i>
+              </b>
+              in the text box below, then Continue</li>
+          </ul>
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--l" for="f-incident">
+              Enter the UCBDB number for this report (See instructions)
+            </label>
+            <div id="f-incident-hint" class="govuk-hint">
+              You can find this in the instructions above.
+            </div>
+            <input class="govuk-input govuk-input--width-10" id="f-incident" name="incident" type="text" aria-describedby="f-incident-hint"></div>
+          </div>
+          <div class="govuk-button-group casa-form-control-block"></div>
+      </div>
+      <div class="govuk-form-group">
+        {{ govukButton({
+  text: "Close",
+  href: "05filepage"
+}) }}
+        <hr>
+          Demo only<br>
+            Note:
+            <ul>
+              <li>Previous page removes from PBA list</li>
+              <li>does this page show if no files?</li>
+              <li>Click Back on browser goes back to list</li>
+            </ul>
+            <hr>
+            {% endblock %}
