@@ -1,0 +1,24 @@
+{% from "key-details-bar/macro.njk" import dwpKeyDetailsBar %}
+
+{{ dwpKeyDetailsBar({
+    primaryIdentifier: {
+        text: 'Name:',
+        value: 'Robert Da Silva'
+    },
+    secondaryIdentifier: {
+        text: 'National Insurance number:',
+        value: 'SW 99 88 76 X'
+    },
+    additionalData: [
+        {
+            text: "Date of birth:",
+            value: "1 April 1991"
+        }
+    ]
+}) }} 
+<style>
+    /* note "error" colour from GDS */
+    .dwp-key-details-bar {
+        background-color: #d4351c;
+    }
+</style>
