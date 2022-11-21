@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Customer history - Keep Customer Interactions Safe
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {{ govukPhaseBanner({
+      tag: {
+      text: "beta"
+    },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
+  {% include "templates/v7/key_details.njk" %}
+  <section aria-label="Back" role="region">
+    {{ govukBackLink({
+      text: "Back",
+      href: "/"
+    }) }}
+  </section>
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Customer history</h1>
+      <p>This page shows all incidents and safety concerns reported about this customer's behaviour. They are in reverse chronological order, with the most recent at the top of the page. </p>
+      <ol class="dwp-timeline__events">
+        
+        <li class="dwp-timeline__events--entry">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Incident</h2>
+          <p class="govuk-!-margin-bottom-1 govuk-hint">7 August 2022</p>
+          <p class="govuk-caption-m">Mike Black: In person</p>
+        </li>
+
+      
+        <li class="dwp-timeline__events--entry">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Measures</h2>
+          <p class="govuk-!-margin-bottom-1 govuk-hint">30 May 2022</p>
+          <p class="govuk-caption-m">Banned from office</p>
+        </li>
+
+      
+        <li class="dwp-timeline__events--entry">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Actions</h2>
+          <p class="govuk-!-margin-bottom-1 govuk-hint">27 May 2022</p>
+          <p class="govuk-caption-m">Request banning order</p>
+        </li>
+
+      
+        <li class="dwp-timeline__events--entry">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Incident</h2>
+          <p class="govuk-!-margin-bottom-1 govuk-hint">26 May 2022</p>
+          <p class="govuk-caption-m">Mike Black: In person</p>
+        </li>
+
+      
+        <li class="dwp-timeline__events--entry">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Actions</h2>
+          <p class="govuk-!-margin-bottom-1 govuk-hint">5 August 2021</p>
+          <p class="govuk-caption-m">Case review</p>
+        </li>
+
+      
+        <li class="dwp-timeline__events--entry">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Measures</h2>
+          <p class="govuk-!-margin-bottom-1 govuk-hint">3 May 2021</p>
+          <p class="govuk-caption-m">Banned from office</p>
+        </li>
+
+      
+        <li class="dwp-timeline__events--entry">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Actions</h2>
+          <p class="govuk-!-margin-bottom-1 govuk-hint">21 March 2021</p>
+          <ul class="govuk-list">
+            <li>Interview</li>
+            <li>Oral warning</li>
+          </ul>
+        </li>
+            
+      
+        <li class="dwp-timeline__events--entry">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Incident</h2>
+          <p class="govuk-!-margin-bottom-1 govuk-hint">20 March 2021</p>
+          <p class="govuk-caption-m">Whitney Earl: In person</p>
+        </li>
+
+      
+        <li class="dwp-timeline__events--entry">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-1">Concern</h2>
+          <p class="govuk-!-margin-bottom-1 govuk-hint">1 March 2021</p>
+          <p class="govuk-caption-m">Centre for Health and Disability Assessments (CHDA)</p>
+        </li>
+
+      </ol>
+    </div>
+  </div>
+
+{% include "beta/history/v5/menus/01history__menu.html" %}
+
+{% endblock %}
