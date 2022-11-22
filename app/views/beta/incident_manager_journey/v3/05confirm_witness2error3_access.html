@@ -28,7 +28,7 @@ Error: Who will complete the witness report? - Keep Customer Interactions Safe
         titleText: "There is a problem",
         errorList: [
           {
-            text:  "This person cannot access this service",
+            text:  "This person cannot access the service",
             href: "#witness-email"
           }
         ]
@@ -44,7 +44,7 @@ Error: Who will complete the witness report? - Keep Customer Interactions Safe
           name: "witness-email",
           autocomplete: "email",
           errorMessage: {
-            text:  "This person cannot access this service" 
+            text:  "This person cannot access the service"
           }
         }) }}
         {% endset %}
@@ -68,7 +68,7 @@ Error: Who will complete the witness report? - Keep Customer Interactions Safe
             },
             {
               value: "colleague",
-              text: "Someone else who can access this service",
+              text: "Someone else who can access the service",
               checked: true,
               conditional: {
               html: colleagueOnbehalfHTML
