@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+
+{% block pageTitle %}
+Your reports - Keep Customer Interactions Safe
+{% endblock %}
+
+{% block beforeContent %}
+<section aria-label="Beta banner" role="region">
+
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+{{ govukPhaseBanner({
+tag: {
+text: "beta"
+},
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+</section>
+<section aria-label="Back" role="region">
+
+{{ govukBackLink({
+text: "Back to Searchlight home",
+href: "00email"
+}) }}
+</section>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-xl" id="page-title">Your reports</h1>
+<h2 class="govuk-heading-l">To do</h2>
+<div class="govuk-hint">
+Each row in this table represents a report that needs action from you.
+</div>
+<div class="govuk-!-padding-bottom-7">
+  {{ govukTable({
+    firstCellIsHeader: true,
+
+    head: [
+      {
+        html: "Date"
+      },
+      {
+        text: "Customer"
+      },
+      {
+        text: "Original reporter"
+      },
+      {
+        text: "Witnesses"
+      },
+      {
+        text: "Action"
+      }
+    ],
+    rows: [
+      [
+        {
+          html: "<span class='govuk-visually-hidden'>Date: </span>3 June 2022<br><span class='govuk-body-s' style='color:#505a5f'>  at 8:06am</span>"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Customer: </span>Robert De Silva"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Original reporter: </span>Whitney Earl"
+        },
+        {
+          html: "<span class='govuk-visually-hidden'>Witnesses: </span>You"
+        },
+        {
+          html: "<a href='witnessv4/01details_simple' aria-label='Make your report for an incident on 3 June 2022 at 8:06am'>Make your report</a>"
+        }
+      ]
+    ]
+  }) }}
+</div>
+<h2 class="govuk-heading-l">Completed</h2>
+<p class="govuk-body">
+  This section shows reports that you have completed, but that are still waiting for a decision.
+</p>
+
+{% endblock %}

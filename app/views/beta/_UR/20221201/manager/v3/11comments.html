@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Add comments and recommendations - Keep Customer Interactions Safe
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {{ govukPhaseBanner({
+      tag: {
+      text: "beta"
+    },
+      html: 'This is a new service – your <a class="govuk-link" href="11commentserror">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {% set html %}
+        <p class="govuk-notification-banner__heading">Keep to the facts and be as specific as possible.</p>
+        <p class="govuk-notification-banner__heading">Include reasons for each recommendation.</p>
+        <p class="govuk-notification-banner__heading">Do not include the names of any DWP staff in your answers.</p>
+      {% endset %}
+      {{ govukNotificationBanner({
+        html: html
+      }) }}
+      {% include "templates/v6/govuk-caption-m-simple.njk" %}
+      {% call govukFieldset({
+        legend: {
+          text: "Add comments and recommendations",
+          classes: "govuk-fieldset__legend--xl",
+          isPageHeading: true
+        }
+      }) %}
+        <p class="govuk-body">Add any comments or recommendations that you think will help decision makers set appropriate safety measures.</p>
+        <p class="govuk-body">For example, a decision maker might decide: </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>to send a warning letter to this customer</li>
+          <li>that this customer should only have appointments in a screened environment</li>
+          <li>that staff should only see this customer when accompanied by colleagues </li>
+          <li>that this customer should not have any home visits </li>
+          <li>that staff should only deal with this customer by post</li>
+          <li>to ban this customer from a particular location </li>
+        </ul>
+        <p class="govuk-body">These are only examples - a decision maker can take actions that are not in this list. </p>
+        <p class="govuk-body govuk-!-font-weight-bold">A decision maker will review your comments and recommendations before they make a decision.</p>
+        {{ govukCharacterCount({
+          id: "label-as-page-heading",
+          name: "label-as-page-heading",
+          rows: "12",
+          maxlength: 3000,
+          label: {
+            text: "Comments and recommendations",
+            classes: "govuk-body"
+          }
+        }) }}
+        <h2 class="govuk-heading-s">Confirm that you have:</h2>
+        {{ govukCheckboxes({
+          idPrefix: "checklist",
+          name: "checklist",
+          items: [
+            {
+              value: "sources",
+              text: "read, viewed or listened to all information / evidence in the report"
+            },
+            {
+              value: "witnesses",
+              text: "added all witnesses to the report"
+            },
+            {
+              value: "comments",
+              text: "added all relevant information that will help decision makers"
+            },
+            {
+              value: "recommendations",
+              text: "recommended all safety measures you think are appropriate"
+            },
+            {
+              value: "justified",
+              text: "added a reason for each recommendation"
+            }
+          ]
+        }) }}
+      {% endcall %}
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Continue",
+          href: "12check"
+        }) }}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

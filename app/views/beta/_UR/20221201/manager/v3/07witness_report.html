@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Witness report - Keep Customer Interactions Safe
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {{ govukPhaseBanner({
+      tag: {
+      text: "beta"
+    },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {% include "templates/v6/govuk-caption-m.njk" %}
+      <h1 class="govuk-heading-xl">Isla Yellow witness report</h1> 
+      <div class="govuk-!-padding-bottom-7">
+        <h2 class="govuk-heading-m" id="h2-overview">Original report details</h2>
+        {{ govukSummaryList({
+          rows: [
+            {
+              key: {
+                html: "Incident occurred",
+                classes: "govuk-!-width-one-half"
+              },
+              value: {
+                text: "1 May 2022 at 8:09am",
+                classes: "govuk-!-width-one-half"
+              }
+            },
+            {
+              key: {
+                text: "Interaction type"
+              },
+              value: {
+                html: "In-person"
+              }
+            },
+            {
+              key: {
+                text: "Incident location"
+              },
+              value: {  
+                html: "In the corridor"
+              }
+            },
+            {
+              key: {
+                html: "Incident reporter"
+              },
+              value: {
+                html: "<span class='govuk-visually-hidden'>Original reporter: </span><span class='govuk-body-s' style='color:#505a5f'>Whitney Earl on behalf of </span>Mike&nbsp;Black"                }
+            }
+          ]
+        }) }}
+      </div>
+      <div class="govuk-!-padding-bottom-7">
+        <h2 class="govuk-heading-m">Witness report</h2>
+        <p class="govuk-body">I did not witness this incident. </p>
+      </div>
+      <div class="govuk-!-padding-bottom-7">
+        <h2 class="govuk-heading-m">Witness contact details</h2>
+        {{ govukSummaryList({
+          rows: [
+            {
+              key: {
+                text: "Name",
+                classes: "govuk-!-width-one-half"
+              },
+              value: {
+                html: "<span class='govuk-visually-hidden'>Original reporter: </span><span class='govuk-body-s' style='color:#505a5f'>Sarah Sencha on behalf of </span>Isla&nbsp;Yellow",
+                classes: "govuk-!-width-one-half"
+              }
+            },
+            {
+              key: {
+                text: "Email address"
+              },
+              value: {
+                text: "sarah@dwp.gov.uk"
+              }
+            }
+          ]
+        }) }}
+      </div>
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Return to witness list",
+          href: "03witnessdisplay-3list"
+        }) }}
+      </div>
+    </div>
+  </div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+<a href="07witness_report_simple">1. simple</a><br>
+<a href="07witness_report">2. Complex</a><br>
+<hr>
+{% endblock %}

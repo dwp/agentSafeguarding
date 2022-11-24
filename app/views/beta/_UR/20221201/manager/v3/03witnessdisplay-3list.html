@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+Witnesses - Keep Customer Interactions Safe
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {{ govukPhaseBanner({
+      tag: {
+      text: "beta"
+    },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
+{% endblock %}
+{% block content %}
+{% include "templates/v6/govuk-caption-m-simple.njk" %}
+<section aria-label="Incident witnesses" role="region">
+  <div class="govuk-grid-row govuk-!-padding-bottom-3">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl" id="pagetitle">Witnesses</h1>
+      <p class="govuk-hint">This list shows everyone who has been named as a witness to this incident. We have emailed each of them, asking them to complete a witness report.</p>
+    </div>
+  </div>
+  <div class="govuk-grid-row govuk-!-padding-bottom-3">
+    <div class="govuk-grid-column-full">
+      {{ govukTable({
+        caption: pagetitle,
+        firstCellIsHeader: true,
+        head: [
+          {
+            text: "Witness name"
+          },
+          {
+            text: "Witness report"
+          },
+          {
+            text: "Action"
+          }
+        ],
+        rows: [
+          [
+            {
+              html: "<span class='govuk-visually-hidden'>Witness name: </span>Sartaq Assam"
+            },
+            {
+              html: "<span class='govuk-visually-hidden'>Witness report</span>Request sent to sartaq@dwp.gov.uk"
+            },
+            {
+              html: "<a class='govuk-link govuk-link--no-visited-state' href='04add_witness_change'>Change<span class='govuk-visually-hidden'> Sartaq Assam witness report request</span></a> <span aria-hidden='true'>|</span> <a href='08deletewitness' class='govuk-link govuk-link--no-visited-state'>Remove <span class='govuk-visually-hidden'> Sartaq Assam witness report request</span></a>"
+            }
+          ]
+        ]
+      }) }}
+    </div>
+  </div>
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Add another witness",
+          href: "04add_witness"
+        }) }}
+        {{ govukButton({
+          text: "Continue",
+          classes: "govuk-button--secondary",
+          href: "09police"
+        }) }}
+      </div>
+    </fieldset>
+  </div>
+</section>
+{% endblock %}

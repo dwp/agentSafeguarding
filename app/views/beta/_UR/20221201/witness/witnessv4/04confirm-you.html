@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Report submitted - Agent Safeguarding
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+  tag: {
+  text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+  </section>
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      {% from "govuk/components/panel/macro.njk" import govukPanel %}
+      {% set refHTML %}
+      <div class="govuk-panel__body">Your reference number:
+        <br>
+        <strong>
+          <span aria-hidden="true">INC-</span><span aria-hidden="false">123-456-789</span>
+        </strong>
+      </div>
+      {% endset %}
+      {{ govukPanel({
+        titleText: "Report submitted",
+        html: refHTML,
+        id: "panel",
+        name: "panel"
+      }) }}
+      <p class="govuk-body">We've received your report.</p>
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p class="govuk-body">
+        We aim to make a decision about this within 48 hours.
+      </p>
+      <p class="govuk-body">
+        DWP staff can access free counselling and support through
+        <a class="govuk-link" href="https://intranet.dwp.gov.uk/section/working-dwp/human-resources/wellbeing/employee-assistance-programme">PAM Assist</a>.
+      </p>
+      <h2 class="govuk-heading-m">What you can do</h2>
+      <p class="govuk-body">
+
+        If you need to give us more information or change anything in your report, email <a href="mailto:HEALTHANDSAFETY.CENTRALISEDNMTEAM@DWP.GOV.UK" class="govuk-link">HealthandSafety.CentralisedNMTeam@dwp.gov.uk</a>. </p><p>You must include the reference number at the top of this page.
+      </p>
+      {{ govukWarningText({
+        text: "Make a note of your reference number and our email address before you close this tab, or print or save this page.",
+        iconFallbackText: "Warning"
+      }) }}
+      <p class="govuk-body">
+        To help us improve this service, we’d like to know
+        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=6fbxllcQF0GsKIDN_ob4w-oDsqWqlSlJvQe6JubotYpUNFoxRVFURzIyVU1QOVo3QTA5WFdWSjJIVS4u" class="govuk-link" rel="noreferrer noopener" target="_blank">what you think of it.</a><br>
+        It will only take 2 minutes to give us feedback.</p>
+      {{ govukButton({
+        text: "Return to start",
+        classes: "govuk-button--primary",
+        href: "../01landingpage2_witness_done"
+      }) }}
+    </div>
+  </div>
+{% endblock %}

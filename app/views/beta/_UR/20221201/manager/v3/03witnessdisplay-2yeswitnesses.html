@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Witnesses - Keep Customer Interactions Safe
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {{ govukPhaseBanner({
+      tag: {
+      text: "beta"
+    },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
+{% endblock %}
+{% block content %}
+<section aria-label="Incident witnesses" role="region">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-padding-bottom-7">
+      {% include "templates/v6/govuk-caption-m-simple.njk" %}
+      <h1 class="govuk-heading-xl">Witnesses</h1>
+      {{ govukWarningText({
+        text: "There were witnesses to the incident",
+        iconFallbackText: "Warning"
+      }) }}
+      <p class="govuk-body">The original reporter has indicated that one or more of their colleagues witnessed this incident. However, there are currently no witnesses listed in this report.
+      </p>
+      <p class="govuk-body">Talk to the reporter to find out who witnessed this incident, then select 'Add a witness' to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>add their details</li>
+        <li>send each of them an email, explaining how to complete a witness report</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Add a witness",
+          href: "04add_witness"
+        }) }}
+        {{ govukButton({
+          text: "Continue",
+          classes: "govuk-button--secondary",
+          href: "09police"
+        }) }}
+      </div>
+    </fieldset>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+<!-- Set active submenu item -->
+{% set menuItemOne = " aria-current=page" %}
+{% set subMenuItemOne = " app-subnav__section-item--current" %}
+{% block pageTitle %}
+  Check your answers - Keep Customer Interactions Safe
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+      tag: {
+      text: "beta"
+    },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
+{% endblock %}
+{% block content %}
+  {% include "templates/v6/govuk-caption-m-simple.njk" %}
+  <h1 class="govuk-heading-xl">
+    Check your answers
+  </h1>
+  <style>
+    .govuk-table__row:last-child th,   .govuk-table__row:last-child td {
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+    .govuk-summary-list__value {
+      padding-right: 0;
+    }
+  </style>
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Witness reporter"
+          },
+          value: {
+            text: "Sartaq Assam"
+          }
+        },
+
+        {
+          key: {
+            text: "Tell us what you saw or heard"
+          },
+          value: {
+            html: "<p>I saw the customer stand up abruptly. He then lent over the desk and shouted at my colleague.</p><p> I approached, asked the customer to calm down. He turned toward me and called me a 'power-hungry dictator'. I told him that was inappropriate and asked him to leave. I escorted him out with no further problems.</p>"
+          }
+        }
+      ]
+    }) }}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="label-as-page-heading">
+          <h2 class="govuk-heading-m">Are you ready to submit your review?</h2>
+          <p class="govuk-body">If you need to change anything in your report, use the back link near the top of this page.</p>
+          <p class="govuk-body">When you click Submit, we will send your report to the appropriate manager to review.</p>
+          <p class="govuk-body govuk-!-font-weight-bold">You will not be able to change anything in your report after you click Submit.</p>    {% from "govuk/components/button/macro.njk" import govukButton %}
+          <div class="govuk-button-group">
+            {{ govukButton(
+              {
+                text: "Submit",
+                href: "04confirm-you"
+              }
+            )}}
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+{% endblock %}

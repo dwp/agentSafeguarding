@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  What did the police do? - Keep Customer Interactions Safe
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {{ govukPhaseBanner({
+      tag: {
+      text: "beta"
+    },
+      html: 'This is a new service – your <a class="govuk-link" href="10actionerror">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
+{% endblock %}
+{% block content %}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        {% include "templates/v6/govuk-caption-m-simple.njk" %}
+        {{ govukCharacterCount({
+          name: "police-action",
+          id: "police-action",
+          maxlength: 3000,
+          label: {
+            text: "What did the police do?",
+            isPageHeading: true,
+            classes: "govuk-label--xl"
+          },
+            hint: {
+            text: "For example, the police may have issued a crime reference number, interviewed witnesses or arrested someone."
+          }
+        }) }}
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Continue",
+            href: "11comments"
+          }) }}
+        </div>
+    </div>
+  </div>
+
+{% endblock %}

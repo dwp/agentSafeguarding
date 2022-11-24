@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Check your answers - Keep Customer Interactions Safe
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+    {{ govukPhaseBanner({
+      tag: {
+      text: "beta"
+    },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
+  {% include "templates/v2/header_searchlight.njk" %}
+  <section aria-label="Back" role="region">
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
+{% endblock %}
+{% block content %}
+{% include "templates/v6/govuk-caption-m-simple.njk" %}
+  <h1 class="govuk-heading-xl">
+    Check your answers
+  </h1>
+  <style>
+    .govuk-summary-list__row:first-child dt {
+      line-height: 1.6;
+    }
+    .shim {
+      font-size:4px;
+      margin-bottom:0px !important
+    }
+  </style>
+  {% set witnessesHTML %}
+    <p class='shim'>&nbsp;</p>
+    {{ govukTable({
+      rows: [
+        [
+          {
+            html: "<span class='govuk-visually-hidden'>Witness name: </span>Sarah Sencha"
+          },
+          {
+            html: "Report complete"
+          }
+        ],
+        [
+          {
+            html: "<span class='govuk-visually-hidden'>Witness name: </span>Isla Yellow"
+          },
+          {
+            html: "Report complete"
+          }
+        ]
+      ]
+    }) }}
+    {{ govukWarningText({
+      html: "<p class='govuk-hint'>Before you complete your review, all witnessess should submit a witness report, and you should review them all.</p>",
+      iconFallbackText: "Warning"
+    }) }}
+  {% endset %}
+  <div class="govuk-!-margin-bottom-9">
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            html: "<div>&nbsp;</div><div>Witnesses</div>"
+          },
+          value: {
+            html: witnessesHTML
+          }
+        },
+        {
+          key: {
+            text: "Did anyone call the police?"
+          },
+          value: {
+            text: "Yes"
+          }
+        },
+        {
+          key: {
+            text: "What did the police do?"
+          },
+          value: {
+            html: "<p>The police were called and arrested the customer.</p> <p>The crime ref number is 12345678</p>"
+          }
+        },
+        {
+          key: {
+            text: "Comments and recommendations"
+          },
+          value: {
+            html: "<p>There were other witnesses to the incident but we do not have contact details.</p><p> I recommend that the customer is banned from all job centres for 6 months and then a case review.</p>"
+          }
+        }
+      ]
+    }) }}
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <h2 class="govuk-heading-m">Are you ready to submit your review?</h2>
+          <p class="govuk-body">If you need to change anything in your review of this incident report, use the back link near the top of this page.</p>
+          <p class="govuk-body">When you click Submit, we will send your review to a case reviewer and then to a decision maker.</p>
+          <p class="govuk-body govuk-!-font-weight-bold">You will not be able to change anything in your review after you click Submit.</p>
+          <div class="govuk-button-group">
+            {{ govukButton(
+                {
+                  text: "Submit",
+                  href: "13confirmation"
+                }
+              )
+            }}
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+<hr>
+NOT PART OF DESIGN: Demo only<br>
+<a href="12check-simple">1. Simple</a><br>
+<a href="12check">2. Complex</a><br>
+<a href="12check-completed-witnesses">3. Completed witnesses</a><br>
+<hr>
+
+{% endblock %}

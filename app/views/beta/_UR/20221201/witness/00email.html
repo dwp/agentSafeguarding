@@ -1,0 +1,88 @@
+{% extends "layout_unbranded.html" %}
+{% block pageTitle %}
+  Email
+{% endblock %}
+{% block content %}
+  <div class="email-message">
+    <table class="govuk-table">
+      <tbody class="">
+        <tr class="">
+          <th scope="row" class="govuk-!-text-align-left govuk-!-padding-bottom-3">From</th>
+          <td class="govuk-!-text-align-left govuk-!-padding-bottom-3">
+            Keep Customer Interactions Safe
+          </td>
+        </tr>
+        <tr>
+          <th scope="row" class="govuk-!-text-align-left govuk-!-padding-bottom-3">To</th>
+          <td class="govuk-!-text-align-left govuk-!-padding-bottom-3">
+            <span class="placeholder-no-brackets">email address</span>
+          </td>
+        </tr>
+        <tr class="email-message-meta">
+          <th scope="row" class="govuk-!-text-align-left govuk-!-padding-bottom-3">Subject</th>
+          <td class="govuk-!-text-align-left govuk-!-padding-bottom-3">
+            URGENT: Complete witness report for incident on
+            <span class="placeholder">((incidentDate))</span>
+            at
+            <span class="placeholder">((incidentTime))</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="email-message-body">
+      <p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">Dear
+        <span class="placeholder">((FirstName))</span>
+        <span class="placeholder">((Surname))</span>,</p>
+      <p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">We believe you recently saw or heard the following incident between one or more of your colleagues and a customer:</p>
+      <table role="presentation" style="padding: 0 0 20px 0;">
+        <tbody>
+          <tr>
+            <td style="font-family: Helvetica, Arial, sans-serif;">
+              <ul style="Margin: 0 0 0 20px; padding: 0; list-style-type: disc;">
+                <li style="Margin: 5px 0 5px; padding: 0 0 0 5px; font-size: 19px;line-height: 25px; color: #0B0C0C;">Date of incident:
+                  <span class="placeholder">((incidentDate))</span>
+                </li>
+                <li style="Margin: 5px 0 5px; padding: 0 0 0 5px; font-size: 19px;line-height: 25px; color: #0B0C0C;">Time of incident:
+                  <span class="placeholder">((incidentTime))</span>
+                </li>
+                <li style="Margin: 5px 0 5px; padding: 0 0 0 5px; font-size: 19px;line-height: 25px; color: #0B0C0C;">Incident reference number:
+                  <span class="placeholder">((ReferenceNumber))</span>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">For security reasons, we cannot provide any more information about the incident in this email.</p>
+      <blockquote style="Margin: 0 0 20px 0; border-left: 10px solid #B1B4B6;padding: 15px 0 0.1px 15px; font-size: 19px; line-height: 25px;">
+        <p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">You must complete a report as soon as possible. Even if you did not witness this incident, you must still complete a report to let us know.</p>
+      </blockquote>
+            <h2 style="Margin: 0 0 20px 0; padding: 0; font-size: 27px; line-height: 35px; font-weight: bold; color: #0B0C0C; font-family: Arial">What to do now</h2>
+      <table role="presentation" style="padding: 0 0 20px 0;">
+        <tbody>
+          <tr>
+            <td style="font-family: Helvetica, Arial, sans-serif;">
+              <ol style="Margin: 0 0 0 20px; padding: 0; list-style-type: decimal;">
+                <li style="Margin: 5px 0 5px; padding: 0 0 0 5px; font-size: 19px;line-height: 25px; color: #0B0C0C;">Log in to Searchlight.</li>
+                <li style="Margin: 5px 0 5px; padding: 0 0 0 5px; font-size: 19px;line-height: 25px; color: #0B0C0C;">Select ‘Menu’ in the top right corner.</li>
+                <li style="Margin: 5px 0 5px; padding: 0 0 0 5px; font-size: 19px;line-height: 25px; color: #0B0C0C;">Select ‘Keep Customer Interactions Safe’.</li>
+                <li style="Margin: 5px 0 5px; padding: 0 0 0 5px; font-size: 19px;line-height: 25px; color: #0B0C0C;">Find the relevant request for a report.</li>
+                <li style="Margin: 5px 0 5px; padding: 0 0 0 5px; font-size: 19px;line-height: 25px; color: #0B0C0C;">Complete the report according to the instructions on the screen.</li>
+              </ol>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">Thank you,</p>
+      <p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">On behalf of Keep Customer Interactions Safe.</p>
+      <p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">E_M_A_I_L_B_L_O_C_K</p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <a href="00searchlight">Continue</a><br><br><br>
+
+  <a href="../">< Back</a><br>
+  {% endblock %}
