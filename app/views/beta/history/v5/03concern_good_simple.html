@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Concern report - Keep Customer Interactions Safe
+{% endblock %}
+{% block beforeContent %}
+  <section aria-label="Beta banner" role="region">
+    {{ govukPhaseBanner({
+      tag: {
+      text: "beta"
+    },
+      html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    }) }}
+  </section>
+  {% include "templates/v7/key_details.njk" %}
+  <section aria-label="Back" role="region">
+    {{ govukBackLink({
+      text: "Back",
+      href: "javascript:history.back()"
+    }) }}
+  </section>
+{% endblock %}
+{% block content %}
+  <h1 class="govuk-heading-xl">Concern report</h1>
+  <section aria-label="Concern overview" role="region">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-!-padding-bottom-9">
+          <h2 class="govuk-heading-l" id="h2-overview"><span class="govuk-warning-text__assistive">Concern </span>Overview</h2>
+          {{ govukSummaryList({
+            rows: [
+              {
+                key: {
+                  html: "<span class='govuk-visually-hidden'>Concern </span>Reported",
+                  classes: "govuk-!-width-one-half"
+                },
+                value: {
+                  text: "8 August 2022 at 2:31pm",
+                  classes: "govuk-!-width-one-half"
+                }
+              },
+              {
+                key: {
+                  html: "Who do you work for?"
+                },
+                value: {
+                  html: "Department for Work and Pensions (DWP)"
+                }
+              }
+            ]
+          }) }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Concern details" role="region">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-!-padding-bottom-9">
+          <h2 class="govuk-heading-l"><span class="govuk-warning-text__assistive">Concern</span> Details</h2>
+          <p class="govuk-hint">The following content is exactly as the original reporter wrote it.</p>
+          <h3 class="govuk-heading-m">Tell us about the safety concern you want to report</h3>
+          <p class="govuk-body">I have uploaded a form ESA50 p3-5 is relevant. This customer may sometimes present as aggressive. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section aria-label="Files attached to concern report" role="region">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-!-padding-bottom-9">
+          <h2 class="govuk-heading-m" id="attached">There are no files attached to this report</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section aria-label="Contact details" role="region">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-!-padding-bottom-9">
+          <h2 class="govuk-heading-l">Contact details</h2>
+          {{ govukSummaryList({
+            rows: [
+              {
+                key: {
+                  text: "Original reporter",
+                  classes: "govuk-!-width-one-half"
+                },
+                value: {
+                  html: "Whitney Earl",
+                  classes: "govuk-!-width-one-half"
+                }
+              },
+              {
+                key: {
+                  text: "Reporter's email address"
+                },
+                value: {
+                  text: "whitney@dwp.gov.uk"
+                }
+              },
+              {
+                key: {
+                  text: "Line manager"
+                },
+                value: {
+                  html: "Sarah Sencha"
+                }
+              },
+              {
+                key: {
+                  text: "Line manager's email address"
+                },
+                value: {
+                  html: "sarah@dwp.gov.uk"
+                }
+              }
+            ]
+          }) }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Back to customer history",
+      href: "01history_good"
+    }) }}
+  </div>
+
+{% include "beta/history/v5/menus/03concern_good__menu.html" %}
+
+{% endblock %}

@@ -11,7 +11,7 @@
       html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
     }) }}
   </section>
-  {% include "templates/v7/key_details_red.njk" %}
+  {% include "templates/v7/key_details.njk" %}
   <section aria-label="Back" role="region">
     {{ govukBackLink({
       text: "Back",
@@ -138,7 +138,7 @@
             head: [
               {
                 text: "File name",
-        classes: 'govuk-!-width-one-half'
+                classes: 'govuk-!-width-one-half'
               },
               {
                 text: "Action"
@@ -285,6 +285,6 @@
     }) }}
   </div>
 
-{% include "beta/history/v5/menus/02incident__menu.html" %}
+{% include "beta/history/v5/menus/02incident_good__menu.html" %}
 
 {% endblock %}

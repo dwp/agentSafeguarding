@@ -43,7 +43,7 @@
                   html: "Who do you work for?"
                 },
                 value: {
-                  html: "Department for Work and Pensions (DWP)"
+                  html: "Centre for Health and Disability Assessments (CHDA)"
                 }
               }
             ]
@@ -70,7 +70,29 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <div class="govuk-!-padding-bottom-9">
-          <h2 class="govuk-heading-m" id="attached">There are no files attached to this report</h2>
+          <h2 class="govuk-heading-l" id="attached">Files attached to concern report</h2>
+          {{ govukTable({
+            captionClasses: "govuk-table__caption--l",
+            head: [
+              {
+                text: "File name",
+                classes: 'govuk-!-width-one-half'
+              },
+              {
+                text: "Action"
+              }
+            ],
+            rows: [
+              [
+                {
+                  html: "<span class='govuk-visually-hidden'>File name: </span>ESA50.pdf"
+                },
+                {
+                  html: "<a href='/public/images/screen_shot.png' role='button' draggable='false' class='govuk-button govuk-button--secondary ' data-module='govuk-button' download>Download file<span class='govuk-visually-hidden'>ESA50.pdf</span></a>"
+                }
+              ]
+            ]
+          }) }}
         </div>
       </div>
     </div>
@@ -88,7 +110,7 @@
                   classes: "govuk-!-width-one-half"
                 },
                 value: {
-                  html: "Whitney Earl",
+                  html: "<span class='govuk-visually-hidden'>Original reporter: </span><span class='govuk-body-s' style='color:#505a5f'>Ted Lady on behalf of </span>Mike&nbsp;Black<br>",
                   classes: "govuk-!-width-one-half"
                 }
               },
@@ -97,7 +119,7 @@
                   text: "Reporter's email address"
                 },
                 value: {
-                  text: "whitney@dwp.gov.uk"
+                  text: "ted@dwp.gov.uk"
                 }
               },
               {
@@ -115,6 +137,22 @@
                 value: {
                   html: "sarah@dwp.gov.uk"
                 }
+              },
+              {
+                key: {
+                  text: "Reviewing manager"
+                },
+                value: {
+                  html: "Peter White"
+                }
+              },
+              {
+                key: {
+                  text: "Reviewing manager's email address"
+                },
+                value: {
+                  html: "peter@dwp.gov.uk"
+                }
               }
             ]
           }) }}
@@ -125,10 +163,10 @@
   <div class="govuk-button-group">
     {{ govukButton({
       text: "Back to customer history",
-      href: "01history_complex"
+      href: "01history_good"
     }) }}
   </div>
 
-{% include "beta/history/v5/menus/03concern__menu.html" %}
+{% include "beta/history/v5/menus/03concern_good__menu.html" %}
 
 {% endblock %}
